@@ -6,7 +6,7 @@
 
 <title>SHAHZAD OFFICIAL 007</title>
 
-<meta name="description" content="Shahzad and Rashid - Friends and students of KIPS College. Welcome to our official website.">
+<meta name="description" content="Meet Shahzad and Rashid, friends and students of KIPS College.">
 
 <style>
 * {
@@ -15,20 +15,24 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #080d1a;
     color: white;
-    text-align: center;
 }
 
 header {
+    background: linear-gradient(135deg,#0066ff,#7928ca);
     padding: 65px 15px;
-    background: linear-gradient(135deg, #005bea, #7b2ff7);
+    text-align: center;
 }
 
 header h1 {
-    font-size: 35px;
+    font-size: 38px;
     margin-bottom: 15px;
 }
 
@@ -37,51 +41,92 @@ header p {
 }
 
 nav {
-    background: #111a2e;
+    background: #111b30;
     padding: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 10px;
+    margin: 12px;
     font-weight: bold;
 }
 
-section {
-    padding: 45px 20px;
+nav a:hover {
+    color: #54a5ff;
 }
 
-h2 {
+section {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+section h2 {
     color: #54a5ff;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+    color: #ddd;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .card {
     background: #151f35;
-    border: 1px solid #293c60;
-    border-radius: 15px;
-    padding: 25px;
-    margin: 15px auto;
-    max-width: 450px;
+    border: 1px solid #30466b;
+    border-radius: 18px;
+    padding: 30px;
+    width: 300px;
+    line-height: 1.8;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #54a5ff;
 }
 
 .card h3 {
+    color: #54a5ff;
     font-size: 25px;
-    color: #ffffff;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .card p {
-    color: #cccccc;
-    line-height: 1.7;
+    color: #ddd;
+}
+
+.badge {
+    display: inline-block;
+    background: #173b70;
+    padding: 7px 15px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.college {
+    background: #101a2d;
 }
 
 footer {
     background: #050914;
-    padding: 25px;
+    text-align: center;
+    padding: 30px 15px;
     color: #aaa;
-    line-height: 1.8;
+    line-height: 2;
 }
 </style>
 </head>
@@ -91,51 +136,94 @@ footer {
 <header>
     <h1>SHAHZAD OFFICIAL 007</h1>
     <p>Welcome to Our Official Website</p>
-    <p>Friendship Forever ❤️</p>
+    <p>Friendship • Education • Success</p>
 </header>
 
 <nav>
     <a href="#home">Home</a>
+    <a href="#about">About Us</a>
     <a href="#friends">Friends</a>
     <a href="#college">College</a>
 </nav>
 
 <section id="home">
-    <h2>Welcome Friends!</h2>
-    <p>Welcome to Shahzad Official 007 Website.</p>
-    <p>Two Friends, One Friendship, Unlimited Memories!</p>
+    <h2>Welcome to Our World!</h2>
+    <div class="intro">
+        <p>
+        We are Shahzad and Rashid, two friends and students
+        of KIPS College. This website represents our friendship,
+        memories, learning journey and dreams for the future.
+        </p>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>👑 SHAHZAD</h3>
+            <p>
+            Welcome! I am Shahzad, the founder of
+            Shahzad Official 007.
+            I am a student of KIPS College and interested
+            in technology, website development and learning
+            new skills.
+            My goal is to learn, improve and build a
+            successful future.
+            </p>
+            <span class="badge">Website Founder</span>
+        </div>
+
+        <div class="card">
+            <h3>🤝 RASHID</h3>
+            <p>
+            Rashid is my friend and fellow student
+            at KIPS College.
+            He is an important part of our friendship
+            and this website journey.
+            We share memories, support each other
+            and work towards our dreams.
+            </p>
+            <span class="badge">My Friend</span>
+        </div>
+
+    </div>
 </section>
 
 <section id="friends">
     <h2>Our Friendship</h2>
-
-    <div class="card">
-        <h3>SHAHZAD</h3>
-        <p>Website Owner</p>
-        <p>Welcome to my official profile!</p>
-    </div>
-
-    <div class="card">
-        <h3>RASHID</h3>
-        <p>My Best Friend</p>
-        <p>A special friend and partner in memories!</p>
+    <div class="intro">
+        <p>
+        True friendship is built on trust, respect,
+        support and unforgettable memories.
+        Our journey is just beginning!
+        </p>
+        <h3 style="margin-top:25px;color:#54a5ff;">
+        SHAHZAD & RASHID ❤️
+        </h3>
     </div>
 </section>
 
-<section id="college">
+<section id="college" class="college">
     <h2>Our College</h2>
-    <div class="card">
+    <div class="intro">
         <h3>KIPS COLLEGE</h3>
-        <p>We are students of KIPS College.</p>
-        <p>Learning, Friendship and Building Our Future!</p>
+        <p>
+        We are students of KIPS College.
+        Education is an important part of our journey.
+        We believe in learning new things and building
+        a brighter future.
+        </p>
     </div>
 </section>
 
 <footer>
     <p>Made with ❤️ by Shahzad & Rashid</p>
-    <p>© 2026 Shahzad Official 007</p>
-    <p>All Rights Reserved.</p>
+    <p>SHAHZAD OFFICIAL 007</p>
+    <p>© 2026 All Rights Reserved.</p>
 </footer>
 
 </body>
-  </html>
+</html>
