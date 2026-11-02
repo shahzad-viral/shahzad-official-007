@@ -5,298 +5,332 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SHAHZAD OFFICIAL 007</title>
-<meta name="description" content="The official website of Shahzad and Rashid, friends and students of KIPS College.">
+
+<meta name="description" content="Welcome to Shahzad Official 007 - Personal Official Website.">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
-html { scroll-behavior: smooth; }
-
-body {
-    font-family: Arial, sans-serif;
-    background: #070b18;
-    color: white;
-    overflow-x: hidden;
+body{
+  font-family:Arial,sans-serif;
+  background:#080d18;
+  color:#fff;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: rgba(7,11,24,.95);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+:root{
+  --gold:#e9c46a;
+  --dark:#080d18;
+  --card:#111b2d;
 }
 
-.logo {
-    font-size: 21px;
-    font-weight: bold;
-    color: #58a6ff;
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(8,13,24,.95);
+  border-bottom:1px solid rgba(233,196,106,.25);
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 8px;
-    font-size: 14px;
+.logo{
+  font-size:21px;
+  font-weight:bold;
+  color:var(--gold);
+  letter-spacing:1px;
 }
 
-nav a:hover { color: #58a6ff; }
-
-.hero {
-    min-height: 530px;
-    padding: 100px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background:
-    radial-gradient(circle at top, #263f85 0%, transparent 55%),
-    linear-gradient(135deg,#101a38,#080b18);
+nav a{
+  color:#ddd;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:13px;
 }
 
-.tag {
-    color: #78baff;
-    letter-spacing: 4px;
-    font-size: 13px;
+nav a:hover{
+  color:var(--gold);
 }
 
-.hero h1 {
-    font-size: clamp(38px, 8vw, 70px);
-    margin: 22px 0;
-    background: linear-gradient(90deg,#fff,#65aaff,#bd8aff);
-    -webkit-background-clip: text;
-    color: transparent;
+.hero{
+  min-height:85vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:50px 20px;
+  background:
+  radial-gradient(circle at top,#263653 0%,#080d18 65%);
 }
 
-.hero p {
-    color: #c3cce0;
-    font-size: 18px;
-    line-height: 1.8;
+.badge{
+  border:1px solid var(--gold);
+  color:var(--gold);
+  padding:9px 20px;
+  border-radius:30px;
+  font-size:12px;
+  letter-spacing:3px;
+  margin-bottom:25px;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 30px;
-    border-radius: 30px;
-    background: linear-gradient(90deg,#1677ff,#873cff);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.hero h1{
+  font-size:clamp(38px,8vw,75px);
+  line-height:1.1;
+  margin-bottom:20px;
 }
 
-section {
-    padding: 85px 20px;
-    text-align: center;
+.hero h1 span{
+  color:var(--gold);
 }
 
-.heading {
-    font-size: 34px;
-    margin-bottom: 15px;
+.hero p{
+  color:#aeb9ca;
+  max-width:550px;
+  line-height:1.8;
 }
 
-.subheading {
-    color: #9caac5;
-    margin-bottom: 40px;
+.button{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 28px;
+  background:var(--gold);
+  color:#101522;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+  transition:.3s;
 }
 
-.container {
-    max-width: 1050px;
-    margin: auto;
+.button:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 25px #e9c46a44;
 }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+section{
+  padding:80px 8%;
 }
 
-.card {
-    width: 310px;
-    padding: 35px 25px;
-    border-radius: 22px;
-    background: linear-gradient(145deg,#172440,#0d1426);
-    border: 1px solid #29446e;
-    box-shadow: 0 15px 40px rgba(0,0,0,.25);
-    transition: .3s;
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:15px;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    border-color: #58a6ff;
+.section-title span{
+  color:var(--gold);
 }
 
-.avatar {
-    width: 85px;
-    height: 85px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 35px;
-    background: linear-gradient(135deg,#147cff,#8b3dff);
+.line{
+  width:65px;
+  height:3px;
+  background:var(--gold);
+  margin:0 auto 40px;
 }
 
-.card h3 {
-    font-size: 25px;
-    margin-bottom: 12px;
+.about-box{
+  max-width:850px;
+  margin:auto;
+  background:var(--card);
+  border:1px solid #263650;
+  border-radius:14px;
+  padding:35px;
+  text-align:center;
+  line-height:1.9;
+  color:#c3ccda;
 }
 
-.role {
-    color: #69adff;
-    margin-bottom: 18px;
-    font-size: 14px;
+.about-box h3{
+  color:var(--gold);
+  margin-bottom:15px;
 }
 
-.card p {
-    color: #bdc8dc;
-    line-height: 1.8;
+.imran-section{
+  background:#0d1524;
 }
 
-.about {
-    background: #0c1325;
+.imran-card{
+  max-width:850px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:35px;
+  background:var(--card);
+  padding:25px;
+  border-radius:15px;
+  border:1px solid #34415a;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-.college-box {
-    max-width: 750px;
-    margin: auto;
-    padding: 40px 25px;
-    border: 1px solid #315184;
-    border-radius: 20px;
-    background: linear-gradient(135deg,#172b50,#101629);
+.imran-card img{
+  width:260px;
+  max-width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:12px;
+  border:2px solid var(--gold);
 }
 
-.college-box h3 {
-    color: #70b4ff;
-    font-size: 30px;
-    margin-bottom: 18px;
+.imran-info{
+  flex:1;
+  min-width:230px;
 }
 
-.college-box p {
-    color: #d0d8e9;
-    line-height: 1.9;
+.imran-info h2{
+  color:var(--gold);
+  font-size:29px;
+  margin-bottom:15px;
 }
 
-.friendship {
-    font-size: 24px;
-    color: #8abaff;
-    line-height: 1.8;
+.imran-info p{
+  color:#b9c3d2;
+  line-height:1.8;
+  margin-bottom:12px;
 }
 
-footer {
-    padding: 35px 15px;
-    text-align: center;
-    background: #040711;
-    color: #929db2;
-    line-height: 2;
+.credit{
+  font-size:11px;
+  color:#8d9aaf;
 }
 
-footer strong { color: #68aaff; }
+footer{
+  text-align:center;
+  padding:35px 15px;
+  background:#050912;
+  border-top:1px solid #263650;
+  color:#8995a8;
+  line-height:2;
+}
 
-@media(max-width:600px) {
-    nav {
-        justify-content: center;
-        gap: 10px;
-    }
-    nav a { margin: 5px; }
-    .hero { min-height: 450px; }
-    section { padding: 65px 15px; }
+footer strong{
+  color:var(--gold);
+}
+
+@media(max-width:600px){
+  header{
+    justify-content:center;
+    text-align:center;
+  }
+
+  nav a{
+    margin:0 7px;
+    font-size:12px;
+  }
+
+  section{
+    padding:60px 6%;
+  }
+
+  .imran-card{
+    text-align:center;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="logo">SHAHZAD 007</div>
-    <div>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#friends">Friends</a>
-        <a href="#college">College</a>
-    </div>
-</nav>
+<header>
+  <div class="logo">SHAHZAD OFFICIAL 007</div>
 
-<header class="hero" id="home">
-    <div class="tag">WELCOME TO OUR WEBSITE</div>
-    <h1>SHAHZAD OFFICIAL 007</h1>
-    <p>Two Friends. One Journey. Endless Dreams.</p>
-    <p>Education • Friendship • Technology • Future</p>
-    <a href="#about" class="button">Discover Our Story</a>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#pakistan">PAKISTAN</a>
+  </nav>
 </header>
 
-<section id="about" class="about">
-    <div class="container">
-        <h2 class="heading">ABOUT US</h2>
-        <p class="subheading">Meet the people behind this website.</p>
+<main>
 
-        <div class="cards">
+<section class="hero" id="home">
+  <div class="badge">WELCOME TO MY WORLD</div>
 
-            <div class="card">
-                <div class="avatar">👑</div>
-                <h3>SHAHZAD</h3>
-                <div class="role">FOUNDER & WEBSITE OWNER</div>
-                <p>
-                    Hello! I am Shahzad, the creator of
-                    Shahzad Official 007. I am a student
-                    of KIPS College with an interest in
-                    technology, website development and
-                    learning new skills. My dream is to
-                    keep improving and build a bright future.
-                </p>
-            </div>
+  <h1>SHAHZAD<br><span>OFFICIAL 007</span></h1>
 
-            <div class="card">
-                <div class="avatar">🤝</div>
-                <h3>RASHID</h3>
-                <div class="role">FRIEND & STUDENT</div>
-                <p>
-                    Rashid is Shahzad's friend and fellow
-                    student at KIPS College. He is part of
-                    this friendship journey. Together we
-                    share good memories, support each other
-                    and work towards our dreams.
-                </p>
-            </div>
+  <p>
+    A personal space built with passion,
+    creativity and ambition.
+    Welcome to my official website.
+  </p>
 
-        </div>
+  <a href="#about" class="button">EXPLORE MORE</a>
+</section>
+
+<section id="about">
+  <h2 class="section-title">ABOUT <span>US</span></h2>
+  <div class="line"></div>
+
+  <div class="about-box">
+    <h3>SHAHZAD OFFICIAL 007</h3>
+
+    <p>
+      Welcome to Shahzad Official 007.
+      This website is a personal digital space
+      created to share creativity, memories
+      and special interests.
+    </p>
+  </div>
+</section>
+
+<section class="imran-section" id="pakistan">
+  <h2 class="section-title">SPECIAL <span>PROFILE</span></h2>
+  <div class="line"></div>
+
+  <div class="imran-card">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Imran_Khan%27s_Official_Portrait%2C_during_Q%26A_in_2021.jpg"
+      alt="Imran Khan portrait"
+      loading="lazy"
+    >
+
+    <div class="imran-info">
+      <h2>IMRAN KHAN 🇵🇰</h2>
+
+      <p>
+        Imran Khan is a former Prime Minister
+        of Pakistan and a former international
+        cricketer who captained Pakistan to
+        victory in the 1992 Cricket World Cup.
+      </p>
+
+      <p><strong>Pakistan Zindabad 🇵🇰</strong></p>
+
+      <a class="button"
+         href="https://commons.wikimedia.org/wiki/File:Imran_Khan%27s_Official_Portrait,_during_Q%26A_in_2021.jpg"
+         target="_blank"
+         rel="noopener">
+         PHOTO SOURCE
+      </a>
+
+      <p class="credit">
+        Portrait credit: Imran Khan / Wikimedia Commons.
+        Licensed under CC BY 3.0.
+      </p>
     </div>
+
+  </div>
 </section>
 
-<section id="friends">
-    <div class="container">
-        <h2 class="heading">OUR FRIENDSHIP</h2>
-        <p class="subheading">A friendship built on respect and memories.</p>
-        <div class="friendship">
-            SHAHZAD & RASHID ❤️
-            <br>
-            Friends Today, Friends Tomorrow.
-        </div>
-    </div>
-</section>
-<section style="text-align:center; padding:30px; background:#101a30; color:white;">
-  <h2>IMRAN KHAN 🇵🇰</h2>
+</main>
 
-  <img
-    src="https://commons.wikimedia.org/wiki/Special:FilePath/Imran_Khan%2C_portrait.jpg"
-    alt="Imran Khan"
-    style="width:220px; max-width:90%; border-radius:15px;"
-  >
-
-  <p>Pakistan Zindabad 🇵🇰</p>
-</section>
+<footer>
+  <strong>SHAHZAD OFFICIAL 007</strong>
+  <br>
+  Created with ❤️ by Shahzad
+  <br>
+  © 2026 All Rights Reserved
 </footer>
-
 
 </body>
 </html>
+    
