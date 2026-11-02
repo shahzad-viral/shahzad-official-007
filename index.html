@@ -5,282 +5,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SHAHZAD OFFICIAL 007</title>
-<meta name="description" content="Shahzad Official 007 - Friendship, College and Inspiration.">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-  font-family:Arial,sans-serif;
-  background:#080d18;
-  color:white;
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+    text-align: center;
 }
 
-:root{
-  --gold:#e9c46a;
-  --card:#111c30;
+header {
+    padding: 35px 15px;
+    background: linear-gradient(135deg, #111, #24200e);
+    border-bottom: 2px solid gold;
 }
 
-header{
-  padding:20px 7%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:15px;
-  background:#080d18;
-  border-bottom:1px solid #66532b;
-  position:sticky;
-  top:0;
-  z-index:10;
+header h1 {
+    color: gold;
+    font-size: 30px;
+    letter-spacing: 2px;
 }
 
-.logo{
-  color:var(--gold);
-  font-size:20px;
-  font-weight:bold;
+header p {
+    color: #ddd;
+    margin-top: 12px;
 }
 
-nav a{
-  color:white;
-  text-decoration:none;
-  margin:0 7px;
-  font-size:13px;
+section {
+    padding: 30px 15px;
 }
 
-nav a:hover{
-  color:var(--gold);
+h2 {
+    color: gold;
+    margin-bottom: 20px;
 }
 
-.hero{
-  min-height:80vh;
-  padding:70px 20px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background:radial-gradient(circle,#263958,#080d18 70%);
+.card {
+    background: #151515;
+    border: 1px solid #8c741f;
+    border-radius: 15px;
+    padding: 25px 15px;
+    margin: 15px auto;
+    max-width: 500px;
+    box-shadow: 0 0 12px #29220c;
 }
 
-.tag{
-  color:var(--gold);
-  border:1px solid var(--gold);
-  padding:10px 22px;
-  border-radius:30px;
-  letter-spacing:3px;
-  font-size:12px;
-  margin-bottom:25px;
+.card h3 {
+    color: gold;
+    font-size: 23px;
+    margin-bottom: 12px;
 }
 
-.hero h1{
-  font-size:clamp(38px,8vw,75px);
-  line-height:1.2;
+.card p {
+    color: #ddd;
+    line-height: 1.7;
 }
 
-.hero h1 span{
-  color:var(--gold);
+.college {
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.6;
 }
 
-.hero p{
-  color:#b9c4d5;
-  margin-top:20px;
-  line-height:1.8;
-  max-width:550px;
+.social-box {
+    background: #151515;
+    border: 1px solid gold;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 12px auto;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  background:var(--gold);
-  color:#101522;
-  padding:14px 27px;
-  text-decoration:none;
-  border-radius:5px;
-  font-weight:bold;
+.social-box h3 {
+    color: gold;
+    margin-bottom: 8px;
 }
 
-section{
-  padding:75px 8%;
+.coming {
+    color: #aaa;
+    letter-spacing: 2px;
+    font-size: 13px;
 }
 
-.title{
-  text-align:center;
-  font-size:32px;
-  margin-bottom:12px;
+footer {
+    padding: 25px 10px;
+    background: #111;
+    border-top: 1px solid gold;
+    color: #aaa;
+    line-height: 1.8;
 }
 
-.title span{
-  color:var(--gold);
-}
-
-.line{
-  height:3px;
-  width:65px;
-  background:var(--gold);
-  margin:0 auto 40px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
-  max-width:950px;
-  margin:auto;
-}
-
-.card{
-  background:var(--card);
-  border:1px solid #34415a;
-  padding:30px 20px;
-  text-align:center;
-  border-radius:14px;
-  transition:.3s;
-}
-
-.card:hover{
-  transform:translateY(-7px);
-  border-color:var(--gold);
-}
-
-.icon{
-  font-size:55px;
-  margin-bottom:18px;
-}
-
-.card h3{
-  color:var(--gold);
-  margin-bottom:12px;
-}
-
-.card p{
-  color:#b9c4d5;
-  line-height:1.7;
-}
-
-.friendship{
-  background:#0b1220;
-}
-
-.friend-text{
-  max-width:850px;
-  margin:auto;
-  padding:30px;
-  text-align:center;
-  background:var(--card);
-  border:1px solid #34415a;
-  border-radius:14px;
-  color:#c5cedb;
-  line-height:1.9;
-}
-
-.college{
-  background:#0d1524;
-}
-
-.college-box{
-  max-width:850px;
-  margin:auto;
-  background:var(--card);
-  padding:35px;
-  text-align:center;
-  border:1px solid #34415a;
-  border-radius:14px;
-}
-
-.college-box h3{
-  color:var(--gold);
-  font-size:25px;
-  margin-bottom:15px;
-}
-
-.college-box p{
-  color:#b9c4d5;
-  line-height:1.8;
-}
-
-.maryam{
-  background:#080d18;
-}
-
-.maryam-box{
-  max-width:850px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-  background:var(--card);
-  border:1px solid #34415a;
-  border-radius:15px;
-  padding:25px;
-}
-
-.maryam-box img{
-  width:250px;
-  height:320px;
-  object-fit:cover;
-  border-radius:12px;
-  border:2px solid var(--gold);
-}
-
-.maryam-info{
-  flex:1;
-  min-width:230px;
-}
-
-.maryam-info h2{
-  color:var(--gold);
-  font-size:28px;
-  margin-bottom:15px;
-}
-
-.maryam-info p{
-  color:#c1cada;
-  line-height:1.8;
-  margin-bottom:12px;
-}
-
-.credit{
-  font-size:11px;
-  color:#8995a8;
-}
-
-footer{
-  background:#050912;
-  text-align:center;
-  padding:35px 15px;
-  border-top:1px solid #34415a;
-  color:#8995a8;
-  line-height:2;
-}
-
-footer strong{
-  color:var(--gold);
-}
-
-@media(max-width:600px){
-  header{
-    justify-content:center;
-  }
-
-  nav{
-    text-align:center;
-  }
-
-  .maryam-box{
-    text-align:center;
-  }
-
-  section{
-    padding:60px 6%;
-  }
+footer span {
+    color: gold;
 }
 </style>
 </head>
@@ -288,139 +111,73 @@ footer strong{
 <body>
 
 <header>
-  <div class="logo">SHAHZAD OFFICIAL 007</div>
-
-  <nav>
-    <a href="#home">HOME</a>
-    <a href="#friends">FRIENDS</a>
-    <a href="#college">COLLEGE</a>
-    <a href="#maryam">MARYAM NAWAZ</a>
-  </nav>
+    <h1>👑 SHAHZAD OFFICIAL 007</h1>
+    <p>Welcome To Our Official Website</p>
+    <p>Friendship • Education • Success</p>
 </header>
 
-<main>
-
-<section class="hero" id="home">
-  <div class="tag">WELCOME TO OUR WORLD</div>
-
-  <h1>SHAHZAD<br><span>OFFICIAL 007</span></h1>
-
-  <p>
-    Friendship, Education and Memories.
-    A special digital place created by Shahzad.
-  </p>
-
-  <a href="#friends" class="btn">EXPLORE WEBSITE</a>
-</section>
-
-<section id="friends">
-  <h2 class="title">OUR <span>FRIENDS</span></h2>
-  <div class="line"></div>
-
-  <div class="cards">
+<section>
+    <h2>🤝 TWO FRIENDS</h2>
 
     <div class="card">
-      <div class="icon">👑</div>
-      <h3>SHAHZAD</h3>
-      <p>Founder of Shahzad Official 007.</p>
+        <h3>👑 SHAHZAD</h3>
+        <p>
+            Welcome to my official profile.
+            Dreams are big, goals are clear,
+            and the journey has just begun.
+        </p>
     </div>
 
     <div class="card">
-      <div class="icon">🤝</div>
-      <h3>RASHID</h3>
-      <p>A special friend and partner in memories.</p>
+        <h3>🤝 RASHID</h3>
+        <p>
+            A true friend and an important part
+            of this journey. Friendship, respect
+            and success forever.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>🏫 OUR COLLEGE</h2>
+
+    <div class="card">
+        <p class="college">
+            KIPS COLLEGE<br>
+            DOKOTA BOYS CAMPUS
+        </p>
+        <p>Education is the key to success.</p>
+    </div>
+</section>
+
+<section>
+    <h2>📱 OUR SOCIAL MEDIA</h2>
+
+    <div class="social-box">
+        <h3>▶ YouTube</h3>
+        <p class="coming">COMING SOON</p>
     </div>
 
-  </div>
-</section>
-
-<section class="friendship">
-  <h2 class="title">OUR <span>FRIENDSHIP ❤️</span></h2>
-  <div class="line"></div>
-
-  <div class="friend-text">
-    <p>
-      True friendship is one of the most beautiful
-      gifts in life. Shahzad and Rashid share a
-      special bond built on trust, respect and
-      unforgettable memories.
-      <br><br>
-      Friends are not just people we meet;
-      they are the people who make life's journey
-      more meaningful.
-    </p>
-  </div>
-</section>
-
-<section class="college" id="college">
-  <h2 class="title">OUR <span>COLLEGE 🎓</span></h2>
-  <div class="line"></div>
-
-  <div class="college-box">
-    <h3>KIPS COLLEGE</h3>
-
-    <p>
-      DOKOTA BOYS CAMPUS
-      <br><br>
-      Education • Friendship • Memories
-      <br>
-      A place of learning, growth and new dreams.
-    </p>
-  </div>
-</section>
-
-<section class="maryam" id="maryam">
-  <h2 class="title">SPECIAL <span>PERSONALITY</span></h2>
-  <div class="line"></div>
-
-  <div class="maryam-box">
-
-    <img
-      src="https://commons.wikimedia.org/wiki/Special:FilePath/Maryam_Nawaz_CM.jpg"
-      alt="Maryam Nawaz Sharif"
-      loading="lazy"
-    >
-
-    <div class="maryam-info">
-      <h2>MARYAM NAWAZ SHARIF 🇵🇰</h2>
-
-      <p>
-        Maryam Nawaz Sharif is a Pakistani
-        political leader and the first woman
-        to serve as Chief Minister of Punjab.
-      </p>
-
-      <p>
-        She has been involved in public service
-        and provincial leadership in Pakistan.
-      </p>
-
-      <p><strong>PAKISTAN ZINDABAD 🇵🇰</strong></p>
-
-      <p class="credit">
-        Photo: Wikimedia Commons.
-        Licensed under CC BY 4.0.
-      </p>
-
-      <a class="btn"
-         href="https://commons.wikimedia.org/wiki/File:Maryam_Nawaz_CM.jpg"
-         target="_blank"
-         rel="noopener">
-         PHOTO SOURCE
-      </a>
+    <div class="social-box">
+        <h3>🎵 TikTok</h3>
+        <p class="coming">COMING SOON</p>
     </div>
 
-  </div>
-</section>
+    <div class="social-box">
+        <h3>📸 Instagram</h3>
+        <p class="coming">COMING SOON</p>
+    </div>
 
-</main>
+    <div class="social-box">
+        <h3>📘 Facebook</h3>
+        <p class="coming">COMING SOON</p>
+    </div>
+</section>
 
 <footer>
-  <strong>SHAHZAD OFFICIAL 007</strong>
-  <br>
-  Created with ❤️ by Shahzad & Rashid
-  <br>
-  © 2026 All Rights Reserved
+    <p><span>SHAHZAD OFFICIAL 007</span></p>
+    <p>Created with ❤️ by Shahzad & Rashid</p>
+    <p>© 2026 All Rights Reserved</p>
 </footer>
 
 </body>
