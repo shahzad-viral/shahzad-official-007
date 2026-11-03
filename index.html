@@ -3,182 +3,421 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="theme-color" content="#050505">
 <title>SHAHZAD OFFICIAL 007</title>
+<meta name="description" content="Welcome to Shahzad Official 007 - Six Friends, One Legacy.">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #080808;
-    color: white;
-    text-align: center;
+html{scroll-behavior:smooth}
+
+body{
+ background:#050505;
+ color:white;
+ font-family:Arial,sans-serif;
+ overflow-x:hidden;
 }
 
-header {
-    padding: 35px 15px;
-    background: linear-gradient(135deg, #111, #24200e);
-    border-bottom: 2px solid gold;
+body::before{
+ content:"";
+ position:fixed;
+ inset:0;
+ background:
+ radial-gradient(circle at 20% 20%,#39260044,transparent 35%),
+ radial-gradient(circle at 80% 70%,#76500022,transparent 35%);
+ z-index:-2;
 }
 
-header h1 {
-    color: gold;
-    font-size: 30px;
-    letter-spacing: 2px;
+#particles{
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ z-index:-1;
 }
 
-header p {
-    color: #ddd;
-    margin-top: 12px;
+.particle{
+ position:absolute;
+ width:3px;
+ height:3px;
+ background:#ffd700;
+ border-radius:50%;
+ box-shadow:0 0 12px gold;
+ animation:float 8s infinite linear;
 }
 
-section {
-    padding: 30px 15px;
+@keyframes float{
+ 0%{transform:translateY(100vh);opacity:0}
+ 20%{opacity:1}
+ 100%{transform:translateY(-10vh);opacity:0}
 }
 
-h2 {
-    color: gold;
-    margin-bottom: 20px;
+header{
+ position:fixed;
+ top:0;
+ width:100%;
+ padding:18px 6%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ background:#050505cc;
+ backdrop-filter:blur(15px);
+ border-bottom:1px solid #b58b28;
+ z-index:100;
 }
 
-.card {
-    background: #151515;
-    border: 1px solid #8c741f;
-    border-radius: 15px;
-    padding: 25px 15px;
-    margin: 15px auto;
-    max-width: 500px;
-    box-shadow: 0 0 12px #29220c;
+.logo{
+ color:#ffd700;
+ font-size:19px;
+ font-weight:900;
+ letter-spacing:2px;
 }
 
-.card h3 {
-    color: gold;
-    font-size: 23px;
-    margin-bottom: 12px;
+nav a{
+ color:white;
+ text-decoration:none;
+ margin-left:18px;
+ font-size:12px;
+ transition:.3s;
 }
 
-.card p {
-    color: #ddd;
-    line-height: 1.7;
+nav a:hover{color:gold}
+
+.hero{
+ min-height:100vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ padding:110px 20px 60px;
 }
 
-.college {
-    color: white;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 1.6;
+.hero-content{
+ max-width:850px;
+ animation:reveal 1.5s ease;
 }
 
-.social-box {
-    background: #151515;
-    border: 1px solid gold;
-    border-radius: 12px;
-    padding: 20px;
-    max-width: 500px;
-    margin: 12px auto;
+@keyframes reveal{
+ from{opacity:0;transform:translateY(40px)}
+ to{opacity:1;transform:translateY(0)}
 }
 
-.social-box h3 {
-    color: gold;
-    margin-bottom: 8px;
+.badge{
+ display:inline-block;
+ border:1px solid #d6a928;
+ color:#ffd700;
+ padding:10px 20px;
+ border-radius:30px;
+ font-size:11px;
+ letter-spacing:4px;
+ margin-bottom:25px;
 }
 
-.coming {
-    color: #aaa;
-    letter-spacing: 2px;
-    font-size: 13px;
+.hero h1{
+ font-size:clamp(40px,9vw,90px);
+ font-weight:1000;
+ letter-spacing:3px;
+ background:linear-gradient(90deg,#fff0a0,#d69b13,#fff4a8,#a66c00);
+ background-size:300%;
+ -webkit-background-clip:text;
+ background-clip:text;
+ color:transparent;
+ animation:gold 5s infinite linear;
 }
 
-footer {
-    padding: 25px 10px;
-    background: #111;
-    border-top: 1px solid gold;
-    color: #aaa;
-    line-height: 1.8;
+@keyframes gold{
+ 0%{background-position:0%}
+ 100%{background-position:300%}
 }
 
-footer span {
-    color: gold;
+.hero p{
+ color:#c7c7c7;
+ margin:22px 0;
+ letter-spacing:4px;
+ font-size:13px;
+}
+
+.btn{
+ display:inline-block;
+ padding:15px 30px;
+ margin:10px;
+ border-radius:30px;
+ background:linear-gradient(120deg,#ffd700,#a66c00);
+ color:#090909;
+ font-weight:bold;
+ text-decoration:none;
+ transition:.3s;
+}
+
+.btn:hover{
+ transform:scale(1.08);
+ box-shadow:0 0 30px #ffd70088;
+}
+
+section{
+ padding:90px 7%;
+ text-align:center;
+}
+
+.section-title{
+ font-size:35px;
+ color:#ffd700;
+ margin-bottom:15px;
+}
+
+.section-desc{
+ color:#aaa;
+ margin-bottom:45px;
+ font-size:14px;
+}
+
+.line{
+ width:90px;
+ height:3px;
+ background:gold;
+ margin:20px auto 30px;
+ box-shadow:0 0 15px gold;
+}
+
+.team{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:25px;
+ max-width:1100px;
+ margin:auto;
+}
+
+.card{
+ position:relative;
+ padding:35px 15px;
+ border:1px solid #a77d25;
+ border-radius:18px;
+ background:linear-gradient(145deg,#171717,#080808);
+ overflow:hidden;
+ transition:.4s;
+}
+
+.card::before{
+ content:"";
+ position:absolute;
+ top:-100%;
+ left:-50%;
+ width:200%;
+ height:100%;
+ background:linear-gradient(transparent,#ffd70018,transparent);
+ transform:rotate(25deg);
+ transition:.6s;
+}
+
+.card:hover::before{top:100%}
+
+.card:hover{
+ transform:translateY(-12px);
+ border-color:#ffe16b;
+ box-shadow:0 10px 35px #ffd70025;
+}
+
+.number{
+ width:65px;
+ height:65px;
+ border-radius:50%;
+ border:2px solid gold;
+ display:grid;
+ place-items:center;
+ margin:0 auto 20px;
+ color:gold;
+ font-size:25px;
+ box-shadow:0 0 20px #ffd70033;
+}
+
+.card h3{
+ color:#ffe18a;
+ font-size:21px;
+ letter-spacing:2px;
+ margin-bottom:10px;
+}
+
+.card p{
+ color:#888;
+ font-size:12px;
+ letter-spacing:2px;
+}
+
+.social-box{
+ max-width:650px;
+ margin:auto;
+ padding:40px 20px;
+ border:1px solid #b58b28;
+ border-radius:20px;
+ background:linear-gradient(145deg,#17120a,#080808);
+}
+
+.social-box h3{
+ color:gold;
+ font-size:26px;
+ margin-bottom:15px;
+}
+
+.social-box p{
+ color:#aaa;
+ margin-bottom:20px;
+}
+
+.tiktok{
+ display:inline-block;
+ padding:16px 35px;
+ border-radius:30px;
+ background:linear-gradient(90deg,#ff0050,#111,#00f2ea);
+ color:white;
+ text-decoration:none;
+ font-weight:bold;
+ transition:.3s;
+}
+
+.tiktok:hover{
+ transform:scale(1.1);
+ box-shadow:0 0 25px #ff005088;
+}
+
+footer{
+ border-top:1px solid #6c5018;
+ padding:35px 15px;
+ text-align:center;
+ color:#888;
+ font-size:12px;
+ line-height:2;
+}
+
+footer span{color:gold}
+
+@media(max-width:600px){
+ header{padding:15px 4%}
+ .logo{font-size:15px}
+ nav a{margin-left:8px;font-size:10px}
+ section{padding:75px 5%}
+ .section-title{font-size:28px}
 }
 </style>
 </head>
 
 <body>
 
+<div id="particles"></div>
+
 <header>
-    <h1>👑 SHAHZAD OFFICIAL 007</h1>
-    <p>Welcome To Our Official Website</p>
-    <p>Friendship • Education • Success</p>
+ <div class="logo">👑 SHAHZAD 007</div>
+ <nav>
+  <a href="#home">HOME</a>
+  <a href="#team">TEAM</a>
+  <a href="#social">TIKTOK</a>
+ </nav>
 </header>
 
-<section>
-    <h2>🤝 TWO FRIENDS</h2>
+<div class="hero" id="home">
+ <div class="hero-content">
+  <div class="badge">WELCOME TO OUR WORLD</div>
 
-    <div class="card">
-        <h3>👑 SHAHZAD</h3>
-        <p>
-            Welcome to my official profile.
-            Dreams are big, goals are clear,
-            and the journey has just begun.
-        </p>
-    </div>
+  <h1>SHAHZAD<br>OFFICIAL 007</h1>
 
-    <div class="card">
-        <h3>🤝 RASHID</h3>
-        <p>
-            A true friend and an important part
-            of this journey. Friendship, respect
-            and success forever.
-        </p>
-    </div>
+  <p>SIX FRIENDS • ONE LEGACY</p>
+
+  <a href="#team" class="btn">EXPLORE OUR TEAM ✦</a>
+  <a href="#social" class="btn">FOLLOW US ↗</a>
+ </div>
+</div>
+
+<section id="team">
+
+ <h2 class="section-title">THE LEGENDS 👑</h2>
+ <div class="line"></div>
+
+ <p class="section-desc">
+  Six Different Personalities. One Amazing Friendship.
+ </p>
+
+ <div class="team">
+
+  <div class="card">
+   <div class="number">01</div>
+   <h3>SHAHZAD</h3>
+   <p>FOUNDER & CREATOR</p>
+  </div>
+
+  <div class="card">
+   <div class="number">02</div>
+   <h3>RASHID</h3>
+   <p>TEAM MEMBER</p>
+  </div>
+
+  <div class="card">
+   <div class="number">03</div>
+   <h3>ZAHEER</h3>
+   <p>TEAM MEMBER</p>
+  </div>
+
+  <div class="card">
+   <div class="number">04</div>
+   <h3>QASIM</h3>
+   <p>TEAM MEMBER</p>
+  </div>
+
+  <div class="card">
+   <div class="number">05</div>
+   <h3>AHMAD</h3>
+   <p>TEAM MEMBER</p>
+  </div>
+
+  <div class="card">
+   <div class="number">06</div>
+   <h3>ABDUL AHAD</h3>
+   <p>TEAM MEMBER</p>
+  </div>
+
+ </div>
 </section>
 
-<section>
-    <h2>🏫 OUR COLLEGE</h2>
+<section id="social">
 
-    <div class="card">
-        <p class="college">
-            KIPS COLLEGE<br>
-            DOKOTA BOYS CAMPUS
-        </p>
-        <p>Education is the key to success.</p>
-    </div>
-</section>
+ <h2 class="section-title">CONNECT WITH US</h2>
+ <div class="line"></div>
 
-<section>
-    <h2>📱 OUR SOCIAL MEDIA</h2>
+ <div class="social-box">
+  <h3>🎵 TIKTOK</h3>
+  <p>Follow our official TikTok profile.</p>
 
-    <div class="social-box">
-        <h3>▶ YouTube</h3>
-        <p class="coming">COMING SOON</p>
-    </div>
+  <a class="tiktok"
+  href="https://www.tiktok.com/@rana.editor33"
+  target="_blank"
+  rel="noopener noreferrer">
+  FOLLOW @RANA.EDITOR33 ↗
+  </a>
+ </div>
 
-    <div class="social-box">
-        <h3>🎵 TikTok</h3>
-        <p class="coming">COMING SOON</p>
-    </div>
-
-    <div class="social-box">
-        <h3>📸 Instagram</h3>
-        <p class="coming">COMING SOON</p>
-    </div>
-
-    <div class="social-box">
-        <h3>📘 Facebook</h3>
-        <p class="coming">COMING SOON</p>
-    </div>
 </section>
 
 <footer>
-    <p><span>SHAHZAD OFFICIAL 007</span></p>
-    <p>Created with ❤️ by Shahzad & Rashid</p>
-    <p>© 2026 All Rights Reserved</p>
+ <p>© 2026 <span>SHAHZAD OFFICIAL 007</span></p>
+ <p>CREATED WITH ❤️ BY SHAHZAD & FRIENDS</p>
+ <p>FRIENDSHIP • RESPECT • SUCCESS</p>
 </footer>
+
+<script>
+const particles=document.getElementById("particles");
+
+for(let i=0;i<55;i++){
+ const p=document.createElement("div");
+ p.className="particle";
+ p.style.left=Math.random()*100+"%";
+ p.style.animationDuration=(5+Math.random()*10)+"s";
+ p.style.animationDelay=Math.random()*8+"s";
+ p.style.opacity=Math.random();
+ particles.appendChild(p);
+}
+</script>
 
 </body>
 </html>
