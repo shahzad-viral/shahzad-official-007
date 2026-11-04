@@ -3,219 +3,240 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050510">
+
 <title>SHAHZAD OFFICIAL 007</title>
 
-<meta name="description" content="Welcome to Shahzad Official 007 - AI Enthusiast, Technology Lover and Digital Creator.">
+<meta name="description" content="Shahzad Official 007 - AI Enthusiast, Technology Lover and Digital Creator.">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
 background:#050510;
 color:white;
+font-family:Arial,sans-serif;
 overflow-x:hidden;
 }
-
 body:before{
 content:"";
 position:fixed;
-width:100%;
-height:100%;
+inset:0;
 background:
-radial-gradient(circle at 20% 20%,#17105b 0,transparent 35%),
-radial-gradient(circle at 80% 70%,#501044 0,transparent 35%);
+radial-gradient(circle at 15% 20%,#17104d 0,transparent 35%),
+radial-gradient(circle at 85% 75%,#451044 0,transparent 35%);
 z-index:-1;
 }
-
 header{
-padding:22px;
+position:sticky;
+top:0;
+z-index:10;
+padding:20px;
 text-align:center;
+background:#050510dd;
+backdrop-filter:blur(15px);
 border-bottom:1px solid #ffffff20;
 }
-
 .logo{
-font-size:24px;
-font-weight:bold;
-letter-spacing:3px;
-background:linear-gradient(90deg,cyan,magenta,yellow,lime,cyan);
-background-size:400%;
--webkit-background-clip:text;
-color:transparent;
-animation:colors 5s linear infinite;
-}
-
-@keyframes colors{
-0%{background-position:0%}
-100%{background-position:400%}
-}
-
-.hero{
-min-height:85vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:25px;
-}
-
-.badge{
-border:1px solid #00ffff80;
-padding:9px 20px;
-border-radius:30px;
-color:#00ffff;
-font-size:12px;
-letter-spacing:2px;
-margin-bottom:25px;
-}
-
-.hero h1{
-font-size:clamp(42px,9vw,75px);
+font-size:23px;
 font-weight:900;
-margin-bottom:15px;
+letter-spacing:3px;
 background:linear-gradient(90deg,#00ffff,#ff00ff,#ffff00,#00ff88,#00ffff);
 background-size:400%;
 -webkit-background-clip:text;
 color:transparent;
-animation:colors 6s linear infinite;
+animation:rainbow 6s linear infinite;
 }
-
+@keyframes rainbow{
+to{background-position:400%}
+}
+nav{
+display:flex;
+justify-content:center;
+gap:22px;
+flex-wrap:wrap;
+margin-top:16px;
+}
+nav a{
+color:#bbb;
+text-decoration:none;
+font-size:13px;
+transition:.3s;
+}
+nav a:hover{color:#00ffff}
+.hero{
+min-height:85vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+padding:30px 20px;
+}
+.tag{
+border:1px solid #00ffff80;
+padding:10px 22px;
+border-radius:30px;
+font-size:11px;
+letter-spacing:3px;
+color:#00ffff;
+margin-bottom:28px;
+}
+.hero h1{
+font-size:clamp(48px,11vw,95px);
+font-weight:900;
+letter-spacing:5px;
+background:linear-gradient(90deg,#00ffff,#ff00ff,#ffff00,#00ff88);
+background-size:300%;
+-webkit-background-clip:text;
+color:transparent;
+animation:rainbow 5s linear infinite;
+}
 .hero p{
-color:#c4c4dc;
-font-size:16px;
-line-height:1.8;
-max-width:550px;
+max-width:580px;
+color:#aaa;
+line-height:1.9;
+margin-top:22px;
 }
-
 .btn{
 display:inline-block;
 margin-top:30px;
-padding:14px 30px;
+padding:15px 32px;
 border-radius:30px;
-background:linear-gradient(90deg,#00c6ff,#9d00ff);
+background:linear-gradient(90deg,#00bfff,#8200ff);
 color:white;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 0 25px #8000ff60;
 transition:.3s;
-border:none;
+border:0;
 cursor:pointer;
 }
-
 .btn:hover{
-transform:scale(1.08);
-box-shadow:0 0 35px #00ffff;
+transform:translateY(-4px);
+box-shadow:0 0 30px #7600ff80;
 }
-
 section{
-padding:65px 20px;
+padding:75px 20px;
 text-align:center;
 }
-
-.heading{
-font-size:32px;
+.title{
+font-size:34px;
 margin-bottom:35px;
 }
-
-.heading span{
-background:linear-gradient(90deg,#00ffff,#ff00ff);
--webkit-background-clip:text;
-color:transparent;
-}
-
+.title span{color:#00d9ff}
 .card{
-max-width:650px;
-margin:18px auto;
-padding:30px 22px;
+max-width:700px;
+margin:20px auto;
+padding:35px 25px;
 background:#ffffff09;
 border:1px solid #ffffff20;
 border-radius:22px;
 backdrop-filter:blur(15px);
-box-shadow:0 10px 35px #00000050;
 transition:.3s;
 }
-
 .card:hover{
-transform:translateY(-7px);
+transform:translateY(-6px);
 border-color:#00ffff;
+box-shadow:0 10px 40px #00ffff15;
 }
-
 .card h3{
-font-size:23px;
-margin-bottom:15px;
+font-size:25px;
+margin-bottom:17px;
 }
-
 .card p{
-color:#c4c4dc;
-line-height:1.8;
+color:#bcbccc;
+line-height:1.9;
 }
-
-.ai-icon{
-font-size:55px;
-margin-bottom:15px;
+.skills{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-top:25px;
 }
-
+.skill{
+padding:11px 18px;
+border:1px solid #00ffff50;
+border-radius:30px;
+color:#00ffff;
+font-size:13px;
+}
+.friend{
+display:inline-block;
+min-width:180px;
+padding:25px;
+margin:10px;
+background:#111124;
+border:1px solid #ffffff20;
+border-radius:18px;
+}
+.friend h3{
+color:#00ffff;
+font-size:21px;
+}
+.friend p{font-size:13px}
 .socials{
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
+flex-wrap:wrap;
 gap:15px;
+margin-top:25px;
 }
-
 .social{
 padding:15px 25px;
-border-radius:15px;
+background:#151525;
 border:1px solid #ffffff30;
-background:#ffffff10;
+border-radius:12px;
 color:white;
 text-decoration:none;
 transition:.3s;
 }
-
 .social:hover{
-background:linear-gradient(90deg,#00bfff,#a000ff);
-transform:scale(1.08);
+background:#00a9d6;
+transform:translateY(-5px);
 }
-
-.friend{
-display:inline-block;
-padding:18px 35px;
-margin:10px;
-border-radius:18px;
-background:#ffffff10;
-border:1px solid #00ffff60;
+.special{
+background:linear-gradient(135deg,#10102a,#080810);
 }
-
-.friend h3{
+.special .card{
+border-color:#9b00ff70;
+}
+.special h3{
+background:linear-gradient(90deg,#00ffff,#ff00ff);
+-webkit-background-clip:text;
+color:transparent;
+}
+#surprise{
+margin-top:22px;
 color:#00ffff;
-margin-bottom:5px;
+font-weight:bold;
+font-size:18px;
 }
-
-.surprise{
-background:linear-gradient(135deg,#120d35,#24104a);
-}
-
 footer{
+padding:35px 15px;
 text-align:center;
-padding:30px 15px;
 border-top:1px solid #ffffff20;
-color:#aaa;
+color:#888;
 line-height:2;
 font-size:13px;
 }
-
-#message{
-margin-top:20px;
-color:#00ffff;
-font-size:18px;
-font-weight:bold;
+.top{
+position:fixed;
+bottom:20px;
+right:18px;
+background:#00bfff;
+color:white;
+padding:13px 17px;
+border-radius:50%;
+text-decoration:none;
 }
-
+@media(max-width:600px){
+.logo{font-size:18px}
+nav{gap:15px}
+.title{font-size:28px}
+.card{padding:27px 18px}
+.hero h1{letter-spacing:2px}
+}
 </style>
 </head>
 
@@ -223,132 +244,104 @@ font-weight:bold;
 
 <header>
 <div class="logo">SHAHZAD OFFICIAL 007</div>
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#team">TEAM</a>
+<a href="#social">SOCIAL</a>
+<a href="#vision">VISION</a>
+</nav>
 </header>
 
-<div class="hero">
-
-<div class="badge">WELCOME TO MY DIGITAL WORLD</div>
-
+<div class="hero" id="home">
+<div class="tag">WELCOME TO MY OFFICIAL WEBSITE</div>
 <h1>SHAHZAD</h1>
-
 <p>
-Dream Big. Think Different. Create Something Extraordinary.
-Welcome to my official website!
+Dream Big. Think Different. Build Your Future.
+Welcome to my personal digital world.
 </p>
-
-<a href="#about" class="btn">EXPLORE MY WORLD ↓</a>
-
+<a href="#about" class="btn">EXPLORE MY WORLD</a>
 </div>
 
 <section id="about">
-
-<h2 class="heading">ABOUT <span>ME</span></h2>
-
+<h2 class="title">ABOUT <span>ME</span></h2>
 <div class="card">
-
-<div class="ai-icon">🤖</div>
-
 <h3>I'm Shahzad</h3>
-
 <p>
-I am a technology lover and AI enthusiast.
-I have a special interest in Artificial Intelligence,
-website development, creative ideas and modern technology.
+I am an AI enthusiast and technology lover.
+Artificial Intelligence, website development and
+digital creativity are my biggest interests.
 
-I love exploring new AI tools, creating digital projects
-and learning something new every day.
+I love exploring modern AI tools, discovering new
+technologies and creating innovative digital projects.
 
-My dream is to become a successful digital creator
-and build something extraordinary.
+My mission is to learn something new every day
+and turn creative ideas into reality.
 </p>
-
+<div class="skills">
+<span class="skill">Artificial Intelligence</span>
+<span class="skill">Web Development</span>
+<span class="skill">Technology</span>
+<span class="skill">Digital Creativity</span>
 </div>
-
+</div>
 </section>
 
-<section>
-
-<h2 class="heading">MY <span>TEAM</span></h2>
-
+<section id="team">
+<h2 class="title">MY <span>TEAM</span></h2>
 <div class="card">
-
 <div class="friend">
-<h3>👑 SHAHZAD</h3>
+<h3>SHAHZAD</h3>
 <p>Owner & Founder</p>
 </div>
-
 <div class="friend">
-<h3>⭐ RASHID</h3>
-<p>My Friend</p>
+<h3>RASHID</h3>
+<p>Friend</p>
 </div>
-
 </div>
-
 </section>
 
-<section>
-
-<h2 class="heading">MY <span>SOCIAL WORLD</span></h2>
-
+<section id="social">
+<h2 class="title">SOCIAL <span>ACCOUNTS</span></h2>
 <div class="card">
-
-<p>Connect with me on social media!</p>
-
-<div class="socials" style="margin-top:25px;">
-
-<a class="social" href="https://www.tiktok.com/" target="_blank">🎵 TikTok</a>
-
-<a class="social" href="https://www.youtube.com/" target="_blank">▶ YouTube</a>
-
-<a class="social" href="https://www.instagram.com/" target="_blank">📸 Instagram</a>
-
-<a class="social" href="https://www.facebook.com/" target="_blank">🌐 Facebook</a>
-
+<p>Connect with me on my social platforms.</p>
+<div class="socials">
+<a class="social" href="https://www.tiktok.com/" target="_blank">TikTok</a>
+<a class="social" href="https://www.youtube.com/" target="_blank">YouTube</a>
+<a class="social" href="https://www.instagram.com/" target="_blank">Instagram</a>
+<a class="social" href="https://www.facebook.com/" target="_blank">Facebook</a>
 </div>
-
 </div>
-
 </section>
 
-<section class="surprise">
-
-<h2 class="heading">SPECIAL <span>ZONE</span></h2>
-
+<section class="special" id="vision">
+<h2 class="title">MY <span>VISION</span></h2>
 <div class="card">
-
-<div class="ai-icon">🚀</div>
-
-<h3>Something Extraordinary!</h3>
-
+<h3>THE FUTURE BELONGS TO CREATORS</h3>
 <p>
-This is not just a website.
-This is the beginning of a digital journey.
+I believe in creativity, innovation and continuous learning.
+Technology is changing the world, and I want to be part
+of that change.
+
+This is just the beginning of my digital journey.
 </p>
-
-<button class="btn" onclick="surprise()">CLICK FOR SURPRISE ✨</button>
-
-<div id="message"></div>
-
+<button class="btn" onclick="showSurprise()">DISCOVER SOMETHING</button>
+<div id="surprise"></div>
 </div>
-
 </section>
 
 <footer>
-
-<h3>👑 SHAHZAD OFFICIAL 007</h3>
-
-<p>Designed with passion ❤️</p>
-
-<p>© 2026 All Rights Reserved.</p>
-
+<h3>SHAHZAD OFFICIAL 007</h3>
+<p>Personal Website | AI Enthusiast | Digital Creator</p>
+<p>Copyright © 2026 Shahzad Official. All Rights Reserved.</p>
 </footer>
 
+<a href="#home" class="top">↑</a>
+
 <script>
-function surprise(){
-
-document.getElementById("message").innerHTML=
-"🔥 DREAM BIG! THE FUTURE IS YOURS! 🚀";
-
+function showSurprise(){
+document.getElementById("surprise").innerHTML=
+"YOUR IDEAS CAN CHANGE THE WORLD. KEEP CREATING.";
 }
 </script>
 
