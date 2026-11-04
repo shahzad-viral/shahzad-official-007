@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050510">
-
 <title>SHAHZAD OFFICIAL 007</title>
-
-<meta name="description" content="Shahzad Official 007 - AI Enthusiast, Technology Lover and Digital Creator.">
+<meta name="description" content="Shahzad Official 007 - AI Enthusiast and Digital Creator">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia,serif;
+}
 html{scroll-behavior:smooth}
 body{
-background:#050510;
-color:white;
-font-family:Arial,sans-serif;
+background:#050505;
+color:#fff;
 overflow-x:hidden;
 }
 body:before{
@@ -23,129 +24,133 @@ content:"";
 position:fixed;
 inset:0;
 background:
-radial-gradient(circle at 15% 20%,#17104d 0,transparent 35%),
-radial-gradient(circle at 85% 75%,#451044 0,transparent 35%);
+radial-gradient(circle at 50% 20%,#39260055,transparent 45%),
+radial-gradient(circle at 10% 80%,#5b3b0030,transparent 35%);
 z-index:-1;
 }
 header{
-position:sticky;
-top:0;
-z-index:10;
-padding:20px;
+padding:25px 15px;
 text-align:center;
-background:#050510dd;
-backdrop-filter:blur(15px);
-border-bottom:1px solid #ffffff20;
+border-bottom:1px solid #b58b35;
+background:#080808;
 }
 .logo{
-font-size:23px;
-font-weight:900;
-letter-spacing:3px;
-background:linear-gradient(90deg,#00ffff,#ff00ff,#ffff00,#00ff88,#00ffff);
-background-size:400%;
+font-size:24px;
+font-weight:bold;
+letter-spacing:4px;
+background:linear-gradient(90deg,#8c6820,#fff0a6,#d4a437,#fff3b0,#8c6820);
+background-size:300%;
 -webkit-background-clip:text;
 color:transparent;
-animation:rainbow 6s linear infinite;
+animation:gold 5s linear infinite;
 }
-@keyframes rainbow{
-to{background-position:400%}
+@keyframes gold{
+to{background-position:300%}
 }
 nav{
 display:flex;
 justify-content:center;
-gap:22px;
+gap:25px;
 flex-wrap:wrap;
-margin-top:16px;
+margin-top:20px;
 }
 nav a{
-color:#bbb;
+color:#d5bd83;
 text-decoration:none;
-font-size:13px;
+font-size:12px;
+letter-spacing:2px;
 transition:.3s;
 }
-nav a:hover{color:#00ffff}
+nav a:hover{color:#fff2b0}
 .hero{
-min-height:85vh;
+min-height:90vh;
 display:flex;
 align-items:center;
 justify-content:center;
 flex-direction:column;
 text-align:center;
 padding:30px 20px;
+position:relative;
 }
-.tag{
-border:1px solid #00ffff80;
-padding:10px 22px;
-border-radius:30px;
-font-size:11px;
-letter-spacing:3px;
-color:#00ffff;
-margin-bottom:28px;
+.line{
+width:100px;
+height:2px;
+background:linear-gradient(90deg,transparent,#e6bd59,transparent);
+margin:20px;
+}
+.small-title{
+color:#c9a34b;
+letter-spacing:5px;
+font-size:12px;
 }
 .hero h1{
 font-size:clamp(48px,11vw,95px);
-font-weight:900;
+font-weight:bold;
 letter-spacing:5px;
-background:linear-gradient(90deg,#00ffff,#ff00ff,#ffff00,#00ff88);
+background:linear-gradient(120deg,#8a6420,#fff0a0,#c99b35,#fff7ce,#967021);
 background-size:300%;
 -webkit-background-clip:text;
 color:transparent;
-animation:rainbow 5s linear infinite;
+animation:gold 5s linear infinite;
+text-shadow:0 0 30px #d6a83b20;
 }
 .hero p{
-max-width:580px;
-color:#aaa;
-line-height:1.9;
-margin-top:22px;
+max-width:600px;
+color:#c2bcae;
+line-height:2;
+font-size:16px;
 }
-.btn{
+.button{
 display:inline-block;
 margin-top:30px;
-padding:15px 32px;
-border-radius:30px;
-background:linear-gradient(90deg,#00bfff,#8200ff);
-color:white;
+padding:15px 35px;
+border:1px solid #c9a34b;
+color:#e6c36d;
 text-decoration:none;
-font-weight:bold;
-transition:.3s;
-border:0;
-cursor:pointer;
+letter-spacing:2px;
+transition:.4s;
 }
-.btn:hover{
-transform:translateY(-4px);
-box-shadow:0 0 30px #7600ff80;
+.button:hover{
+background:#c9a34b;
+color:#000;
+box-shadow:0 0 30px #c9a34b60;
 }
 section{
-padding:75px 20px;
+padding:85px 20px;
 text-align:center;
 }
-.title{
+.heading{
 font-size:34px;
-margin-bottom:35px;
+letter-spacing:3px;
+margin-bottom:40px;
+color:#f1d68b;
 }
-.title span{color:#00d9ff}
+.heading span{color:#fff}
 .card{
-max-width:700px;
+max-width:750px;
 margin:20px auto;
-padding:35px 25px;
-background:#ffffff09;
-border:1px solid #ffffff20;
-border-radius:22px;
-backdrop-filter:blur(15px);
-transition:.3s;
+padding:40px 25px;
+background:linear-gradient(145deg,#15120b,#080808);
+border:1px solid #8f6b29;
+box-shadow:0 0 30px #c49b3510;
+transition:.4s;
 }
 .card:hover{
-transform:translateY(-6px);
-border-color:#00ffff;
-box-shadow:0 10px 40px #00ffff15;
+border-color:#f5d77b;
+box-shadow:0 0 35px #c49b3530;
+transform:translateY(-5px);
 }
 .card h3{
 font-size:25px;
-margin-bottom:17px;
+color:#e8c36b;
+margin-bottom:20px;
 }
 .card p{
-color:#bcbccc;
-line-height:1.9;
+color:#c0b9a9;
+line-height:2;
+}
+.gold-text{
+color:#d9b65d;
 }
 .skills{
 display:flex;
@@ -155,86 +160,75 @@ gap:12px;
 margin-top:25px;
 }
 .skill{
-padding:11px 18px;
-border:1px solid #00ffff50;
-border-radius:30px;
-color:#00ffff;
+border:1px solid #92702f;
+padding:12px 18px;
+color:#e4c574;
 font-size:13px;
 }
 .friend{
 display:inline-block;
-min-width:180px;
-padding:25px;
-margin:10px;
-background:#111124;
-border:1px solid #ffffff20;
-border-radius:18px;
+min-width:190px;
+padding:30px 20px;
+margin:12px;
+border:1px solid #a47c32;
+background:#0c0a06;
 }
 .friend h3{
-color:#00ffff;
-font-size:21px;
+color:#eac86f;
+font-size:23px;
 }
-.friend p{font-size:13px}
+.friend p{
+font-size:13px;
+}
 .socials{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:15px;
-margin-top:25px;
+margin-top:30px;
 }
 .social{
 padding:15px 25px;
-background:#151525;
-border:1px solid #ffffff30;
-border-radius:12px;
-color:white;
+border:1px solid #a47c32;
+color:#e5c36b;
 text-decoration:none;
 transition:.3s;
 }
 .social:hover{
-background:#00a9d6;
-transform:translateY(-5px);
+background:#c9a34b;
+color:#000;
 }
-.special{
-background:linear-gradient(135deg,#10102a,#080810);
+.quote{
+max-width:800px;
+margin:auto;
+padding:50px 25px;
+border-top:1px solid #a47c32;
+border-bottom:1px solid #a47c32;
 }
-.special .card{
-border-color:#9b00ff70;
+.quote h2{
+font-size:clamp(25px,5vw,38px);
+color:#f0d68c;
+line-height:1.6;
 }
-.special h3{
-background:linear-gradient(90deg,#00ffff,#ff00ff);
--webkit-background-clip:text;
-color:transparent;
-}
-#surprise{
-margin-top:22px;
-color:#00ffff;
-font-weight:bold;
-font-size:18px;
+.quote p{
+margin-top:20px;
+color:#a58b50;
+letter-spacing:3px;
+font-size:12px;
 }
 footer{
-padding:35px 15px;
+padding:40px 15px;
 text-align:center;
-border-top:1px solid #ffffff20;
-color:#888;
-line-height:2;
+border-top:1px solid #8f6b29;
+color:#968b70;
+line-height:2.2;
 font-size:13px;
 }
-.top{
-position:fixed;
-bottom:20px;
-right:18px;
-background:#00bfff;
-color:white;
-padding:13px 17px;
-border-radius:50%;
-text-decoration:none;
-}
 @media(max-width:600px){
-.logo{font-size:18px}
+.logo{font-size:18px;letter-spacing:2px}
 nav{gap:15px}
-.title{font-size:28px}
-.card{padding:27px 18px}
+.heading{font-size:27px}
+.card{padding:30px 18px}
 .hero h1{letter-spacing:2px}
 }
 </style>
@@ -254,96 +248,142 @@ nav{gap:15px}
 </header>
 
 <div class="hero" id="home">
-<div class="tag">WELCOME TO MY OFFICIAL WEBSITE</div>
+
+<div class="small-title">THE OFFICIAL DIGITAL WORLD</div>
+<div class="line"></div>
+
 <h1>SHAHZAD</h1>
+
+<div class="line"></div>
+
 <p>
-Dream Big. Think Different. Build Your Future.
-Welcome to my personal digital world.
+Welcome to my personal world.
+A place of creativity, technology, ambition
+and extraordinary ideas.
 </p>
-<a href="#about" class="btn">EXPLORE MY WORLD</a>
+
+<a href="#about" class="button">DISCOVER MY WORLD</a>
+
 </div>
 
 <section id="about">
-<h2 class="title">ABOUT <span>ME</span></h2>
+
+<h2 class="heading">ABOUT ME</h2>
+
 <div class="card">
-<h3>I'm Shahzad</h3>
+
+<h3>SHAHZAD — AI ENTHUSIAST</h3>
+
 <p>
-I am an AI enthusiast and technology lover.
-Artificial Intelligence, website development and
-digital creativity are my biggest interests.
+I am Shahzad, a passionate technology lover
+with a deep interest in Artificial Intelligence.
 
-I love exploring modern AI tools, discovering new
-technologies and creating innovative digital projects.
+I enjoy exploring the world of AI, discovering
+modern technologies, creating digital projects
+and learning new skills.
 
-My mission is to learn something new every day
-and turn creative ideas into reality.
+My vision is to transform creative ideas
+into meaningful digital experiences.
+
+I believe that the future belongs to people
+who never stop learning, thinking and creating.
 </p>
+
 <div class="skills">
-<span class="skill">Artificial Intelligence</span>
-<span class="skill">Web Development</span>
-<span class="skill">Technology</span>
-<span class="skill">Digital Creativity</span>
+<span class="skill">ARTIFICIAL INTELLIGENCE</span>
+<span class="skill">WEB DEVELOPMENT</span>
+<span class="skill">TECHNOLOGY</span>
+<span class="skill">CREATIVITY</span>
 </div>
+
 </div>
 </section>
 
 <section id="team">
-<h2 class="title">MY <span>TEAM</span></h2>
+
+<h2 class="heading">MY TEAM</h2>
+
 <div class="card">
+
 <div class="friend">
 <h3>SHAHZAD</h3>
-<p>Owner & Founder</p>
+<p>OWNER & FOUNDER</p>
 </div>
+
 <div class="friend">
 <h3>RASHID</h3>
-<p>Friend</p>
+<p>FRIEND</p>
 </div>
+
 </div>
 </section>
 
 <section id="social">
-<h2 class="title">SOCIAL <span>ACCOUNTS</span></h2>
+
+<h2 class="heading">CONNECT WITH ME</h2>
+
 <div class="card">
-<p>Connect with me on my social platforms.</p>
+
+<p>Follow my digital journey on social media.</p>
+
 <div class="socials">
-<a class="social" href="https://www.tiktok.com/" target="_blank">TikTok</a>
-<a class="social" href="https://www.youtube.com/" target="_blank">YouTube</a>
-<a class="social" href="https://www.instagram.com/" target="_blank">Instagram</a>
-<a class="social" href="https://www.facebook.com/" target="_blank">Facebook</a>
+
+<a class="social" href="https://www.tiktok.com/" target="_blank">TIKTOK</a>
+
+<a class="social" href="https://www.youtube.com/" target="_blank">YOUTUBE</a>
+
+<a class="social" href="https://www.instagram.com/" target="_blank">INSTAGRAM</a>
+
+<a class="social" href="https://www.facebook.com/" target="_blank">FACEBOOK</a>
+
 </div>
 </div>
 </section>
 
-<section class="special" id="vision">
-<h2 class="title">MY <span>VISION</span></h2>
-<div class="card">
-<h3>THE FUTURE BELONGS TO CREATORS</h3>
-<p>
-I believe in creativity, innovation and continuous learning.
-Technology is changing the world, and I want to be part
-of that change.
+<section id="vision">
 
-This is just the beginning of my digital journey.
-</p>
-<button class="btn" onclick="showSurprise()">DISCOVER SOMETHING</button>
-<div id="surprise"></div>
+<h2 class="heading">MY VISION</h2>
+
+<div class="quote">
+
+<h2>
+"Greatness is not about being known by everyone.
+It is about creating something that speaks for you."
+</h2>
+
+<p>SHAHZAD OFFICIAL 007</p>
+
 </div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h3>THE JOURNEY HAS JUST BEGUN</h3>
+
+<p>
+Every great achievement starts with a small idea.
+Keep learning, keep improving and keep creating.
+Your future is built by what you do today.
+</p>
+
+</div>
+
 </section>
 
 <footer>
-<h3>SHAHZAD OFFICIAL 007</h3>
-<p>Personal Website | AI Enthusiast | Digital Creator</p>
+
+<h3 class="gold-text">SHAHZAD OFFICIAL 007</h3>
+
+<p>AI Enthusiast | Technology Lover | Digital Creator</p>
+
+<p>Designed with Vision and Creativity</p>
+
 <p>Copyright © 2026 Shahzad Official. All Rights Reserved.</p>
+
 </footer>
-
-<a href="#home" class="top">↑</a>
-
-<script>
-function showSurprise(){
-document.getElementById("surprise").innerHTML=
-"YOUR IDEAS CAN CHANGE THE WORLD. KEEP CREATING.";
-}
-</script>
 
 </body>
 </html>
