@@ -3,427 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050505">
-
 <title>SHAHZAD OFFICIAL 007</title>
 
-<meta name="description" content="Welcome to Shahzad Official 007. Six Friends, One Legacy.">
+<meta name="description" content="Welcome to Shahzad Official 007 - AI Enthusiast, Technology Lover and Digital Creator.">
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-html{scroll-behavior:smooth;}
-
 body{
-background:#030303;
+background:#050510;
 color:white;
-font-family:Arial,sans-serif;
 overflow-x:hidden;
 }
 
 body:before{
 content:"";
 position:fixed;
-inset:0;
+width:100%;
+height:100%;
 background:
-radial-gradient(circle at 15% 20%,#4b320044,transparent 35%),
-radial-gradient(circle at 85% 80%,#30200044,transparent 40%);
-z-index:-2;
-}
-
-#particles{
-position:fixed;
-inset:0;
-pointer-events:none;
+radial-gradient(circle at 20% 20%,#17105b 0,transparent 35%),
+radial-gradient(circle at 80% 70%,#501044 0,transparent 35%);
 z-index:-1;
 }
 
-.particle{
-position:absolute;
-width:3px;
-height:3px;
-background:gold;
-border-radius:50%;
-box-shadow:0 0 12px gold;
-animation:float 9s infinite linear;
-}
-
-@keyframes float{
-0%{transform:translateY(100vh);opacity:0;}
-20%{opacity:1;}
-100%{transform:translateY(-10vh);opacity:0;}
-}
-
-/* HEADER */
-
 header{
-position:fixed;
-top:0;
-width:100%;
-padding:18px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#050505dd;
-backdrop-filter:blur(15px);
-border-bottom:1px solid #a77d25;
-z-index:100;
+padding:22px;
+text-align:center;
+border-bottom:1px solid #ffffff20;
 }
 
 .logo{
-color:#ffd700;
-font-size:19px;
-font-weight:900;
-letter-spacing:2px;
+font-size:24px;
+font-weight:bold;
+letter-spacing:3px;
+background:linear-gradient(90deg,cyan,magenta,yellow,lime,cyan);
+background-size:400%;
+-webkit-background-clip:text;
+color:transparent;
+animation:colors 5s linear infinite;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:17px;
-font-size:12px;
-transition:.3s;
+@keyframes colors{
+0%{background-position:0%}
+100%{background-position:400%}
 }
-
-nav a:hover{color:gold;}
-
-/* HERO */
 
 .hero{
-min-height:100vh;
+min-height:85vh;
 display:flex;
-align-items:center;
+flex-direction:column;
 justify-content:center;
+align-items:center;
 text-align:center;
-padding:120px 20px 60px;
-}
-
-.hero-content{
-max-width:900px;
-animation:reveal 1.5s ease;
-}
-
-@keyframes reveal{
-from{opacity:0;transform:translateY(50px);}
-to{opacity:1;transform:translateY(0);}
+padding:25px;
 }
 
 .badge{
-display:inline-block;
-padding:12px 25px;
-border:1px solid gold;
+border:1px solid #00ffff80;
+padding:9px 20px;
 border-radius:30px;
-color:gold;
-font-size:11px;
-letter-spacing:4px;
-margin-bottom:30px;
+color:#00ffff;
+font-size:12px;
+letter-spacing:2px;
+margin-bottom:25px;
 }
 
 .hero h1{
-font-size:clamp(42px,9vw,95px);
-font-weight:1000;
-letter-spacing:3px;
-background:linear-gradient(
-90deg,#fff1a8,#d69b13,#ffffff,#a66c00
-);
-background-size:300%;
+font-size:clamp(42px,9vw,75px);
+font-weight:900;
+margin-bottom:15px;
+background:linear-gradient(90deg,#00ffff,#ff00ff,#ffff00,#00ff88,#00ffff);
+background-size:400%;
 -webkit-background-clip:text;
-background-clip:text;
 color:transparent;
-animation:gold 5s infinite linear;
-}
-
-@keyframes gold{
-0%{background-position:0%;}
-100%{background-position:300%;}
+animation:colors 6s linear infinite;
 }
 
 .hero p{
-color:#ccc;
-margin:25px 0;
-letter-spacing:5px;
-font-size:13px;
+color:#c4c4dc;
+font-size:16px;
+line-height:1.8;
+max-width:550px;
 }
 
 .btn{
 display:inline-block;
-padding:15px 30px;
-margin:10px;
+margin-top:30px;
+padding:14px 30px;
 border-radius:30px;
-background:linear-gradient(120deg,#ffe16b,#a66c00);
-color:black;
-font-weight:bold;
+background:linear-gradient(90deg,#00c6ff,#9d00ff);
+color:white;
 text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 25px #8000ff60;
 transition:.3s;
+border:none;
+cursor:pointer;
 }
 
 .btn:hover{
-transform:scale(1.1);
-box-shadow:0 0 30px gold;
+transform:scale(1.08);
+box-shadow:0 0 35px #00ffff;
 }
 
-/* SECTIONS */
-
 section{
-padding:95px 7%;
+padding:65px 20px;
 text-align:center;
 }
 
-.section-title{
-font-size:36px;
-color:#ffd700;
-letter-spacing:2px;
+.heading{
+font-size:32px;
+margin-bottom:35px;
 }
 
-.line{
-width:90px;
-height:3px;
-background:gold;
-margin:22px auto;
-box-shadow:0 0 20px gold;
-}
-
-.section-desc{
-color:#aaa;
-margin:20px 0 45px;
-font-size:14px;
-}
-
-/* OWNER */
-
-.owner-box{
-max-width:800px;
-margin:auto;
-padding:40px 25px;
-border:1px solid #d4a52b;
-border-radius:22px;
-background:linear-gradient(145deg,#211807,#080808);
-box-shadow:0 0 35px #d6a50022;
-transition:.4s;
-}
-
-.owner-box:hover{
-transform:translateY(-8px);
-box-shadow:0 0 40px #ffd70044;
-}
-
-.owner-icon{
-width:100px;
-height:100px;
-margin:0 auto 25px;
-border:2px solid gold;
-border-radius:50%;
-display:grid;
-place-items:center;
-font-size:45px;
-color:gold;
-box-shadow:0 0 25px #ffd70066;
-animation:ownerGlow 3s infinite alternate;
-}
-
-@keyframes ownerGlow{
-from{box-shadow:0 0 10px gold;}
-to{box-shadow:0 0 35px gold;}
-}
-
-.owner-box h3{
-color:gold;
-font-size:28px;
-margin-bottom:15px;
-}
-
-.owner-box p{
-color:#ccc;
-line-height:1.9;
-font-size:14px;
-}
-
-/* TEAM */
-
-.team{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:25px;
-max-width:1100px;
-margin:auto;
+.heading span{
+background:linear-gradient(90deg,#00ffff,#ff00ff);
+-webkit-background-clip:text;
+color:transparent;
 }
 
 .card{
-padding:35px 15px;
-border:1px solid #555;
-border-radius:20px;
-background:linear-gradient(145deg,#191919,#070707);
-transition:.4s;
-position:relative;
-overflow:hidden;
+max-width:650px;
+margin:18px auto;
+padding:30px 22px;
+background:#ffffff09;
+border:1px solid #ffffff20;
+border-radius:22px;
+backdrop-filter:blur(15px);
+box-shadow:0 10px 35px #00000050;
+transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-12px) scale(1.025);
-box-shadow:0 0 35px var(--glow);
-border-color:var(--color);
-}
-
-.number{
-width:85px;
-height:85px;
-margin:0 auto 25px;
-border-radius:50%;
-display:grid;
-place-items:center;
-font-size:27px;
-font-weight:900;
-color:var(--color);
-border:2px solid var(--color);
-background:#080808;
-box-shadow:0 0 12px var(--glow);
-animation:circleMove 3s infinite alternate ease-in-out,
-circleGlow 2s infinite alternate;
-}
-
-@keyframes circleMove{
-0%{transform:translateY(0) rotate(-5deg);}
-100%{transform:translateY(-12px) rotate(5deg);}
-}
-
-@keyframes circleGlow{
-from{box-shadow:0 0 8px var(--glow);}
-to{box-shadow:0 0 30px var(--glow);}
+transform:translateY(-7px);
+border-color:#00ffff;
 }
 
 .card h3{
-color:var(--color);
-font-size:22px;
-letter-spacing:2px;
-margin-bottom:12px;
-}
-
-.card p{
-color:#999;
-font-size:12px;
-letter-spacing:2px;
-}
-
-/* SIX DIFFERENT COLORS */
-
-.card:nth-child(1){
---color:#ffd700;
---glow:#ffd70088;
-}
-
-.card:nth-child(2){
---color:#00aaff;
---glow:#00aaff88;
-}
-
-.card:nth-child(3){
---color:#bd55ff;
---glow:#bd55ff88;
-}
-
-.card:nth-child(4){
---color:#39ff79;
---glow:#39ff7988;
-}
-
-.card:nth-child(5){
---color:#ff354f;
---glow:#ff354f88;
-}
-
-.card:nth-child(6){
---color:#00f5e9;
---glow:#00f5e988;
-}
-
-/* SOCIAL MEDIA */
-
-.social-box{
-max-width:700px;
-margin:auto;
-padding:40px 20px;
-border:1px solid #b58b28;
-border-radius:22px;
-background:linear-gradient(145deg,#19130a,#080808);
-}
-
-.social-box h3{
-color:gold;
-font-size:27px;
+font-size:23px;
 margin-bottom:15px;
 }
 
-.social-box p{
-color:#aaa;
-margin-bottom:25px;
+.card p{
+color:#c4c4dc;
+line-height:1.8;
 }
 
-.social-links{
+.ai-icon{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.socials{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:15px;
 }
 
-.social-btn{
-min-width:140px;
-padding:15px 20px;
-border:1px solid gold;
-border-radius:30px;
+.social{
+padding:15px 25px;
+border-radius:15px;
+border:1px solid #ffffff30;
+background:#ffffff10;
 color:white;
 text-decoration:none;
-font-size:13px;
-font-weight:bold;
 transition:.3s;
 }
 
-.social-btn:hover{
-background:gold;
-color:black;
-transform:translateY(-5px);
-box-shadow:0 0 25px gold;
+.social:hover{
+background:linear-gradient(90deg,#00bfff,#a000ff);
+transform:scale(1.08);
 }
 
-.coming{
-color:#777;
-font-size:10px;
-display:block;
-margin-top:5px;
+.friend{
+display:inline-block;
+padding:18px 35px;
+margin:10px;
+border-radius:18px;
+background:#ffffff10;
+border:1px solid #00ffff60;
 }
 
-/* FOOTER */
+.friend h3{
+color:#00ffff;
+margin-bottom:5px;
+}
+
+.surprise{
+background:linear-gradient(135deg,#120d35,#24104a);
+}
 
 footer{
-border-top:1px solid #70551c;
-padding:40px 15px;
 text-align:center;
-color:#888;
-font-size:12px;
-line-height:2.2;
+padding:30px 15px;
+border-top:1px solid #ffffff20;
+color:#aaa;
+line-height:2;
+font-size:13px;
 }
 
-footer span{color:gold;}
-
-@media(max-width:600px){
-
-header{padding:15px 4%;}
-
-.logo{font-size:14px;}
-
-nav a{
-font-size:10px;
-margin-left:8px;
-}
-
-section{padding:75px 5%;}
-
-.section-title{font-size:27px;}
-
+#message{
+margin-top:20px;
+color:#00ffff;
+font-size:18px;
+font-weight:bold;
 }
 
 </style>
@@ -431,193 +221,88 @@ section{padding:75px 5%;}
 
 <body>
 
-<div id="particles"></div>
-
-<!-- HEADER -->
-
 <header>
-
-<div class="logo">👑 SHAHZAD 007</div>
-
-<nav>
-<a href="#home">HOME</a>
-<a href="#owner">OWNER</a>
-<a href="#team">TEAM</a>
-<a href="#social">SOCIAL</a>
-</nav>
-
+<div class="logo">SHAHZAD OFFICIAL 007</div>
 </header>
 
-<!-- INTRODUCTION -->
+<div class="hero">
 
-<div class="hero" id="home">
+<div class="badge">WELCOME TO MY DIGITAL WORLD</div>
 
-<div class="hero-content">
-
-<div class="badge">
-WELCOME TO OUR OFFICIAL WORLD
-</div>
-
-<h1>
-SHAHZAD<br>
-OFFICIAL 007
-</h1>
-
-<p>SIX FRIENDS • ONE LEGACY</p>
-
-<a href="#owner" class="btn">
-MEET THE OWNER ✦
-</a>
-
-<a href="#team" class="btn">
-EXPLORE TEAM ↗
-</a>
-
-</div>
-
-</div>
-
-<!-- OWNER INTRODUCTION -->
-
-<section id="owner">
-
-<h2 class="section-title">
-MEET THE OWNER 👑
-</h2>
-
-<div class="line"></div>
-
-<p class="section-desc">
-THE PERSON BEHIND SHAHZAD OFFICIAL 007
-</p>
-
-<div class="owner-box">
-
-<div class="owner-icon">👑</div>
-
-<h3>SHAHZAD</h3>
+<h1>SHAHZAD</h1>
 
 <p>
-Hello! I am Shahzad, the founder and owner
-of SHAHZAD OFFICIAL 007.
+Dream Big. Think Different. Create Something Extraordinary.
+Welcome to my official website!
+</p>
 
-This platform represents my identity,
-creativity, friendship and passion.
+<a href="#about" class="btn">EXPLORE MY WORLD ↓</a>
 
-My vision is to create something unique,
-build a strong identity and share our journey
-with the world.
+</div>
 
-<strong style="color:#ffd700;">
-DREAM BIG • WORK HARD • STAY UNIQUE
-</strong>
+<section id="about">
 
+<h2 class="heading">ABOUT <span>ME</span></h2>
+
+<div class="card">
+
+<div class="ai-icon">🤖</div>
+
+<h3>I'm Shahzad</h3>
+
+<p>
+I am a technology lover and AI enthusiast.
+I have a special interest in Artificial Intelligence,
+website development, creative ideas and modern technology.
+
+I love exploring new AI tools, creating digital projects
+and learning something new every day.
+
+My dream is to become a successful digital creator
+and build something extraordinary.
 </p>
 
 </div>
 
 </section>
 
-<!-- FRIENDS TEAM -->
+<section>
 
-<section id="team">
-
-<h2 class="section-title">
-THE LEGENDS 👑
-</h2>
-
-<div class="line"></div>
-
-<p class="section-desc">
-SIX DIFFERENT PERSONALITIES.
-ONE AMAZING FRIENDSHIP.
-</p>
-
-<div class="team">
+<h2 class="heading">MY <span>TEAM</span></h2>
 
 <div class="card">
-<div class="number">01</div>
-<h3>SHAHZAD</h3>
-<p>FOUNDER & OWNER</p>
+
+<div class="friend">
+<h3>👑 SHAHZAD</h3>
+<p>Owner & Founder</p>
 </div>
 
-<div class="card">
-<div class="number">02</div>
-<h3>RASHID</h3>
-<p>TEAM MEMBER</p>
-</div>
-
-<div class="card">
-<div class="number">03</div>
-<h3>ZAHEER</h3>
-<p>TEAM MEMBER</p>
-</div>
-
-<div class="card">
-<div class="number">04</div>
-<h3>QASIM</h3>
-<p>TEAM MEMBER</p>
-</div>
-
-<div class="card">
-<div class="number">05</div>
-<h3>AHMAD</h3>
-<p>TEAM MEMBER</p>
-</div>
-
-<div class="card">
-<div class="number">06</div>
-<h3>ABDUL AHAD</h3>
-<p>TEAM MEMBER</p>
+<div class="friend">
+<h3>⭐ RASHID</h3>
+<p>My Friend</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- SOCIAL MEDIA -->
+<section>
 
-<section id="social">
+<h2 class="heading">MY <span>SOCIAL WORLD</span></h2>
 
-<h2 class="section-title">
-CONNECT WITH US 🌐
-</h2>
+<div class="card">
 
-<div class="line"></div>
+<p>Connect with me on social media!</p>
 
-<p class="section-desc">
-FOLLOW OUR OFFICIAL SOCIAL MEDIA
-</p>
+<div class="socials" style="margin-top:25px;">
 
-<div class="social-box">
+<a class="social" href="https://www.tiktok.com/" target="_blank">🎵 TikTok</a>
 
-<h3>OUR SOCIAL MEDIA</h3>
+<a class="social" href="https://www.youtube.com/" target="_blank">▶ YouTube</a>
 
-<p>Stay connected with SHAHZAD OFFICIAL 007.</p>
+<a class="social" href="https://www.instagram.com/" target="_blank">📸 Instagram</a>
 
-<div class="social-links">
-
-<a class="social-btn"
-href="https://www.tiktok.com/@rana.editor33"
-target="_blank"
-rel="noopener noreferrer">
-🎵 TIKTOK
-</a>
-
-<div class="social-btn">
-🟢 WHATSAPP
-<span class="coming">COMING SOON</span>
-</div>
-
-<div class="social-btn">
-📘 FACEBOOK
-<span class="coming">COMING SOON</span>
-</div>
-
-<div class="social-btn">
-📸 INSTAGRAM
-<span class="coming">COMING SOON</span>
-</div>
+<a class="social" href="https://www.facebook.com/" target="_blank">🌐 Facebook</a>
 
 </div>
 
@@ -625,43 +310,47 @@ rel="noopener noreferrer">
 
 </section>
 
-<!-- FOOTER -->
+<section class="surprise">
+
+<h2 class="heading">SPECIAL <span>ZONE</span></h2>
+
+<div class="card">
+
+<div class="ai-icon">🚀</div>
+
+<h3>Something Extraordinary!</h3>
+
+<p>
+This is not just a website.
+This is the beginning of a digital journey.
+</p>
+
+<button class="btn" onclick="surprise()">CLICK FOR SURPRISE ✨</button>
+
+<div id="message"></div>
+
+</div>
+
+</section>
 
 <footer>
 
-<p>© 2026 <span>SHAHZAD OFFICIAL 007</span></p>
+<h3>👑 SHAHZAD OFFICIAL 007</h3>
 
-<p>CREATED WITH ❤️ BY SHAHZAD</p>
+<p>Designed with passion ❤️</p>
 
-<p>FRIENDSHIP • RESPECT • SUCCESS</p>
-
-<p>OFFICIAL WEBSITE</p>
+<p>© 2026 All Rights Reserved.</p>
 
 </footer>
 
-<!-- ANIMATION SCRIPT -->
-
 <script>
+function surprise(){
 
-const particles=document.getElementById("particles");
-
-for(let i=0;i<65;i++){
-
-const p=document.createElement("div");
-
-p.className="particle";
-
-p.style.left=Math.random()*100+"%";
-
-p.style.animationDuration=(5+Math.random()*10)+"s";
-
-p.style.animationDelay=Math.random()*10+"s";
-
-particles.appendChild(p);
+document.getElementById("message").innerHTML=
+"🔥 DREAM BIG! THE FUTURE IS YOURS! 🚀";
 
 }
-
 </script>
 
 </body>
- </html>
+</html>
