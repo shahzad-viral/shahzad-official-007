@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050505">
 
-<title>SHAHZAD OFFICIAL 007</title>
+<title>SHAHZAD OFFICIAL 007 | Official Website</title>
+
+<meta name="description" content="Welcome to Shahzad Official 007. Explore technology, artificial intelligence, digital creativity, TikTok and YouTube.">
+
+<meta name="keywords" content="Shahzad Official 007, Shahzad, AI, Technology, Baby Bubu Toons, Digital Creator">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -15,7 +21,10 @@ box-sizing:border-box;
 font-family:Georgia,serif;
 }
 
-html{scroll-behavior:smooth}
+html{
+scroll-behavior:smooth;
+scroll-padding-top:100px;
+}
 
 body{
 background:#050505;
@@ -32,35 +41,40 @@ z-index:-1;
 pointer-events:none;
 }
 
-body:before{
+body::before{
 content:"";
 position:fixed;
 inset:0;
 background:
-radial-gradient(circle at 50% 15%,#9b741b20,transparent 40%),
-radial-gradient(circle at 10% 80%,#b68a2b12,transparent 35%),
-radial-gradient(circle at 90% 70%,#d7ad5010,transparent 35%);
+radial-gradient(circle at 50% 10%,#b78b3020,transparent 40%),
+radial-gradient(circle at 10% 80%,#d4af3710,transparent 35%),
+radial-gradient(circle at 90% 70%,#d4af3710,transparent 35%);
 z-index:-2;
+pointer-events:none;
 }
+
+/* HEADER */
 
 header{
 position:sticky;
 top:0;
-z-index:20;
-padding:22px 15px;
+z-index:100;
+padding:20px 15px;
 text-align:center;
-background:#080808eF;
-backdrop-filter:blur(15px);
-border-bottom:1px solid #a78338;
+background:#080808ed;
+backdrop-filter:blur(18px);
+border-bottom:1px solid #b58b37;
 }
 
 .logo{
 font-size:23px;
 font-weight:bold;
 letter-spacing:4px;
+
 background:linear-gradient(
 90deg,#8c6820,#fff1a8,#d3a43e,#fff7c9,#8c6820
 );
+
 background-size:300%;
 -webkit-background-clip:text;
 color:transparent;
@@ -74,7 +88,7 @@ to{background-position:300%}
 nav{
 display:flex;
 justify-content:center;
-gap:24px;
+gap:25px;
 flex-wrap:wrap;
 margin-top:18px;
 }
@@ -91,6 +105,8 @@ nav a:hover{
 color:white;
 text-shadow:0 0 15px gold;
 }
+
+/* HERO */
 
 .hero{
 min-height:90vh;
@@ -109,24 +125,29 @@ letter-spacing:5px;
 }
 
 .line{
-width:110px;
+width:120px;
 height:2px;
-background:linear-gradient(90deg,transparent,#e9c66b,transparent);
+background:linear-gradient(
+90deg,transparent,#e9c66b,transparent
+);
 margin:25px;
 }
 
 .hero h1{
-font-size:clamp(48px,11vw,100px);
+font-size:clamp(45px,11vw,105px);
 letter-spacing:5px;
-font-weight:bold;
+
 background:linear-gradient(
 120deg,#805d17,#fff0a0,#c99b35,#fff8d4,#916a1f
 );
+
 background-size:300%;
 -webkit-background-clip:text;
 color:transparent;
+
 animation:gold 5s linear infinite;
-filter:drop-shadow(0 0 20px #d4af3760);
+
+filter:drop-shadow(0 0 25px #d4af3760);
 }
 
 .hero p{
@@ -152,14 +173,16 @@ color:black;
 box-shadow:0 0 30px #d0a94380;
 }
 
+/* SECTIONS */
+
 section{
-padding:80px 20px;
+padding:85px 20px;
 text-align:center;
 }
 
 .heading{
-font-size:34px;
-letter-spacing:3px;
+font-size:35px;
+letter-spacing:4px;
 margin-bottom:40px;
 color:#edcf7e;
 }
@@ -168,18 +191,26 @@ color:#edcf7e;
 color:white;
 }
 
+/* CARDS */
+
 .card{
-max-width:760px;
+max-width:800px;
 margin:20px auto;
 padding:40px 25px;
-background:linear-gradient(145deg,#17140c,#080808);
+
+background:linear-gradient(
+145deg,#17140c,#080808
+);
+
 border:1px solid #8f6d2d;
+
 box-shadow:0 0 35px #c49b3510;
+
 transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-5px);
 border-color:#ffe18a;
 box-shadow:0 0 35px #d4af3740;
 }
@@ -195,6 +226,8 @@ color:#c1b8a7;
 line-height:2;
 }
 
+/* SKILLS */
+
 .skills{
 display:flex;
 justify-content:center;
@@ -208,33 +241,47 @@ border:1px solid #a17b31;
 padding:12px 18px;
 color:#e8c46c;
 font-size:12px;
+transition:.3s;
 }
+
+.skill:hover{
+background:#b58b37;
+color:black;
+}
+
+/* TEAM */
 
 .friend{
 display:inline-block;
-min-width:200px;
+min-width:210px;
 padding:30px 20px;
 margin:12px;
-background:linear-gradient(145deg,#201a0c,#090909);
+
+background:linear-gradient(
+145deg,#201a0c,#090909
+);
+
 border:1px solid #b18a3d;
-box-shadow:0 0 20px #d4af3710;
 transition:.4s;
 }
 
 .friend:hover{
-transform:scale(1.06);
+transform:scale(1.05);
 box-shadow:0 0 30px #d4af3760;
 }
 
 .animated-name{
 font-size:25px;
 font-weight:bold;
+
 background:linear-gradient(
 90deg,#8c6820,#fff2ad,#d4a438,#fff8d5,#8c6820
 );
+
 background-size:300%;
 -webkit-background-clip:text;
 color:transparent;
+
 animation:gold 4s linear infinite;
 }
 
@@ -243,35 +290,55 @@ font-size:13px;
 margin-top:12px;
 }
 
+/* SOCIAL MEDIA */
+
 .socials{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:15px;
+gap:18px;
 margin-top:30px;
 }
 
 .social{
-padding:15px 25px;
+display:inline-block;
+min-width:200px;
+padding:17px 25px;
+
 border:1px solid #a78338;
 color:#e7c46b;
 text-decoration:none;
-transition:.3s;
+
+transition:.4s;
 letter-spacing:1px;
+font-size:13px;
 }
 
 .social:hover{
 background:#cba54d;
 color:black;
-box-shadow:0 0 20px #cba54d80;
+box-shadow:0 0 25px #cba54d80;
+transform:translateY(-4px);
 }
+
+.youtube{
+border-color:#b58b37;
+}
+
+.tiktok{
+border-color:#b58b37;
+}
+
+/* QUOTE */
 
 .quote{
 max-width:850px;
 margin:auto;
 padding:50px 25px;
+
 border-top:1px solid #ad8435;
 border-bottom:1px solid #ad8435;
+
 background:#ffffff05;
 }
 
@@ -287,8 +354,10 @@ color:#b38b3a;
 letter-spacing:4px;
 }
 
+/* FOOTER */
+
 footer{
-padding:40px 15px;
+padding:45px 15px;
 text-align:center;
 border-top:1px solid #92702f;
 color:#968b70;
@@ -296,15 +365,50 @@ line-height:2.2;
 font-size:13px;
 }
 
-@media(max-width:600px){
-.logo{font-size:17px;letter-spacing:2px}
-nav{gap:14px}
-nav a{font-size:10px}
-.heading{font-size:27px}
-.card{padding:30px 18px}
-.hero h1{letter-spacing:2px}
-.friend{min-width:150px}
+footer h3{
+margin-bottom:15px;
 }
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.logo{
+font-size:17px;
+letter-spacing:2px;
+}
+
+nav{
+gap:14px;
+}
+
+nav a{
+font-size:10px;
+}
+
+.heading{
+font-size:27px;
+}
+
+.card{
+padding:30px 18px;
+}
+
+.hero h1{
+letter-spacing:2px;
+}
+
+.friend{
+min-width:150px;
+}
+
+.social{
+width:100%;
+max-width:280px;
+}
+
+}
+
 </style>
 </head>
 
@@ -312,21 +416,33 @@ nav a{font-size:10px}
 
 <canvas id="particles"></canvas>
 
+<!-- HEADER -->
+
 <header>
-<div class="logo">SHAHZAD OFFICIAL 007</div>
+
+<div class="logo">
+SHAHZAD OFFICIAL 007
+</div>
 
 <nav>
+
 <a href="#home">HOME</a>
 <a href="#about">ABOUT</a>
 <a href="#team">TEAM</a>
 <a href="#social">SOCIAL</a>
 <a href="#vision">VISION</a>
+
 </nav>
+
 </header>
+
+<!-- HERO -->
 
 <div class="hero" id="home">
 
-<div class="small">THE OFFICIAL DIGITAL WORLD</div>
+<div class="small">
+THE OFFICIAL DIGITAL WORLD
+</div>
 
 <div class="line"></div>
 
@@ -340,19 +456,26 @@ A place of ambition, creativity, technology
 and extraordinary ideas.
 </p>
 
-<a href="#about" class="button">DISCOVER MY WORLD</a>
+<a href="#about" class="button">
+DISCOVER MY WORLD
+</a>
 
 </div>
 
+<!-- ABOUT -->
+
 <section id="about">
 
-<h2 class="heading">ABOUT <span>ME</span></h2>
+<h2 class="heading">
+ABOUT <span>ME</span>
+</h2>
 
 <div class="card">
 
 <h3>SHAHZAD — AI ENTHUSIAST</h3>
 
 <p>
+
 I am Shahzad, a passionate technology lover
 with a deep interest in Artificial Intelligence.
 
@@ -365,74 +488,165 @@ into meaningful digital experiences.
 
 I believe that the future belongs to people
 who never stop learning, thinking and creating.
+
 </p>
 
 <div class="skills">
+
 <div class="skill">ARTIFICIAL INTELLIGENCE</div>
 <div class="skill">WEB DEVELOPMENT</div>
 <div class="skill">TECHNOLOGY</div>
 <div class="skill">DIGITAL CREATIVITY</div>
+
 </div>
 
 </div>
+
 </section>
+
+<!-- TEAM -->
 
 <section id="team">
 
-<h2 class="heading">MY <span>TEAM</span></h2>
+<h2 class="heading">
+MY <span>TEAM</span>
+</h2>
 
 <div class="card">
 
 <div class="friend">
-<div class="animated-name">SHAHZAD</div>
+
+<div class="animated-name">
+SHAHZAD
+</div>
+
 <p>OWNER & FOUNDER</p>
+
 </div>
 
 <div class="friend">
-<div class="animated-name">RASHID</div>
+
+<div class="animated-name">
+RASHID
+</div>
+
 <p>MY FRIEND</p>
+
 </div>
 
 </div>
+
 </section>
+
+<!-- SOCIAL MEDIA -->
 
 <section id="social">
 
-<h2 class="heading">MY <span>TIKTOK</span></h2>
+<h2 class="heading">
+MY <span>SOCIAL MEDIA</span>
+</h2>
 
 <div class="card">
 
-<p>FOLLOW MY JOURNEY ON TIKTOK</p>
+<h3>CONNECT WITH ME</h3>
+
+<p>
+Follow my digital journey on social media
+and explore my creative content.
+</p>
 
 <div class="socials">
 
-<a class="social"
+<a
+class="social tiktok"
 href="https://www.tiktok.com/@rana.editor33"
 target="_blank"
 rel="noopener noreferrer">
-VISIT MY TIKTOK
+
+TIKTOK — VISIT PROFILE
+
+</a>
+
+<a
+class="social youtube"
+href="https://www.youtube.com/@BabyBubuToons"
+target="_blank"
+rel="noopener noreferrer">
+
+YOUTUBE — BABY BUBU TOONS
+
 </a>
 
 </div>
 
 </div>
+
 </section>
+
+<!-- YOUTUBE CHANNEL -->
+
+<section id="youtube">
+
+<h2 class="heading">
+MY <span>YOUTUBE CHANNEL</span>
+</h2>
+
+<div class="card">
+
+<h3>BABY BUBU TOONS</h3>
+
+<p>
+
+Welcome to Baby Bubu Toons!
+
+Explore cute AI animations, creative characters
+and entertaining animated videos.
+
+Subscribe to my YouTube channel
+and become part of the journey.
+
+</p>
+
+<a
+class="button"
+href="https://www.youtube.com/@BabyBubuToons"
+target="_blank"
+rel="noopener noreferrer">
+
+▶ SUBSCRIBE ON YOUTUBE
+
+</a>
+
+</div>
+
+</section>
+
+<!-- VISION -->
 
 <section id="vision">
 
-<h2 class="heading">MY <span>VISION</span></h2>
+<h2 class="heading">
+MY <span>VISION</span>
+</h2>
 
 <div class="quote">
 
 <h2>
+
 "Greatness is not about being known by everyone.
 It is about creating something that speaks for you."
+
 </h2>
 
-<p>SHAHZAD OFFICIAL 007</p>
+<p>
+SHAHZAD OFFICIAL 007
+</p>
 
 </div>
+
 </section>
+
+<!-- JOURNEY -->
 
 <section>
 
@@ -441,78 +655,125 @@ It is about creating something that speaks for you."
 <h3>THE JOURNEY HAS JUST BEGUN</h3>
 
 <p>
+
 Never stop learning.
 Never stop improving.
 Never stop creating.
 
 Your dreams deserve your dedication.
 Your future deserves your hard work.
+
 Make every day a step towards greatness.
+
 </p>
 
 </div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
-<h3 class="animated-name">SHAHZAD OFFICIAL 007</h3>
+<h3 class="animated-name">
+SHAHZAD OFFICIAL 007
+</h3>
 
-<p>AI Enthusiast | Technology Lover | Digital Creator</p>
+<p>
+AI Enthusiast | Technology Lover | Digital Creator
+</p>
 
-<p>Designed with Vision and Creativity</p>
+<p>
+Designed with Vision and Creativity
+</p>
 
-<p>Copyright © 2026 Shahzad Official. All Rights Reserved.</p>
+<p>
+Copyright © 2026 Shahzad Official.
+All Rights Reserved.
+</p>
 
 </footer>
 
+<!-- PARTICLE ANIMATION -->
+
 <script>
+
 const canvas=document.getElementById("particles");
 const ctx=canvas.getContext("2d");
 
 let particles=[];
 
 function resize(){
+
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
+
 }
 
 window.addEventListener("resize",resize);
+
 resize();
 
 for(let i=0;i<65;i++){
+
 particles.push({
+
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height,
+
 size:Math.random()*2+0.5,
+
 speed:Math.random()*0.5+0.15,
+
 opacity:Math.random()*0.7+0.2
+
 });
+
 }
 
 function animate(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
+
+ctx.clearRect(
+0,0,canvas.width,canvas.height
+);
 
 particles.forEach(p=>{
+
 p.y-=p.speed;
 
 if(p.y<0){
+
 p.y=canvas.height;
 p.x=Math.random()*canvas.width;
+
 }
 
 ctx.beginPath();
-ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
-ctx.fillStyle="rgba(224,183,83,"+p.opacity+")";
+
+ctx.arc(
+p.x,
+p.y,
+p.size,
+0,
+Math.PI*2
+);
+
+ctx.fillStyle=
+"rgba(224,183,83,"+p.opacity+")";
+
 ctx.shadowBlur=12;
 ctx.shadowColor="#d4af37";
+
 ctx.fill();
+
 });
 
 requestAnimationFrame(animate);
+
 }
 
 animate();
+
 </script>
 
 </body>
