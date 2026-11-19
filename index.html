@@ -1,1533 +1,739 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta name="theme-color" content="#080610">
 
-<title>SHAHZAD OFFICIAL 007 | ULTRA ELITE</title>
+<title>SHAHZAD OFFICIAL 007</title>
 
-<meta name="description" content="Welcome to Shahzad Official 007. Explore Artificial Intelligence, Technology, Digital Creativity and Innovation.">
-
-<meta name="keywords" content="Shahzad Official 007, Shahzad, AI, Technology, Digital Creator, Web Development">
-
+<meta name="description" content="Official website of Shahzad. Explore AI, technology, web development and digital creativity.">
+<meta name="keywords" content="Shahzad Official 007, AI Creator, Web Developer, Digital Creator">
 <meta name="author" content="Shahzad">
 
-<meta property="og:title" content="SHAHZAD OFFICIAL 007">
-<meta property="og:description" content="Dream Big. Build Different. Stay Unstoppable.">
-<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================
-   ROOT
-========================= */
-
 :root{
-
---black:#080610;
---dark:#100b1b;
---purple:#8b5cf6;
---deep-purple:#5424a8;
---gold:#d9b66c;
---light-gold:#ffe7a3;
---silver:#e7e2f0;
---text:#c7c0d2;
---border:#ffffff16;
-
+  --bg:#080610;
+  --card:#100b1b;
+  --purple:#9865ff;
+  --gold:#dfbd78;
+  --white:#ffffff;
+  --muted:#b9b1c9;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
-scroll-padding-top:100px;
+  scroll-behavior:smooth;
 }
 
 body{
-
-background:var(--black);
-color:white;
-
-font-family:Georgia,serif;
-
-overflow-x:hidden;
-
+  font-family:'Plus Jakarta Sans',sans-serif;
+  background:var(--bg);
+  color:var(--white);
+  overflow-x:hidden;
 }
 
 a{
-text-decoration:none;
--webkit-tap-highlight-color:transparent;
+  text-decoration:none;
+  color:inherit;
 }
 
-::selection{
-background:var(--gold);
-color:black;
-}
-
-/* =========================
-   BACKGROUND EFFECTS
-========================= */
-
-body::before{
-
-content:"";
-
-position:fixed;
-inset:0;
-
-z-index:-3;
-
-background:
-
-radial-gradient(
-ellipse at 50% 0%,
-#5826a440,
-transparent 50%
-),
-
-radial-gradient(
-ellipse at 0% 70%,
-#8b5cf620,
-transparent 40%
-),
-
-radial-gradient(
-ellipse at 100% 80%,
-#d9b66c12,
-transparent 40%
-);
-
-pointer-events:none;
-
+#progress{
+  position:fixed;
+  top:0;
+  left:0;
+  height:3px;
+  width:0%;
+  background:linear-gradient(90deg,#dfbd78,#9865ff,#00d4ff,#ff63c8);
+  z-index:9999;
 }
 
 #particles{
-
-position:fixed;
-inset:0;
-
-width:100%;
-height:100%;
-
-z-index:-2;
-
-pointer-events:none;
-
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:-1;
 }
 
-/* =========================
-   SCROLL BAR
-========================= */
-
-.progress{
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:0%;
-height:3px;
-
-background:linear-gradient(
-90deg,
-#8b5cf6,
-#d9b66c,
-#fff0bd
-);
-
-z-index:9999;
-
-box-shadow:0 0 15px var(--gold);
-
+body::before{
+  content:"";
+  position:fixed;
+  width:500px;
+  height:500px;
+  background:#792cff;
+  filter:blur(180px);
+  opacity:.12;
+  top:-180px;
+  left:-150px;
+  z-index:-2;
 }
 
-/* =========================
-   HEADER
-========================= */
+body::after{
+  content:"";
+  position:fixed;
+  width:400px;
+  height:400px;
+  background:#d9a441;
+  filter:blur(180px);
+  opacity:.08;
+  bottom:-150px;
+  right:-100px;
+  z-index:-2;
+}
+
+/* HEADER */
 
 header{
-
-position:sticky;
-top:0;
-
-z-index:1000;
-
-background:#0a0714eF;
-
-backdrop-filter:blur(20px);
-
-border-bottom:1px solid #d9b66c50;
-
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(8,6,16,.88);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.header-inner{
-
-max-width:1200px;
-
-margin:auto;
-
-padding:19px 22px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .logo{
-
-font-size:20px;
-
-font-weight:bold;
-
-letter-spacing:3px;
-
-background:linear-gradient(
-90deg,
-#d9b66c,
-#fff2c5,
-#9d7ce8,
-#d9b66c
-);
-
-background-size:300%;
-
--webkit-background-clip:text;
-
-color:transparent;
-
-animation:goldFlow 7s linear infinite;
-
+  font-size:21px;
+  font-weight:800;
+  letter-spacing:1px;
 }
 
-@keyframes goldFlow{
-
-to{
-background-position:300%;
+.gradient-text{
+  background:linear-gradient(
+    270deg,
+    #dfbd78,
+    #ffffff,
+    #9865ff,
+    #00d4ff,
+    #ff63c8,
+    #dfbd78
+  );
+  background-size:600% 600%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:colorMove 9s ease infinite;
 }
 
+@keyframes colorMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
-nav{
-
-display:flex;
-
-align-items:center;
-
-gap:23px;
-
+.nav-links{
+  display:flex;
+  gap:28px;
+  align-items:center;
 }
 
-nav a{
-
-color:#c9bbdc;
-
-font-size:11px;
-
-letter-spacing:1.5px;
-
-transition:.3s;
-
+.nav-links a{
+  font-size:13px;
+  color:#d5cde2;
+  transition:.3s;
 }
 
-nav a:hover{
-
-color:var(--light-gold);
-
-text-shadow:0 0 15px var(--gold);
-
+.nav-links a:hover{
+  color:var(--gold);
 }
 
 .menu-btn{
-
-display:none;
-
-background:transparent;
-
-border:1px solid var(--gold);
-
-color:var(--light-gold);
-
-padding:9px 13px;
-
-font-size:19px;
-
-cursor:pointer;
-
+  display:none;
+  background:none;
+  border:1px solid #55466d;
+  color:white;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:20px;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* COMMON */
+
+section{
+  padding:100px 7%;
+  max-width:1300px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-size:36px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.section-title p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.gold-line{
+  width:65px;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold),var(--purple));
+  margin:18px auto;
+  border-radius:20px;
+}
+
+/* HERO */
 
 .hero{
-
-min-height:92vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-flex-direction:column;
-
-text-align:center;
-
-padding:50px 20px;
-
-position:relative;
-
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding-top:70px;
 }
 
-.hero-tag{
-
-color:var(--gold);
-
-font-size:11px;
-
-letter-spacing:6px;
-
-margin-bottom:30px;
-
+.hero-content{
+  max-width:850px;
 }
 
-.hero-line{
-
-width:140px;
-
-height:1px;
-
-background:linear-gradient(
-90deg,
-transparent,
-var(--gold),
-var(--purple),
-transparent
-);
-
-margin:25px auto;
-
+.badge{
+  display:inline-block;
+  border:1px solid rgba(223,189,120,.5);
+  padding:9px 18px;
+  border-radius:30px;
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:2px;
+  margin-bottom:25px;
+  background:rgba(223,189,120,.06);
 }
 
 .hero h1{
-
-font-size:clamp(43px,11vw,115px);
-
-font-weight:bold;
-
-letter-spacing:7px;
-
-background:linear-gradient(
-120deg,
-#997333,
-#fff1bb,
-#d9b66c,
-#b18ce9,
-#fff4ce
-);
-
-background-size:300%;
-
--webkit-background-clip:text;
-
-color:transparent;
-
-animation:goldFlow 6s linear infinite;
-
-filter:drop-shadow(0 0 25px #a47adf45);
-
+  font-size:clamp(42px,8vw,85px);
+  font-weight:800;
+  line-height:1.15;
+  margin-bottom:15px;
 }
 
 .hero h2{
-
-font-size:clamp(17px,4vw,30px);
-
-letter-spacing:8px;
-
-color:#d9b66c;
-
-margin-top:15px;
-
+  font-size:clamp(19px,4vw,30px);
+  color:#e4d9f7;
+  margin-bottom:20px;
 }
 
-.hero-description{
-
-max-width:650px;
-
-color:var(--text);
-
-line-height:2;
-
-font-size:15px;
-
-margin-top:20px;
-
+.hero p{
+  max-width:650px;
+  margin:auto;
+  color:var(--muted);
+  line-height:1.9;
+  font-size:15px;
 }
 
 .hero-buttons{
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:15px;
-
-margin-top:35px;
-
+  margin-top:32px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
 .btn{
+  display:inline-block;
+  padding:14px 25px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:700;
+  transition:.3s;
+}
 
-display:inline-block;
+.btn-primary{
+  background:linear-gradient(120deg,#dfbd78,#9865ff);
+  color:#080610;
+}
 
-padding:15px 30px;
-
-border:1px solid var(--gold);
-
-color:var(--light-gold);
-
-font-size:11px;
-
-letter-spacing:2px;
-
-transition:.4s;
-
-background:#ffffff04;
-
+.btn-outline{
+  border:1px solid #8c75b6;
+  color:white;
 }
 
 .btn:hover{
-
-background:var(--gold);
-
-color:#090611;
-
-box-shadow:0 0 30px #d9b66c65;
-
-transform:translateY(-5px);
-
+  transform:translateY(-4px);
+  box-shadow:0 0 25px rgba(152,101,255,.35);
 }
 
-.btn-purple{
+/* CARDS */
 
-border-color:var(--purple);
-
-color:#d9c8ff;
-
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
-
-.btn-purple:hover{
-
-background:var(--purple);
-
-color:white;
-
-box-shadow:0 0 30px #8b5cf670;
-
-}
-
-/* =========================
-   DIGITAL CLOCK
-========================= */
-
-.clock-box{
-
-margin-top:55px;
-
-padding:18px 30px;
-
-border:1px solid #ffffff18;
-
-background:#ffffff08;
-
-backdrop-filter:blur(15px);
-
-border-radius:12px;
-
-}
-
-.clock-label{
-
-font-size:10px;
-
-letter-spacing:3px;
-
-color:var(--gold);
-
-margin-bottom:10px;
-
-}
-
-#clock{
-
-font-size:25px;
-
-letter-spacing:3px;
-
-color:var(--silver);
-
-}
-
-#date{
-
-font-size:11px;
-
-color:var(--text);
-
-margin-top:8px;
-
-}
-
-/* =========================
-   SECTIONS
-========================= */
-
-section{
-
-padding:95px 20px;
-
-text-align:center;
-
-}
-
-.container{
-
-max-width:1100px;
-
-margin:auto;
-
-}
-
-.section-label{
-
-font-size:10px;
-
-color:var(--purple);
-
-letter-spacing:5px;
-
-margin-bottom:15px;
-
-}
-
-.heading{
-
-font-size:clamp(28px,5vw,39px);
-
-letter-spacing:4px;
-
-color:var(--light-gold);
-
-margin-bottom:45px;
-
-}
-
-.heading span{
-
-color:white;
-
-}
-
-.subtitle{
-
-max-width:650px;
-
-margin:-25px auto 40px;
-
-color:var(--text);
-
-line-height:2;
-
-}
-
-/* =========================
-   GLASS CARDS
-========================= */
 
 .card{
+  background:linear-gradient(145deg,#171027,#0e0a18);
+  padding:30px;
+  border:1px solid transparent;
+  border-radius:18px;
+  position:relative;
+  transition:.4s;
+}
 
-max-width:900px;
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:18px;
+  padding:1px;
+  background:linear-gradient(120deg,#dfbd78,#9865ff,#00d4ff,#ff63c8);
+  background-size:300% 300%;
+  animation:borderMove 8s linear infinite;
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  pointer-events:none;
+}
 
-margin:20px auto;
-
-padding:45px 30px;
-
-background:linear-gradient(
-145deg,
-#21182eaa,
-#100b1bdd,
-#171020
-);
-
-border:1px solid #ffffff18;
-
-border-radius:15px;
-
-backdrop-filter:blur(15px);
-
-box-shadow:
-
-0 15px 50px #00000050,
-
-inset 0 1px 0 #ffffff10;
-
-transition:.4s;
-
+@keyframes borderMove{
+  0%{background-position:0% 50%}
+  100%{background-position:300% 50%}
 }
 
 .card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 40px rgba(152,101,255,.15);
+}
 
-transform:translateY(-7px);
-
-border-color:#d9b66c85;
-
-box-shadow:0 15px 50px #8b5cf620;
-
+.card-icon{
+  font-size:35px;
+  margin-bottom:18px;
 }
 
 .card h3{
-
-font-size:25px;
-
-color:var(--gold);
-
-margin-bottom:22px;
-
+  font-size:19px;
+  margin-bottom:12px;
 }
 
 .card p{
-
-color:var(--text);
-
-line-height:2;
-
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.9;
 }
 
-/* =========================
-   PROFILE
-========================= */
+/* ABOUT */
 
-.profile-circle{
-
-width:125px;
-height:125px;
-
-margin:0 auto 25px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:42px;
-
-font-weight:bold;
-
-color:var(--light-gold);
-
-background:linear-gradient(
-135deg,
-#39205f,
-#151020,
-#9c7535
-);
-
-border:2px solid var(--gold);
-
-box-shadow:
-
-0 0 25px #8b5cf650,
-
-inset 0 0 20px #d9b66c20;
-
+.about-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
 }
 
-.profile-name{
-
-font-size:28px;
-
-letter-spacing:3px;
-
-background:linear-gradient(
-90deg,
-#d9b66c,
-#fff0bd,
-#9b7ce0
-);
-
--webkit-background-clip:text;
-
-color:transparent;
-
+.about-info h3{
+  font-size:27px;
+  margin-bottom:18px;
 }
 
-/* =========================
-   SKILLS
-========================= */
-
-.skills{
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:13px;
-
-margin-top:30px;
-
+.about-info p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:2;
+  margin-bottom:15px;
 }
+
+.profile-box{
+  min-height:300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:25px;
+  background:
+    radial-gradient(circle at center,rgba(152,101,255,.25),transparent 65%),
+    linear-gradient(145deg,#191027,#0c0915);
+  border:1px solid rgba(223,189,120,.25);
+  text-align:center;
+}
+
+.profile-number{
+  font-size:90px;
+  font-weight:800;
+}
+
+/* SKILLS */
 
 .skill{
-
-padding:13px 18px;
-
-border:1px solid #8b5cf680;
-
-border-radius:30px;
-
-background:#8b5cf610;
-
-color:#e1d4ff;
-
-font-size:10px;
-
-letter-spacing:1px;
-
-transition:.3s;
-
+  margin-bottom:22px;
 }
 
-.skill:hover{
-
-border-color:var(--gold);
-
-color:var(--light-gold);
-
-background:#d9b66c12;
-
+.skill-name{
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  margin-bottom:9px;
 }
 
-/* =========================
-   PROJECTS
-========================= */
-
-.project-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:22px;
-
-max-width:950px;
-
-margin:auto;
-
+.skill-bar{
+  height:8px;
+  background:#292033;
+  border-radius:20px;
+  overflow:hidden;
 }
 
-.project{
-
-padding:38px 25px;
-
-text-align:left;
-
-background:linear-gradient(
-145deg,
-#21172f,
-#100b18
-);
-
-border:1px solid #ffffff18;
-
-border-radius:14px;
-
-transition:.4s;
-
+.skill-fill{
+  height:100%;
+  border-radius:20px;
+  background:linear-gradient(90deg,#dfbd78,#9865ff,#00d4ff);
+  animation:fillMove 3s ease;
 }
 
-.project:hover{
-
-transform:translateY(-8px);
-
-border-color:var(--gold);
-
-box-shadow:0 10px 40px #8b5cf625;
-
+@keyframes fillMove{
+  from{width:0}
 }
 
-.project-number{
+/* PROJECTS */
 
-font-size:35px;
-
-color:var(--gold);
-
-margin-bottom:20px;
-
+.project-tag{
+  display:inline-block;
+  color:var(--gold);
+  font-size:11px;
+  letter-spacing:1px;
+  margin-bottom:12px;
 }
 
-.project h3{
+/* TEAM */
 
-font-size:20px;
-
-color:#e9d6ff;
-
-margin-bottom:15px;
-
+.friend-card{
+  text-align:center;
 }
 
-.project p{
-
-font-size:13px;
-
-color:var(--text);
-
-line-height:1.9;
-
+.friend-avatar{
+  width:75px;
+  height:75px;
+  border-radius:50%;
+  margin:0 auto 18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  font-weight:800;
+  background:linear-gradient(135deg,#dfbd78,#9865ff);
+  color:#080610;
 }
 
-/* =========================
-   AI SECTION
-========================= */
+/* SOCIAL */
 
-.ai-box{
-
-max-width:850px;
-
-margin:auto;
-
-padding:50px 30px;
-
-background:
-
-radial-gradient(
-circle at top,
-#8b5cf630,
-transparent 60%
-),
-
-#100b19;
-
-border:1px solid #8b5cf680;
-
-border-radius:18px;
-
-box-shadow:0 0 45px #8b5cf615;
-
-}
-
-.ai-icon{
-
-font-size:45px;
-
-margin-bottom:20px;
-
-color:var(--gold);
-
-}
-
-.ai-box h3{
-
-font-size:28px;
-
-color:var(--light-gold);
-
-margin-bottom:20px;
-
-}
-
-.ai-box p{
-
-color:var(--text);
-
-line-height:2;
-
-}
-
-/* =========================
-   TEAM
-========================= */
-
-.friend{
-
-display:inline-block;
-
-min-width:220px;
-
-padding:35px 25px;
-
-margin:12px;
-
-background:linear-gradient(
-145deg,
-#271a39,
-#100b19
-);
-
-border:1px solid #d9b66c75;
-
-border-radius:14px;
-
-transition:.4s;
-
-}
-
-.friend:hover{
-
-transform:scale(1.05);
-
-box-shadow:0 0 35px #8b5cf640;
-
-}
-
-.friend-name{
-
-font-size:26px;
-
-font-weight:bold;
-
-background:linear-gradient(
-90deg,
-#d9b66c,
-#fff1b5,
-#9c7de4
-);
-
-background-size:300%;
-
--webkit-background-clip:text;
-
-color:transparent;
-
-animation:goldFlow 5s linear infinite;
-
-}
-
-.friend p{
-
-margin-top:15px;
-
-font-size:11px;
-
-letter-spacing:2px;
-
-color:var(--text);
-
-}
-
-/* =========================
-   SOCIAL MEDIA
-========================= */
-
-.socials{
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:18px;
-
-margin-top:30px;
-
+.social-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
 }
 
 .social{
-
-min-width:220px;
-
-padding:19px 25px;
-
-border:1px solid #d9b66c70;
-
-border-radius:10px;
-
-color:var(--light-gold);
-
-font-size:12px;
-
-letter-spacing:1px;
-
-transition:.4s;
-
-background:#ffffff05;
-
+  min-width:160px;
+  padding:17px 22px;
+  text-align:center;
+  background:#130d20;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  font-size:13px;
+  font-weight:700;
+  transition:.3s;
 }
 
 .social:hover{
-
-background:linear-gradient(
-90deg,
-#8b5cf6,
-#b28a45
-);
-
-color:white;
-
-transform:translateY(-5px);
-
-box-shadow:0 0 25px #8b5cf640;
-
+  transform:translateY(-5px);
+  border-color:var(--gold);
+  box-shadow:0 0 22px rgba(152,101,255,.2);
 }
 
-/* =========================
-   YOUTUBE
-========================= */
+/* YOUTUBE */
 
 .youtube-box{
-
-max-width:800px;
-
-margin:auto;
-
-padding:45px 25px;
-
-background:linear-gradient(
-145deg,
-#21172f,
-#100b18
-);
-
-border:1px solid #d9b66c70;
-
-border-radius:15px;
-
+  text-align:center;
+  padding:45px 25px;
+  background:linear-gradient(145deg,#191027,#0d0917);
+  border:1px solid rgba(223,189,120,.3);
+  border-radius:22px;
 }
 
 .youtube-box h3{
-
-font-size:28px;
-
-color:var(--light-gold);
-
-margin-bottom:20px;
-
+  font-size:27px;
+  margin-bottom:15px;
 }
 
 .youtube-box p{
-
-color:var(--text);
-
-line-height:2;
-
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.8;
+  margin-bottom:25px;
 }
 
-/* =========================
-   VISION
-========================= */
+/* CONTACT */
 
-.quote{
-
-max-width:900px;
-
-margin:auto;
-
-padding:55px 25px;
-
-background:#ffffff05;
-
-border-top:1px solid var(--gold);
-
-border-bottom:1px solid var(--purple);
-
-border-radius:8px;
-
+.contact-box{
+  text-align:center;
+  padding:40px 20px;
+  border-radius:20px;
+  background:linear-gradient(145deg,#171027,#0e0a18);
+  border:1px solid rgba(152,101,255,.3);
 }
 
-.quote h2{
-
-font-size:clamp(22px,5vw,38px);
-
-line-height:1.8;
-
-color:var(--silver);
-
+.contact-box p{
+  color:var(--muted);
+  line-height:1.9;
+  font-size:14px;
+  margin:15px 0 25px;
 }
 
-.quote p{
-
-margin-top:25px;
-
-color:var(--gold);
-
-letter-spacing:4px;
-
-}
-
-/* =========================
-   JOURNEY
-========================= */
-
-.journey{
-
-max-width:850px;
-
-margin:auto;
-
-padding:45px 25px;
-
-border:1px solid #8b5cf670;
-
-border-radius:15px;
-
-background:linear-gradient(
-145deg,
-#21172f,
-#100b18
-);
-
-}
-
-.journey h3{
-
-font-size:25px;
-
-color:var(--light-gold);
-
-margin-bottom:20px;
-
-}
-
-.journey p{
-
-color:var(--text);
-
-line-height:2;
-
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
-
-padding:55px 20px;
-
-text-align:center;
-
-border-top:1px solid #d9b66c55;
-
-background:#090611;
-
-color:#a89fb5;
-
-font-size:12px;
-
-line-height:2.3;
-
+  border-top:1px solid rgba(255,255,255,.08);
+  padding:30px 6%;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
 }
 
-.footer-logo{
-
-font-size:22px;
-
-letter-spacing:3px;
-
-font-weight:bold;
-
-background:linear-gradient(
-90deg,
-#d9b66c,
-#fff0bd,
-#9c7de4
-);
-
--webkit-background-clip:text;
-
-color:transparent;
-
-margin-bottom:20px;
-
+footer .logo{
+  margin-bottom:12px;
 }
 
-/* =========================
-   BACK TO TOP
-========================= */
-
-.top-btn{
-
-position:fixed;
-
-right:22px;
-
-bottom:25px;
-
-width:48px;
-
-height:48px;
-
-border:1px solid var(--gold);
-
-border-radius:10px;
-
-background:#130d20;
-
-color:var(--light-gold);
-
-font-size:22px;
-
-cursor:pointer;
-
-display:none;
-
-z-index:500;
-
-transition:.3s;
-
-}
-
-.top-btn:hover{
-
-background:var(--gold);
-
-color:black;
-
-}
-
-/* =========================
-   REVEAL ANIMATION
-========================= */
+/* ANIMATIONS */
 
 .reveal{
-
-opacity:0;
-
-transform:translateY(35px);
-
-transition:
-opacity .8s ease,
-transform .8s ease;
-
+  opacity:0;
+  transform:translateY(35px);
+  transition:all .8s ease;
 }
 
-.reveal.show{
-
-opacity:1;
-
-transform:translateY(0);
-
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
 }
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:750px){
-
-.header-inner{
-
-flex-wrap:wrap;
-
+#topBtn{
+  position:fixed;
+  bottom:22px;
+  right:20px;
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:50%;
+  background:linear-gradient(135deg,#dfbd78,#9865ff);
+  color:#080610;
+  font-size:20px;
+  cursor:pointer;
+  display:none;
+  z-index:999;
 }
 
-.logo{
+/* MOBILE */
 
-font-size:15px;
+@media(max-width:800px){
 
-letter-spacing:1.5px;
+  .menu-btn{
+    display:block;
+  }
 
-}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:68px;
+    left:0;
+    width:100%;
+    padding:25px;
+    background:#100b1b;
+    flex-direction:column;
+    gap:22px;
+    border-bottom:1px solid #302342;
+  }
 
-.menu-btn{
+  .nav-links.show{
+    display:flex;
+  }
 
-display:block;
+  .grid{
+    grid-template-columns:1fr;
+  }
 
-}
+  .about-box{
+    grid-template-columns:1fr;
+  }
 
-nav{
+  section{
+    padding:75px 6%;
+  }
 
-display:none;
+  .hero{
+    min-height:80vh;
+  }
 
-width:100%;
+  .section-title h2{
+    font-size:29px;
+  }
 
-flex-direction:column;
-
-gap:0;
-
-padding-top:15px;
-
-}
-
-nav.active{
-
-display:flex;
-
-}
-
-nav a{
-
-width:100%;
-
-text-align:center;
-
-padding:16px;
-
-border-top:1px solid #ffffff12;
-
-}
-
-.hero{
-
-min-height:82vh;
-
-}
-
-.hero h1{
-
-letter-spacing:3px;
-
-}
-
-.hero h2{
-
-letter-spacing:4px;
-
-}
-
-.project-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.card{
-
-padding:32px 20px;
-
-}
-
-.heading{
-
-font-size:28px;
-
-}
-
-.friend{
-
-min-width:150px;
-
-}
-
-.social{
-
-width:100%;
-
-max-width:320px;
-
-}
-
-.clock-box{
-
-padding:16px 22px;
-
-}
-
+  .social{
+    width:100%;
+  }
 }
 
 @media(prefers-reduced-motion:reduce){
-
-*{
-
-animation:none!important;
-
-transition:none!important;
-
-scroll-behavior:auto!important;
-
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
 }
-
-.reveal{
-
-opacity:1;
-
-transform:none;
-
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<div class="progress" id="progress"></div>
-
+<div id="progress"></div>
 <canvas id="particles"></canvas>
 
 <!-- HEADER -->
 
 <header>
+<nav class="navbar">
 
-<div class="header-inner">
+<a href="#home" class="logo gradient-text">
+SHAHZAD 007
+</a>
 
-<div class="logo">
-SHAHZAD OFFICIAL 007
-</div>
-
-<button
-class="menu-btn"
-id="menuBtn"
-aria-label="Open menu"
-aria-expanded="false">
-
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
 ☰
-
 </button>
 
-<nav id="navigation">
-
-<a href="#home">HOME</a>
-<a href="#about">ABOUT</a>
-<a href="#projects">PROJECTS</a>
-<a href="#ai">AI ZONE</a>
-<a href="#team">TEAM</a>
-<a href="#social">SOCIAL</a>
-<a href="#vision">VISION</a>
-
-</nav>
-
+<div class="nav-links" id="navLinks">
+<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#about" onclick="closeMenu()">About</a>
+<a href="#skills" onclick="closeMenu()">Skills</a>
+<a href="#projects" onclick="closeMenu()">Projects</a>
+<a href="#team" onclick="closeMenu()">Team</a>
+<a href="#social" onclick="closeMenu()">Social</a>
 </div>
 
+</nav>
 </header>
-
-<main>
 
 <!-- HERO -->
 
-<div class="hero" id="home">
+<section class="hero" id="home">
+<div class="hero-content reveal">
 
-<div class="hero-tag">
-THE FUTURE STARTS HERE
-</div>
+<div class="badge">WELCOME TO MY OFFICIAL WEBSITE</div>
 
-<div class="hero-line"></div>
+<h1 class="gradient-text">SHAHZAD OFFICIAL 007</h1>
 
-<h1>SHAHZAD</h1>
+<h2>Digital Creator | AI Explorer | Future Developer</h2>
 
-<h2>OFFICIAL 007</h2>
-
-<div class="hero-line"></div>
-
-<p class="hero-description">
-
-Welcome to my exclusive digital world.
-
-A journey of ambition, Artificial Intelligence,
-technology and limitless creativity.
-
+<p>
+Welcome to my digital world. I am Shahzad, passionate about
+Artificial Intelligence, technology, web development and
+creative digital projects. Explore my journey and creativity.
 </p>
 
 <div class="hero-buttons">
-
-<a href="#about" class="btn">
-EXPLORE MY WORLD
-</a>
-
-<a href="#social" class="btn btn-purple">
-CONNECT WITH ME
-</a>
-
-</div>
-
-<div class="clock-box">
-
-<div class="clock-label">
-PAKISTAN STANDARD TIME
-</div>
-
-<div id="clock">00:00:00</div>
-
-<div id="date">Loading...</div>
-
+<a href="#about" class="btn btn-primary">EXPLORE MORE</a>
+<a href="#social" class="btn btn-outline">CONNECT WITH ME</a>
 </div>
 
 </div>
+</section>
 
 <!-- ABOUT -->
 
 <section id="about">
 
-<div class="container reveal">
-
-<div class="section-label">
-THE PERSON BEHIND THE VISION
+<div class="section-title reveal">
+<h2 class="gradient-text">ABOUT ME</h2>
+<div class="gold-line"></div>
+<p>Discover the person behind this digital platform.</p>
 </div>
 
-<h2 class="heading">
-ABOUT <span>ME</span>
-</h2>
+<div class="about-box">
 
-<div class="card">
-
-<div class="profile-circle">
-S
+<div class="profile-box reveal">
+<div>
+<div class="profile-number gradient-text">007</div>
+<h3>SHAHZAD</h3>
+<p style="color:#b9b1c9;margin-top:8px;">Founder & Creator</p>
+</div>
 </div>
 
-<div class="profile-name">
-SHAHZAD
-</div>
-
-<h3 style="margin-top:15px">
-AI ENTHUSIAST & DIGITAL CREATOR
-</h3>
+<div class="about-info reveal">
+<h3>My Digital Journey</h3>
 
 <p>
-
-I am Shahzad, a passionate technology lover
-with a strong interest in Artificial Intelligence.
-
-I enjoy exploring modern AI tools,
-creating digital projects and learning
-about the latest technologies.
-
-My goal is to transform creative ideas
-into meaningful digital experiences.
-
-I believe in continuous learning,
-hard work and building something unique.
-
+I am Shahzad, the creator of SHAHZAD OFFICIAL 007.
+My interests include AI technology, digital creativity,
+web development and learning new skills.
 </p>
 
-<div class="skills">
+<p>
+My goal is to build creative projects, explore new ideas
+and develop useful digital experiences.
+</p>
 
-<div class="skill">ARTIFICIAL INTELLIGENCE</div>
+<p>
+This website represents my personal digital identity
+and my journey into the world of technology.
+</p>
 
-<div class="skill">WEB DEVELOPMENT</div>
-
-<div class="skill">TECHNOLOGY</div>
-
-<div class="skill">DIGITAL CREATIVITY</div>
-
-<div class="skill">CONTENT CREATION</div>
-
+<a href="#projects" class="btn btn-primary">VIEW MY WORK</a>
 </div>
 
+</div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="section-title reveal">
+<h2 class="gradient-text">MY INTERESTS</h2>
+<div class="gold-line"></div>
+<p>Technology, creativity and continuous learning.</p>
+</div>
+
+<div class="grid">
+
+<div class="card reveal">
+<div class="card-icon">🤖</div>
+<h3>Artificial Intelligence</h3>
+<p>Exploring AI tools, creative concepts and modern artificial intelligence.</p>
+</div>
+
+<div class="card reveal">
+<div class="card-icon">💻</div>
+<h3>Web Development</h3>
+<p>Learning how to create websites using HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="card reveal">
+<div class="card-icon">🎬</div>
+<h3>Digital Creation</h3>
+<p>Creating digital content, animations and social media projects.</p>
 </div>
 
 </div>
@@ -1538,680 +744,309 @@ hard work and building something unique.
 
 <section id="projects">
 
-<div class="container reveal">
-
-<div class="section-label">
-INNOVATION & CREATIVITY
+<div class="section-title reveal">
+<h2 class="gradient-text">MY PROJECTS</h2>
+<div class="gold-line"></div>
+<p>My creative digital projects and platforms.</p>
 </div>
 
-<h2 class="heading">
-MY <span>PROJECTS</span>
-</h2>
+<div class="grid">
 
-<p class="subtitle">
+<div class="card reveal">
+<span class="project-tag">WEBSITE PROJECT</span>
+<h3>SHAHZAD OFFICIAL 007</h3>
+<p>
+My personal website built to represent my digital identity,
+interests and creative journey.
+</p>
+<br>
+<a href="https://shahzad-viral.github.io/shahzad-official-007/"
+target="_blank" rel="noopener" class="btn btn-outline">
+VISIT WEBSITE
+</a>
+</div>
 
-Exploring new ideas and creating
+<div class="card reveal">
+<span class="project-tag">YOUTUBE PROJECT</span>
+<h3>Baby Bubu Toons</h3>
+<p>
+A creative YouTube project featuring fictional animated
+characters and entertaining AI-inspired content.
+</p>
+<br>
+<a href="https://www.youtube.com/@BabyBubuToons"
+target="_blank" rel="noopener" class="btn btn-outline">
+OPEN CHANNEL
+</a>
+</div>
+
+<div class="card reveal">
+<span class="project-tag">FUTURE PROJECT</span>
+<h3>Future Innovations</h3>
+<p>
+Exploring new ideas in technology, AI, gaming and
 digital experiences.
-
 </p>
-
-<div class="project-grid">
-
-<div class="project">
-
-<div class="project-number">01</div>
-
-<h3>WEB DEVELOPMENT</h3>
-
-<p>
-Building modern, responsive
-and professional websites.
-</p>
-
-</div>
-
-<div class="project">
-
-<div class="project-number">02</div>
-
-<h3>ARTIFICIAL INTELLIGENCE</h3>
-
-<p>
-Exploring AI tools and
-innovative technologies.
-</p>
-
-</div>
-
-<div class="project">
-
-<div class="project-number">03</div>
-
-<h3>AI VIDEO CREATION</h3>
-
-<p>
-Creating imaginative animations
-and digital video content.
-</p>
-
-</div>
-
-<div class="project">
-
-<div class="project-number">04</div>
-
-<h3>DIGITAL CREATIVITY</h3>
-
-<p>
-Turning creative concepts
-into digital experiences.
-</p>
-
+<br>
+<a href="#contact" class="btn btn-outline">LEARN MORE</a>
 </div>
 
 </div>
-
-</div>
-
-</section>
-
-<!-- AI ZONE -->
-
-<section id="ai">
-
-<div class="container reveal">
-
-<div class="section-label">
-TECHNOLOGY OF TOMORROW
-</div>
-
-<h2 class="heading">
-ARTIFICIAL <span>INTELLIGENCE</span>
-</h2>
-
-<div class="ai-box">
-
-<div class="ai-icon">✧</div>
-
-<h3>THE AI ZONE</h3>
-
-<p>
-
-Artificial Intelligence is changing
-the future of technology.
-
-From intelligent systems to creative tools,
-AI opens new opportunities for innovation.
-
-My interest is to explore these technologies
-and understand how they can help build
-a smarter digital future.
-
-</p>
-
-<div class="skills">
-
-<div class="skill">AI EXPLORATION</div>
-
-<div class="skill">SMART TECHNOLOGY</div>
-
-<div class="skill">FUTURE INNOVATION</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 <!-- TEAM -->
 
 <section id="team">
 
-<div class="container reveal">
-
-<div class="section-label">
-THE PEOPLE IN MY JOURNEY
+<div class="section-title reveal">
+<h2 class="gradient-text">MY TEAM</h2>
+<div class="gold-line"></div>
+<p>People connected with my journey.</p>
 </div>
 
-<h2 class="heading">
-MY <span>TEAM</span>
-</h2>
+<div class="grid">
 
-<div class="card">
-
-<div class="friend">
-
-<div class="friend-name">
-SHAHZAD
+<div class="card friend-card reveal">
+<div class="friend-avatar">S</div>
+<h3>Shahzad</h3>
+<p>Founder & Creator</p>
 </div>
 
-<p>OWNER & FOUNDER</p>
-
+<div class="card friend-card reveal">
+<div class="friend-avatar">R</div>
+<h3>Rashid</h3>
+<p>Friend</p>
 </div>
 
-<div class="friend">
-
-<div class="friend-name">
-RASHID
-</div>
-
-<p>MY FRIEND</p>
-
+<div class="card friend-card reveal">
+<div class="friend-avatar">007</div>
+<h3>Official 007</h3>
+<p>Digital Identity</p>
 </div>
 
 </div>
-
-</div>
-
 </section>
 
-<!-- SOCIAL MEDIA -->
+<!-- SOCIAL -->
 
 <section id="social">
 
-<div class="container reveal">
-
-<div class="section-label">
-STAY CONNECTED
+<div class="section-title reveal">
+<h2 class="gradient-text">CONNECT WITH ME</h2>
+<div class="gold-line"></div>
+<p>Follow my digital journey on social platforms.</p>
 </div>
 
-<h2 class="heading">
-MY <span>SOCIAL MEDIA</span>
-</h2>
+<div class="social-grid reveal">
 
-<div class="card">
-
-<h3>CONNECT WITH ME</h3>
-
-<p>
-
-Follow my creative journey
-and explore my latest content.
-
-</p>
-
-<div class="socials">
-
-<a
-class="social"
+<a class="social"
 href="https://www.tiktok.com/@rana.editor33"
-target="_blank"
-rel="noopener noreferrer">
-
-TIKTOK — VISIT PROFILE
-
+target="_blank" rel="noopener">
+TikTok
 </a>
 
-<a
-class="social"
+<a class="social"
 href="https://www.youtube.com/@BabyBubuToons"
-target="_blank"
-rel="noopener noreferrer">
-
-YOUTUBE — VISIT CHANNEL
-
+target="_blank" rel="noopener">
+YouTube
 </a>
 
-</div>
+<div class="social">Instagram — Coming Soon</div>
+
+<div class="social">Facebook — Coming Soon</div>
+
+<div class="social">WhatsApp — Coming Soon</div>
 
 </div>
-
-</div>
-
 </section>
 
 <!-- YOUTUBE -->
 
 <section id="youtube">
 
-<div class="container reveal">
+<div class="youtube-box reveal">
 
-<div class="section-label">
-MY VIDEO CREATION WORLD
-</div>
-
-<h2 class="heading">
-MY <span>YOUTUBE CHANNEL</span>
-</h2>
-
-<div class="youtube-box">
-
-<h3>BABY BUBU TOONS</h3>
+<h3 class="gradient-text">BABY BUBU TOONS</h3>
 
 <p>
-
-Welcome to Baby Bubu Toons!
-
-Explore cute AI animations,
-creative characters and entertaining videos.
-
-Subscribe and become part
-of this creative journey.
-
+Explore my YouTube channel and discover creative
+animated content and fictional characters.
 </p>
 
-<a
-class="btn"
-href="https://www.youtube.com/@BabyBubuToons"
-target="_blank"
-rel="noopener noreferrer">
-
-▶ SUBSCRIBE NOW
-
+<a href="https://www.youtube.com/@BabyBubuToons"
+target="_blank" rel="noopener"
+class="btn btn-primary">
+SUBSCRIBE ON YOUTUBE
 </a>
 
 </div>
-
-</div>
-
 </section>
 
-<!-- VISION -->
+<!-- CONTACT -->
 
-<section id="vision">
+<section id="contact">
 
-<div class="container reveal">
-
-<div class="section-label">
-THINK BEYOND LIMITS
+<div class="section-title reveal">
+<h2 class="gradient-text">MY VISION</h2>
+<div class="gold-line"></div>
+<p>Think creatively. Learn continuously. Build something meaningful.</p>
 </div>
 
-<h2 class="heading">
-MY <span>VISION</span>
-</h2>
+<div class="contact-box reveal">
 
-<div class="quote">
-
-<h2>
-
-"Greatness is not about being known
-by everyone.
-
-It is about creating something
-that speaks for you."
-
-</h2>
+<h3>THE JOURNEY IS JUST BEGINNING</h3>
 
 <p>
-SHAHZAD OFFICIAL 007
+My vision is to keep learning, explore technology
+and create something valuable through digital creativity.
 </p>
 
-</div>
+<a href="#home" class="btn btn-primary">BACK TO HOME</a>
 
 </div>
-
 </section>
-
-<!-- JOURNEY -->
-
-<section>
-
-<div class="container reveal">
-
-<div class="journey">
-
-<h3>THE JOURNEY HAS JUST BEGUN</h3>
-
-<p>
-
-Never stop learning.<br>
-
-Never stop improving.<br>
-
-Never stop creating.<br><br>
-
-Your dreams deserve your dedication.
-
-Your future deserves your hard work.
-
-Make every day a step towards greatness.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
 
 <!-- FOOTER -->
 
 <footer>
 
-<div class="footer-logo">
-SHAHZAD OFFICIAL 007
-</div>
+<div class="logo gradient-text">SHAHZAD OFFICIAL 007</div>
 
-<p>
-AI Enthusiast | Technology Lover | Digital Creator
-</p>
+<p>Designed with creativity and passion.</p>
 
-<p>
-Dream Big. Build Different. Stay Unstoppable.
-</p>
-
-<p>
-Designed with Vision and Creativity.
-</p>
-
-<p>
-Copyright © <span id="year"></span>
-Shahzad Official. All Rights Reserved.
+<p style="margin-top:12px;">
+© <span id="year"></span> SHAHZAD OFFICIAL 007. All Rights Reserved.
 </p>
 
 </footer>
 
-<!-- BACK TO TOP -->
-
-<button
-class="top-btn"
-id="topBtn"
-aria-label="Back to top">
-
-↑
-
-</button>
-
-<!-- JAVASCRIPT -->
+<button id="topBtn" onclick="goTop()" aria-label="Back to top">↑</button>
 
 <script>
 
-/* =========================
-   MOBILE MENU
-========================= */
+/* MOBILE MENU */
 
-const menuBtn=document.getElementById("menuBtn");
-
-const navigation=document.getElementById("navigation");
-
-menuBtn.addEventListener("click",()=>{
-
-const opened=navigation.classList.toggle("active");
-
-menuBtn.textContent=opened?"✕":"☰";
-
-menuBtn.setAttribute(
-"aria-expanded",
-String(opened)
-);
-
-});
-
-navigation.querySelectorAll("a").forEach(link=>{
-
-link.addEventListener("click",()=>{
-
-navigation.classList.remove("active");
-
-menuBtn.textContent="☰";
-
-menuBtn.setAttribute("aria-expanded","false");
-
-});
-
-});
-
-/* =========================
-   LIVE PAKISTAN CLOCK
-========================= */
-
-function updateClock(){
-
-const now=new Date();
-
-const time=now.toLocaleTimeString(
-"en-US",
-{
-timeZone:"Asia/Karachi",
-hour:"2-digit",
-minute:"2-digit",
-second:"2-digit",
-hour12:true
-}
-);
-
-const date=now.toLocaleDateString(
-"en-US",
-{
-timeZone:"Asia/Karachi",
-weekday:"long",
-day:"numeric",
-month:"long",
-year:"numeric"
-}
-);
-
-document.getElementById("clock").textContent=time;
-
-document.getElementById("date").textContent=date;
-
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("show");
 }
 
-updateClock();
-
-setInterval(updateClock,1000);
-
-/* =========================
-   SCROLL PROGRESS
-========================= */
-
-window.addEventListener("scroll",()=>{
-
-const total=
-document.documentElement.scrollHeight-window.innerHeight;
-
-const progress=
-total>0?(window.scrollY/total)*100:0;
-
-document.getElementById("progress").style.width=
-progress+"%";
-
-});
-
-/* =========================
-   BACK TO TOP
-========================= */
-
-const topBtn=document.getElementById("topBtn");
-
-window.addEventListener("scroll",()=>{
-
-topBtn.style.display=
-window.scrollY>400?"block":"none";
-
-});
-
-topBtn.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const observer=new IntersectionObserver(
-
-(entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-observer.unobserve(entry.target);
-
+function closeMenu(){
+  document.getElementById("navLinks").classList.remove("show");
 }
 
+/* SCROLL PROGRESS */
+
+window.addEventListener("scroll",function(){
+
+  let scrollTop=document.documentElement.scrollTop;
+  let height=document.documentElement.scrollHeight-
+             document.documentElement.clientHeight;
+
+  let progress=(scrollTop/height)*100;
+
+  document.getElementById("progress").style.width=progress+"%";
+
+  document.getElementById("topBtn").style.display=
+    scrollTop>350?"block":"none";
+
 });
 
-},
+/* BACK TO TOP */
 
-{
-threshold:0.12
+function goTop(){
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 }
 
-);
+/* REVEAL ANIMATION */
 
-document.querySelectorAll(".reveal").forEach(element=>{
+const observer=new IntersectionObserver(function(entries){
 
-observer.observe(element);
+  entries.forEach(function(entry){
 
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+
+  });
+
+},{threshold:0.12});
+
+document.querySelectorAll(".reveal").forEach(function(element){
+  observer.observe(element);
 });
 
-/* =========================
-   AUTOMATIC YEAR
-========================= */
+/* YEAR */
 
 document.getElementById("year").textContent=
-new Date().getFullYear();
+  new Date().getFullYear();
 
-/* =========================
-   PARTICLE ANIMATION
-========================= */
+/* PARTICLES */
 
 const canvas=document.getElementById("particles");
-
 const ctx=canvas.getContext("2d");
 
 let particles=[];
 
-const reduceMotion=window.matchMedia(
-"(prefers-reduced-motion: reduce)"
-).matches;
-
 function resizeCanvas(){
 
-const ratio=Math.min(window.devicePixelRatio||1,2);
-
-canvas.width=window.innerWidth*ratio;
-
-canvas.height=window.innerHeight*ratio;
-
-canvas.style.width=window.innerWidth+"px";
-
-canvas.style.height=window.innerHeight+"px";
-
-ctx.setTransform(ratio,0,0,ratio,0,0);
+  canvas.width=window.innerWidth;
+  canvas.height=window.innerHeight;
 
 }
 
-function createParticles(){
-
-particles=[];
-
-const count=Math.min(
-65,
-Math.floor(window.innerWidth/7)
-);
-
-for(let i=0;i<count;i++){
-
-particles.push({
-
-x:Math.random()*window.innerWidth,
-
-y:Math.random()*window.innerHeight,
-
-size:Math.random()*1.8+0.5,
-
-speed:Math.random()*0.35+0.1,
-
-opacity:Math.random()*0.6+0.2,
-
-purple:Math.random()>0.5
-
-});
-
-}
-
-}
-
-function drawParticles(){
-
-ctx.clearRect(
-0,
-0,
-window.innerWidth,
-window.innerHeight
-);
-
-particles.forEach(p=>{
-
-if(!reduceMotion){
-
-p.y-=p.speed;
-
-if(p.y<0){
-
-p.y=window.innerHeight;
-
-p.x=Math.random()*window.innerWidth;
-
-}
-
-}
-
-ctx.beginPath();
-
-ctx.arc(
-p.x,
-p.y,
-p.size,
-0,
-Math.PI*2
-);
-
-ctx.fillStyle=p.purple
-?
-"rgba(165,120,255,"+p.opacity+")"
-:
-"rgba(230,193,115,"+p.opacity+")";
-
-ctx.shadowBlur=10;
-
-ctx.shadowColor=p.purple?"#8b5cf6":"#d9b66c";
-
-ctx.fill();
-
-});
-
-if(!reduceMotion){
-
-requestAnimationFrame(drawParticles);
-
-}
-
-}
-
+window.addEventListener("resize",resizeCanvas);
 resizeCanvas();
 
-createParticles();
+for(let i=0;i<45;i++){
 
-drawParticles();
+  particles.push({
 
-window.addEventListener("resize",()=>{
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    size:Math.random()*2+0.5,
+    speed:Math.random()*0.5+0.1,
+    hue:Math.random()*80+250
 
-resizeCanvas();
+  });
 
-createParticles();
+}
 
-});
+function animateParticles(){
+
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  particles.forEach(function(p){
+
+    p.y-=p.speed;
+
+    if(p.y<0){
+      p.y=canvas.height;
+      p.x=Math.random()*canvas.width;
+    }
+
+    ctx.beginPath();
+
+    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+
+    ctx.fillStyle="hsla("+p.hue+",90%,75%,0.65)";
+
+    ctx.shadowBlur=12;
+    ctx.shadowColor="rgba(152,101,255,0.6)";
+
+    ctx.fill();
+
+  });
+
+  requestAnimationFrame(animateParticles);
+
+}
+
+animateParticles();
 
 </script>
 
 </body>
-
 </html>
