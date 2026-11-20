@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080b16">
+<meta name="theme-color" content="#090817">
 
-<title>SHAHZAD OFFICIAL 007</title>
+<title>SHAHZAD AHMAD | Official Website</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -20,14 +19,14 @@
 }
 
 :root{
-    --red:#ff1744;
-    --blue:#168cff;
-    --white:#ffffff;
+    --accent:#a855f7;
+    --accent2:#06b6d4;
+    --accent3:#f5b942;
 }
 
 body{
-    background:#080b16;
-    color:white;
+    background:#090817;
+    color:#fff;
     font-family:'Outfit',sans-serif;
     min-height:100vh;
     overflow-x:hidden;
@@ -39,143 +38,180 @@ body{
     position:fixed;
     inset:0;
     z-index:-2;
-    background:#080b16;
     overflow:hidden;
+    background:
+    radial-gradient(ellipse at top,#17132d 0%,#090817 60%);
 }
 
 .glow{
     position:absolute;
-    width:380px;
-    height:380px;
+    width:400px;
+    height:400px;
     border-radius:50%;
-    filter:blur(110px);
-    opacity:.42;
-    animation:moveGlow 9s ease-in-out infinite alternate;
+    filter:blur(120px);
+    opacity:.35;
+    animation:floatGlow 12s ease-in-out infinite alternate;
 }
 
-.red-glow{
-    background:#ff003c;
-    top:5%;
-    left:-130px;
+.glow-one{
+    background:#9333ea;
+    top:-100px;
+    left:-150px;
 }
 
-.blue-glow{
-    background:#006eff;
-    bottom:0;
-    right:-120px;
+.glow-two{
+    background:#0891b2;
+    right:-150px;
+    bottom:5%;
     animation-delay:2s;
 }
 
-@keyframes moveGlow{
-    0%{
-        transform:translate(0,0) scale(1);
-    }
-    100%{
-        transform:translate(100px,-60px) scale(1.3);
-    }
+.glow-three{
+    background:#d97706;
+    top:45%;
+    left:35%;
+    width:250px;
+    height:250px;
+    opacity:.13;
+    animation-delay:4s;
+}
+
+@keyframes floatGlow{
+    0%{transform:translate(0,0) scale(1)}
+    100%{transform:translate(100px,80px) scale(1.3)}
+}
+
+/* Animated text colors */
+
+.animated-text{
+    background:linear-gradient(
+        90deg,
+        #a855f7,
+        #06b6d4,
+        #f5b942,
+        #ec4899,
+        #a855f7
+    );
+    background-size:300% auto;
+    color:transparent;
+    background-clip:text;
+    -webkit-background-clip:text;
+    animation:colorFlow 6s linear infinite;
+}
+
+@keyframes colorFlow{
+    to{background-position:300% center}
 }
 
 /* Header */
 
 header{
-    width:100%;
-    padding:24px 7%;
+    padding:22px 7%;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     border-bottom:1px solid rgba(255,255,255,.08);
-    background:rgba(8,11,22,.65);
-    backdrop-filter:blur(15px);
+    background:rgba(9,8,23,.65);
+    backdrop-filter:blur(18px);
 }
 
 .logo{
     font-family:'Space Grotesk',sans-serif;
-    font-size:22px;
+    font-size:19px;
     font-weight:800;
-    font-style:italic;
     letter-spacing:1px;
-    background:linear-gradient(90deg,#ff1744,#ffffff,#168cff);
-    background-size:200% auto;
-    color:transparent;
-    background-clip:text;
-    -webkit-background-clip:text;
-    animation:colorMove 4s linear infinite;
 }
 
-@keyframes colorMove{
-    to{
-        background-position:200% center;
-    }
-}
-
-/* Main welcome */
+/* Welcome section */
 
 .hero{
-    min-height:80vh;
+    min-height:85vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:60px 20px;
+    padding:70px 20px;
 }
 
 .hero-content{
-    max-width:800px;
+    width:100%;
+    max-width:850px;
 }
 
-.welcome-urdu{
-    font-family:'Noto Nastaliq Urdu',serif;
-    font-size:clamp(30px,7vw,55px);
-    line-height:2.1;
-    margin-bottom:15px;
-    color:white;
-    text-shadow:0 0 25px rgba(22,140,255,.35);
+.small-label{
+    color:#b7b3d1;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:5px;
+    margin-bottom:25px;
 }
 
-.hero-title{
+.main-name{
     font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(35px,8vw,75px);
+    font-size:clamp(40px,9vw,82px);
     font-weight:700;
     font-style:italic;
-    letter-spacing:-2px;
-    background:linear-gradient(90deg,#ff1744,#ffffff,#168cff,#ff1744);
-    background-size:300% auto;
-    color:transparent;
-    background-clip:text;
-    -webkit-background-clip:text;
-    animation:colorMove 5s linear infinite;
+    letter-spacing:-3px;
+    line-height:1.2;
 }
 
-.hero-subtitle{
-    color:#b8c2d8;
+.welcome{
+    margin-top:22px;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(24px,5vw,38px);
+    font-weight:700;
+    letter-spacing:5px;
+}
+
+.welcome-message{
+    max-width:650px;
+    margin:24px auto 0;
+    color:#c3c0d6;
     font-size:16px;
-    margin-top:18px;
-    line-height:1.8;
+    line-height:2;
+    font-weight:400;
+}
+
+.welcome-message strong{
+    color:#fff;
+    font-weight:700;
+}
+
+/* Decorative line */
+
+.divider{
+    width:110px;
+    height:3px;
+    border-radius:20px;
+    margin:30px auto;
+    background:linear-gradient(90deg,#a855f7,#06b6d4,#f5b942);
+    background-size:200%;
+    animation:colorFlow 4s linear infinite;
 }
 
 /* Button */
 
 .info-button{
-    margin-top:38px;
+    margin-top:15px;
     padding:16px 30px;
-    border:none;
+    border:1px solid rgba(255,255,255,.2);
     border-radius:12px;
     color:white;
-    font-size:14px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    font-family:'Space Grotesk',sans-serif;
-    background:linear-gradient(100deg,#ff1744,#168cff);
+    background:linear-gradient(110deg,#9333ea,#0891b2);
     background-size:200% auto;
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:1.5px;
     cursor:pointer;
-    box-shadow:0 0 30px rgba(22,140,255,.25);
-    transition:.3s;
-    animation:colorMove 4s linear infinite;
+    transition:.35s;
+    box-shadow:0 0 30px rgba(147,51,234,.2);
+    animation:colorFlow 5s linear infinite;
 }
 
 .info-button:hover{
     transform:translateY(-5px);
-    box-shadow:0 0 35px rgba(255,23,68,.4);
+    box-shadow:0 0 35px rgba(6,182,212,.35);
 }
 
 /* Personal information */
@@ -183,67 +219,57 @@ header{
 #personal{
     display:none;
     max-width:950px;
-    margin:0 auto;
-    padding:30px 20px 80px;
-    animation:showSection .7s ease;
+    margin:auto;
+    padding:35px 20px 80px;
+    animation:appear .7s ease;
 }
 
-@keyframes showSection{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+@keyframes appear{
+    from{opacity:0;transform:translateY(25px)}
+    to{opacity:1;transform:translateY(0)}
 }
 
 .section-heading{
-    text-align:center;
     font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(25px,5vw,40px);
-    font-style:italic;
+    text-align:center;
+    font-size:clamp(27px,6vw,42px);
     margin-bottom:35px;
-    background:linear-gradient(90deg,#ff1744,#168cff);
-    color:transparent;
-    background-clip:text;
-    -webkit-background-clip:text;
+    font-weight:800;
 }
 
 .info-card{
-    background:rgba(255,255,255,.045);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:18px;
-    padding:25px;
+    padding:27px;
     margin-bottom:20px;
-    backdrop-filter:blur(12px);
-    transition:.3s;
+    border-radius:18px;
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.10);
+    backdrop-filter:blur(15px);
+    transition:.35s;
 }
 
 .info-card:hover{
-    border-color:#168cff;
-    transform:translateY(-4px);
+    transform:translateY(-5px);
+    border-color:var(--accent2);
+    box-shadow:0 10px 35px rgba(6,182,212,.08);
 }
 
 .card-number{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:13px;
-    font-weight:700;
+    font-size:12px;
+    font-weight:800;
     letter-spacing:3px;
-    color:#168cff;
     margin-bottom:12px;
+    color:#06b6d4;
 }
 
 .card-title{
-    font-size:23px;
-    font-weight:800;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:24px;
+    font-weight:700;
     margin-bottom:15px;
-    color:white;
 }
 
 .info-text{
-    color:#b9c4d8;
+    color:#c2c1d4;
     font-size:15px;
     line-height:2;
 }
@@ -252,7 +278,7 @@ header{
     display:flex;
     justify-content:space-between;
     gap:15px;
-    padding:13px 0;
+    padding:14px 0;
     border-bottom:1px solid rgba(255,255,255,.08);
     font-size:14px;
 }
@@ -262,16 +288,16 @@ header{
 }
 
 .info-row span:first-child{
-    color:#9daac2;
+    color:#a5a2ba;
 }
 
 .info-row span:last-child{
     color:white;
-    text-align:right;
     font-weight:600;
+    text-align:right;
 }
 
-/* Social links */
+/* Social media */
 
 .social-links{
     display:grid;
@@ -279,56 +305,51 @@ header{
     gap:13px;
 }
 
-.social-link{
-    display:block;
-    text-decoration:none;
-    color:white;
+.social-link,
+.coming-soon{
     padding:16px;
     text-align:center;
     border-radius:12px;
     border:1px solid rgba(255,255,255,.12);
     background:rgba(255,255,255,.04);
+    color:white;
+    text-decoration:none;
     font-weight:700;
     transition:.3s;
 }
 
 .social-link:hover{
-    background:linear-gradient(100deg,#ff1744,#168cff);
-    transform:translateY(-3px);
+    background:linear-gradient(110deg,#9333ea,#0891b2);
+    transform:translateY(-4px);
 }
 
 .coming-soon{
-    color:#8c98ad;
-    padding:16px;
-    text-align:center;
-    border-radius:12px;
-    border:1px dashed rgba(255,255,255,.15);
-    font-weight:600;
+    color:#aaa6c0;
 }
 
-/* Password modal */
+/* Password popup */
 
 .modal{
     display:none;
     position:fixed;
     inset:0;
-    z-index:10;
-    background:rgba(0,0,0,.82);
-    backdrop-filter:blur(12px);
+    z-index:20;
     align-items:center;
     justify-content:center;
     padding:20px;
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(12px);
 }
 
 .modal-box{
     width:100%;
-    max-width:380px;
+    max-width:390px;
     padding:30px;
     border-radius:20px;
-    background:#101729;
-    border:1px solid rgba(22,140,255,.5);
-    box-shadow:0 0 40px rgba(22,140,255,.15);
     text-align:center;
+    background:#15132a;
+    border:1px solid rgba(168,85,247,.5);
+    box-shadow:0 0 45px rgba(147,51,234,.18);
 }
 
 .modal-box h2{
@@ -338,25 +359,26 @@ header{
 }
 
 .modal-box p{
-    color:#aab6cc;
+    color:#b5b1c9;
     font-size:14px;
     margin-bottom:22px;
+    line-height:1.7;
 }
 
 .password-input{
     width:100%;
     padding:15px;
     border-radius:10px;
-    border:1px solid #34415c;
+    border:1px solid #48415f;
     outline:none;
-    background:#080e1c;
+    background:#0b0a19;
     color:white;
     font-size:16px;
     margin-bottom:15px;
 }
 
 .password-input:focus{
-    border-color:#168cff;
+    border-color:#06b6d4;
 }
 
 .modal-actions{
@@ -367,23 +389,23 @@ header{
 .modal-actions button{
     flex:1;
     padding:13px;
-    border:none;
+    border:0;
     border-radius:9px;
     color:white;
-    font-weight:700;
+    font-weight:800;
     cursor:pointer;
 }
 
 .unlock{
-    background:linear-gradient(100deg,#ff1744,#168cff);
+    background:linear-gradient(100deg,#9333ea,#0891b2);
 }
 
 .cancel{
-    background:#29344a;
+    background:#34304a;
 }
 
 #error{
-    color:#ff536e;
+    color:#ff6b85;
     font-size:13px;
     margin-top:13px;
     min-height:18px;
@@ -392,29 +414,38 @@ header{
 /* Footer */
 
 footer{
+    padding:27px 15px;
     text-align:center;
-    padding:25px 15px;
+    color:#89859e;
     border-top:1px solid rgba(255,255,255,.08);
-    color:#8290a8;
     font-size:13px;
     line-height:2;
 }
 
 @media(max-width:600px){
+
     header{
         padding:20px;
     }
 
     .logo{
-        font-size:17px;
+        font-size:16px;
     }
 
     .hero{
-        min-height:75vh;
+        min-height:78vh;
+    }
+
+    .main-name{
+        letter-spacing:-2px;
+    }
+
+    .welcome-message{
+        font-size:14px;
     }
 
     .info-card{
-        padding:20px;
+        padding:21px;
     }
 
     .social-links{
@@ -425,37 +456,49 @@ footer{
         font-size:13px;
     }
 }
-
 </style>
 </head>
 
 <body>
 
 <div class="background">
-    <div class="glow red-glow"></div>
-    <div class="glow blue-glow"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
 </div>
 
 <header>
-    <div class="logo">SHAHZAD OFFICIAL 007</div>
+    <div class="logo animated-text">
+        SHAHZAD AHMAD
+    </div>
 </header>
 
 <!-- WELCOME PAGE -->
 
 <section class="hero">
+
     <div class="hero-content">
 
-        <h1 class="welcome-urdu" dir="rtl">
-            خوش آمدید
+        <div class="small-label">
+            PERSONAL WEBSITE
+        </div>
+
+        <h1 class="main-name animated-text">
+            𝙎𝙝𝙖𝙝𝙯𝙖𝙙 𝘼𝙝𝙢𝙖𝙙
         </h1>
 
-        <h2 class="hero-title">
-            𝙎𝙝𝙖𝙝𝙯𝙖𝙙
+        <h2 class="welcome animated-text">
+            WELCOME
         </h2>
 
-        <p class="hero-subtitle">
-            Welcome to my personal website.<br>
-            Discover my journey, interests and digital world.
+        <div class="divider"></div>
+
+        <p class="welcome-message">
+            It is a pleasure to welcome you here.
+            <strong>Your visit is truly appreciated.</strong>
+            Thank you for taking the time to explore my personal
+            website. I hope you enjoy discovering my interests,
+            creativity and digital journey.
         </p>
 
         <button class="info-button" onclick="openPassword()">
@@ -463,33 +506,35 @@ footer{
         </button>
 
     </div>
+
 </section>
 
-<!-- PERSONAL INFORMATION -->
+<!-- PRIVATE INFORMATION -->
 
 <section id="personal">
 
-    <h2 class="section-heading">
+    <h2 class="section-heading animated-text">
         MY PERSONAL INFORMATION
     </h2>
 
     <div class="info-card">
         <div class="card-number">01 / INTRODUCTION</div>
         <h3 class="card-title">About Me</h3>
+
         <p class="info-text">
-            Welcome to my personal space.
-            I am Shahzad, a digital creator interested
-            in technology, creativity and learning new things.
+            My name is Shahzad Ahmad. I am interested in
+            technology, creativity and digital development.
+            I enjoy exploring new ideas and learning new skills.
         </p>
     </div>
 
     <div class="info-card">
-        <div class="card-number">02 / PERSONAL DETAILS</div>
-        <h3 class="card-title">My Profile</h3>
+        <div class="card-number">02 / PROFILE</div>
+        <h3 class="card-title">Personal Profile</h3>
 
         <div class="info-row">
             <span>Name</span>
-            <span>Shahzad</span>
+            <span>Shahzad Ahmad</span>
         </div>
 
         <div class="info-row">
@@ -498,7 +543,7 @@ footer{
         </div>
 
         <div class="info-row">
-            <span>Role</span>
+            <span>Profession</span>
             <span>Digital Creator</span>
         </div>
     </div>
@@ -545,9 +590,13 @@ footer{
                 YouTube
             </a>
 
-            <div class="coming-soon">Instagram — Coming Soon</div>
+            <div class="coming-soon">
+                Instagram — Coming Soon
+            </div>
 
-            <div class="coming-soon">Facebook — Coming Soon</div>
+            <div class="coming-soon">
+                Facebook — Coming Soon
+            </div>
 
         </div>
     </div>
@@ -555,11 +604,12 @@ footer{
 </section>
 
 <footer>
+    SHAHZAD AHMAD<br>
     SHAHZAD OFFICIAL 007<br>
     Personal Website
 </footer>
 
-<!-- PASSWORD POPUP -->
+<!-- PASSWORD WINDOW -->
 
 <div class="modal" id="passwordModal">
 
@@ -568,14 +618,15 @@ footer{
         <h2>Private Information</h2>
 
         <p>
-            Enter your password to access personal information.
+            Please enter your password to access
+            the personal information section.
         </p>
 
         <input
             type="password"
             id="passwordInput"
             class="password-input"
-            placeholder="Enter Password"
+            placeholder="Enter Your Password"
         >
 
         <div class="modal-actions">
@@ -601,8 +652,11 @@ footer{
 const WEBSITE_PASSWORD = "Shahzad445";
 
 function openPassword(){
+
     document.getElementById("passwordModal").style.display="flex";
+
     document.getElementById("passwordInput").value="";
+
     document.getElementById("error").textContent="";
 
     setTimeout(()=>{
@@ -611,25 +665,26 @@ function openPassword(){
 }
 
 function closePassword(){
+
     document.getElementById("passwordModal").style.display="none";
+
 }
 
 function checkPassword(){
 
-    const enteredPassword =
+    const entered =
         document.getElementById("passwordInput").value;
 
-    if(enteredPassword === WEBSITE_PASSWORD){
+    if(entered === WEBSITE_PASSWORD){
 
         closePassword();
 
-        const personal =
-            document.getElementById("personal");
+        const section = document.getElementById("personal");
 
-        personal.style.display="block";
+        section.style.display="block";
 
         setTimeout(()=>{
-            personal.scrollIntoView({
+            section.scrollIntoView({
                 behavior:"smooth",
                 block:"start"
             });
@@ -638,7 +693,7 @@ function checkPassword(){
     }else{
 
         document.getElementById("error").textContent =
-            "Incorrect password. Please try again.";
+        "Incorrect password. Please try again.";
 
     }
 }
@@ -646,7 +701,7 @@ function checkPassword(){
 document.getElementById("passwordInput")
 .addEventListener("keydown",function(event){
 
-    if(event.key === "Enter"){
+    if(event.key==="Enter"){
         checkPassword();
     }
 
