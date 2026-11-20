@@ -5,515 +5,453 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SHAHZAD AHMAD | OFFICIAL 007</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-:root {
-    --gold: #e8c66e;
-    --light: #fff0bd;
-    --red: #8e2025;
-    --black: #050505;
+:root{
+    --gold:#e8c66e;
+    --light:#fff0bd;
+    --black:#050505;
 }
 
-html {
-    scroll-behavior: smooth;
+body{
+    background:#050505;
+    color:white;
+    font-family:Poppins,sans-serif;
+    overflow-x:hidden;
 }
 
-body {
-    background: var(--black);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+html{
+    scroll-behavior:smooth;
 }
 
-/* BACKGROUND */
-
-.background {
-    position: fixed;
-    inset: 0;
-    z-index: -3;
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-5;
     background:
-        radial-gradient(ellipse at 50% 110%,
-        rgba(232,198,110,.16), transparent 55%),
-        radial-gradient(circle at 10% 15%,
-        rgba(142,32,37,.10), transparent 35%),
-        #050505;
+    radial-gradient(circle at 50% 100%,#49361555,transparent 55%),
+    #050505;
 }
 
-/* BOTTOM LIGHTING */
-
-.bottom-light {
-    position: fixed;
-    bottom: -220px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 450px;
-    background: radial-gradient(
+.bottom-light{
+    position:fixed;
+    bottom:-200px;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    height:450px;
+    background:radial-gradient(
         ellipse,
-        rgba(232,198,110,.28),
-        rgba(232,198,110,.10) 35%,
+        #e8c66e66,
+        #b88b3240 35%,
         transparent 70%
     );
-    filter: blur(35px);
-    animation: lightMove 5s ease-in-out infinite alternate;
-    z-index: -2;
-    pointer-events: none;
+    filter:blur(35px);
+    animation:light 4s infinite alternate;
+    z-index:-3;
 }
 
-@keyframes lightMove {
-    from {
-        opacity: .4;
-        transform: translateX(-50%) scale(.85);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(-50%) scale(1.15);
-    }
+@keyframes light{
+    from{opacity:.35;transform:translateX(-50%) scale(.8);}
+    to{opacity:1;transform:translateX(-50%) scale(1.2);}
 }
 
-/* ANIMATED PARTICLES */
-
-#particles {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
+#particles{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    pointer-events:none;
 }
 
-/* HEADER */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    text-align: center;
-    padding: 20px 10px;
-    background: rgba(0,0,0,.75);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(232,198,110,.25);
+header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    text-align:center;
+    padding:20px;
+    background:#000c;
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #e8c66e55;
 }
 
-.logo {
-    font-family: 'Cinzel', serif;
-    font-size: 19px;
-    font-weight: 800;
-    letter-spacing: 4px;
-    color: var(--light);
-    text-shadow: 0 0 18px rgba(232,198,110,.3);
+.logo{
+    font-family:Cinzel,serif;
+    font-size:20px;
+    letter-spacing:4px;
+    font-weight:800;
+    animation:gold 3s infinite alternate;
 }
 
-.logo span {
-    color: white;
+.logo span{
+    color:white;
 }
 
-/* HERO */
-
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 65px 18px;
+@keyframes gold{
+    from{color:#e8c66e;text-shadow:0 0 8px #e8c66e;}
+    to{color:#fff0bd;text-shadow:0 0 25px #e8c66e;}
 }
 
-.hero-content {
-    max-width: 850px;
-    animation: appear 1.5s ease;
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 18px;
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(35px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.hero-content{
+    max-width:850px;
+    animation:appear 1.5s ease;
 }
 
-.top-label {
-    color: var(--gold);
-    font-size: 10px;
-    letter-spacing: 5px;
-    margin-bottom: 22px;
+@keyframes appear{
+    from{opacity:0;transform:translateY(40px);}
+    to{opacity:1;transform:translateY(0);}
 }
 
-.name {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(37px, 8vw, 78px);
-    line-height: 1.3;
-    letter-spacing: 3px;
-    color: var(--light);
-    text-shadow:
-        0 0 15px rgba(232,198,110,.25),
-        0 0 35px rgba(232,198,110,.12);
+.top-label{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:5px;
+    margin-bottom:20px;
 }
 
-.name span {
-    color: white;
+.name{
+    font-family:Cinzel,serif;
+    font-size:clamp(38px,9vw,80px);
+    line-height:1.3;
+    letter-spacing:3px;
+    animation:gold 3s infinite alternate;
 }
 
-.welcome {
-    margin-top: 22px;
-    font-size: 22px;
-    font-weight: 500;
-    letter-spacing: 7px;
-    color: white;
+.name span{
+    color:white;
 }
 
-.line {
-    width: 80px;
-    height: 1px;
-    background: var(--gold);
-    margin: 23px auto;
-    box-shadow: 0 0 15px var(--gold);
+.welcome{
+    margin-top:20px;
+    font-size:22px;
+    letter-spacing:8px;
+    font-weight:600;
 }
 
-/* POETRY */
-
-.poetry {
-    max-width: 650px;
-    margin: 25px auto;
-    padding: 15px 10px;
-    color: var(--light);
-    font-family: 'Noto Nastaliq Urdu', serif;
-    font-size: clamp(17px, 4vw, 23px);
-    line-height: 2.4;
-    text-shadow: 0 0 15px rgba(232,198,110,.15);
+.line{
+    width:90px;
+    height:2px;
+    margin:25px auto;
+    background:var(--gold);
+    box-shadow:0 0 20px var(--gold);
 }
 
-/* INTRO */
-
-.description {
-    max-width: 620px;
-    margin: auto;
-    color: #aaa;
-    font-size: 13px;
-    line-height: 2.2;
+.poetry{
+    font-family:'Noto Nastaliq Urdu',serif;
+    color:var(--light);
+    font-size:clamp(17px,4vw,23px);
+    line-height:2.5;
+    margin:25px auto;
 }
 
-.description strong {
-    color: var(--gold);
+.description{
+    color:#aaa;
+    font-size:13px;
+    line-height:2.2;
 }
 
-/* BUTTON */
-
-.btn {
-    display: inline-block;
-    margin-top: 28px;
-    padding: 13px 30px;
-    border: 1px solid rgba(232,198,110,.6);
-    border-radius: 30px;
-    color: var(--light);
-    text-decoration: none;
-    font-size: 11px;
-    letter-spacing: 2px;
-    transition: .4s;
-    background: rgba(232,198,110,.04);
+.description strong{
+    color:var(--gold);
 }
 
-.btn:hover {
-    background: var(--gold);
-    color: black;
-    box-shadow: 0 0 25px rgba(232,198,110,.35);
-    transform: translateY(-3px);
+.btn{
+    display:inline-block;
+    margin-top:28px;
+    padding:13px 30px;
+    border:1px solid var(--gold);
+    border-radius:30px;
+    color:var(--light);
+    text-decoration:none;
+    font-size:11px;
+    letter-spacing:2px;
+    transition:.4s;
 }
 
-/* CLOCK */
-
-.clock-box {
-    max-width: 330px;
-    margin: 38px auto 0;
-    padding: 18px;
-    border: 1px solid rgba(232,198,110,.3);
-    border-radius: 13px;
-    background: rgba(255,255,255,.035);
-    box-shadow: 0 0 25px rgba(232,198,110,.06);
+.btn:hover{
+    background:var(--gold);
+    color:black;
+    box-shadow:0 0 30px var(--gold);
 }
 
-.clock-label {
-    color: var(--gold);
-    font-size: 10px;
-    letter-spacing: 3px;
+.clock-box{
+    max-width:320px;
+    margin:35px auto;
+    padding:20px;
+    border:1px solid #e8c66e55;
+    border-radius:15px;
+    background:#ffffff08;
 }
 
-#clock {
-    color: var(--light);
-    font-size: 27px;
-    margin-top: 8px;
-    font-weight: 600;
+.clock-label{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:3px;
 }
 
-#date {
-    color: #999;
-    font-size: 11px;
-    margin-top: 5px;
+#clock{
+    font-size:28px;
+    color:var(--light);
+    margin-top:8px;
 }
 
-/* SECTIONS */
-
-section {
-    padding: 65px 18px;
-    position: relative;
-    z-index: 1;
+#date{
+    color:#999;
+    font-size:11px;
 }
 
-.section-title {
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    font-size: 28px;
-    color: var(--light);
-    letter-spacing: 3px;
-    margin-bottom: 12px;
+section{
+    padding:65px 18px;
 }
 
-.subtitle {
-    text-align: center;
-    color: #888;
-    font-size: 10px;
-    letter-spacing: 3px;
-    margin-bottom: 35px;
+.section-title{
+    text-align:center;
+    font-family:Cinzel,serif;
+    font-size:27px;
+    letter-spacing:3px;
+    color:var(--gold);
+    margin-bottom:12px;
+    animation:gold 3s infinite alternate;
 }
 
-/* ABOUT CARD */
-
-.container {
-    max-width: 750px;
-    margin: auto;
+.subtitle{
+    text-align:center;
+    font-size:10px;
+    letter-spacing:3px;
+    color:#888;
+    margin-bottom:35px;
 }
 
-.card {
-    padding: 25px;
-    margin: 18px 0;
-    border: 1px solid rgba(232,198,110,.22);
-    border-radius: 15px;
-    background: linear-gradient(
-        145deg,
-        rgba(255,255,255,.045),
-        rgba(142,32,37,.025)
-    );
-    transition: .3s;
+.container{
+    max-width:750px;
+    margin:auto;
 }
 
-.card:hover {
-    border-color: rgba(232,198,110,.6);
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(232,198,110,.06);
+.card{
+    padding:25px;
+    margin:18px 0;
+    border:1px solid #e8c66e44;
+    border-radius:15px;
+    background:linear-gradient(145deg,#ffffff0c,#e8c66e08);
+    transition:.4s;
 }
 
-.card h3 {
-    color: var(--gold);
-    font-family: 'Cinzel', serif;
-    font-size: 19px;
-    margin-bottom: 17px;
+.card:hover{
+    transform:translateY(-5px);
+    border-color:var(--gold);
+    box-shadow:0 0 25px #e8c66e22;
 }
 
-.card p {
-    color: #aaa;
-    font-size: 13px;
-    line-height: 2.2;
+.card h3{
+    color:var(--gold);
+    font-family:Cinzel,serif;
+    margin-bottom:15px;
 }
 
-.card p strong {
-    color: var(--light);
+.card p{
+    color:#aaa;
+    font-size:13px;
+    line-height:2.2;
 }
 
-/* FREE FIRE ID */
-
-.game-id {
-    text-align: center;
-    padding: 27px 15px;
-    border: 1px solid rgba(232,198,110,.3);
-    border-radius: 14px;
-    background: rgba(232,198,110,.035);
+.card strong{
+    color:var(--light);
 }
 
-.game-id h3 {
-    color: var(--gold);
-    font-family: 'Cinzel', serif;
-    margin-bottom: 12px;
+/* LION */
+
+.lion-box{
+    max-width:400px;
+    margin:35px auto;
+    text-align:center;
 }
 
-.game-id .id-number {
-    font-size: 25px;
-    font-weight: 700;
-    color: var(--light);
-    letter-spacing: 2px;
+.lion-box img{
+    width:100%;
+    border-radius:20px;
+    border:2px solid var(--gold);
+    box-shadow:0 0 35px #e8c66e55;
+    animation:lionGlow 3s infinite alternate;
 }
 
-.game-id small {
-    display: block;
-    color: #888;
-    margin-top: 8px;
-    font-size: 10px;
-    letter-spacing: 2px;
+@keyframes lionGlow{
+    from{box-shadow:0 0 12px #e8c66e33;}
+    to{box-shadow:0 0 40px #e8c66e99;}
 }
 
-/* STATS */
+/* INTERESTS */
 
-.stats {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+.stats{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
 }
 
-.stat {
-    width: 190px;
-    padding: 23px 10px;
-    text-align: center;
-    background: rgba(255,255,255,.035);
-    border: 1px solid rgba(232,198,110,.2);
-    border-radius: 12px;
+.stat{
+    width:190px;
+    text-align:center;
+    padding:25px 10px;
+    border:1px solid #e8c66e44;
+    border-radius:13px;
+    background:#ffffff08;
+    transition:.4s;
 }
 
-.stat h2 {
-    color: var(--gold);
-    font-family: 'Cinzel', serif;
-    font-size: 24px;
+.stat:hover{
+    transform:scale(1.06);
+    border-color:var(--gold);
 }
 
-.stat p {
-    color: #999;
-    font-size: 10px;
-    margin-top: 8px;
-    letter-spacing: 2px;
+.stat h2{
+    color:var(--gold);
+    font-family:Cinzel,serif;
+}
+
+.stat p{
+    font-size:10px;
+    letter-spacing:2px;
+    color:#aaa;
+    margin-top:8px;
 }
 
 /* PASSWORD */
 
-.password-box {
-    max-width: 390px;
-    margin: auto;
-    padding: 28px 20px;
-    text-align: center;
-    background: rgba(255,255,255,.035);
-    border: 1px solid rgba(232,198,110,.25);
-    border-radius: 15px;
+.password-box{
+    max-width:390px;
+    margin:auto;
+    padding:28px 20px;
+    text-align:center;
+    background:#ffffff08;
+    border:1px solid #e8c66e55;
+    border-radius:16px;
 }
 
-.password-box h3 {
-    color: var(--gold);
-    font-family: 'Cinzel', serif;
-    margin-bottom: 10px;
+.password-box h3{
+    color:var(--gold);
+    font-family:Cinzel,serif;
+    margin-bottom:12px;
 }
 
-.password-box p {
-    color: #999;
-    font-size: 12px;
-    margin-bottom: 20px;
+.password-box p{
+    color:#999;
+    font-size:12px;
+    margin-bottom:20px;
 }
 
-.password-box input {
-    width: 100%;
-    padding: 13px;
-    background: #111;
-    border: 1px solid #444;
-    border-radius: 8px;
-    outline: none;
-    color: white;
-    text-align: center;
+.password-box input{
+    width:100%;
+    padding:14px;
+    border:1px solid #555;
+    border-radius:8px;
+    background:#111;
+    color:white;
+    text-align:center;
+    outline:none;
 }
 
-.password-box input:focus {
-    border-color: var(--gold);
+.password-box input:focus{
+    border-color:var(--gold);
 }
 
-.password-box button {
-    margin-top: 15px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    background: var(--gold);
-    color: black;
-    font-weight: 700;
-    cursor: pointer;
+.password-box button{
+    padding:13px 25px;
+    margin-top:16px;
+    background:var(--gold);
+    border:0;
+    border-radius:30px;
+    font-weight:700;
+    cursor:pointer;
 }
 
-#error {
-    color: #ff7777;
-    font-size: 12px;
-    margin-top: 12px;
+#error{
+    color:#ff7777;
+    font-size:12px;
+    margin-top:12px;
 }
 
-.hidden {
-    display: none;
+.hidden{
+    display:none;
+}
+
+/* PROFILE */
+
+.id-number{
+    font-size:25px;
+    color:var(--light);
+    letter-spacing:2px;
+    margin-top:12px;
+}
+
+.game-id{
+    text-align:center;
+    padding:25px;
+    border:1px solid var(--gold);
+    border-radius:15px;
+    background:#e8c66e0a;
+}
+
+.game-id h3{
+    color:var(--gold);
+    font-family:Cinzel,serif;
 }
 
 /* SOCIAL */
 
-.socials {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 13px;
+.socials{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
 }
 
-.socials a {
-    min-width: 135px;
-    padding: 13px 20px;
-    text-align: center;
-    color: var(--light);
-    border: 1px solid rgba(232,198,110,.4);
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 12px;
-    transition: .3s;
+.socials a{
+    padding:13px 25px;
+    border:1px solid var(--gold);
+    border-radius:30px;
+    color:var(--light);
+    text-decoration:none;
+    transition:.3s;
 }
 
-.socials a:hover {
-    background: var(--gold);
-    color: black;
+.socials a:hover{
+    background:var(--gold);
+    color:black;
 }
 
 /* FOOTER */
 
-footer {
-    padding: 30px 15px;
-    text-align: center;
-    border-top: 1px solid rgba(232,198,110,.2);
-    color: #888;
-    font-size: 11px;
-    letter-spacing: 1px;
-    position: relative;
-    z-index: 1;
+footer{
+    padding:30px;
+    text-align:center;
+    border-top:1px solid #e8c66e44;
+    color:#888;
+    font-size:11px;
 }
 
-footer span {
-    color: var(--gold);
+footer span{
+    color:var(--gold);
 }
 
-/* MOBILE */
-
-@media(max-width:600px) {
-    .logo {
-        font-size: 15px;
-        letter-spacing: 2px;
-    }
-
-    .welcome {
-        font-size: 19px;
-    }
-
-    .section-title {
-        font-size: 23px;
-    }
-
-    .stat {
-        width: 100%;
-        max-width: 300px;
-    }
+@media(max-width:600px){
+    .logo{font-size:15px;letter-spacing:2px;}
+    .welcome{font-size:18px;}
+    .section-title{font-size:22px;}
+    .stat{width:100%;max-width:300px;}
 }
 </style>
 </head>
@@ -522,11 +460,7 @@ footer span {
 
 <div class="background"></div>
 <div class="bottom-light"></div>
-
-<!-- ANIMATED BACKGROUND -->
 <canvas id="particles"></canvas>
-
-<!-- HEADER -->
 
 <header>
     <div class="logo">
@@ -537,166 +471,130 @@ footer span {
 <!-- HOME -->
 
 <div class="hero">
+<div class="hero-content">
 
-    <div class="hero-content">
+    <div class="top-label">
+        PERSONAL OFFICIAL WEBSITE
+    </div>
 
-        <div class="top-label">
-            PERSONAL OFFICIAL WEBSITE
+    <h1 class="name">
+        SHAHZAD<br>
+        <span>AHMAD</span>
+    </h1>
+
+    <div class="welcome">WELCOME</div>
+
+    <div class="line"></div>
+
+    <div class="poetry">
+        لاکھ کمی ہوں گی میرے اندر،<br>
+        مگر اس دل نے کبھی کسی کا بُرا نہیں سوچا۔
+    </div>
+
+    <div class="line"></div>
+
+    <p class="description">
+        Welcome to my official digital world.<br>
+        <strong>Dream Big. Think Different. Stay Legendary.</strong>
+    </p>
+
+    <a href="#about" class="btn">
+        EXPLORE MY WORLD
+    </a>
+
+    <div class="clock-box">
+        <div class="clock-label">
+            PAKISTAN STANDARD TIME
         </div>
-
-        <h1 class="name">
-            SHAHZAD<br>
-            <span>AHMAD</span>
-        </h1>
-
-        <div class="welcome">
-            WELCOME
-        </div>
-
-        <div class="line"></div>
-
-        <div class="poetry">
-            لاکھ کمی ہوں گی میرے اندر،<br>
-            مگر اس دل نے کبھی کسی کا بُرا نہیں سوچا۔
-        </div>
-
-        <div class="line"></div>
-
-        <p class="description">
-            Welcome to my official digital world.
-            <br>
-            <strong>Dream Big. Think Different. Stay Legendary.</strong>
-            <br>
-            Explore my interests, creativity and digital journey.
-            Your presence is truly appreciated.
-        </p>
-
-        <a href="#about" class="btn">
-            EXPLORE MY WORLD
-        </a>
-
-        <!-- PAKISTAN TIME -->
-
-        <div class="clock-box">
-            <div class="clock-label">
-                PAKISTAN STANDARD TIME
-            </div>
-
-            <div id="clock">00:00:00</div>
-
-            <div id="date">Loading...</div>
-        </div>
-
+        <div id="clock">00:00:00</div>
+        <div id="date">Loading...</div>
     </div>
 
 </div>
+</div>
 
-<!-- ABOUT ME -->
+<!-- ABOUT -->
 
 <section id="about">
 
-    <h2 class="section-title">ABOUT ME</h2>
+<h2 class="section-title">ABOUT ME</h2>
+<p class="subtitle">GET TO KNOW ME</p>
 
-    <p class="subtitle">GET TO KNOW ME</p>
+<div class="container">
 
-    <div class="container">
+<div class="card">
+<h3>WHO IS SHAHZAD?</h3>
 
-        <div class="card">
+<p>
+My name is <strong>Shahzad Ahmad</strong>.
+I am interested in technology, creativity and digital development.
 
-            <h3>WHO IS SHAHZAD?</h3>
+I believe in respect, kindness and staying true to myself.
+My goal is to keep learning and create my own identity.
+</p>
+</div>
 
-            <p>
-                My name is <strong>Shahzad Ahmad</strong>.
-                I am interested in technology, creativity and
-                digital development. I enjoy exploring new ideas
-                and learning new skills.
-                <br><br>
-                I believe in respect, kindness and staying true
-                to myself. I like creating new things, discovering
-                technology and improving my skills.
-                <br><br>
-                My goal is to keep learning, work hard and make
-                my own identity through creativity and dedication.
-            </p>
+<div class="card">
+<h3>MY PERSONALITY</h3>
 
-        </div>
+<p>
+Simple living, positive thinking and respect for everyone.
+I may not be perfect, but I always try to keep my intentions clean.
+Character matters more than words.
+</p>
+</div>
 
-        <div class="card">
-
-            <h3>MY PERSONALITY</h3>
-
-            <p>
-                Simple living, positive thinking and respect for
-                everyone. I believe that a person's real identity
-                is not just their words, but their character.
-                <br><br>
-                I may not be perfect, but I always try to keep
-                my intentions clean and my heart sincere.
-            </p>
-
-        </div>
-
-    </div>
-
+</div>
 </section>
 
-<!-- INTERESTS -->
+<!-- LION IMAGE -->
 
 <section>
 
-    <h2 class="section-title">MY INTERESTS</h2>
+<h2 class="section-title">MY ROYAL WORLD</h2>
+<p class="subtitle">SILENT POWER • ROYAL ATTITUDE</p>
 
-    <p class="subtitle">THINGS I LOVE</p>
+<div class="lion-box">
 
-    <div class="stats">
+<img
+src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=90"
+alt="Lion portrait"
+>
 
-        <div class="stat">
-            <h2>01</h2>
-            <p>TECHNOLOGY</p>
-        </div>
-
-        <div class="stat">
-            <h2>02</h2>
-            <p>CREATIVITY</p>
-        </div>
-
-        <div class="stat">
-            <h2>03</h2>
-            <p>DIGITAL WORLD</p>
-        </div>
-
-        <div class="stat">
-            <h2>04</h2>
-            <p>FREE FIRE</p>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- FREE FIRE -->
+<!-- MY INTERESTS -->
 
 <section>
 
-    <h2 class="section-title">FREE FIRE</h2>
+<h2 class="section-title">MY INTERESTS</h2>
+<p class="subtitle">THINGS I LOVE</p>
 
-    <p class="subtitle">GAMING IDENTITY</p>
+<div class="stats">
 
-    <div class="container">
+<div class="stat">
+<h2>01</h2>
+<p>ARTIFICIAL INTELLIGENCE</p>
+</div>
 
-        <div class="game-id">
+<div class="stat">
+<h2>02</h2>
+<p>EDITING</p>
+</div>
 
-            <h3>SHAHZAD AHMAD</h3>
+<div class="stat">
+<h2>03</h2>
+<p>STORYTELLING</p>
+</div>
 
-            <div class="id-number">
-                13960506580
-            </div>
+<div class="stat">
+<h2>04</h2>
+<p>FREE FIRE</p>
+</div>
 
-            <small>FREE FIRE PLAYER ID</small>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -704,89 +602,105 @@ footer span {
 
 <section id="profile">
 
-    <h2 class="section-title">MY PROFILE</h2>
+<h2 class="section-title">PRIVATE PROFILE</h2>
+<p class="subtitle">PASSWORD PROTECTED AREA</p>
 
-    <p class="subtitle">PERSONAL PROFILE ACCESS</p>
+<div class="container">
 
-    <div class="container">
+<div class="password-box" id="loginBox">
 
-        <div class="password-box" id="loginBox">
+<h3>PROFILE LOCKED</h3>
 
-            <h3>PROFILE LOCKED</h3>
+<p>Enter your secret password to unlock.</p>
 
-            <p>Enter password to unlock the profile.</p>
+<input
+type="password"
+id="password"
+placeholder="ENTER PASSWORD"
+>
 
-            <input
-                type="password"
-                id="password"
-                placeholder="Enter Password"
-            >
+<button onclick="checkPassword()">
+UNLOCK PROFILE
+</button>
 
-            <button onclick="checkPassword()">
-                UNLOCK PROFILE
-            </button>
+<div id="error"></div>
 
-            <div id="error"></div>
+</div>
 
-        </div>
+<div id="profileContent" class="hidden">
 
-        <div id="profileContent" class="hidden">
+<div class="card">
 
-            <div class="card">
+<h3>PERSONAL DETAILS</h3>
 
-                <h3>PERSONAL DETAILS</h3>
+<p>
+<strong>Name:</strong> Shahzad Ahmad<br>
+<strong>Title:</strong> Official 007<br>
+<strong>Country:</strong> Pakistan<br>
+<strong>Interest:</strong> AI & Creativity
+</p>
 
-                <p>
-                    <strong>Name:</strong> Shahzad Ahmad<br>
-                    <strong>Title:</strong> Official 007<br>
-                    <strong>Country:</strong> Pakistan<br>
-                    <strong>Interest:</strong> Technology & Creativity<br>
-                    <strong>Free Fire ID:</strong> 13960506580
-                </p>
+</div>
 
-            </div>
+<div class="card">
 
-        </div>
+<h3>ABOUT MYSELF</h3>
 
-    </div>
+<p>
+AI enthusiast with a creative streak.
+Passionate about exploring new tech,
+editing, and storytelling—always learning,
+building, and trying something new.
+</p>
 
+</div>
+
+<div class="game-id">
+
+<h3>FREE FIRE PLAYER ID</h3>
+
+<div class="id-number">
+13960506580
+</div>
+
+<small>SHAHZAD AHMAD</small>
+
+</div>
+
+</div>
+</div>
 </section>
 
-<!-- SOCIAL MEDIA -->
+<!-- SOCIAL -->
 
 <section>
 
-    <h2 class="section-title">CONNECT WITH ME</h2>
+<h2 class="section-title">CONNECT WITH ME</h2>
+<p class="subtitle">MY SOCIAL MEDIA WORLD</p>
 
-    <p class="subtitle">MY SOCIAL MEDIA WORLD</p>
+<div class="socials">
 
-    <div class="socials">
+<a href="https://www.tiktok.com/@rana.editor33" target="_blank">
+TIKTOK
+</a>
 
-        <a href="https://www.tiktok.com/@rana.editor33"
-           target="_blank">
-            TIKTOK
-        </a>
+<a href="https://www.youtube.com/@BabyBubuToons" target="_blank">
+YOUTUBE
+</a>
 
-        <a href="https://www.youtube.com/@BabyBubuToons"
-           target="_blank">
-            YOUTUBE
-        </a>
-
-    </div>
+</div>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-    <p>
-        © 2026 <span>SHAHZAD AHMAD 007</span>
-    </p>
+<p>
+© 2026 <span>SHAHZAD AHMAD 007</span>
+</p>
 
-    <p style="margin-top:8px;">
-        Dream Big • Stay Humble • Keep Growing
-    </p>
+<p style="margin-top:8px;">
+Dream Big • Stay Humble • Keep Growing
+</p>
 
 </footer>
 
@@ -794,185 +708,158 @@ footer span {
 
 /* PASSWORD SYSTEM */
 
-function checkPassword() {
+function checkPassword(){
 
-    const correctPassword = "Shahzad445";
+const correctPassword="Shahzad445";
 
-    const enteredPassword =
-        document.getElementById("password").value;
+const entered=document.getElementById("password").value;
 
-    if (enteredPassword === correctPassword) {
+if(entered===correctPassword){
 
-        document.getElementById("loginBox")
-        .classList.add("hidden");
+document.getElementById("loginBox").classList.add("hidden");
 
-        document.getElementById("profileContent")
-        .classList.remove("hidden");
+document.getElementById("profileContent").classList.remove("hidden");
 
-        document.getElementById("error").innerText = "";
+}else{
 
-    } else {
-
-        document.getElementById("error")
-        .innerText = "Wrong password! Please try again.";
-
-    }
+document.getElementById("error").innerText=
+"Wrong Password! Try Again.";
 
 }
 
-/* ENTER KEY */
+}
 
-document.getElementById("password")
-.addEventListener("keydown", function(event) {
+document.getElementById("password").addEventListener("keydown",function(e){
 
-    if (event.key === "Enter") {
-        checkPassword();
-    }
+if(e.key==="Enter"){
+checkPassword();
+}
 
 });
 
-/* PAKISTAN LIVE CLOCK */
+/* PAKISTAN CLOCK */
 
-function updateClock() {
+function updateClock(){
 
-    const now = new Date();
+const now=new Date();
 
-    const time = new Intl.DateTimeFormat("en-PK", {
-        timeZone: "Asia/Karachi",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true
-    }).format(now);
+document.getElementById("clock").innerText=
+new Intl.DateTimeFormat("en-PK",{
+timeZone:"Asia/Karachi",
+hour:"2-digit",
+minute:"2-digit",
+second:"2-digit",
+hour12:true
+}).format(now);
 
-    const date = new Intl.DateTimeFormat("en-PK", {
-        timeZone: "Asia/Karachi",
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-    }).format(now);
-
-    document.getElementById("clock").innerText = time;
-    document.getElementById("date").innerText = date;
+document.getElementById("date").innerText=
+new Intl.DateTimeFormat("en-PK",{
+timeZone:"Asia/Karachi",
+weekday:"long",
+day:"numeric",
+month:"long",
+year:"numeric"
+}).format(now);
 
 }
 
 updateClock();
-setInterval(updateClock, 1000);
+setInterval(updateClock,1000);
 
+/* GOLDEN PARTICLE ANIMATION */
 
-/* GOLDEN BACKGROUND ANIMATION */
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
 
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
+let particles=[];
 
-let particles = [];
+function resizeCanvas(){
 
-function resizeCanvas() {
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 
 }
 
-window.addEventListener("resize", resizeCanvas);
+window.addEventListener("resize",resizeCanvas);
 resizeCanvas();
 
-class Particle {
+class Particle{
 
-    constructor() {
-        this.reset();
-    }
+constructor(){
+this.reset();
+}
 
-    reset() {
+reset(){
 
-        this.x = Math.random() * canvas.width;
-        this.y = canvas.height + Math.random() * 100;
+this.x=Math.random()*canvas.width;
+this.y=canvas.height+Math.random()*100;
 
-        this.size = Math.random() * 2.2 + .5;
-
-        this.speedY = Math.random() * .8 + .25;
-        this.speedX = (Math.random() - .5) * .5;
-
-        this.opacity = Math.random() * .55 + .15;
-
-        this.color = Math.random() > .25
-            ? "232,198,110"
-            : "180,80,65";
-
-    }
-
-    update() {
-
-        this.y -= this.speedY;
-        this.x += this.speedX;
-
-        if (this.y < -10 || this.x < -10 || this.x > canvas.width + 10) {
-            this.reset();
-        }
-
-    }
-
-    draw() {
-
-        ctx.beginPath();
-
-        ctx.fillStyle =
-            `rgba(${this.color},${this.opacity})`;
-
-        ctx.shadowBlur = 12;
-        ctx.shadowColor =
-            `rgba(${this.color},.5)`;
-
-        ctx.arc(
-            this.x,
-            this.y,
-            this.size,
-            0,
-            Math.PI * 2
-        );
-
-        ctx.fill();
-
-    }
+this.size=Math.random()*2+0.5;
+this.speedY=Math.random()*0.8+0.2;
+this.speedX=(Math.random()-0.5)*0.5;
+this.opacity=Math.random()*0.6+0.2;
 
 }
 
-function createParticles() {
+update(){
 
-    particles = [];
+this.y-=this.speedY;
+this.x+=this.speedX;
 
-    const total = Math.min(
-        75,
-        Math.floor(window.innerWidth / 7)
-    );
-
-    for (let i = 0; i < total; i++) {
-
-        particles.push(new Particle());
-
-    }
+if(this.y<0){
+this.reset();
+}
 
 }
 
-function animateParticles() {
+draw(){
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.beginPath();
 
-    particles.forEach(particle => {
+ctx.fillStyle=`rgba(232,198,110,${this.opacity})`;
 
-        particle.update();
-        particle.draw();
+ctx.shadowBlur=15;
+ctx.shadowColor="#e8c66e";
 
-    });
+ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
 
-    requestAnimationFrame(animateParticles);
+ctx.fill();
+
+}
+
+}
+
+function createParticles(){
+
+particles=[];
+
+let total=Math.min(80,Math.floor(window.innerWidth/7));
+
+for(let i=0;i<total;i++){
+
+particles.push(new Particle());
+
+}
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(p=>{
+
+p.update();
+p.draw();
+
+});
+
+requestAnimationFrame(animate);
 
 }
 
 createParticles();
-animateParticles();
+animate();
 
 </script>
 
