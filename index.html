@@ -1,808 +1,677 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050505">
 
-<title>SHAHZAD AHMAD | OFFICIAL 007</title>
-
-<meta name="description" content="Welcome to the official personal website of Shahzad Ahmad. Explore my digital world, interests, creativity and technology journey.">
+<title>SHAHZAD AHMAD | OFFICIAL</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 :root{
-    --gold:#d4af37;
-    --light:#ffe9a3;
-    --black:#050505;
+--gold:#d4af37;
+--light:#ffe9a3;
+--black:#050505;
 }
 
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-    background:var(--black);
-    color:white;
-    font-family:'Outfit',sans-serif;
-    overflow-x:hidden;
+background:var(--black);
+color:white;
+font-family:'Outfit',sans-serif;
+overflow-x:hidden;
 }
-
-/* BACKGROUND */
 
 #particles{
-    position:fixed;
-    inset:0;
-    width:100%;
-    height:100%;
-    z-index:-3;
-    pointer-events:none;
+position:fixed;
+inset:0;
+width:100%;
+height:100%;
+z-index:-3;
+pointer-events:none;
 }
 
-.background-glow{
-    position:fixed;
-    width:350px;
-    height:350px;
-    border-radius:50%;
-    filter:blur(120px);
-    z-index:-2;
-    pointer-events:none;
-    animation:glowMove 12s infinite alternate;
+.glow{
+position:fixed;
+width:350px;
+height:350px;
+border-radius:50%;
+filter:blur(120px);
+z-index:-2;
+pointer-events:none;
+animation:glow 12s infinite alternate;
 }
 
-.glow-one{
-    background:rgba(212,175,55,.15);
-    top:-150px;
-    left:-150px;
+.glow1{
+background:rgba(212,175,55,.15);
+top:-150px;
+left:-150px;
 }
 
-.glow-two{
-    background:rgba(255,190,50,.10);
-    bottom:-150px;
-    right:-150px;
+.glow2{
+background:rgba(212,175,55,.09);
+bottom:-150px;
+right:-150px;
 }
 
-@keyframes glowMove{
-    to{
-        transform:translate(100px,80px);
-    }
+@keyframes glow{
+to{transform:translate(100px,80px)}
 }
 
-.ambient{
-    position:fixed;
-    inset:0;
-    z-index:-2;
-    pointer-events:none;
-    background:radial-gradient(
-        ellipse at center,
-        transparent 10%,
-        rgba(0,0,0,.85) 100%
-    );
+.gold{
+background:linear-gradient(
+100deg,#8d6b18,#ffe9a3,#d4af37,#fff4c2,#a47b18
+);
+background-size:300% auto;
+color:transparent;
+background-clip:text;
+-webkit-background-clip:text;
+animation:gold 5s linear infinite;
 }
 
-/* GOLD TEXT */
-
-.gold-text{
-    background:linear-gradient(
-        100deg,
-        #8d6b18,
-        #f5df91,
-        #d4af37,
-        #fff4c2,
-        #a47b18
-    );
-
-    background-size:300% auto;
-    color:transparent;
-    background-clip:text;
-    -webkit-background-clip:text;
-    animation:goldFlow 5s linear infinite;
-}
-
-@keyframes goldFlow{
-    to{
-        background-position:300% center;
-    }
+@keyframes gold{
+to{background-position:300% center}
 }
 
 /* HEADER */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:10;
-    padding:20px 7%;
-    display:flex;
-    justify-content:center;
-    background:rgba(5,5,5,.85);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(212,175,55,.3);
+position:sticky;
+top:0;
+z-index:10;
+padding:20px 15px;
+text-align:center;
+background:rgba(5,5,5,.88);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(212,175,55,.3);
 }
 
 .logo{
-    font-family:'Orbitron',sans-serif;
-    font-size:18px;
-    font-weight:900;
-    letter-spacing:3px;
+font-family:'Orbitron',sans-serif;
+font-size:17px;
+font-weight:900;
+letter-spacing:4px;
 }
 
 /* HERO */
 
 .hero{
-    min-height:90vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:70px 7%;
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:65px 20px;
 }
 
-.hero-container{
-    width:100%;
-    max-width:1150px;
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
-    gap:30px;
+.hero-inner{
+max-width:1050px;
+width:100%;
+display:grid;
+grid-template-columns:1.1fr .9fr;
+align-items:center;
+gap:35px;
 }
 
-.hero-content{
-    text-align:left;
-}
+.content{text-align:left}
 
 .eyebrow{
-    color:var(--gold);
-    font-family:'Orbitron',sans-serif;
-    font-size:11px;
-    letter-spacing:5px;
-    margin-bottom:25px;
+font-family:'Orbitron',sans-serif;
+font-size:10px;
+letter-spacing:5px;
+color:var(--gold);
+margin-bottom:25px;
 }
 
-.main-name{
-    font-family:'Cinzel',serif;
-    font-size:clamp(38px,6vw,75px);
-    line-height:1.25;
-    font-weight:800;
-    text-shadow:0 0 35px rgba(212,175,55,.2);
+.name{
+font-family:'Cinzel',serif;
+font-size:clamp(38px,7vw,78px);
+font-weight:800;
+line-height:1.3;
 }
 
 .welcome{
-    font-family:'Orbitron',sans-serif;
-    font-size:clamp(20px,4vw,32px);
-    letter-spacing:6px;
-    margin-top:22px;
+font-family:'Orbitron',sans-serif;
+font-size:clamp(20px,4vw,32px);
+letter-spacing:7px;
+margin-top:20px;
 }
 
-.gold-line{
-    width:110px;
-    height:2px;
-    margin:25px 0;
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #d4af37,
-        #fff1b8
-    );
-    box-shadow:0 0 15px #d4af37;
+.line{
+width:110px;
+height:2px;
+margin:25px 0;
+background:linear-gradient(90deg,transparent,#d4af37,#fff1b8);
+box-shadow:0 0 15px #d4af37;
 }
 
-.welcome-message{
-    max-width:530px;
-    color:#bdbdbd;
-    font-size:16px;
-    line-height:2;
+.description{
+max-width:510px;
+font-size:15px;
+color:#bbb;
+line-height:2;
 }
 
-.welcome-message strong{
-    color:var(--light);
+.description strong{color:var(--light)}
+
+.main-btn{
+margin-top:30px;
+padding:16px 28px;
+border:1px solid var(--light);
+border-radius:5px;
+background:linear-gradient(110deg,#8d6b18,#d4af37,#ffe9a3);
+color:#050505;
+font-family:'Orbitron',sans-serif;
+font-weight:900;
+font-size:11px;
+letter-spacing:2px;
+cursor:pointer;
+transition:.4s;
 }
 
-.info-button{
-    display:inline-block;
-    margin-top:32px;
-    padding:16px 27px;
-    border:1px solid var(--light);
-    border-radius:5px;
-    background:linear-gradient(
-        110deg,
-        #8d6b18,
-        #d4af37,
-        #ffe9a3
-    );
-    color:#050505;
-    font-family:'Orbitron',sans-serif;
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:2px;
-    cursor:pointer;
-    transition:.4s;
+.main-btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 30px rgba(212,175,55,.5);
 }
 
-.info-button:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 35px rgba(212,175,55,.5);
-}
-
-/* INTELLIGENT HUMAN ILLUSTRATION */
+/* HUMAN ILLUSTRATION */
 
 .character-area{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:440px;
-    position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:400px;
 }
 
-.character-card{
-    width:310px;
-    height:390px;
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border:1px solid rgba(212,175,55,.3);
-    border-radius:150px 150px 20px 20px;
-    background:linear-gradient(
-        145deg,
-        rgba(212,175,55,.10),
-        rgba(255,255,255,.015)
-    );
-    box-shadow:
-        0 0 50px rgba(212,175,55,.08),
-        inset 0 0 40px rgba(212,175,55,.04);
-    animation:characterFloat 5s ease-in-out infinite;
-    overflow:hidden;
+.character{
+position:relative;
+width:290px;
+height:370px;
+border:1px solid rgba(212,175,55,.3);
+border-radius:150px 150px 20px 20px;
+background:radial-gradient(
+circle at 50% 30%,
+rgba(212,175,55,.14),
+rgba(255,255,255,.01) 65%
+);
+box-shadow:0 0 50px rgba(212,175,55,.08);
+overflow:hidden;
+animation:float 5s ease-in-out infinite;
 }
 
-@keyframes characterFloat{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-12px);
-    }
+@keyframes float{
+50%{transform:translateY(-12px)}
 }
 
-/* Decorative halo */
-
-.character-card::before{
-    content:"";
-    position:absolute;
-    width:220px;
-    height:220px;
-    border:1px solid rgba(212,175,55,.3);
-    border-radius:50%;
-    top:45px;
-    box-shadow:0 0 40px rgba(212,175,55,.1);
+.halo{
+position:absolute;
+width:200px;
+height:200px;
+border:1px solid rgba(212,175,55,.35);
+border-radius:50%;
+top:35px;
+left:45px;
+box-shadow:0 0 35px rgba(212,175,55,.12);
 }
 
-/* Person */
-
-.person{
-    position:absolute;
-    width:210px;
-    height:310px;
-    bottom:0;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+.man{
+position:absolute;
+bottom:35px;
+left:50%;
+transform:translateX(-50%);
+width:180px;
+height:260px;
 }
-
-/* Head */
 
 .head{
-    position:relative;
-    width:100px;
-    height:125px;
-    background:linear-gradient(
-        120deg,
-        #b97848,
-        #e5ae7c,
-        #98613f
-    );
-    border-radius:45% 45% 42% 42%;
-    z-index:2;
-    margin-top:25px;
-    box-shadow:inset -10px -5px 15px rgba(0,0,0,.2);
+position:absolute;
+top:15px;
+left:40px;
+width:100px;
+height:120px;
+border-radius:45% 45% 42% 42%;
+background:linear-gradient(120deg,#a96c45,#e7b487,#98613f);
+z-index:2;
 }
-
-/* Hair */
 
 .hair{
-    position:absolute;
-    top:-9px;
-    left:0;
-    width:100px;
-    height:45px;
-    background:#15120e;
-    border-radius:50% 50% 20% 20%;
-}
-
-.hair::after{
-    content:"";
-    position:absolute;
-    top:8px;
-    left:12px;
-    width:70px;
-    height:20px;
-    background:#272019;
-    border-radius:50%;
-}
-
-/* Eyes */
-
-.eyes{
-    position:absolute;
-    top:55px;
-    left:20px;
-    width:60px;
-    display:flex;
-    justify-content:space-between;
+position:absolute;
+top:-8px;
+left:0;
+width:100px;
+height:43px;
+border-radius:50% 50% 20% 20%;
+background:#17120e;
 }
 
 .eye{
-    width:10px;
-    height:5px;
-    border-radius:50%;
-    background:#21160f;
+position:absolute;
+top:60px;
+width:9px;
+height:5px;
+border-radius:50%;
+background:#24150f;
 }
 
-/* Nose */
+.eye.left{left:20px}
+.eye.right{right:20px}
 
 .nose{
-    position:absolute;
-    top:63px;
-    left:47px;
-    width:7px;
-    height:18px;
-    border-left:2px solid rgba(80,45,25,.4);
+position:absolute;
+top:65px;
+left:48px;
+width:5px;
+height:16px;
+border-left:2px solid rgba(60,30,20,.5);
 }
-
-/* Mouth */
 
 .mouth{
-    position:absolute;
-    top:91px;
-    left:39px;
-    width:22px;
-    height:7px;
-    border-bottom:2px solid #643e31;
-    border-radius:50%;
+position:absolute;
+top:92px;
+left:40px;
+width:20px;
+height:6px;
+border-bottom:2px solid #613e30;
+border-radius:50%;
 }
-
-/* Neck */
 
 .neck{
-    width:40px;
-    height:35px;
-    background:#bd8058;
-    margin-top:-5px;
-    z-index:1;
+position:absolute;
+top:125px;
+left:70px;
+width:40px;
+height:35px;
+background:#bb8057;
 }
 
-/* Suit */
-
-.suit{
-    position:relative;
-    width:190px;
-    height:155px;
-    margin-top:-3px;
-    background:linear-gradient(
-        100deg,
-        #171717,
-        #34302a,
-        #101010
-    );
-    border-radius:50px 50px 0 0;
-    border-top:3px solid var(--gold);
-    z-index:3;
+.body{
+position:absolute;
+top:145px;
+left:10px;
+width:160px;
+height:120px;
+border-radius:45px 45px 0 0;
+background:linear-gradient(100deg,#151515,#383127,#101010);
+border-top:3px solid var(--gold);
 }
 
-.suit::before{
-    content:"";
-    position:absolute;
-    left:85px;
-    top:0;
-    width:20px;
-    height:70px;
-    background:linear-gradient(
-        90deg,
-        #d4af37,
-        #fff0a6,
-        #a47b18
-    );
-    clip-path:polygon(0 0,100% 0,50% 100%);
+.body:after{
+content:"";
+position:absolute;
+top:0;
+left:72px;
+width:18px;
+height:55px;
+background:linear-gradient(90deg,#b58b25,#fff0a6,#a47b18);
+clip-path:polygon(0 0,100% 0,50% 100%);
 }
-
-/* Laptop */
 
 .laptop{
-    position:absolute;
-    bottom:12px;
-    left:50%;
-    transform:translateX(-50%);
-    width:155px;
-    height:90px;
-    background:linear-gradient(
-        135deg,
-        #302b1e,
-        #080808
-    );
-    border:2px solid var(--gold);
-    border-radius:7px 7px 0 0;
-    z-index:5;
-    box-shadow:0 0 25px rgba(212,175,55,.2);
+position:absolute;
+z-index:3;
+bottom:0;
+left:25px;
+width:130px;
+height:75px;
+border:2px solid var(--gold);
+border-radius:6px 6px 0 0;
+background:#080808;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:'Orbitron',sans-serif;
+font-size:11px;
+color:var(--light);
+box-shadow:0 0 20px rgba(212,175,55,.2);
 }
 
-.laptop::after{
-    content:"";
-    position:absolute;
-    bottom:-8px;
-    left:-12px;
-    width:175px;
-    height:8px;
-    background:#a98735;
-    border-radius:2px;
+.laptop:after{
+content:"";
+position:absolute;
+bottom:-8px;
+left:-10px;
+width:146px;
+height:7px;
+background:#a98735;
+border-radius:2px;
 }
-
-.laptop-screen{
-    position:absolute;
-    inset:7px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-family:'Orbitron',sans-serif;
-    font-size:12px;
-    color:var(--light);
-    background:#080808;
-}
-
-/* CHARACTER LABEL */
 
 .character-label{
-    position:absolute;
-    bottom:10px;
-    text-align:center;
-    width:100%;
-    font-family:'Orbitron',sans-serif;
-    font-size:10px;
-    letter-spacing:3px;
-    color:var(--light);
+position:absolute;
+bottom:12px;
+width:100%;
+text-align:center;
+font-family:'Orbitron',sans-serif;
+font-size:10px;
+letter-spacing:3px;
+color:var(--light);
 }
 
-/* PERSONAL SECTION */
+/* PERSONAL INFORMATION */
 
 #personal{
-    display:none;
-    max-width:950px;
-    margin:auto;
-    padding:70px 20px;
-    animation:fadeUp .8s ease;
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+display:none;
+max-width:900px;
+margin:auto;
+padding:55px 20px 80px;
 }
 
 .section-heading{
-    text-align:center;
-    font-family:'Orbitron',sans-serif;
-    font-size:clamp(22px,5vw,36px);
-    letter-spacing:2px;
-    margin-bottom:45px;
+font-family:'Orbitron',sans-serif;
+text-align:center;
+font-size:clamp(22px,5vw,35px);
+letter-spacing:2px;
+margin-bottom:40px;
 }
 
-/* CARDS */
-
-.info-card{
-    padding:30px;
-    margin-bottom:22px;
-    background:linear-gradient(
-        145deg,
-        rgba(255,255,255,.04),
-        rgba(212,175,55,.035)
-    );
-    border:1px solid rgba(212,175,55,.25);
-    border-radius:13px;
-    transition:.4s;
+.card{
+padding:28px;
+margin-bottom:22px;
+background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(212,175,55,.035));
+border:1px solid rgba(212,175,55,.25);
+border-radius:12px;
+transition:.4s;
 }
 
-.info-card:hover{
-    transform:translateY(-5px);
-    border-color:var(--gold);
-    box-shadow:0 10px 35px rgba(212,175,55,.1);
+.card:hover{
+transform:translateY(-5px);
+border-color:var(--gold);
+box-shadow:0 10px 35px rgba(212,175,55,.1);
 }
 
-.card-number{
-    font-family:'Orbitron',sans-serif;
-    color:var(--gold);
-    font-size:11px;
-    letter-spacing:3px;
-    margin-bottom:15px;
+.number{
+font-family:'Orbitron',sans-serif;
+color:var(--gold);
+font-size:11px;
+letter-spacing:3px;
+margin-bottom:14px;
 }
 
-.card-title{
-    font-family:'Cinzel',serif;
-    color:var(--light);
-    font-size:25px;
-    margin-bottom:18px;
+.card h3{
+font-family:'Cinzel',serif;
+color:var(--light);
+font-size:24px;
+margin-bottom:17px;
 }
 
-.info-text{
-    color:#c5c5c5;
-    font-size:15px;
-    line-height:2;
+.text{
+color:#c5c5c5;
+font-size:15px;
+line-height:2;
 }
 
-.info-row{
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
-    padding:16px 0;
-    border-bottom:1px solid rgba(255,255,255,.08);
-    font-size:14px;
+.row{
+display:flex;
+justify-content:space-between;
+gap:15px;
+padding:15px 0;
+border-bottom:1px solid rgba(255,255,255,.08);
+font-size:14px;
 }
 
-.info-row:last-child{
-    border-bottom:none;
+.row:last-child{border:none}
+.row span:first-child{color:#999}
+.row span:last-child{
+color:var(--light);
+font-weight:700;
+text-align:right;
 }
 
-.info-row span:first-child{
-    color:#999;
+.social{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
 }
 
-.info-row span:last-child{
-    color:var(--light);
-    text-align:right;
-    font-weight:700;
+.social a,.soon{
+padding:16px;
+text-align:center;
+border:1px solid rgba(212,175,55,.35);
+border-radius:6px;
+text-decoration:none;
+color:var(--light);
+font-weight:800;
+background:rgba(212,175,55,.04);
+transition:.3s;
 }
 
-/* SOCIAL LINKS */
-
-.social-links{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
+.social a:hover{
+background:var(--gold);
+color:#000;
+transform:translateY(-4px);
 }
 
-.social-link,
-.coming-soon{
-    display:block;
-    text-align:center;
-    padding:17px;
-    border-radius:7px;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:800;
-    color:var(--light);
-    border:1px solid rgba(212,175,55,.35);
-    background:rgba(212,175,55,.04);
-    transition:.3s;
+.soon{
+color:#888;
+border-style:dashed;
 }
 
-.social-link:hover{
-    background:var(--gold);
-    color:#050505;
-    transform:translateY(-4px);
+/* PASSWORD MODAL */
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+z-index:20;
+align-items:center;
+justify-content:center;
+padding:20px;
+background:rgba(0,0,0,.92);
+backdrop-filter:blur(12px);
 }
 
-.coming-soon{
-    color:#929292;
-    border-style:dashed;
+.modal-box{
+width:100%;
+max-width:380px;
+padding:30px;
+background:#101010;
+border:1px solid var(--gold);
+border-radius:12px;
+text-align:center;
+box-shadow:0 0 35px rgba(212,175,55,.15);
+}
+
+.modal-box h2{
+font-family:'Cinzel',serif;
+color:var(--light);
+margin-bottom:12px;
+}
+
+.modal-box p{
+color:#aaa;
+font-size:14px;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+.password-input{
+width:100%;
+padding:15px;
+border:1px solid #66521e;
+border-radius:6px;
+background:#080808;
+color:white;
+outline:none;
+margin-bottom:15px;
+font-size:15px;
+}
+
+.password-input:focus{border-color:var(--gold)}
+
+.actions{
+display:flex;
+gap:10px;
+}
+
+.actions button{
+flex:1;
+padding:14px;
+border:0;
+border-radius:5px;
+font-family:'Orbitron',sans-serif;
+font-size:10px;
+font-weight:800;
+cursor:pointer;
+}
+
+.unlock{
+background:linear-gradient(110deg,#b58b25,#f5df91);
+color:#000;
+}
+
+.cancel{
+background:#292929;
+color:white;
+}
+
+#error{
+color:#ff7777;
+font-size:13px;
+margin-top:12px;
+min-height:18px;
 }
 
 /* FOOTER */
 
 footer{
-    padding:35px 15px;
-    text-align:center;
-    border-top:1px solid rgba(212,175,55,.25);
-    color:#929292;
-    font-size:13px;
-    line-height:2.3;
-    letter-spacing:1px;
+padding:32px 15px;
+text-align:center;
+border-top:1px solid rgba(212,175,55,.25);
+color:#929292;
+font-size:12px;
+line-height:2.3;
+letter-spacing:1px;
 }
 
 footer strong{
-    font-family:'Orbitron',sans-serif;
-    font-size:18px;
-    letter-spacing:3px;
+font-family:'Orbitron',sans-serif;
+font-size:17px;
+letter-spacing:3px;
 }
 
 /* MOBILE */
 
 @media(max-width:750px){
 
-    header{
-        padding:18px 10px;
-    }
+.hero-inner{
+grid-template-columns:1fr;
+text-align:center;
+}
 
-    .logo{
-        font-size:14px;
-        letter-spacing:2px;
-    }
+.content{text-align:center}
 
-    .hero{
-        padding:55px 20px;
-    }
+.line{margin:25px auto}
 
-    .hero-container{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
+.description{margin:auto}
 
-    .hero-content{
-        text-align:center;
-    }
+.character-area{min-height:400px}
 
-    .gold-line{
-        margin:25px auto;
-    }
+}
 
-    .welcome-message{
-        margin:auto;
-        font-size:14px;
-    }
+@media(max-width:600px){
 
-    .character-area{
-        min-height:420px;
-        margin-top:10px;
-    }
+.logo{font-size:14px;letter-spacing:2px}
 
-    .character-card{
-        width:280px;
-        height:370px;
-    }
+.hero{padding:55px 18px}
 
-    .social-links{
-        grid-template-columns:1fr;
-    }
+.name{font-size:42px}
 
-    .info-card{
-        padding:22px;
-    }
+.welcome{letter-spacing:5px}
 
-    .info-row{
-        font-size:13px;
-    }
+.description{font-size:14px}
+
+.character{width:270px;height:350px}
+
+.social{grid-template-columns:1fr}
+
+.card{padding:22px}
+
+.row{font-size:13px}
 
 }
 
 @media(prefers-reduced-motion:reduce){
-
-    *,
-    *::before,
-    *::after{
-        animation-duration:.01ms!important;
-        animation-iteration-count:1!important;
-        scroll-behavior:auto!important;
-    }
-
+*,*::before,*::after{
+animation-duration:.01ms!important;
+animation-iteration-count:1!important;
+scroll-behavior:auto!important;
 }
-
+}
 </style>
-
 </head>
 
 <body>
 
 <canvas id="particles"></canvas>
 
-<div class="background-glow glow-one"></div>
-<div class="background-glow glow-two"></div>
-<div class="ambient"></div>
-
-<!-- HEADER -->
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
 
 <header>
-
-    <div class="logo gold-text">
-        SHAHZAD AHMAD
-    </div>
-
+<div class="logo gold">SHAHZAD AHMAD</div>
 </header>
-
-<!-- HERO SECTION -->
 
 <section class="hero">
 
-<div class="hero-container">
+<div class="hero-inner">
 
-<div class="hero-content">
+<div class="content">
 
-    <div class="eyebrow">
-        OFFICIAL PERSONAL PORTFOLIO
-    </div>
+<div class="eyebrow">PERSONAL WEBSITE</div>
 
-    <h1 class="main-name gold-text">
-        SHAHZAD<br>
-        AHMAD
-    </h1>
+<h1 class="name gold">SHAHZAD AHMAD</h1>
 
-    <h2 class="welcome gold-text">
-        WELCOME
-    </h2>
+<h2 class="welcome gold">WELCOME</h2>
 
-    <div class="gold-line"></div>
+<div class="line"></div>
 
-    <p class="welcome-message">
+<p class="description">
+Welcome to my official personal website.
+<strong>Your presence is truly appreciated.</strong>
+Explore my interests, creativity and digital journey.
+Thank you for visiting my world.
+</p>
 
-        Welcome to my official personal website.
-
-        <strong>
-            A place where creativity meets technology.
-        </strong>
-
-        Explore my interests, discover my digital world
-        and follow my journey of learning and innovation.
-
-    </p>
-
-    <button class="info-button" onclick="showProfile()">
-
-        EXPLORE MY PROFILE
-
-    </button>
+<button class="main-btn" onclick="openPassword()">
+EXPLORE MY PROFILE
+</button>
 
 </div>
-
-<!-- INTELLIGENT CHARACTER -->
 
 <div class="character-area">
 
-<div class="character-card">
+<div class="character">
 
-    <div class="person">
+<div class="halo"></div>
 
-        <div class="head">
+<div class="man">
 
-            <div class="hair"></div>
+<div class="head">
+<div class="hair"></div>
+<div class="eye left"></div>
+<div class="eye right"></div>
+<div class="nose"></div>
+<div class="mouth"></div>
+</div>
 
-            <div class="eyes">
-                <div class="eye"></div>
-                <div class="eye"></div>
-            </div>
+<div class="neck"></div>
+<div class="body"></div>
 
-            <div class="nose"></div>
-            <div class="mouth"></div>
+<div class="laptop">AI / 007</div>
 
-        </div>
+</div>
 
-        <div class="neck"></div>
-
-        <div class="suit"></div>
-
-        <div class="laptop">
-
-            <div class="laptop-screen">
-                AI / 007
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="character-label">
-        DIGITAL THINKER
-    </div>
+<div class="character-label">DIGITAL THINKER</div>
 
 </div>
 
@@ -811,339 +680,321 @@ footer strong{
 </div>
 
 </section>
-
-<!-- PERSONAL INFORMATION -->
 
 <section id="personal">
 
-<h2 class="section-heading gold-text">
-    ABOUT MY WORLD
+<h2 class="section-heading gold">
+MY PERSONAL INFORMATION
 </h2>
 
-<!-- ABOUT -->
+<div class="card">
 
-<div class="info-card">
+<div class="number">01 / INTRODUCTION</div>
 
-    <div class="card-number">
-        01 / INTRODUCTION
-    </div>
+<h3>About Me</h3>
 
-    <h3 class="card-title">
-        About Me
-    </h3>
-
-    <p class="info-text">
-
-        My name is Shahzad Ahmad.
-
-        I am passionate about technology,
-        creativity and digital innovation.
-
-        I enjoy exploring new ideas,
-        learning modern skills and discovering
-        opportunities in the digital world.
-
-    </p>
+<p class="text">
+My name is Shahzad Ahmad. I am interested in technology,
+creativity and digital development. I enjoy exploring new
+ideas and learning new skills.
+</p>
 
 </div>
 
-<!-- PROFILE -->
+<div class="card">
 
-<div class="info-card">
+<div class="number">02 / PROFILE</div>
 
-    <div class="card-number">
-        02 / PROFILE
-    </div>
+<h3>Personal Profile</h3>
 
-    <h3 class="card-title">
-        Personal Profile
-    </h3>
+<div class="row">
+<span>Name</span>
+<span>SHAHZAD AHMAD</span>
+</div>
 
-    <div class="info-row">
-        <span>Name</span>
-        <span>SHAHZAD AHMAD</span>
-    </div>
+<div class="row">
+<span>Website</span>
+<span>Shahzad Official 007</span>
+</div>
 
-    <div class="info-row">
-        <span>Brand</span>
-        <span>SHAHZAD OFFICIAL 007</span>
-    </div>
-
-    <div class="info-row">
-        <span>Profession</span>
-        <span>Digital Creator</span>
-    </div>
+<div class="row">
+<span>Role</span>
+<span>Digital Creator</span>
+</div>
 
 </div>
 
-<!-- INTERESTS -->
+<div class="card">
 
-<div class="info-card">
+<div class="number">03 / INTERESTS</div>
 
-    <div class="card-number">
-        03 / INTERESTS
-    </div>
+<h3>My Interests</h3>
 
-    <h3 class="card-title">
-        Areas of Interest
-    </h3>
-
-    <p class="info-text">
-
-        Artificial Intelligence<br>
-        Website Development<br>
-        Video Editing<br>
-        Digital Creativity<br>
-        Modern Technology<br>
-        Gaming
-
-    </p>
+<p class="text">
+Artificial Intelligence<br>
+Technology<br>
+Website Development<br>
+Video Editing<br>
+Digital Creation<br>
+Gaming
+</p>
 
 </div>
 
-<!-- SOCIAL -->
+<div class="card">
 
-<div class="info-card">
+<div class="number">04 / GAMING</div>
 
-    <div class="card-number">
-        04 / SOCIAL MEDIA
-    </div>
+<h3>Free Fire Profile</h3>
 
-    <h3 class="card-title">
-        Let's Connect
-    </h3>
+<div class="row">
+<span>Player ID</span>
+<span>13960506580</span>
+</div>
 
-    <div class="social-links">
+</div>
 
-        <a class="social-link"
-           href="https://www.tiktok.com/@rana.editor33"
-           target="_blank"
-           rel="noopener noreferrer">
+<div class="card">
 
-            TIKTOK
+<div class="number">05 / SOCIAL MEDIA</div>
 
-        </a>
+<h3>Connect With Me</h3>
 
-        <a class="social-link"
-           href="https://www.youtube.com/@BabyBubuToons"
-           target="_blank"
-           rel="noopener noreferrer">
+<div class="social">
 
-            YOUTUBE
+<a href="https://www.tiktok.com/@rana.editor33"
+target="_blank" rel="noopener noreferrer">TIKTOK</a>
 
-        </a>
+<a href="https://www.youtube.com/@BabyBubuToons"
+target="_blank" rel="noopener noreferrer">YOUTUBE</a>
 
-        <div class="coming-soon">
-            INSTAGRAM — COMING SOON
-        </div>
+<div class="soon">INSTAGRAM — COMING SOON</div>
 
-        <div class="coming-soon">
-            FACEBOOK — COMING SOON
-        </div>
+<div class="soon">FACEBOOK — COMING SOON</div>
 
-    </div>
+</div>
 
 </div>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-    <strong class="gold-text">
-        SHAHZAD AHMAD
-    </strong>
+<strong class="gold">SHAHZAD AHMAD</strong>
 
-    <br>
+<br>
 
-    SHAHZAD OFFICIAL 007
+SHAHZAD OFFICIAL 007
 
-    <br>
+<br>
 
-    CREATIVITY • TECHNOLOGY • INNOVATION
+PERSONAL WEBSITE
 
-    <br>
+<br>
 
-    © 2026 ALL RIGHTS RESERVED
+© 2026 ALL RIGHTS RESERVED
 
 </footer>
 
+<!-- PASSWORD MODAL -->
+
+<div class="modal" id="passwordModal">
+
+<div class="modal-box">
+
+<h2>Private Information</h2>
+
+<p>
+Enter your password to access your personal information.
+</p>
+
+<input
+type="password"
+id="passwordInput"
+class="password-input"
+placeholder="Enter Your Password"
+>
+
+<div class="actions">
+
+<button class="unlock" onclick="checkPassword()">UNLOCK</button>
+
+<button class="cancel" onclick="closePassword()">CANCEL</button>
+
+</div>
+
+<div id="error"></div>
+
+</div>
+
+</div>
+
 <script>
 
-/* PROFILE DISPLAY */
+/* PASSWORD SYSTEM */
 
-function showProfile(){
+const WEBSITE_PASSWORD = "Shahzad445";
 
-    const section = document.getElementById("personal");
+function openPassword(){
 
-    section.style.display = "block";
+document.getElementById("passwordModal").style.display="flex";
 
-    setTimeout(()=>{
+document.getElementById("passwordInput").value="";
 
-        section.scrollIntoView({
+document.getElementById("error").textContent="";
 
-            behavior:"smooth",
-            block:"start"
-
-        });
-
-    },100);
+document.getElementById("passwordInput").focus();
 
 }
 
-/* GOLDEN PARTICLES */
+function closePassword(){
 
-const canvas = document.getElementById("particles");
+document.getElementById("passwordModal").style.display="none";
 
-const ctx = canvas.getContext("2d");
+}
 
-let particles = [];
+function checkPassword(){
 
-function resizeCanvas(){
+const entered=document.getElementById("passwordInput").value;
 
-    const ratio = Math.min(
-        window.devicePixelRatio || 1,
-        2
-    );
+if(entered===WEBSITE_PASSWORD){
 
-    canvas.width = window.innerWidth * ratio;
+closePassword();
 
-    canvas.height = window.innerHeight * ratio;
+const section=document.getElementById("personal");
 
-    canvas.style.width = window.innerWidth + "px";
+section.style.display="block";
 
-    canvas.style.height = window.innerHeight + "px";
+setTimeout(()=>{
 
-    ctx.setTransform(ratio,0,0,ratio,0,0);
+section.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+},100);
+
+}else{
+
+document.getElementById("error").textContent=
+"Incorrect password. Please try again.";
+
+}
+
+}
+
+document.getElementById("passwordInput")
+.addEventListener("keydown",function(event){
+
+if(event.key==="Enter")checkPassword();
+
+});
+
+/* PARTICLES */
+
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+
+let particles=[];
+
+function resize(){
+
+const ratio=Math.min(window.devicePixelRatio||1,2);
+
+canvas.width=window.innerWidth*ratio;
+canvas.height=window.innerHeight*ratio;
+
+canvas.style.width=window.innerWidth+"px";
+canvas.style.height=window.innerHeight+"px";
+
+ctx.setTransform(ratio,0,0,ratio,0,0);
 
 }
 
 class Particle{
 
-    constructor(){
+constructor(){
 
-        this.x = Math.random()*window.innerWidth;
+this.x=Math.random()*window.innerWidth;
+this.y=Math.random()*window.innerHeight;
 
-        this.y = Math.random()*window.innerHeight;
+this.size=Math.random()*2+0.5;
 
-        this.size = Math.random()*2+0.5;
+this.speedX=(Math.random()-.5)*.35;
+this.speedY=(Math.random()-.5)*.35;
 
-        this.speedX = (Math.random()-.5)*0.35;
+this.opacity=Math.random()*.6+.15;
+this.twinkle=Math.random()*.008;
 
-        this.speedY = (Math.random()-.5)*0.35;
+}
 
-        this.opacity = Math.random()*.6+.15;
+update(){
 
-        this.twinkle = Math.random()*.008;
+this.x+=this.speedX;
+this.y+=this.speedY;
 
-    }
+this.opacity+=this.twinkle;
 
-    update(){
+if(this.opacity>.75||this.opacity<.15){
+this.twinkle*=-1;
+}
 
-        this.x += this.speedX;
+if(this.x<0||this.x>window.innerWidth)this.speedX*=-1;
+if(this.y<0||this.y>window.innerHeight)this.speedY*=-1;
 
-        this.y += this.speedY;
+}
 
-        this.opacity += this.twinkle;
+draw(){
 
-        if(this.opacity>.75 || this.opacity<.15){
+ctx.beginPath();
 
-            this.twinkle *= -1;
+ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
 
-        }
+ctx.fillStyle=`rgba(212,175,55,${this.opacity})`;
 
-        if(this.x<0 || this.x>window.innerWidth){
+ctx.shadowBlur=10;
+ctx.shadowColor="#d4af37";
 
-            this.speedX *= -1;
+ctx.fill();
 
-        }
+ctx.shadowBlur=0;
 
-        if(this.y<0 || this.y>window.innerHeight){
-
-            this.speedY *= -1;
-
-        }
-
-    }
-
-    draw(){
-
-        ctx.beginPath();
-
-        ctx.arc(
-            this.x,
-            this.y,
-            this.size,
-            0,
-            Math.PI*2
-        );
-
-        ctx.fillStyle =
-        `rgba(212,175,55,${this.opacity})`;
-
-        ctx.shadowBlur = 10;
-
-        ctx.shadowColor = "#d4af37";
-
-        ctx.fill();
-
-        ctx.shadowBlur = 0;
-
-    }
+}
 
 }
 
 function createParticles(){
 
-    particles = [];
+particles=[];
 
-    const count = Math.min(
-        85,
-        Math.floor(window.innerWidth/9)
-    );
+const count=Math.min(85,Math.floor(window.innerWidth/9));
 
-    for(let i=0;i<count;i++){
-
-        particles.push(new Particle());
-
-    }
+for(let i=0;i<count;i++){
+particles.push(new Particle());
+}
 
 }
 
-function animateParticles(){
+function animate(){
 
-    ctx.clearRect(
-        0,
-        0,
-        window.innerWidth,
-        window.innerHeight
-    );
+ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
 
-    particles.forEach(p=>{
+particles.forEach(p=>{
+p.update();
+p.draw();
+});
 
-        p.update();
-
-        p.draw();
-
-    });
-
-    requestAnimationFrame(animateParticles);
+requestAnimationFrame(animate);
 
 }
 
-resizeCanvas();
-
+resize();
 createParticles();
-
-animateParticles();
+animate();
 
 window.addEventListener("resize",()=>{
-
-    resizeCanvas();
-
-    createParticles();
-
+resize();
+createParticles();
 });
 
 </script>
