@@ -7,7 +7,7 @@
 
 <title>SHAHZAD OFFICIAL 007</title>
 
-<meta name="description" content="Shahzad Official 007 - AI Creator, Digital Creator, Web Developer and Gaming Enthusiast.">
+<meta name="description" content="Official digital portfolio of Shahzad. AI, technology, gaming and digital creativity.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +17,11 @@
 <style>
 
 :root{
---bg:#080808;
+--bg:#070707;
 --card:#111111;
 --red:#ff1744;
---red2:#ff003c;
 --white:#ffffff;
---muted:#aaa;
+--muted:#a5a5a5;
 }
 
 *{
@@ -47,7 +46,7 @@ text-decoration:none;
 color:inherit;
 }
 
-/* PASSWORD SCREEN */
+/* PASSWORD */
 
 #lockScreen{
 position:fixed;
@@ -56,36 +55,36 @@ z-index:100000;
 display:flex;
 align-items:center;
 justify-content:center;
-background:
-radial-gradient(circle at center,#250008,#080808 65%);
+background:radial-gradient(circle,#270008,#070707 70%);
 padding:20px;
 }
 
 .lock-box{
 width:100%;
 max-width:400px;
-padding:40px 28px;
+padding:42px 28px;
 text-align:center;
-background:#111;
+background:#101010;
 border:1px solid #ff1744;
-border-radius:22px;
-box-shadow:0 0 45px rgba(255,0,60,.2);
+border-radius:20px;
+box-shadow:0 0 50px #ff174422;
 }
 
 .lock-logo{
-font-size:42px;
+font-size:45px;
 font-weight:900;
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
 .lock-box h2{
-font-size:23px;
-margin:15px 0;
+font-family:'Space Grotesk',sans-serif;
+font-size:24px;
+margin-bottom:12px;
 }
 
 .lock-box p{
-color:#aaa;
 font-size:13px;
+color:var(--muted);
 margin-bottom:25px;
 }
 
@@ -104,25 +103,56 @@ margin-bottom:15px;
 
 .lock-box input:focus{
 border-color:var(--red);
-box-shadow:0 0 15px #ff174455;
+box-shadow:0 0 15px #ff174444;
 }
 
 .unlock-btn{
 width:100%;
-padding:14px;
+padding:15px;
 border:none;
 border-radius:10px;
-background:linear-gradient(120deg,#ff1744,#a00025);
+background:linear-gradient(120deg,#ff1744,#9d001f);
 color:white;
 font-weight:800;
+letter-spacing:1px;
 cursor:pointer;
-font-size:15px;
+font-family:'Outfit',sans-serif;
 }
 
 #error{
 color:#ff4568;
 font-size:13px;
 margin-top:15px;
+}
+
+/* ANIMATED COLORS */
+
+.gradient-text{
+background:linear-gradient(
+270deg,
+#ff1744,
+#ffffff,
+#ff0033,
+#ff687f,
+#99001f,
+#ff1744
+);
+background-size:500% 500%;
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:colorMove 6s ease infinite;
+}
+
+@keyframes colorMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+@keyframes redGlow{
+0%,100%{box-shadow:0 0 8px #ff174422}
+50%{box-shadow:0 0 25px #ff174466}
 }
 
 /* BACKGROUND */
@@ -141,9 +171,9 @@ content:"";
 position:fixed;
 width:450px;
 height:450px;
-background:#ff003c;
+background:#ff0033;
 filter:blur(180px);
-opacity:.10;
+opacity:.09;
 top:-180px;
 left:-150px;
 pointer-events:none;
@@ -154,9 +184,9 @@ content:"";
 position:fixed;
 width:400px;
 height:400px;
-background:#ff003c;
+background:#99001f;
 filter:blur(180px);
-opacity:.07;
+opacity:.08;
 bottom:-150px;
 right:-100px;
 pointer-events:none;
@@ -174,32 +204,8 @@ top:0;
 left:0;
 height:3px;
 width:0%;
-background:linear-gradient(90deg,#ff1744,#ff6680,#ffffff);
+background:linear-gradient(90deg,#ff1744,#ffffff,#ff0033);
 z-index:99999;
-}
-
-/* ANIMATED TEXT */
-
-.gradient-text{
-background:linear-gradient(
-270deg,
-#ff1744,
-#ffffff,
-#ff003c,
-#ff899d,
-#ff1744
-);
-background-size:500% 500%;
--webkit-background-clip:text;
-background-clip:text;
--webkit-text-fill-color:transparent;
-animation:colorMove 7s ease infinite;
-}
-
-@keyframes colorMove{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
 }
 
 /* HEADER */
@@ -208,7 +214,7 @@ header{
 position:sticky;
 top:0;
 z-index:999;
-background:rgba(8,8,8,.92);
+background:rgba(7,7,7,.94);
 backdrop-filter:blur(18px);
 border-bottom:1px solid #ff174433;
 }
@@ -216,22 +222,22 @@ border-bottom:1px solid #ff174433;
 .navbar{
 max-width:1250px;
 margin:auto;
-padding:18px 6%;
+padding:19px 6%;
 display:flex;
 align-items:center;
 justify-content:space-between;
 }
 
 .logo{
+font-family:'Space Grotesk',sans-serif;
 font-size:21px;
 font-weight:900;
 letter-spacing:1px;
-font-family:'Space Grotesk',sans-serif;
 }
 
 .nav-links{
 display:flex;
-gap:25px;
+gap:26px;
 align-items:center;
 }
 
@@ -242,7 +248,7 @@ transition:.3s;
 }
 
 .nav-links a:hover{
-color:var(--red);
+color:#ff1744;
 }
 
 .menu-btn{
@@ -265,13 +271,14 @@ padding:100px 7%;
 
 .section-title{
 text-align:center;
-margin-bottom:45px;
+margin-bottom:48px;
 }
 
 .section-title h2{
-font-size:38px;
-font-weight:900;
 font-family:'Space Grotesk',sans-serif;
+font-size:38px;
+font-weight:800;
+letter-spacing:1px;
 }
 
 .section-title p{
@@ -281,12 +288,13 @@ margin-top:12px;
 }
 
 .red-line{
-width:70px;
+width:75px;
 height:3px;
-margin:18px auto;
+margin:19px auto;
 border-radius:20px;
-background:linear-gradient(90deg,#ff1744,#ffffff);
-box-shadow:0 0 15px #ff1744;
+background:linear-gradient(90deg,#ff1744,#ffffff,#ff1744);
+background-size:200% 100%;
+animation:colorMove 4s linear infinite;
 }
 
 /* HERO */
@@ -305,27 +313,30 @@ max-width:900px;
 
 .badge{
 display:inline-block;
-padding:10px 20px;
+padding:11px 21px;
 border:1px solid #ff1744;
 border-radius:30px;
 color:#ff4568;
 font-size:11px;
 letter-spacing:2px;
-margin-bottom:25px;
+margin-bottom:28px;
 background:#ff174411;
+animation:redGlow 3s infinite;
 }
 
 .hero h1{
-font-size:clamp(42px,8vw,85px);
+font-family:'Space Grotesk',sans-serif;
+font-size:clamp(40px,8vw,86px);
 font-weight:900;
 line-height:1.15;
-font-family:'Space Grotesk',sans-serif;
+letter-spacing:-2px;
 }
 
 .hero h2{
 font-size:clamp(18px,4vw,28px);
-margin:20px 0;
+margin:22px 0;
 color:#eee;
+font-weight:500;
 }
 
 .hero p{
@@ -337,10 +348,10 @@ line-height:2;
 }
 
 .hero-buttons{
-margin-top:32px;
+margin-top:35px;
 display:flex;
 justify-content:center;
-gap:15px;
+gap:16px;
 flex-wrap:wrap;
 }
 
@@ -348,18 +359,17 @@ flex-wrap:wrap;
 
 .btn{
 display:inline-block;
-padding:14px 27px;
+padding:15px 28px;
 border-radius:30px;
 font-size:12px;
 font-weight:800;
-letter-spacing:1px;
+letter-spacing:1.2px;
 transition:.3s;
 }
 
 .btn-primary{
-background:linear-gradient(120deg,#ff1744,#b00028);
+background:linear-gradient(120deg,#ff1744,#a00025);
 color:white;
-box-shadow:0 0 20px #ff174433;
 }
 
 .btn-outline{
@@ -369,7 +379,7 @@ color:white;
 
 .btn:hover{
 transform:translateY(-5px);
-box-shadow:0 0 25px #ff174477;
+box-shadow:0 0 25px #ff174455;
 }
 
 /* CARDS */
@@ -377,31 +387,25 @@ box-shadow:0 0 25px #ff174477;
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:22px;
+gap:23px;
 }
 
 .card{
 position:relative;
-padding:30px;
-border-radius:18px;
+padding:32px;
+border-radius:17px;
 background:linear-gradient(145deg,#171717,#0c0c0c);
-border:1px solid #ffffff15;
+border:1px solid #ffffff12;
 transition:.4s;
-overflow:hidden;
 }
 
 .card::before{
 content:"";
 position:absolute;
-inset:0;
+inset:-1px;
 border-radius:18px;
 padding:1px;
-background:linear-gradient(
-120deg,
-#ff1744,
-transparent,
-#ff1744
-);
+background:linear-gradient(120deg,#ff1744,#333,#ff1744);
 background-size:300% 300%;
 animation:borderMove 6s linear infinite;
 -webkit-mask:linear-gradient(#fff 0 0) content-box,
@@ -422,13 +426,16 @@ box-shadow:0 15px 35px #ff174422;
 }
 
 .card-icon{
-font-size:35px;
-margin-bottom:18px;
+font-size:27px;
+margin-bottom:20px;
+color:#ff1744;
+font-weight:800;
 }
 
 .card h3{
+font-family:'Space Grotesk',sans-serif;
 font-size:20px;
-margin-bottom:12px;
+margin-bottom:13px;
 }
 
 .card p{
@@ -442,7 +449,7 @@ line-height:1.9;
 .about-box{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap:42px;
 align-items:center;
 }
 
@@ -453,20 +460,20 @@ align-items:center;
 justify-content:center;
 text-align:center;
 border-radius:25px;
-background:
-radial-gradient(circle,#ff174433,transparent 65%),
-#111;
+background:radial-gradient(circle,#ff174433,transparent 65%),#111;
 border:1px solid #ff174455;
+animation:redGlow 5s infinite;
 }
 
 .profile-number{
-font-size:105px;
+font-size:110px;
 font-weight:900;
 font-family:'Space Grotesk',sans-serif;
 }
 
 .about-info h3{
 font-size:30px;
+font-family:'Space Grotesk',sans-serif;
 margin-bottom:20px;
 }
 
@@ -491,7 +498,7 @@ margin-bottom:10px;
 }
 
 .skill-bar{
-height:9px;
+height:8px;
 border-radius:20px;
 background:#292929;
 overflow:hidden;
@@ -500,7 +507,7 @@ overflow:hidden;
 .skill-fill{
 height:100%;
 border-radius:20px;
-background:linear-gradient(90deg,#ff1744,#ff899d);
+background:linear-gradient(90deg,#99001f,#ff1744);
 animation:fill 3s ease;
 }
 
@@ -522,28 +529,29 @@ margin-bottom:15px;
 
 .game-box{
 text-align:center;
-padding:45px 25px;
-background:linear-gradient(145deg,#1a0b10,#101010);
+padding:48px 25px;
+background:linear-gradient(145deg,#1a090d,#101010);
 border:1px solid #ff174455;
 border-radius:22px;
 }
 
-.game-icon{
-font-size:55px;
-margin-bottom:15px;
+.game-heading{
+font-family:'Space Grotesk',sans-serif;
+font-size:32px;
 }
 
 .game-id{
 display:inline-block;
-padding:15px 25px;
-margin:20px 0;
+padding:17px 28px;
+margin:22px 0;
 background:#080808;
 border:1px solid #ff1744;
 border-radius:12px;
-font-size:24px;
+font-size:25px;
 font-weight:900;
 letter-spacing:2px;
 color:#ff4568;
+animation:redGlow 3s infinite;
 }
 
 /* SOCIAL */
@@ -557,7 +565,7 @@ gap:15px;
 
 .social{
 min-width:160px;
-padding:17px 22px;
+padding:18px 22px;
 text-align:center;
 background:#151515;
 border:1px solid #ffffff20;
@@ -577,28 +585,29 @@ box-shadow:0 0 20px #ff174433;
 
 .vision-box{
 text-align:center;
-padding:45px 25px;
+padding:50px 25px;
 background:linear-gradient(145deg,#171717,#0d0d0d);
 border:1px solid #ff174455;
 border-radius:22px;
 }
 
 .vision-box h3{
-font-size:27px;
+font-family:'Space Grotesk',sans-serif;
+font-size:28px;
 }
 
 .vision-box p{
 color:#aaa;
 font-size:14px;
 line-height:2;
-margin:20px 0;
+margin:22px 0;
 }
 
 /* FOOTER */
 
 footer{
 border-top:1px solid #ffffff15;
-padding:35px 6%;
+padding:38px 6%;
 text-align:center;
 color:#aaa;
 font-size:12px;
@@ -608,7 +617,7 @@ footer .logo{
 margin-bottom:15px;
 }
 
-/* ANIMATIONS */
+/* REVEAL */
 
 .reveal{
 opacity:0;
@@ -629,7 +638,7 @@ width:46px;
 height:46px;
 border:none;
 border-radius:50%;
-background:linear-gradient(135deg,#ff1744,#a00025);
+background:linear-gradient(135deg,#ff1744,#900020);
 color:white;
 font-size:22px;
 cursor:pointer;
@@ -652,7 +661,7 @@ top:68px;
 left:0;
 width:100%;
 padding:25px;
-background:#111;
+background:#101010;
 flex-direction:column;
 gap:23px;
 border-bottom:1px solid #ff1744;
@@ -679,7 +688,7 @@ min-height:80vh;
 }
 
 .section-title h2{
-font-size:30px;
+font-size:29px;
 }
 
 .social{
@@ -701,30 +710,28 @@ scroll-behavior:auto!important;
 
 <body>
 
-<!-- PASSWORD -->
+<!-- PASSWORD SCREEN -->
 
 <div id="lockScreen">
 
 <div class="lock-box">
 
-<div class="lock-logo gradient-text">
-007
-</div>
+<div class="lock-logo gradient-text">007</div>
 
-<h2>WELCOME BACK</h2>
+<h2>WELCOME TO MY WEBSITE</h2>
 
 <p>Enter your password to access the official website.</p>
 
 <input
 type="password"
 id="password"
-placeholder="Enter Website Password"
+placeholder="Enter Password"
 autocomplete="current-password"
 onkeydown="if(event.key==='Enter') unlock()"
 >
 
 <button class="unlock-btn" onclick="unlock()">
-UNLOCK WEBSITE
+ACCESS WEBSITE
 </button>
 
 <div id="error"></div>
@@ -733,13 +740,13 @@ UNLOCK WEBSITE
 
 </div>
 
+<!-- MAIN WEBSITE -->
+
 <div id="mainWebsite">
 
 <div id="progress"></div>
 
 <canvas id="particles"></canvas>
-
-<!-- HEADER -->
 
 <header>
 
@@ -749,17 +756,17 @@ UNLOCK WEBSITE
 SHAHZAD 007
 </a>
 
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+MENU
+</button>
 
 <div class="nav-links" id="navLinks">
-
-<a href="#home" onclick="closeMenu()">Home</a>
-<a href="#about" onclick="closeMenu()">About</a>
-<a href="#skills" onclick="closeMenu()">Interests</a>
-<a href="#projects" onclick="closeMenu()">Projects</a>
-<a href="#gaming" onclick="closeMenu()">Gaming</a>
-<a href="#social" onclick="closeMenu()">Social</a>
-
+<a href="#home" onclick="closeMenu()">HOME</a>
+<a href="#about" onclick="closeMenu()">ABOUT</a>
+<a href="#skills" onclick="closeMenu()">INTERESTS</a>
+<a href="#projects" onclick="closeMenu()">PROJECTS</a>
+<a href="#gaming" onclick="closeMenu()">GAMING</a>
+<a href="#social" onclick="closeMenu()">SOCIAL</a>
 </div>
 
 </nav>
@@ -772,36 +779,22 @@ SHAHZAD 007
 
 <div class="hero-content reveal">
 
-<div class="badge">
-WELCOME TO MY DIGITAL WORLD
-</div>
+<div class="badge">WELCOME TO MY DIGITAL WORLD</div>
 
-<h1 class="gradient-text">
-SHAHZAD OFFICIAL 007
-</h1>
+<h1 class="gradient-text">SHAHZAD OFFICIAL 007</h1>
 
-<h2>
-AI Explorer | Digital Creator | Future Developer
-</h2>
+<h2>AI EXPLORER | DIGITAL CREATOR | FUTURE DEVELOPER</h2>
 
 <p>
 Welcome to my official digital platform.
-I am Shahzad, a creative mind passionate about
-Artificial Intelligence, technology, gaming,
-video editing and web development.
-This is where my ideas and digital journey come together.
+I am Shahzad, passionate about artificial intelligence,
+modern technology, web development, gaming and digital creativity.
+Explore my world, interests and creative journey.
 </p>
 
 <div class="hero-buttons">
-
-<a href="#about" class="btn btn-primary">
-EXPLORE MY WORLD
-</a>
-
-<a href="#social" class="btn btn-outline">
-CONNECT WITH ME
-</a>
-
+<a href="#about" class="btn btn-primary">EXPLORE MY WORLD</a>
+<a href="#social" class="btn btn-outline">CONNECT WITH ME</a>
 </div>
 
 </div>
@@ -813,58 +806,43 @@ CONNECT WITH ME
 <section id="about">
 
 <div class="section-title reveal">
-
 <h2 class="gradient-text">ABOUT SHAHZAD</h2>
-
 <div class="red-line"></div>
-
 <p>Discover my story and digital identity.</p>
-
 </div>
 
 <div class="about-box">
 
 <div class="profile-box reveal">
-
 <div>
-
 <div class="profile-number gradient-text">007</div>
-
 <h2>SHAHZAD</h2>
-
-<p style="color:#aaa;margin-top:8px;">
-Founder & Digital Creator
-</p>
-
+<p style="color:#aaa;margin-top:10px">FOUNDER & DIGITAL CREATOR</p>
 </div>
-
 </div>
 
 <div class="about-info reveal">
 
-<h3>My Digital Journey</h3>
+<h3>MY DIGITAL JOURNEY</h3>
 
 <p>
 Hello! I am Shahzad, the creator of SHAHZAD OFFICIAL 007.
-I am interested in exploring the world of modern technology
-and digital creativity.
+I am interested in exploring modern technology and digital creativity.
 </p>
 
 <p>
-I enjoy discovering Artificial Intelligence tools,
-creating digital content, learning website development
+I enjoy discovering artificial intelligence tools,
+creating digital content, learning web development
 and exploring new creative ideas.
 </p>
 
 <p>
-I also have an interest in gaming, especially Free Fire.
-My goal is to improve my skills, build amazing projects
-and create something meaningful in the digital world.
+Gaming, video editing and technology are also
+important parts of my creative interests.
+My goal is to learn, improve and build meaningful projects.
 </p>
 
-<a href="#projects" class="btn btn-primary">
-EXPLORE PROJECTS
-</a>
+<a href="#projects" class="btn btn-primary">VIEW MY PROJECTS</a>
 
 </div>
 
@@ -877,93 +855,47 @@ EXPLORE PROJECTS
 <section id="skills">
 
 <div class="section-title reveal">
-
 <h2 class="gradient-text">MY INTERESTS</h2>
-
 <div class="red-line"></div>
-
-<p>Things I enjoy learning and exploring.</p>
-
+<p>Technology, creativity and continuous learning.</p>
 </div>
 
 <div class="grid">
 
 <div class="card reveal">
-
-<div class="card-icon">🤖</div>
-
-<h3>Artificial Intelligence</h3>
-
-<p>
-Exploring AI tools, creative technology,
-AI-generated content and modern innovations.
-</p>
-
+<div class="card-icon">01</div>
+<h3>ARTIFICIAL INTELLIGENCE</h3>
+<p>Exploring AI tools, creative technology and modern artificial intelligence.</p>
 </div>
 
 <div class="card reveal">
-
-<div class="card-icon">💻</div>
-
-<h3>Web Development</h3>
-
-<p>
-Learning HTML, CSS and JavaScript
-to create modern and responsive websites.
-</p>
-
+<div class="card-icon">02</div>
+<h3>WEB DEVELOPMENT</h3>
+<p>Learning HTML, CSS and JavaScript to build modern responsive websites.</p>
 </div>
 
 <div class="card reveal">
-
-<div class="card-icon">🎬</div>
-
-<h3>Video Editing</h3>
-
-<p>
-Creating digital videos, animations,
-creative visuals and social media content.
-</p>
-
+<div class="card-icon">03</div>
+<h3>DIGITAL CREATION</h3>
+<p>Creating digital videos, animations and creative social media content.</p>
 </div>
 
 <div class="card reveal">
-
-<div class="card-icon">🎮</div>
-
-<h3>Gaming</h3>
-
-<p>
-Exploring mobile gaming, Free Fire
-and improving gaming skills.
-</p>
-
+<div class="card-icon">04</div>
+<h3>GAMING</h3>
+<p>Exploring mobile gaming and improving gaming skills.</p>
 </div>
 
 <div class="card reveal">
-
-<div class="card-icon">📱</div>
-
-<h3>Social Media</h3>
-
-<p>
-Building digital platforms and
-sharing creative content online.
-</p>
-
+<div class="card-icon">05</div>
+<h3>VIDEO EDITING</h3>
+<p>Learning creative editing techniques and visual storytelling.</p>
 </div>
 
 <div class="card reveal">
-
-<div class="card-icon">🚀</div>
-
-<h3>Future Technology</h3>
-
-<p>
-Learning new technologies and
-exploring innovative digital ideas.
-</p>
-
+<div class="card-icon">06</div>
+<h3>FUTURE TECHNOLOGY</h3>
+<p>Discovering new innovations and exploring future digital possibilities.</p>
 </div>
 
 </div>
@@ -975,76 +907,37 @@ exploring innovative digital ideas.
 <section id="projects">
 
 <div class="section-title reveal">
-
 <h2 class="gradient-text">MY PROJECTS</h2>
-
 <div class="red-line"></div>
-
 <p>My digital platforms and creative work.</p>
-
 </div>
 
 <div class="grid">
 
 <div class="card reveal">
-
-<span class="project-tag">PERSONAL WEBSITE</span>
-
+<span class="project-tag">WEBSITE PROJECT</span>
 <h3>SHAHZAD OFFICIAL 007</h3>
-
-<p>
-My personal website representing
-my digital identity, interests and projects.
-</p>
-
+<p>My personal website representing my identity, interests and digital journey.</p>
 <br>
-
 <a href="https://shahzad-viral.github.io/shahzad-official-007/"
-target="_blank" rel="noopener"
-class="btn btn-outline">
-VISIT WEBSITE
-</a>
-
+target="_blank" rel="noopener" class="btn btn-outline">VISIT WEBSITE</a>
 </div>
 
 <div class="card reveal">
-
-<span class="project-tag">YOUTUBE CHANNEL</span>
-
-<h3>Baby Bubu Toons</h3>
-
-<p>
-A creative YouTube project featuring
-fictional animated characters and AI-inspired videos.
-</p>
-
+<span class="project-tag">YOUTUBE PROJECT</span>
+<h3>BABY BUBU TOONS</h3>
+<p>A creative YouTube project featuring fictional animated characters and AI-inspired videos.</p>
 <br>
-
 <a href="https://www.youtube.com/@BabyBubuToons"
-target="_blank" rel="noopener"
-class="btn btn-outline">
-OPEN CHANNEL
-</a>
-
+target="_blank" rel="noopener" class="btn btn-outline">OPEN CHANNEL</a>
 </div>
 
 <div class="card reveal">
-
-<span class="project-tag">UPCOMING</span>
-
-<h3>Future Innovations</h3>
-
-<p>
-Exploring new possibilities in
-AI, gaming, web development and technology.
-</p>
-
+<span class="project-tag">FUTURE PROJECT</span>
+<h3>FUTURE INNOVATIONS</h3>
+<p>Exploring creative ideas in AI, gaming, web development and technology.</p>
 <br>
-
-<a href="#contact" class="btn btn-outline">
-EXPLORE VISION
-</a>
-
+<a href="#contact" class="btn btn-outline">EXPLORE VISION</a>
 </div>
 
 </div>
@@ -1056,31 +949,23 @@ EXPLORE VISION
 <section id="gaming">
 
 <div class="section-title reveal">
-
-<h2 class="gradient-text">MY GAMING WORLD</h2>
-
+<h2 class="gradient-text">GAMING PROFILE</h2>
 <div class="red-line"></div>
-
-<p>My Free Fire gaming profile.</p>
-
+<p>My mobile gaming identity.</p>
 </div>
 
 <div class="game-box reveal">
 
-<div class="game-icon">🎮</div>
+<h2 class="game-heading gradient-text">FREE FIRE</h2>
 
-<h2>FREE FIRE</h2>
-
-<p style="color:#aaa;margin-top:12px;">
-My Free Fire Player ID
+<p style="color:#aaa;margin-top:15px">
+PLAYER IDENTIFICATION NUMBER
 </p>
 
-<div class="game-id">
-13960506580
-</div>
+<div class="game-id">13960506580</div>
 
-<p style="color:#aaa;font-size:13px;">
-GAMING • SKILLS • ENTERTAINMENT
+<p style="color:#aaa;font-size:12px;letter-spacing:2px">
+GAMING | SKILLS | ENTERTAINMENT
 </p>
 
 </div>
@@ -1092,40 +977,24 @@ GAMING • SKILLS • ENTERTAINMENT
 <section id="social">
 
 <div class="section-title reveal">
-
 <h2 class="gradient-text">CONNECT WITH ME</h2>
-
 <div class="red-line"></div>
-
-<p>Follow my digital journey.</p>
-
+<p>Follow my digital journey on social platforms.</p>
 </div>
 
 <div class="social-grid reveal">
 
-<a class="social"
-href="https://www.tiktok.com/@rana.editor33"
-target="_blank" rel="noopener">
-TikTok
-</a>
+<a class="social" href="https://www.tiktok.com/@rana.editor33"
+target="_blank" rel="noopener">TIKTOK</a>
 
-<a class="social"
-href="https://www.youtube.com/@BabyBubuToons"
-target="_blank" rel="noopener">
-YouTube
-</a>
+<a class="social" href="https://www.youtube.com/@BabyBubuToons"
+target="_blank" rel="noopener">YOUTUBE</a>
 
-<div class="social">
-Instagram — Coming Soon
-</div>
+<div class="social">INSTAGRAM — COMING SOON</div>
 
-<div class="social">
-Facebook — Coming Soon
-</div>
+<div class="social">FACEBOOK — COMING SOON</div>
 
-<div class="social">
-WhatsApp — Coming Soon
-</div>
+<div class="social">WHATSAPP — COMING SOON</div>
 
 </div>
 
@@ -1136,71 +1005,54 @@ WhatsApp — Coming Soon
 <section id="contact">
 
 <div class="section-title reveal">
-
 <h2 class="gradient-text">MY VISION</h2>
-
 <div class="red-line"></div>
-
 <p>My dreams. My ideas. My journey.</p>
-
 </div>
 
 <div class="vision-box reveal">
 
-<h3 class="gradient-text">
-THE JOURNEY IS JUST BEGINNING
-</h3>
+<h3 class="gradient-text">THE JOURNEY IS JUST BEGINNING</h3>
 
 <p>
-I believe in learning new things,
-exploring technology and turning creative
-ideas into real digital projects.
-Every day is an opportunity to grow,
-improve and build something better.
+I believe in continuous learning, creative thinking
+and exploring new opportunities.
+My vision is to develop useful digital projects,
+improve my skills and create something meaningful.
 </p>
 
-<a href="#home" class="btn btn-primary">
-BACK TO HOME
-</a>
+<a href="#home" class="btn btn-primary">BACK TO HOME</a>
 
 </div>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-<div class="logo gradient-text">
-SHAHZAD OFFICIAL 007
-</div>
+<div class="logo gradient-text">SHAHZAD OFFICIAL 007</div>
 
-<p>
-Designed with creativity and passion.
-</p>
+<p>DESIGNED WITH CREATIVITY AND PASSION</p>
 
-<p style="margin-top:12px;">
-© <span id="year"></span>
-SHAHZAD OFFICIAL 007.
-ALL RIGHTS RESERVED.
+<p style="margin-top:15px">
+COPYRIGHT &copy; <span id="year"></span>
+SHAHZAD OFFICIAL 007. ALL RIGHTS RESERVED.
 </p>
 
 </footer>
 
-<button id="topBtn" onclick="goTop()">↑</button>
+<button id="topBtn" onclick="goTop()" aria-label="Back to top">↑</button>
 
 </div>
 
 <script>
 
-/* PASSWORD SYSTEM */
+/* PASSWORD */
 
-const WEBSITE_PASSWORD = "SHAHZAD@007";
+const WEBSITE_PASSWORD = "Shahzad445";
 
 function unlock(){
 
-const entered =
-document.getElementById("password").value;
+const entered = document.getElementById("password").value;
 
 if(entered === WEBSITE_PASSWORD){
 
@@ -1221,7 +1073,7 @@ document.getElementById("error").textContent=
 
 }
 
-/* WEBSITE START */
+/* START WEBSITE */
 
 let websiteStarted=false;
 
@@ -1240,8 +1092,6 @@ initParticles();
 
 }
 
-/* REMEMBER UNLOCK IN THIS TAB */
-
 if(sessionStorage.getItem("websiteUnlocked")==="yes"){
 
 document.getElementById("lockScreen").style.display="none";
@@ -1256,19 +1106,17 @@ startWebsite();
 
 function toggleMenu(){
 
-document.getElementById("navLinks")
-.classList.toggle("show");
+document.getElementById("navLinks").classList.toggle("show");
 
 }
 
 function closeMenu(){
 
-document.getElementById("navLinks")
-.classList.remove("show");
+document.getElementById("navLinks").classList.remove("show");
 
 }
 
-/* SCROLL EFFECTS */
+/* SCROLL */
 
 window.addEventListener("scroll",function(){
 
@@ -1346,7 +1194,7 @@ resize();
 
 window.addEventListener("resize",resize);
 
-for(let i=0;i<55;i++){
+for(let i=0;i<50;i++){
 
 particles.push({
 
