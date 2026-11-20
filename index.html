@@ -5,11 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050505">
 
-<title>SHAHZAD AHMAD | 007 OFFICIAL</title>
+<title>SHAHZAD AHMAD | OFFICIAL 007</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&family=Outfit:wght@300;400;500;700;800;900&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -18,15 +22,17 @@ box-sizing:border-box;
 
 :root{
 --red:#ff2525;
---gold:#ffd700;
+--gold:#e9c76a;
 --blue:#00d9ff;
 --black:#050505;
 }
 
-html{scroll-behavior:smooth}
+html{
+scroll-behavior:smooth;
+}
 
 body{
-background:#050505;
+background:var(--black);
 color:white;
 font-family:'Outfit',sans-serif;
 overflow-x:hidden;
@@ -46,8 +52,8 @@ position:fixed;
 inset:0;
 z-index:-1;
 background:
-radial-gradient(circle at 15% 20%,rgba(255,0,0,.17),transparent 35%),
-radial-gradient(circle at 85% 70%,rgba(0,180,255,.13),transparent 35%),
+radial-gradient(circle at 15% 20%,rgba(255,0,0,.16),transparent 35%),
+radial-gradient(circle at 85% 70%,rgba(0,180,255,.12),transparent 35%),
 #050505;
 }
 
@@ -55,129 +61,195 @@ header{
 position:sticky;
 top:0;
 z-index:10;
-padding:20px;
+padding:21px;
 text-align:center;
-background:rgba(0,0,0,.8);
-backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(255,40,40,.4);
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(233,199,106,.3);
 }
 
 .logo{
 font-family:'Orbitron',sans-serif;
+font-size:17px;
 font-weight:900;
-font-size:19px;
-letter-spacing:4px;
-animation:neon 2s infinite alternate;
+letter-spacing:5px;
+background:linear-gradient(90deg,#b8860b,#fff1b5,#e9c76a,#fff);
+background-size:250%;
+color:transparent;
+background-clip:text;
+-webkit-background-clip:text;
+animation:goldMove 5s linear infinite;
 }
 
-@keyframes neon{
-from{text-shadow:0 0 8px red,0 0 20px red}
-to{text-shadow:0 0 15px gold,0 0 35px red}
+@keyframes goldMove{
+to{background-position:250%}
 }
 
-section,.hero,footer{
+section,footer{
 position:relative;
 z-index:1;
 }
 
+/* HERO */
+
 .hero{
-min-height:90vh;
+min-height:92vh;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-padding:60px 20px;
+padding:65px 20px;
 }
 
 .hero-content{
-max-width:900px;
-animation:enter 1.5s ease;
+max-width:950px;
+width:100%;
+animation:appear 1.5s ease;
 }
 
-@keyframes enter{
-from{opacity:0;transform:translateY(50px)}
-to{opacity:1;transform:translateY(0)}
+@keyframes appear{
+from{
+opacity:0;
+transform:translateY(35px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .badge{
 display:inline-block;
-padding:10px 20px;
-border:1px solid var(--red);
+padding:11px 24px;
+border:1px solid rgba(233,199,106,.55);
 border-radius:30px;
-color:#ff6666;
 font-family:'Orbitron',sans-serif;
 font-size:10px;
-letter-spacing:3px;
-margin-bottom:30px;
-box-shadow:0 0 20px rgba(255,0,0,.2);
+letter-spacing:4px;
+color:var(--gold);
+margin-bottom:32px;
+box-shadow:0 0 20px rgba(233,199,106,.12);
 }
 
-h1{
-font-family:'Orbitron',sans-serif;
-font-size:clamp(35px,8vw,85px);
-font-weight:900;
-line-height:1.3;
-background:linear-gradient(90deg,#ff2525,#fff,#ffd700,#ff2525);
+/* PREMIUM NAME */
+
+.name{
+font-family:'Cinzel',serif;
+font-size:clamp(36px,8vw,88px);
+font-weight:800;
+letter-spacing:5px;
+line-height:1.4;
+background:linear-gradient(
+100deg,
+#9d721d,
+#fff2bd,
+#d4af37,
+#ffffff,
+#9d721d
+);
 background-size:300%;
 color:transparent;
 background-clip:text;
 -webkit-background-clip:text;
-animation:gradient 5s linear infinite;
+animation:goldMove 6s linear infinite;
+filter:drop-shadow(0 0 15px rgba(212,175,55,.2));
 }
 
-@keyframes gradient{
-to{background-position:300%}
-}
+/* WELCOME */
 
 .welcome{
-font-family:'Cinzel',serif;
-font-size:clamp(25px,5vw,45px);
-letter-spacing:8px;
+font-family:'Orbitron',sans-serif;
+font-size:clamp(21px,5vw,38px);
+font-weight:700;
+letter-spacing:12px;
+margin-top:20px;
+color:#fff;
+text-shadow:
+0 0 10px #ff2525,
+0 0 25px rgba(255,0,0,.5);
+}
+
+/* SHAYARI */
+
+.poetry{
+max-width:700px;
+margin:35px auto 20px;
+padding:22px 15px;
+border-top:1px solid rgba(233,199,106,.4);
+border-bottom:1px solid rgba(233,199,106,.4);
+font-family:'Playfair Display',serif;
+font-size:clamp(17px,3.5vw,23px);
+font-style:italic;
+line-height:2;
+letter-spacing:1px;
+color:#f2e5c2;
+text-shadow:0 0 12px rgba(233,199,106,.15);
+animation:poetryGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes poetryGlow{
+from{opacity:.75}
+to{opacity:1}
+}
+
+.poetry span{
+display:block;
+font-family:'Orbitron',sans-serif;
+font-style:normal;
+font-size:9px;
+letter-spacing:5px;
+color:var(--gold);
 margin-top:15px;
-text-shadow:0 0 20px #ff2525;
 }
 
 .line{
-width:150px;
-height:3px;
+width:130px;
+height:2px;
 margin:30px auto;
 background:linear-gradient(90deg,transparent,red,gold,transparent);
-box-shadow:0 0 20px red;
+box-shadow:0 0 18px red;
 }
 
 .description{
-max-width:600px;
+max-width:610px;
 margin:auto;
+font-size:15px;
+line-height:2.2;
 color:#aaa;
-font-size:16px;
-line-height:2;
+letter-spacing:.5px;
 }
 
-.description strong{color:var(--gold)}
+.description strong{
+color:var(--gold);
+font-weight:700;
+}
+
+/* BUTTON */
 
 .btn{
 display:inline-block;
 margin-top:35px;
-padding:17px 30px;
-border:1px solid red;
+padding:17px 32px;
+border:1px solid var(--gold);
 border-radius:5px;
-background:linear-gradient(100deg,#a00000,#ff2525,#a00000);
+background:linear-gradient(100deg,#8d0000,#ed2020,#8d0000);
 background-size:200%;
 color:white;
 font-family:'Orbitron',sans-serif;
 font-size:11px;
 font-weight:900;
-letter-spacing:2px;
-text-decoration:none;
+letter-spacing:3px;
 cursor:pointer;
 transition:.4s;
 }
 
 .btn:hover{
-transform:translateY(-5px) scale(1.04);
+transform:translateY(-5px);
 box-shadow:0 0 30px red;
 background-position:right;
 }
+
+/* STATS */
 
 .stats{
 display:flex;
@@ -189,64 +261,72 @@ margin-top:55px;
 
 .stat{
 min-width:140px;
-padding:20px;
-border:1px solid rgba(255,215,0,.25);
+padding:22px;
+border:1px solid rgba(233,199,106,.3);
 background:rgba(255,255,255,.035);
 border-radius:12px;
 backdrop-filter:blur(10px);
+transition:.4s;
+}
+
+.stat:hover{
+transform:translateY(-7px);
+box-shadow:0 0 25px rgba(233,199,106,.15);
 }
 
 .stat h2{
 font-family:'Orbitron',sans-serif;
 color:var(--gold);
-font-size:23px;
+font-size:25px;
 }
 
 .stat p{
-font-size:11px;
-color:#aaa;
-margin-top:8px;
-letter-spacing:2px;
+font-size:10px;
+color:#999;
+margin-top:9px;
+letter-spacing:3px;
 }
+
+/* PROFILE */
 
 #personal{
 display:none;
 max-width:900px;
 margin:auto;
-padding:70px 20px;
+padding:75px 20px;
 }
 
 .heading{
 text-align:center;
-font-family:'Orbitron',sans-serif;
-font-size:clamp(22px,5vw,38px);
+font-family:'Cinzel',serif;
+font-size:clamp(24px,5vw,40px);
+letter-spacing:3px;
 color:var(--gold);
-margin-bottom:40px;
-text-shadow:0 0 15px rgba(255,215,0,.4);
+margin-bottom:45px;
 }
 
 .card{
-padding:28px;
-margin-bottom:22px;
-border:1px solid rgba(255,40,40,.35);
+padding:30px;
+margin-bottom:23px;
+border:1px solid rgba(233,199,106,.3);
 border-radius:14px;
-background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,0,0,.035));
+background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,0,0,.025));
 backdrop-filter:blur(12px);
 transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-7px);
+transform:translateY(-6px);
 border-color:var(--gold);
-box-shadow:0 0 30px rgba(255,0,0,.15);
+box-shadow:0 10px 35px rgba(233,199,106,.1);
 }
 
 .number{
 font-family:'Orbitron',sans-serif;
-font-size:11px;
-letter-spacing:3px;
-color:#ff4545;
-margin-bottom:15px;
+font-size:10px;
+letter-spacing:4px;
+color:var(--red);
+margin-bottom:16px;
 }
 
 .card h3{
@@ -258,7 +338,7 @@ margin-bottom:20px;
 
 .text{
 font-size:15px;
-line-height:2;
+line-height:2.1;
 color:#bbb;
 }
 
@@ -271,8 +351,14 @@ border-bottom:1px solid rgba(255,255,255,.1);
 font-size:14px;
 }
 
-.row:last-child{border:0}
-.row span:first-child{color:#888}
+.row:last-child{
+border:0;
+}
+
+.row span:first-child{
+color:#888;
+}
+
 .row span:last-child{
 color:var(--gold);
 font-weight:700;
@@ -300,33 +386,19 @@ transition:.3s;
 
 .social a:hover{
 background:var(--blue);
-color:black;
+color:#000;
 box-shadow:0 0 25px var(--blue);
 transform:scale(1.04);
 }
 
-footer{
-padding:40px 15px;
-text-align:center;
-border-top:1px solid rgba(255,0,0,.3);
-color:#777;
-font-size:12px;
-line-height:2.5;
-letter-spacing:2px;
-}
-
-footer strong{
-font-family:'Orbitron',sans-serif;
-font-size:19px;
-color:var(--gold);
-}
+/* MODAL */
 
 #passwordModal{
 display:none;
 position:fixed;
 inset:0;
 z-index:30;
-background:rgba(0,0,0,.94);
+background:rgba(0,0,0,.95);
 align-items:center;
 justify-content:center;
 padding:20px;
@@ -338,7 +410,7 @@ max-width:380px;
 padding:30px;
 text-align:center;
 background:#111;
-border:1px solid red;
+border:1px solid var(--gold);
 border-radius:15px;
 box-shadow:0 0 35px rgba(255,0,0,.2);
 }
@@ -352,7 +424,6 @@ margin-bottom:15px;
 .modal-box p{
 color:#aaa;
 font-size:14px;
-line-height:1.8;
 margin-bottom:20px;
 }
 
@@ -374,7 +445,7 @@ gap:10px;
 
 .modal-actions button{
 flex:1;
-padding:13px;
+padding:14px;
 border:0;
 border-radius:5px;
 font-family:'Orbitron',sans-serif;
@@ -383,8 +454,15 @@ font-weight:800;
 cursor:pointer;
 }
 
-.unlock{background:red;color:white}
-.cancel{background:#333;color:white}
+.unlock{
+background:red;
+color:white;
+}
+
+.cancel{
+background:#333;
+color:white;
+}
 
 #error{
 color:#ff5555;
@@ -392,14 +470,85 @@ font-size:13px;
 margin-top:12px;
 }
 
-@media(max-width:600px){
-.logo{font-size:15px}
-.hero{padding:50px 18px}
-.description{font-size:14px}
-.social{grid-template-columns:1fr}
-.card{padding:22px}
-.row{font-size:12px}
+/* FOOTER */
+
+footer{
+padding:40px 15px;
+text-align:center;
+border-top:1px solid rgba(233,199,106,.3);
+color:#777;
+font-size:11px;
+line-height:2.5;
+letter-spacing:2px;
 }
+
+footer strong{
+font-family:'Orbitron',sans-serif;
+font-size:18px;
+color:var(--gold);
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.logo{
+font-size:13px;
+letter-spacing:3px;
+}
+
+.hero{
+padding:55px 17px;
+}
+
+.name{
+font-size:38px;
+letter-spacing:2px;
+}
+
+.welcome{
+letter-spacing:7px;
+}
+
+.poetry{
+font-size:17px;
+line-height:2;
+}
+
+.description{
+font-size:14px;
+}
+
+.stats{
+gap:12px;
+}
+
+.stat{
+min-width:95px;
+padding:16px 10px;
+}
+
+.social{
+grid-template-columns:1fr;
+}
+
+.card{
+padding:23px;
+}
+
+.row{
+font-size:12px;
+}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{
+animation:none!important;
+scroll-behavior:auto!important;
+}
+}
+
 </style>
 </head>
 
@@ -418,9 +567,15 @@ margin-top:12px;
 
 <div class="badge">✦ PERSONAL WEBSITE ✦</div>
 
-<h1>SHAHZAD AHMAD</h1>
+<h1 class="name">SHAHZAD AHMAD</h1>
 
-<div class="welcome">THE LEGEND 007</div>
+<div class="welcome">WELCOME</div>
+
+<div class="poetry">
+"Na rutbe ka guroor, na shohrat ka nasha,<br>
+Bas apni pehchaan aur kirdaar hi hai aasra."
+<span>— SHAHZAD AHMAD</span>
+</div>
 
 <div class="line"></div>
 
@@ -428,7 +583,7 @@ margin-top:12px;
 Welcome to my official digital world.
 <strong>Dream Big. Think Different. Stay Legendary.</strong>
 Explore my interests, creativity and digital journey.
-Thank you for visiting my website.
+Your presence is truly appreciated.
 </p>
 
 <button class="btn" onclick="openPassword()">
@@ -535,14 +690,17 @@ target="_blank" rel="noopener noreferrer">YOUTUBE ↗</a>
 <br>
 SHAHZAD OFFICIAL 007
 <br>
-DREAM BIG • STAY LEGENDARY
+RESPECT • CHARACTER • IDENTITY
 <br>
 © 2026 ALL RIGHTS RESERVED
 </footer>
 
 <div id="passwordModal">
+
 <div class="modal-box">
+
 <h2>PRIVATE ACCESS</h2>
+
 <p>Enter your password to explore your profile.</p>
 
 <input type="password" id="passwordInput"
@@ -554,13 +712,13 @@ placeholder="Enter Password">
 </div>
 
 <div id="error"></div>
+
 </div>
 </div>
 
 <script>
 
-// Password demonstration only.
-// This is NOT secure authentication.
+// DEMO PASSWORD ONLY — NOT SECURE AUTHENTICATION
 const WEBSITE_PASSWORD = "Shahzad445";
 
 function openPassword(){
@@ -574,19 +732,28 @@ document.getElementById("passwordModal").style.display="none";
 }
 
 function checkPassword(){
+
 const value=document.getElementById("passwordInput").value;
 
 if(value===WEBSITE_PASSWORD){
+
 closePassword();
+
 const profile=document.getElementById("personal");
+
 profile.style.display="block";
+
 setTimeout(()=>{
 profile.scrollIntoView({behavior:"smooth"});
 },100);
+
 }else{
+
 document.getElementById("error").textContent=
 "Incorrect Password! Try Again.";
+
 }
+
 }
 
 document.getElementById("passwordInput")
@@ -594,7 +761,7 @@ document.getElementById("passwordInput")
 if(e.key==="Enter")checkPassword();
 });
 
-// FIRE PARTICLE ANIMATION
+// FIRE PARTICLES
 
 const canvas=document.getElementById("fire");
 const ctx=canvas.getContext("2d");
@@ -602,64 +769,94 @@ const ctx=canvas.getContext("2d");
 let particles=[];
 
 function resize(){
+
 const ratio=Math.min(window.devicePixelRatio||1,2);
+
 canvas.width=innerWidth*ratio;
 canvas.height=innerHeight*ratio;
+
 canvas.style.width=innerWidth+"px";
 canvas.style.height=innerHeight+"px";
+
 ctx.setTransform(ratio,0,0,ratio,0,0);
+
 }
 
 class Fire{
+
 constructor(){
 this.reset();
 }
 
 reset(){
+
 this.x=Math.random()*innerWidth;
 this.y=innerHeight+Math.random()*100;
+
 this.size=Math.random()*3+1;
 this.speed=Math.random()*1.5+.5;
 this.alpha=Math.random()*.6+.2;
-this.color=Math.random()>.5?"255,40,0":"255,180,0";
+
+this.color=Math.random()>.5
+?"255,40,0"
+:"255,180,0";
+
 }
 
 update(){
+
 this.y-=this.speed;
 this.x+=(Math.random()-.5)*.8;
 this.alpha-=.001;
 
-if(this.y< -10 || this.alpha<=0){
+if(this.y< -10||this.alpha<=0){
 this.reset();
 }
+
 }
 
 draw(){
+
 ctx.beginPath();
+
 ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+
 ctx.fillStyle=`rgba(${this.color},${this.alpha})`;
+
 ctx.shadowBlur=15;
 ctx.shadowColor="red";
+
 ctx.fill();
+
 ctx.shadowBlur=0;
+
 }
+
 }
 
 function create(){
+
 particles=[];
+
 let count=Math.min(100,Math.floor(innerWidth/5));
+
 for(let i=0;i<count;i++){
 particles.push(new Fire());
 }
+
 }
 
 function animate(){
+
 ctx.clearRect(0,0,innerWidth,innerHeight);
+
 particles.forEach(p=>{
 p.update();
 p.draw();
 });
+
 requestAnimationFrame(animate);
+
 }
 
 resize();
@@ -675,3 +872,4 @@ create();
 
 </body>
 </html>
+</MY college web coming soon >
