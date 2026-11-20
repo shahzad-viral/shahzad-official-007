@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -63,16 +63,16 @@ top:0;
 z-index:10;
 padding:21px;
 text-align:center;
-background:rgba(0,0,0,.85);
+background:rgba(0,0,0,.88);
 backdrop-filter:blur(18px);
 border-bottom:1px solid rgba(233,199,106,.3);
 }
 
 .logo{
 font-family:'Orbitron',sans-serif;
-font-size:17px;
-font-weight:900;
-letter-spacing:5px;
+font-size:16px;
+font-weight:800;
+letter-spacing:4px;
 background:linear-gradient(90deg,#b8860b,#fff1b5,#e9c76a,#fff);
 background-size:250%;
 color:transparent;
@@ -123,21 +123,20 @@ display:inline-block;
 padding:11px 24px;
 border:1px solid rgba(233,199,106,.55);
 border-radius:30px;
-font-family:'Orbitron',sans-serif;
-font-size:10px;
-letter-spacing:4px;
+font-size:11px;
+letter-spacing:2px;
 color:var(--gold);
 margin-bottom:32px;
 box-shadow:0 0 20px rgba(233,199,106,.12);
 }
 
-/* PREMIUM NAME */
+/* NAME */
 
 .name{
 font-family:'Cinzel',serif;
 font-size:clamp(36px,8vw,88px);
 font-weight:800;
-letter-spacing:5px;
+letter-spacing:3px;
 line-height:1.4;
 background:linear-gradient(
 100deg,
@@ -158,10 +157,10 @@ filter:drop-shadow(0 0 15px rgba(212,175,55,.2));
 /* WELCOME */
 
 .welcome{
-font-family:'Orbitron',sans-serif;
-font-size:clamp(21px,5vw,38px);
-font-weight:700;
-letter-spacing:12px;
+font-family:'Outfit',sans-serif;
+font-size:clamp(25px,5vw,42px);
+font-weight:800;
+letter-spacing:9px;
 margin-top:20px;
 color:#fff;
 text-shadow:
@@ -169,7 +168,7 @@ text-shadow:
 0 0 25px rgba(255,0,0,.5);
 }
 
-/* SHAYARI */
+/* POETRY */
 
 .poetry{
 max-width:700px;
@@ -181,9 +180,8 @@ font-family:'Playfair Display',serif;
 font-size:clamp(17px,3.5vw,23px);
 font-style:italic;
 line-height:2;
-letter-spacing:1px;
+letter-spacing:.5px;
 color:#f2e5c2;
-text-shadow:0 0 12px rgba(233,199,106,.15);
 animation:poetryGlow 4s ease-in-out infinite alternate;
 }
 
@@ -194,13 +192,15 @@ to{opacity:1}
 
 .poetry span{
 display:block;
-font-family:'Orbitron',sans-serif;
+font-family:'Outfit',sans-serif;
 font-style:normal;
-font-size:9px;
-letter-spacing:5px;
+font-size:11px;
+letter-spacing:4px;
 color:var(--gold);
 margin-top:15px;
 }
+
+/* LINE */
 
 .line{
 width:130px;
@@ -210,13 +210,16 @@ background:linear-gradient(90deg,transparent,red,gold,transparent);
 box-shadow:0 0 18px red;
 }
 
+/* DESCRIPTION */
+
 .description{
 max-width:610px;
 margin:auto;
-font-size:15px;
-line-height:2.2;
+font-size:17px;
+line-height:2.1;
 color:#aaa;
-letter-spacing:.5px;
+letter-spacing:.2px;
+font-weight:400;
 }
 
 .description strong{
@@ -229,15 +232,15 @@ font-weight:700;
 .btn{
 display:inline-block;
 margin-top:35px;
-padding:17px 32px;
+padding:18px 32px;
 border:1px solid var(--gold);
-border-radius:5px;
+border-radius:7px;
 background:linear-gradient(100deg,#8d0000,#ed2020,#8d0000);
 background-size:200%;
 color:white;
-font-family:'Orbitron',sans-serif;
-font-size:11px;
-font-weight:900;
+font-family:'Outfit',sans-serif;
+font-size:14px;
+font-weight:800;
 letter-spacing:3px;
 cursor:pointer;
 transition:.4s;
@@ -261,10 +264,10 @@ margin-top:55px;
 
 .stat{
 min-width:140px;
-padding:22px;
+padding:24px;
 border:1px solid rgba(233,199,106,.3);
 background:rgba(255,255,255,.035);
-border-radius:12px;
+border-radius:16px;
 backdrop-filter:blur(10px);
 transition:.4s;
 }
@@ -277,14 +280,61 @@ box-shadow:0 0 25px rgba(233,199,106,.15);
 .stat h2{
 font-family:'Orbitron',sans-serif;
 color:var(--gold);
-font-size:25px;
+font-size:27px;
 }
 
 .stat p{
-font-size:10px;
+font-size:11px;
 color:#999;
-margin-top:9px;
+margin-top:10px;
 letter-spacing:3px;
+}
+
+/* PAKISTAN CLOCK */
+
+.clock-box{
+max-width:390px;
+margin:35px auto 0;
+padding:23px 20px;
+border:1px solid rgba(233,199,106,.5);
+border-radius:15px;
+background:linear-gradient(
+135deg,
+rgba(255,0,0,.10),
+rgba(233,199,106,.06),
+rgba(0,150,255,.08)
+);
+box-shadow:0 0 25px rgba(233,199,106,.08);
+backdrop-filter:blur(12px);
+}
+
+.clock-title{
+font-size:12px;
+letter-spacing:3px;
+color:#aaa;
+margin-bottom:13px;
+}
+
+.clock-time{
+font-family:'Orbitron',sans-serif;
+font-size:clamp(25px,7vw,36px);
+font-weight:800;
+color:var(--gold);
+text-shadow:0 0 15px rgba(233,199,106,.3);
+letter-spacing:2px;
+}
+
+.clock-date{
+margin-top:12px;
+font-size:14px;
+color:#bbb;
+}
+
+.clock-zone{
+margin-top:8px;
+font-size:11px;
+letter-spacing:3px;
+color:var(--red);
 }
 
 /* PROFILE */
@@ -299,7 +349,7 @@ padding:75px 20px;
 .heading{
 text-align:center;
 font-family:'Cinzel',serif;
-font-size:clamp(24px,5vw,40px);
+font-size:clamp(25px,5vw,40px);
 letter-spacing:3px;
 color:var(--gold);
 margin-bottom:45px;
@@ -310,7 +360,11 @@ padding:30px;
 margin-bottom:23px;
 border:1px solid rgba(233,199,106,.3);
 border-radius:14px;
-background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,0,0,.025));
+background:linear-gradient(
+145deg,
+rgba(255,255,255,.06),
+rgba(255,0,0,.025)
+);
 backdrop-filter:blur(12px);
 transition:.4s;
 }
@@ -322,9 +376,8 @@ box-shadow:0 10px 35px rgba(233,199,106,.1);
 }
 
 .number{
-font-family:'Orbitron',sans-serif;
-font-size:10px;
-letter-spacing:4px;
+font-size:12px;
+letter-spacing:3px;
 color:var(--red);
 margin-bottom:16px;
 }
@@ -337,7 +390,7 @@ margin-bottom:20px;
 }
 
 .text{
-font-size:15px;
+font-size:16px;
 line-height:2.1;
 color:#bbb;
 }
@@ -348,7 +401,7 @@ justify-content:space-between;
 gap:15px;
 padding:15px 0;
 border-bottom:1px solid rgba(255,255,255,.1);
-font-size:14px;
+font-size:15px;
 }
 
 .row:last-child{
@@ -356,7 +409,7 @@ border:0;
 }
 
 .row span:first-child{
-color:#888;
+color:#999;
 }
 
 .row span:last-child{
@@ -378,8 +431,7 @@ border-radius:8px;
 text-decoration:none;
 text-align:center;
 color:var(--blue);
-font-family:'Orbitron',sans-serif;
-font-size:12px;
+font-size:14px;
 font-weight:800;
 transition:.3s;
 }
@@ -416,14 +468,14 @@ box-shadow:0 0 35px rgba(255,0,0,.2);
 }
 
 .modal-box h2{
-font-family:'Orbitron',sans-serif;
+font-family:'Outfit',sans-serif;
 color:var(--gold);
 margin-bottom:15px;
 }
 
 .modal-box p{
 color:#aaa;
-font-size:14px;
+font-size:15px;
 margin-bottom:20px;
 }
 
@@ -436,6 +488,8 @@ border-radius:6px;
 color:white;
 outline:none;
 margin-bottom:15px;
+font-family:'Outfit',sans-serif;
+font-size:15px;
 }
 
 .modal-actions{
@@ -448,8 +502,8 @@ flex:1;
 padding:14px;
 border:0;
 border-radius:5px;
-font-family:'Orbitron',sans-serif;
-font-size:10px;
+font-family:'Outfit',sans-serif;
+font-size:12px;
 font-weight:800;
 cursor:pointer;
 }
@@ -476,15 +530,15 @@ footer{
 padding:40px 15px;
 text-align:center;
 border-top:1px solid rgba(233,199,106,.3);
-color:#777;
-font-size:11px;
+color:#888;
+font-size:12px;
 line-height:2.5;
-letter-spacing:2px;
+letter-spacing:1px;
 }
 
 footer strong{
-font-family:'Orbitron',sans-serif;
-font-size:18px;
+font-family:'Cinzel',serif;
+font-size:21px;
 color:var(--gold);
 }
 
@@ -503,7 +557,7 @@ padding:55px 17px;
 
 .name{
 font-size:38px;
-letter-spacing:2px;
+letter-spacing:1px;
 }
 
 .welcome{
@@ -516,7 +570,7 @@ line-height:2;
 }
 
 .description{
-font-size:14px;
+font-size:15px;
 }
 
 .stats{
@@ -525,7 +579,7 @@ gap:12px;
 
 .stat{
 min-width:95px;
-padding:16px 10px;
+padding:17px 10px;
 }
 
 .social{
@@ -537,16 +591,22 @@ padding:23px;
 }
 
 .row{
-font-size:12px;
+font-size:13px;
+}
+
+.clock-box{
+margin-top:30px;
 }
 
 }
 
 @media(prefers-reduced-motion:reduce){
+
 *,*::before,*::after{
 animation:none!important;
 scroll-behavior:auto!important;
 }
+
 }
 
 </style>
@@ -572,18 +632,25 @@ scroll-behavior:auto!important;
 <div class="welcome">WELCOME</div>
 
 <div class="poetry">
+
 "Na rutbe ka guroor, na shohrat ka nasha,<br>
 Bas apni pehchaan aur kirdaar hi hai aasra."
+
 <span>— SHAHZAD AHMAD</span>
+
 </div>
 
 <div class="line"></div>
 
 <p class="description">
+
 Welcome to my official digital world.
+
 <strong>Dream Big. Think Different. Stay Legendary.</strong>
+
 Explore my interests, creativity and digital journey.
 Your presence is truly appreciated.
+
 </p>
 
 <button class="btn" onclick="openPassword()">
@@ -609,25 +676,56 @@ Your presence is truly appreciated.
 
 </div>
 
+<!-- PAKISTAN LIVE CLOCK -->
+
+<div class="clock-box">
+
+<div class="clock-title">
+🇵🇰 PAKISTAN STANDARD TIME
+</div>
+
+<div class="clock-time" id="pakTime">
+00:00:00
+</div>
+
+<div class="clock-date" id="pakDate">
+Loading Date...
+</div>
+
+<div class="clock-zone">
+ASIA / KARACHI • PKT (UTC+5)
+</div>
+
+</div>
+
 </div>
 </section>
+
+<!-- PROFILE -->
 
 <section id="personal">
 
 <h2 class="heading">MY PROFILE</h2>
 
 <div class="card">
+
 <div class="number">01 / INTRODUCTION</div>
+
 <h3>About Me</h3>
+
 <p class="text">
+
 My name is Shahzad Ahmad. I am interested in technology,
 creativity and digital development. I enjoy exploring new
 ideas and learning new skills.
+
 </p>
 </div>
 
 <div class="card">
+
 <div class="number">02 / PROFILE</div>
+
 <h3>Personal Information</h3>
 
 <div class="row">
@@ -644,56 +742,86 @@ ideas and learning new skills.
 <span>Role</span>
 <span>Digital Creator</span>
 </div>
+
 </div>
 
 <div class="card">
+
 <div class="number">03 / INTERESTS</div>
+
 <h3>My Interests</h3>
+
 <p class="text">
+
 Artificial Intelligence<br>
 Technology<br>
 Website Development<br>
 Video Editing<br>
 Digital Creation<br>
 Gaming
+
 </p>
+
 </div>
 
 <div class="card">
+
 <div class="number">04 / GAMING</div>
+
 <h3>Free Fire Profile</h3>
+
 <div class="row">
 <span>Player ID</span>
 <span>13960506580</span>
 </div>
+
 </div>
 
 <div class="card">
+
 <div class="number">05 / SOCIAL MEDIA</div>
+
 <h3>Connect With Me</h3>
 
 <div class="social">
 
 <a href="https://www.tiktok.com/@rana.editor33"
-target="_blank" rel="noopener noreferrer">TIKTOK ↗</a>
+target="_blank" rel="noopener noreferrer">
+TIKTOK ↗
+</a>
 
 <a href="https://www.youtube.com/@BabyBubuToons"
-target="_blank" rel="noopener noreferrer">YOUTUBE ↗</a>
+target="_blank" rel="noopener noreferrer">
+YOUTUBE ↗
+</a>
 
 </div>
+
 </div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
+
 <strong>SHAHZAD AHMAD</strong>
+
 <br>
+
 SHAHZAD OFFICIAL 007
+
 <br>
+
 RESPECT • CHARACTER • IDENTITY
+
 <br>
+
 © 2026 ALL RIGHTS RESERVED
+
 </footer>
+
+<!-- PASSWORD MODAL -->
 
 <div id="passwordModal">
 
@@ -703,12 +831,22 @@ RESPECT • CHARACTER • IDENTITY
 
 <p>Enter your password to explore your profile.</p>
 
-<input type="password" id="passwordInput"
-placeholder="Enter Password">
+<input
+type="password"
+id="passwordInput"
+placeholder="Enter Password"
+>
 
 <div class="modal-actions">
-<button class="unlock" onclick="checkPassword()">UNLOCK</button>
-<button class="cancel" onclick="closePassword()">CANCEL</button>
+
+<button class="unlock" onclick="checkPassword()">
+UNLOCK
+</button>
+
+<button class="cancel" onclick="closePassword()">
+CANCEL
+</button>
+
 </div>
 
 <div id="error"></div>
@@ -718,17 +856,27 @@ placeholder="Enter Password">
 
 <script>
 
-// DEMO PASSWORD ONLY — NOT SECURE AUTHENTICATION
+// DEMO PASSWORD ONLY
+// Client-side password is not secure authentication.
+
 const WEBSITE_PASSWORD = "Shahzad445";
 
+// PASSWORD SYSTEM
+
 function openPassword(){
+
 document.getElementById("passwordModal").style.display="flex";
+
 document.getElementById("passwordInput").value="";
+
 document.getElementById("error").textContent="";
+
 }
 
 function closePassword(){
+
 document.getElementById("passwordModal").style.display="none";
+
 }
 
 function checkPassword(){
@@ -744,7 +892,9 @@ const profile=document.getElementById("personal");
 profile.style.display="block";
 
 setTimeout(()=>{
+
 profile.scrollIntoView({behavior:"smooth"});
+
 },100);
 
 }else{
@@ -758,12 +908,53 @@ document.getElementById("error").textContent=
 
 document.getElementById("passwordInput")
 .addEventListener("keydown",e=>{
+
 if(e.key==="Enter")checkPassword();
+
 });
+
+// PAKISTAN LIVE CLOCK
+
+function updatePakistanClock(){
+
+const now=new Date();
+
+const time=new Intl.DateTimeFormat("en-PK",{
+
+timeZone:"Asia/Karachi",
+
+hour:"2-digit",
+minute:"2-digit",
+second:"2-digit",
+hour12:true
+
+}).format(now);
+
+const date=new Intl.DateTimeFormat("en-PK",{
+
+timeZone:"Asia/Karachi",
+
+weekday:"long",
+day:"2-digit",
+month:"long",
+year:"numeric"
+
+}).format(now);
+
+document.getElementById("pakTime").textContent=time;
+
+document.getElementById("pakDate").textContent=date;
+
+}
+
+updatePakistanClock();
+
+setInterval(updatePakistanClock,1000);
 
 // FIRE PARTICLES
 
 const canvas=document.getElementById("fire");
+
 const ctx=canvas.getContext("2d");
 
 let particles=[];
@@ -773,9 +964,11 @@ function resize(){
 const ratio=Math.min(window.devicePixelRatio||1,2);
 
 canvas.width=innerWidth*ratio;
+
 canvas.height=innerHeight*ratio;
 
 canvas.style.width=innerWidth+"px";
+
 canvas.style.height=innerHeight+"px";
 
 ctx.setTransform(ratio,0,0,ratio,0,0);
@@ -785,16 +978,21 @@ ctx.setTransform(ratio,0,0,ratio,0,0);
 class Fire{
 
 constructor(){
+
 this.reset();
+
 }
 
 reset(){
 
 this.x=Math.random()*innerWidth;
+
 this.y=innerHeight+Math.random()*100;
 
 this.size=Math.random()*3+1;
+
 this.speed=Math.random()*1.5+.5;
+
 this.alpha=Math.random()*.6+.2;
 
 this.color=Math.random()>.5
@@ -806,11 +1004,15 @@ this.color=Math.random()>.5
 update(){
 
 this.y-=this.speed;
+
 this.x+=(Math.random()-.5)*.8;
+
 this.alpha-=.001;
 
 if(this.y< -10||this.alpha<=0){
+
 this.reset();
+
 }
 
 }
@@ -824,6 +1026,7 @@ ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
 ctx.fillStyle=`rgba(${this.color},${this.alpha})`;
 
 ctx.shadowBlur=15;
+
 ctx.shadowColor="red";
 
 ctx.fill();
@@ -841,7 +1044,9 @@ particles=[];
 let count=Math.min(100,Math.floor(innerWidth/5));
 
 for(let i=0;i<count;i++){
+
 particles.push(new Fire());
+
 }
 
 }
@@ -851,8 +1056,11 @@ function animate(){
 ctx.clearRect(0,0,innerWidth,innerHeight);
 
 particles.forEach(p=>{
+
 p.update();
+
 p.draw();
+
 });
 
 requestAnimationFrame(animate);
@@ -860,16 +1068,20 @@ requestAnimationFrame(animate);
 }
 
 resize();
+
 create();
+
 animate();
 
 window.addEventListener("resize",()=>{
+
 resize();
+
 create();
+
 });
 
 </script>
 
 </body>
 </html>
-</MY college web coming soon >
