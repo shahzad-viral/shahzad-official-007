@@ -3,662 +3,809 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080610">
+<meta name="theme-color" content="#080808">
 
 <title>SHAHZAD OFFICIAL 007</title>
 
-<meta name="description" content="Official website of Shahzad. Explore AI, technology, web development and digital creativity.">
-<meta name="keywords" content="Shahzad Official 007, AI Creator, Web Developer, Digital Creator">
-<meta name="author" content="Shahzad">
+<meta name="description" content="Shahzad Official 007 - AI Creator, Digital Creator, Web Developer and Gaming Enthusiast.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
-  --bg:#080610;
-  --card:#100b1b;
-  --purple:#9865ff;
-  --gold:#dfbd78;
-  --white:#ffffff;
-  --muted:#b9b1c9;
+--bg:#080808;
+--card:#111111;
+--red:#ff1744;
+--red2:#ff003c;
+--white:#ffffff;
+--muted:#aaa;
 }
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  background:var(--bg);
-  color:var(--white);
-  overflow-x:hidden;
+background:var(--bg);
+color:white;
+font-family:'Outfit',sans-serif;
+overflow-x:hidden;
 }
 
 a{
-  text-decoration:none;
-  color:inherit;
+text-decoration:none;
+color:inherit;
 }
 
-#progress{
-  position:fixed;
-  top:0;
-  left:0;
-  height:3px;
-  width:0%;
-  background:linear-gradient(90deg,#dfbd78,#9865ff,#00d4ff,#ff63c8);
-  z-index:9999;
+/* PASSWORD SCREEN */
+
+#lockScreen{
+position:fixed;
+inset:0;
+z-index:100000;
+display:flex;
+align-items:center;
+justify-content:center;
+background:
+radial-gradient(circle at center,#250008,#080808 65%);
+padding:20px;
 }
+
+.lock-box{
+width:100%;
+max-width:400px;
+padding:40px 28px;
+text-align:center;
+background:#111;
+border:1px solid #ff1744;
+border-radius:22px;
+box-shadow:0 0 45px rgba(255,0,60,.2);
+}
+
+.lock-logo{
+font-size:42px;
+font-weight:900;
+margin-bottom:10px;
+}
+
+.lock-box h2{
+font-size:23px;
+margin:15px 0;
+}
+
+.lock-box p{
+color:#aaa;
+font-size:13px;
+margin-bottom:25px;
+}
+
+.lock-box input{
+width:100%;
+padding:15px;
+border-radius:10px;
+border:1px solid #444;
+background:#080808;
+color:white;
+outline:none;
+font-size:15px;
+text-align:center;
+margin-bottom:15px;
+}
+
+.lock-box input:focus{
+border-color:var(--red);
+box-shadow:0 0 15px #ff174455;
+}
+
+.unlock-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:linear-gradient(120deg,#ff1744,#a00025);
+color:white;
+font-weight:800;
+cursor:pointer;
+font-size:15px;
+}
+
+#error{
+color:#ff4568;
+font-size:13px;
+margin-top:15px;
+}
+
+/* BACKGROUND */
 
 #particles{
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  pointer-events:none;
-  z-index:-1;
+position:fixed;
+inset:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:0;
 }
 
 body::before{
-  content:"";
-  position:fixed;
-  width:500px;
-  height:500px;
-  background:#792cff;
-  filter:blur(180px);
-  opacity:.12;
-  top:-180px;
-  left:-150px;
-  z-index:-2;
+content:"";
+position:fixed;
+width:450px;
+height:450px;
+background:#ff003c;
+filter:blur(180px);
+opacity:.10;
+top:-180px;
+left:-150px;
+pointer-events:none;
 }
 
 body::after{
-  content:"";
-  position:fixed;
-  width:400px;
-  height:400px;
-  background:#d9a441;
-  filter:blur(180px);
-  opacity:.08;
-  bottom:-150px;
-  right:-100px;
-  z-index:-2;
+content:"";
+position:fixed;
+width:400px;
+height:400px;
+background:#ff003c;
+filter:blur(180px);
+opacity:.07;
+bottom:-150px;
+right:-100px;
+pointer-events:none;
+}
+
+#mainWebsite{
+display:none;
+position:relative;
+z-index:1;
+}
+
+#progress{
+position:fixed;
+top:0;
+left:0;
+height:3px;
+width:0%;
+background:linear-gradient(90deg,#ff1744,#ff6680,#ffffff);
+z-index:99999;
+}
+
+/* ANIMATED TEXT */
+
+.gradient-text{
+background:linear-gradient(
+270deg,
+#ff1744,
+#ffffff,
+#ff003c,
+#ff899d,
+#ff1744
+);
+background-size:500% 500%;
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:colorMove 7s ease infinite;
+}
+
+@keyframes colorMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
 
 /* HEADER */
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(8,6,16,.88);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(255,255,255,.08);
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(8,8,8,.92);
+backdrop-filter:blur(18px);
+border-bottom:1px solid #ff174433;
 }
 
 .navbar{
-  max-width:1200px;
-  margin:auto;
-  padding:18px 6%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+max-width:1250px;
+margin:auto;
+padding:18px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
 .logo{
-  font-size:21px;
-  font-weight:800;
-  letter-spacing:1px;
-}
-
-.gradient-text{
-  background:linear-gradient(
-    270deg,
-    #dfbd78,
-    #ffffff,
-    #9865ff,
-    #00d4ff,
-    #ff63c8,
-    #dfbd78
-  );
-  background-size:600% 600%;
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:colorMove 9s ease infinite;
-}
-
-@keyframes colorMove{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+font-size:21px;
+font-weight:900;
+letter-spacing:1px;
+font-family:'Space Grotesk',sans-serif;
 }
 
 .nav-links{
-  display:flex;
-  gap:28px;
-  align-items:center;
+display:flex;
+gap:25px;
+align-items:center;
 }
 
 .nav-links a{
-  font-size:13px;
-  color:#d5cde2;
-  transition:.3s;
+font-size:13px;
+color:#ddd;
+transition:.3s;
 }
 
 .nav-links a:hover{
-  color:var(--gold);
+color:var(--red);
 }
 
 .menu-btn{
-  display:none;
-  background:none;
-  border:1px solid #55466d;
-  color:white;
-  padding:8px 12px;
-  border-radius:8px;
-  font-size:20px;
+display:none;
+background:none;
+border:1px solid #ff1744;
+color:white;
+padding:8px 13px;
+border-radius:8px;
+font-size:20px;
 }
 
-/* COMMON */
+/* SECTIONS */
 
 section{
-  padding:100px 7%;
-  max-width:1300px;
-  margin:auto;
+max-width:1300px;
+margin:auto;
+padding:100px 7%;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:45px;
+text-align:center;
+margin-bottom:45px;
 }
 
 .section-title h2{
-  font-size:36px;
-  font-weight:800;
-  margin-bottom:12px;
+font-size:38px;
+font-weight:900;
+font-family:'Space Grotesk',sans-serif;
 }
 
 .section-title p{
-  color:var(--muted);
-  font-size:14px;
+color:var(--muted);
+font-size:14px;
+margin-top:12px;
 }
 
-.gold-line{
-  width:65px;
-  height:3px;
-  background:linear-gradient(90deg,var(--gold),var(--purple));
-  margin:18px auto;
-  border-radius:20px;
+.red-line{
+width:70px;
+height:3px;
+margin:18px auto;
+border-radius:20px;
+background:linear-gradient(90deg,#ff1744,#ffffff);
+box-shadow:0 0 15px #ff1744;
 }
 
 /* HERO */
 
 .hero{
-  min-height:88vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding-top:70px;
+min-height:88vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
 .hero-content{
-  max-width:850px;
+max-width:900px;
 }
 
 .badge{
-  display:inline-block;
-  border:1px solid rgba(223,189,120,.5);
-  padding:9px 18px;
-  border-radius:30px;
-  color:var(--gold);
-  font-size:12px;
-  letter-spacing:2px;
-  margin-bottom:25px;
-  background:rgba(223,189,120,.06);
+display:inline-block;
+padding:10px 20px;
+border:1px solid #ff1744;
+border-radius:30px;
+color:#ff4568;
+font-size:11px;
+letter-spacing:2px;
+margin-bottom:25px;
+background:#ff174411;
 }
 
 .hero h1{
-  font-size:clamp(42px,8vw,85px);
-  font-weight:800;
-  line-height:1.15;
-  margin-bottom:15px;
+font-size:clamp(42px,8vw,85px);
+font-weight:900;
+line-height:1.15;
+font-family:'Space Grotesk',sans-serif;
 }
 
 .hero h2{
-  font-size:clamp(19px,4vw,30px);
-  color:#e4d9f7;
-  margin-bottom:20px;
+font-size:clamp(18px,4vw,28px);
+margin:20px 0;
+color:#eee;
 }
 
 .hero p{
-  max-width:650px;
-  margin:auto;
-  color:var(--muted);
-  line-height:1.9;
-  font-size:15px;
+max-width:680px;
+margin:auto;
+color:#aaa;
+font-size:15px;
+line-height:2;
 }
 
 .hero-buttons{
-  margin-top:32px;
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
+margin-top:32px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
+/* BUTTONS */
+
 .btn{
-  display:inline-block;
-  padding:14px 25px;
-  border-radius:30px;
-  font-size:13px;
-  font-weight:700;
-  transition:.3s;
+display:inline-block;
+padding:14px 27px;
+border-radius:30px;
+font-size:12px;
+font-weight:800;
+letter-spacing:1px;
+transition:.3s;
 }
 
 .btn-primary{
-  background:linear-gradient(120deg,#dfbd78,#9865ff);
-  color:#080610;
+background:linear-gradient(120deg,#ff1744,#b00028);
+color:white;
+box-shadow:0 0 20px #ff174433;
 }
 
 .btn-outline{
-  border:1px solid #8c75b6;
-  color:white;
+border:1px solid #ff1744;
+color:white;
 }
 
 .btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 0 25px rgba(152,101,255,.35);
+transform:translateY(-5px);
+box-shadow:0 0 25px #ff174477;
 }
 
 /* CARDS */
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
 }
 
 .card{
-  background:linear-gradient(145deg,#171027,#0e0a18);
-  padding:30px;
-  border:1px solid transparent;
-  border-radius:18px;
-  position:relative;
-  transition:.4s;
+position:relative;
+padding:30px;
+border-radius:18px;
+background:linear-gradient(145deg,#171717,#0c0c0c);
+border:1px solid #ffffff15;
+transition:.4s;
+overflow:hidden;
 }
 
 .card::before{
-  content:"";
-  position:absolute;
-  inset:-1px;
-  border-radius:18px;
-  padding:1px;
-  background:linear-gradient(120deg,#dfbd78,#9865ff,#00d4ff,#ff63c8);
-  background-size:300% 300%;
-  animation:borderMove 8s linear infinite;
-  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-  pointer-events:none;
+content:"";
+position:absolute;
+inset:0;
+border-radius:18px;
+padding:1px;
+background:linear-gradient(
+120deg,
+#ff1744,
+transparent,
+#ff1744
+);
+background-size:300% 300%;
+animation:borderMove 6s linear infinite;
+-webkit-mask:linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+pointer-events:none;
 }
 
 @keyframes borderMove{
-  0%{background-position:0% 50%}
-  100%{background-position:300% 50%}
+0%{background-position:0% 50%}
+100%{background-position:300% 50%}
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 15px 40px rgba(152,101,255,.15);
+transform:translateY(-9px);
+box-shadow:0 15px 35px #ff174422;
 }
 
 .card-icon{
-  font-size:35px;
-  margin-bottom:18px;
+font-size:35px;
+margin-bottom:18px;
 }
 
 .card h3{
-  font-size:19px;
-  margin-bottom:12px;
+font-size:20px;
+margin-bottom:12px;
 }
 
 .card p{
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.9;
+color:#aaa;
+font-size:13px;
+line-height:1.9;
 }
 
 /* ABOUT */
 
 .about-box{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
-}
-
-.about-info h3{
-  font-size:27px;
-  margin-bottom:18px;
-}
-
-.about-info p{
-  color:var(--muted);
-  font-size:14px;
-  line-height:2;
-  margin-bottom:15px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
 
 .profile-box{
-  min-height:300px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:25px;
-  background:
-    radial-gradient(circle at center,rgba(152,101,255,.25),transparent 65%),
-    linear-gradient(145deg,#191027,#0c0915);
-  border:1px solid rgba(223,189,120,.25);
-  text-align:center;
+min-height:320px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+border-radius:25px;
+background:
+radial-gradient(circle,#ff174433,transparent 65%),
+#111;
+border:1px solid #ff174455;
 }
 
 .profile-number{
-  font-size:90px;
-  font-weight:800;
+font-size:105px;
+font-weight:900;
+font-family:'Space Grotesk',sans-serif;
+}
+
+.about-info h3{
+font-size:30px;
+margin-bottom:20px;
+}
+
+.about-info p{
+font-size:14px;
+line-height:2;
+color:#aaa;
+margin-bottom:17px;
 }
 
 /* SKILLS */
 
 .skill{
-  margin-bottom:22px;
+margin-bottom:25px;
 }
 
 .skill-name{
-  display:flex;
-  justify-content:space-between;
-  font-size:13px;
-  margin-bottom:9px;
+display:flex;
+justify-content:space-between;
+font-size:13px;
+margin-bottom:10px;
 }
 
 .skill-bar{
-  height:8px;
-  background:#292033;
-  border-radius:20px;
-  overflow:hidden;
+height:9px;
+border-radius:20px;
+background:#292929;
+overflow:hidden;
 }
 
 .skill-fill{
-  height:100%;
-  border-radius:20px;
-  background:linear-gradient(90deg,#dfbd78,#9865ff,#00d4ff);
-  animation:fillMove 3s ease;
+height:100%;
+border-radius:20px;
+background:linear-gradient(90deg,#ff1744,#ff899d);
+animation:fill 3s ease;
 }
 
-@keyframes fillMove{
-  from{width:0}
+@keyframes fill{
+from{width:0}
 }
 
 /* PROJECTS */
 
 .project-tag{
-  display:inline-block;
-  color:var(--gold);
-  font-size:11px;
-  letter-spacing:1px;
-  margin-bottom:12px;
+color:#ff4568;
+font-size:11px;
+letter-spacing:2px;
+display:inline-block;
+margin-bottom:15px;
 }
 
-/* TEAM */
+/* GAMING */
 
-.friend-card{
-  text-align:center;
+.game-box{
+text-align:center;
+padding:45px 25px;
+background:linear-gradient(145deg,#1a0b10,#101010);
+border:1px solid #ff174455;
+border-radius:22px;
 }
 
-.friend-avatar{
-  width:75px;
-  height:75px;
-  border-radius:50%;
-  margin:0 auto 18px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:27px;
-  font-weight:800;
-  background:linear-gradient(135deg,#dfbd78,#9865ff);
-  color:#080610;
+.game-icon{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.game-id{
+display:inline-block;
+padding:15px 25px;
+margin:20px 0;
+background:#080808;
+border:1px solid #ff1744;
+border-radius:12px;
+font-size:24px;
+font-weight:900;
+letter-spacing:2px;
+color:#ff4568;
 }
 
 /* SOCIAL */
 
 .social-grid{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
 }
 
 .social{
-  min-width:160px;
-  padding:17px 22px;
-  text-align:center;
-  background:#130d20;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:12px;
-  font-size:13px;
-  font-weight:700;
-  transition:.3s;
+min-width:160px;
+padding:17px 22px;
+text-align:center;
+background:#151515;
+border:1px solid #ffffff20;
+border-radius:12px;
+font-size:13px;
+font-weight:700;
+transition:.3s;
 }
 
 .social:hover{
-  transform:translateY(-5px);
-  border-color:var(--gold);
-  box-shadow:0 0 22px rgba(152,101,255,.2);
+transform:translateY(-5px);
+border-color:#ff1744;
+box-shadow:0 0 20px #ff174433;
 }
 
-/* YOUTUBE */
+/* VISION */
 
-.youtube-box{
-  text-align:center;
-  padding:45px 25px;
-  background:linear-gradient(145deg,#191027,#0d0917);
-  border:1px solid rgba(223,189,120,.3);
-  border-radius:22px;
+.vision-box{
+text-align:center;
+padding:45px 25px;
+background:linear-gradient(145deg,#171717,#0d0d0d);
+border:1px solid #ff174455;
+border-radius:22px;
 }
 
-.youtube-box h3{
-  font-size:27px;
-  margin-bottom:15px;
+.vision-box h3{
+font-size:27px;
 }
 
-.youtube-box p{
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.8;
-  margin-bottom:25px;
-}
-
-/* CONTACT */
-
-.contact-box{
-  text-align:center;
-  padding:40px 20px;
-  border-radius:20px;
-  background:linear-gradient(145deg,#171027,#0e0a18);
-  border:1px solid rgba(152,101,255,.3);
-}
-
-.contact-box p{
-  color:var(--muted);
-  line-height:1.9;
-  font-size:14px;
-  margin:15px 0 25px;
+.vision-box p{
+color:#aaa;
+font-size:14px;
+line-height:2;
+margin:20px 0;
 }
 
 /* FOOTER */
 
 footer{
-  border-top:1px solid rgba(255,255,255,.08);
-  padding:30px 6%;
-  text-align:center;
-  color:var(--muted);
-  font-size:12px;
+border-top:1px solid #ffffff15;
+padding:35px 6%;
+text-align:center;
+color:#aaa;
+font-size:12px;
 }
 
 footer .logo{
-  margin-bottom:12px;
+margin-bottom:15px;
 }
 
 /* ANIMATIONS */
 
 .reveal{
-  opacity:0;
-  transform:translateY(35px);
-  transition:all .8s ease;
+opacity:0;
+transform:translateY(35px);
+transition:.8s;
 }
 
 .reveal.active{
-  opacity:1;
-  transform:translateY(0);
+opacity:1;
+transform:translateY(0);
 }
 
 #topBtn{
-  position:fixed;
-  bottom:22px;
-  right:20px;
-  width:45px;
-  height:45px;
-  border:none;
-  border-radius:50%;
-  background:linear-gradient(135deg,#dfbd78,#9865ff);
-  color:#080610;
-  font-size:20px;
-  cursor:pointer;
-  display:none;
-  z-index:999;
+position:fixed;
+bottom:22px;
+right:20px;
+width:46px;
+height:46px;
+border:none;
+border-radius:50%;
+background:linear-gradient(135deg,#ff1744,#a00025);
+color:white;
+font-size:22px;
+cursor:pointer;
+display:none;
+z-index:999;
 }
 
 /* MOBILE */
 
 @media(max-width:800px){
 
-  .menu-btn{
-    display:block;
-  }
+.menu-btn{
+display:block;
+}
 
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:68px;
-    left:0;
-    width:100%;
-    padding:25px;
-    background:#100b1b;
-    flex-direction:column;
-    gap:22px;
-    border-bottom:1px solid #302342;
-  }
+.nav-links{
+display:none;
+position:absolute;
+top:68px;
+left:0;
+width:100%;
+padding:25px;
+background:#111;
+flex-direction:column;
+gap:23px;
+border-bottom:1px solid #ff1744;
+}
 
-  .nav-links.show{
-    display:flex;
-  }
+.nav-links.show{
+display:flex;
+}
 
-  .grid{
-    grid-template-columns:1fr;
-  }
+.grid{
+grid-template-columns:1fr;
+}
 
-  .about-box{
-    grid-template-columns:1fr;
-  }
+.about-box{
+grid-template-columns:1fr;
+}
 
-  section{
-    padding:75px 6%;
-  }
+section{
+padding:75px 6%;
+}
 
-  .hero{
-    min-height:80vh;
-  }
+.hero{
+min-height:80vh;
+}
 
-  .section-title h2{
-    font-size:29px;
-  }
+.section-title h2{
+font-size:30px;
+}
 
-  .social{
-    width:100%;
-  }
+.social{
+width:100%;
+}
+
 }
 
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    animation-duration:.01ms !important;
-    transition-duration:.01ms !important;
-    scroll-behavior:auto !important;
-  }
+*,*::before,*::after{
+animation-duration:.01ms!important;
+transition-duration:.01ms!important;
+scroll-behavior:auto!important;
 }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- PASSWORD -->
+
+<div id="lockScreen">
+
+<div class="lock-box">
+
+<div class="lock-logo gradient-text">
+007
+</div>
+
+<h2>WELCOME BACK</h2>
+
+<p>Enter your password to access the official website.</p>
+
+<input
+type="password"
+id="password"
+placeholder="Enter Website Password"
+autocomplete="current-password"
+onkeydown="if(event.key==='Enter') unlock()"
+>
+
+<button class="unlock-btn" onclick="unlock()">
+UNLOCK WEBSITE
+</button>
+
+<div id="error"></div>
+
+</div>
+
+</div>
+
+<div id="mainWebsite">
+
 <div id="progress"></div>
+
 <canvas id="particles"></canvas>
 
 <!-- HEADER -->
 
 <header>
+
 <nav class="navbar">
 
 <a href="#home" class="logo gradient-text">
 SHAHZAD 007
 </a>
 
-<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
-☰
-</button>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 <div class="nav-links" id="navLinks">
+
 <a href="#home" onclick="closeMenu()">Home</a>
 <a href="#about" onclick="closeMenu()">About</a>
-<a href="#skills" onclick="closeMenu()">Skills</a>
+<a href="#skills" onclick="closeMenu()">Interests</a>
 <a href="#projects" onclick="closeMenu()">Projects</a>
-<a href="#team" onclick="closeMenu()">Team</a>
+<a href="#gaming" onclick="closeMenu()">Gaming</a>
 <a href="#social" onclick="closeMenu()">Social</a>
+
 </div>
 
 </nav>
+
 </header>
 
 <!-- HERO -->
 
 <section class="hero" id="home">
+
 <div class="hero-content reveal">
 
-<div class="badge">WELCOME TO MY OFFICIAL WEBSITE</div>
+<div class="badge">
+WELCOME TO MY DIGITAL WORLD
+</div>
 
-<h1 class="gradient-text">SHAHZAD OFFICIAL 007</h1>
+<h1 class="gradient-text">
+SHAHZAD OFFICIAL 007
+</h1>
 
-<h2>Digital Creator | AI Explorer | Future Developer</h2>
+<h2>
+AI Explorer | Digital Creator | Future Developer
+</h2>
 
 <p>
-Welcome to my digital world. I am Shahzad, passionate about
-Artificial Intelligence, technology, web development and
-creative digital projects. Explore my journey and creativity.
+Welcome to my official digital platform.
+I am Shahzad, a creative mind passionate about
+Artificial Intelligence, technology, gaming,
+video editing and web development.
+This is where my ideas and digital journey come together.
 </p>
 
 <div class="hero-buttons">
-<a href="#about" class="btn btn-primary">EXPLORE MORE</a>
-<a href="#social" class="btn btn-outline">CONNECT WITH ME</a>
+
+<a href="#about" class="btn btn-primary">
+EXPLORE MY WORLD
+</a>
+
+<a href="#social" class="btn btn-outline">
+CONNECT WITH ME
+</a>
+
 </div>
 
 </div>
+
 </section>
 
 <!-- ABOUT -->
@@ -666,74 +813,157 @@ creative digital projects. Explore my journey and creativity.
 <section id="about">
 
 <div class="section-title reveal">
-<h2 class="gradient-text">ABOUT ME</h2>
-<div class="gold-line"></div>
-<p>Discover the person behind this digital platform.</p>
+
+<h2 class="gradient-text">ABOUT SHAHZAD</h2>
+
+<div class="red-line"></div>
+
+<p>Discover my story and digital identity.</p>
+
 </div>
 
 <div class="about-box">
 
 <div class="profile-box reveal">
+
 <div>
+
 <div class="profile-number gradient-text">007</div>
-<h3>SHAHZAD</h3>
-<p style="color:#b9b1c9;margin-top:8px;">Founder & Creator</p>
+
+<h2>SHAHZAD</h2>
+
+<p style="color:#aaa;margin-top:8px;">
+Founder & Digital Creator
+</p>
+
 </div>
+
 </div>
 
 <div class="about-info reveal">
+
 <h3>My Digital Journey</h3>
 
 <p>
-I am Shahzad, the creator of SHAHZAD OFFICIAL 007.
-My interests include AI technology, digital creativity,
-web development and learning new skills.
+Hello! I am Shahzad, the creator of SHAHZAD OFFICIAL 007.
+I am interested in exploring the world of modern technology
+and digital creativity.
 </p>
 
 <p>
-My goal is to build creative projects, explore new ideas
-and develop useful digital experiences.
+I enjoy discovering Artificial Intelligence tools,
+creating digital content, learning website development
+and exploring new creative ideas.
 </p>
 
 <p>
-This website represents my personal digital identity
-and my journey into the world of technology.
+I also have an interest in gaming, especially Free Fire.
+My goal is to improve my skills, build amazing projects
+and create something meaningful in the digital world.
 </p>
 
-<a href="#projects" class="btn btn-primary">VIEW MY WORK</a>
+<a href="#projects" class="btn btn-primary">
+EXPLORE PROJECTS
+</a>
+
 </div>
 
 </div>
+
 </section>
 
-<!-- SKILLS -->
+<!-- INTERESTS -->
 
 <section id="skills">
 
 <div class="section-title reveal">
+
 <h2 class="gradient-text">MY INTERESTS</h2>
-<div class="gold-line"></div>
-<p>Technology, creativity and continuous learning.</p>
+
+<div class="red-line"></div>
+
+<p>Things I enjoy learning and exploring.</p>
+
 </div>
 
 <div class="grid">
 
 <div class="card reveal">
+
 <div class="card-icon">🤖</div>
+
 <h3>Artificial Intelligence</h3>
-<p>Exploring AI tools, creative concepts and modern artificial intelligence.</p>
+
+<p>
+Exploring AI tools, creative technology,
+AI-generated content and modern innovations.
+</p>
+
 </div>
 
 <div class="card reveal">
+
 <div class="card-icon">💻</div>
+
 <h3>Web Development</h3>
-<p>Learning how to create websites using HTML, CSS and JavaScript.</p>
+
+<p>
+Learning HTML, CSS and JavaScript
+to create modern and responsive websites.
+</p>
+
 </div>
 
 <div class="card reveal">
+
 <div class="card-icon">🎬</div>
-<h3>Digital Creation</h3>
-<p>Creating digital content, animations and social media projects.</p>
+
+<h3>Video Editing</h3>
+
+<p>
+Creating digital videos, animations,
+creative visuals and social media content.
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<div class="card-icon">🎮</div>
+
+<h3>Gaming</h3>
+
+<p>
+Exploring mobile gaming, Free Fire
+and improving gaming skills.
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<div class="card-icon">📱</div>
+
+<h3>Social Media</h3>
+
+<p>
+Building digital platforms and
+sharing creative content online.
+</p>
+
+</div>
+
+<div class="card reveal">
+
+<div class="card-icon">🚀</div>
+
+<h3>Future Technology</h3>
+
+<p>
+Learning new technologies and
+exploring innovative digital ideas.
+</p>
+
 </div>
 
 </div>
@@ -745,86 +975,116 @@ and my journey into the world of technology.
 <section id="projects">
 
 <div class="section-title reveal">
+
 <h2 class="gradient-text">MY PROJECTS</h2>
-<div class="gold-line"></div>
-<p>My creative digital projects and platforms.</p>
+
+<div class="red-line"></div>
+
+<p>My digital platforms and creative work.</p>
+
 </div>
 
 <div class="grid">
 
 <div class="card reveal">
-<span class="project-tag">WEBSITE PROJECT</span>
+
+<span class="project-tag">PERSONAL WEBSITE</span>
+
 <h3>SHAHZAD OFFICIAL 007</h3>
+
 <p>
-My personal website built to represent my digital identity,
-interests and creative journey.
+My personal website representing
+my digital identity, interests and projects.
 </p>
+
 <br>
+
 <a href="https://shahzad-viral.github.io/shahzad-official-007/"
-target="_blank" rel="noopener" class="btn btn-outline">
+target="_blank" rel="noopener"
+class="btn btn-outline">
 VISIT WEBSITE
 </a>
+
 </div>
 
 <div class="card reveal">
-<span class="project-tag">YOUTUBE PROJECT</span>
+
+<span class="project-tag">YOUTUBE CHANNEL</span>
+
 <h3>Baby Bubu Toons</h3>
+
 <p>
-A creative YouTube project featuring fictional animated
-characters and entertaining AI-inspired content.
+A creative YouTube project featuring
+fictional animated characters and AI-inspired videos.
 </p>
+
 <br>
+
 <a href="https://www.youtube.com/@BabyBubuToons"
-target="_blank" rel="noopener" class="btn btn-outline">
+target="_blank" rel="noopener"
+class="btn btn-outline">
 OPEN CHANNEL
 </a>
+
 </div>
 
 <div class="card reveal">
-<span class="project-tag">FUTURE PROJECT</span>
+
+<span class="project-tag">UPCOMING</span>
+
 <h3>Future Innovations</h3>
+
 <p>
-Exploring new ideas in technology, AI, gaming and
-digital experiences.
+Exploring new possibilities in
+AI, gaming, web development and technology.
 </p>
+
 <br>
-<a href="#contact" class="btn btn-outline">LEARN MORE</a>
+
+<a href="#contact" class="btn btn-outline">
+EXPLORE VISION
+</a>
+
 </div>
 
 </div>
+
 </section>
 
-<!-- TEAM -->
+<!-- GAMING -->
 
-<section id="team">
+<section id="gaming">
 
 <div class="section-title reveal">
-<h2 class="gradient-text">MY TEAM</h2>
-<div class="gold-line"></div>
-<p>People connected with my journey.</p>
-</div>
 
-<div class="grid">
+<h2 class="gradient-text">MY GAMING WORLD</h2>
 
-<div class="card friend-card reveal">
-<div class="friend-avatar">S</div>
-<h3>Shahzad</h3>
-<p>Founder & Creator</p>
-</div>
+<div class="red-line"></div>
 
-<div class="card friend-card reveal">
-<div class="friend-avatar">R</div>
-<h3>Rashid</h3>
-<p>Friend</p>
-</div>
-
-<div class="card friend-card reveal">
-<div class="friend-avatar">007</div>
-<h3>Official 007</h3>
-<p>Digital Identity</p>
-</div>
+<p>My Free Fire gaming profile.</p>
 
 </div>
+
+<div class="game-box reveal">
+
+<div class="game-icon">🎮</div>
+
+<h2>FREE FIRE</h2>
+
+<p style="color:#aaa;margin-top:12px;">
+My Free Fire Player ID
+</p>
+
+<div class="game-id">
+13960506580
+</div>
+
+<p style="color:#aaa;font-size:13px;">
+GAMING • SKILLS • ENTERTAINMENT
+</p>
+
+</div>
+
 </section>
 
 <!-- SOCIAL -->
@@ -832,9 +1092,13 @@ digital experiences.
 <section id="social">
 
 <div class="section-title reveal">
+
 <h2 class="gradient-text">CONNECT WITH ME</h2>
-<div class="gold-line"></div>
-<p>Follow my digital journey on social platforms.</p>
+
+<div class="red-line"></div>
+
+<p>Follow my digital journey.</p>
+
 </div>
 
 <div class="social-grid reveal">
@@ -851,200 +1115,292 @@ target="_blank" rel="noopener">
 YouTube
 </a>
 
-<div class="social">Instagram — Coming Soon</div>
+<div class="social">
+Instagram — Coming Soon
+</div>
 
-<div class="social">Facebook — Coming Soon</div>
+<div class="social">
+Facebook — Coming Soon
+</div>
 
-<div class="social">WhatsApp — Coming Soon</div>
+<div class="social">
+WhatsApp — Coming Soon
+</div>
 
 </div>
+
 </section>
 
-<!-- YOUTUBE -->
-
-<section id="youtube">
-
-<div class="youtube-box reveal">
-
-<h3 class="gradient-text">BABY BUBU TOONS</h3>
-
-<p>
-Explore my YouTube channel and discover creative
-animated content and fictional characters.
-</p>
-
-<a href="https://www.youtube.com/@BabyBubuToons"
-target="_blank" rel="noopener"
-class="btn btn-primary">
-SUBSCRIBE ON YOUTUBE
-</a>
-
-</div>
-</section>
-
-<!-- CONTACT -->
+<!-- VISION -->
 
 <section id="contact">
 
 <div class="section-title reveal">
+
 <h2 class="gradient-text">MY VISION</h2>
-<div class="gold-line"></div>
-<p>Think creatively. Learn continuously. Build something meaningful.</p>
+
+<div class="red-line"></div>
+
+<p>My dreams. My ideas. My journey.</p>
+
 </div>
 
-<div class="contact-box reveal">
+<div class="vision-box reveal">
 
-<h3>THE JOURNEY IS JUST BEGINNING</h3>
+<h3 class="gradient-text">
+THE JOURNEY IS JUST BEGINNING
+</h3>
 
 <p>
-My vision is to keep learning, explore technology
-and create something valuable through digital creativity.
+I believe in learning new things,
+exploring technology and turning creative
+ideas into real digital projects.
+Every day is an opportunity to grow,
+improve and build something better.
 </p>
 
-<a href="#home" class="btn btn-primary">BACK TO HOME</a>
+<a href="#home" class="btn btn-primary">
+BACK TO HOME
+</a>
 
 </div>
+
 </section>
 
 <!-- FOOTER -->
 
 <footer>
 
-<div class="logo gradient-text">SHAHZAD OFFICIAL 007</div>
+<div class="logo gradient-text">
+SHAHZAD OFFICIAL 007
+</div>
 
-<p>Designed with creativity and passion.</p>
+<p>
+Designed with creativity and passion.
+</p>
 
 <p style="margin-top:12px;">
-© <span id="year"></span> SHAHZAD OFFICIAL 007. All Rights Reserved.
+© <span id="year"></span>
+SHAHZAD OFFICIAL 007.
+ALL RIGHTS RESERVED.
 </p>
 
 </footer>
 
-<button id="topBtn" onclick="goTop()" aria-label="Back to top">↑</button>
+<button id="topBtn" onclick="goTop()">↑</button>
+
+</div>
 
 <script>
+
+/* PASSWORD SYSTEM */
+
+const WEBSITE_PASSWORD = "SHAHZAD@007";
+
+function unlock(){
+
+const entered =
+document.getElementById("password").value;
+
+if(entered === WEBSITE_PASSWORD){
+
+sessionStorage.setItem("websiteUnlocked","yes");
+
+document.getElementById("lockScreen").style.display="none";
+
+document.getElementById("mainWebsite").style.display="block";
+
+startWebsite();
+
+}else{
+
+document.getElementById("error").textContent=
+"Incorrect password. Please try again.";
+
+}
+
+}
+
+/* WEBSITE START */
+
+let websiteStarted=false;
+
+function startWebsite(){
+
+if(websiteStarted)return;
+
+websiteStarted=true;
+
+document.getElementById("year").textContent=
+new Date().getFullYear();
+
+initReveal();
+
+initParticles();
+
+}
+
+/* REMEMBER UNLOCK IN THIS TAB */
+
+if(sessionStorage.getItem("websiteUnlocked")==="yes"){
+
+document.getElementById("lockScreen").style.display="none";
+
+document.getElementById("mainWebsite").style.display="block";
+
+startWebsite();
+
+}
 
 /* MOBILE MENU */
 
 function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("show");
+
+document.getElementById("navLinks")
+.classList.toggle("show");
+
 }
 
 function closeMenu(){
-  document.getElementById("navLinks").classList.remove("show");
+
+document.getElementById("navLinks")
+.classList.remove("show");
+
 }
 
-/* SCROLL PROGRESS */
+/* SCROLL EFFECTS */
 
 window.addEventListener("scroll",function(){
 
-  let scrollTop=document.documentElement.scrollTop;
-  let height=document.documentElement.scrollHeight-
-             document.documentElement.clientHeight;
+let scrollTop=document.documentElement.scrollTop;
 
-  let progress=(scrollTop/height)*100;
+let height=document.documentElement.scrollHeight-
+document.documentElement.clientHeight;
 
-  document.getElementById("progress").style.width=progress+"%";
+let progress=(scrollTop/height)*100;
 
-  document.getElementById("topBtn").style.display=
-    scrollTop>350?"block":"none";
+document.getElementById("progress").style.width=
+progress+"%";
+
+document.getElementById("topBtn").style.display=
+scrollTop>350?"block":"none";
 
 });
 
 /* BACK TO TOP */
 
 function goTop(){
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
 }
 
-/* REVEAL ANIMATION */
+/* REVEAL */
+
+function initReveal(){
 
 const observer=new IntersectionObserver(function(entries){
 
-  entries.forEach(function(entry){
+entries.forEach(function(entry){
 
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
-    }
+if(entry.isIntersecting){
 
-  });
+entry.target.classList.add("active");
 
-},{threshold:0.12});
+}
 
-document.querySelectorAll(".reveal").forEach(function(element){
-  observer.observe(element);
 });
 
-/* YEAR */
+},{threshold:.10});
 
-document.getElementById("year").textContent=
-  new Date().getFullYear();
+document.querySelectorAll(".reveal").forEach(function(el){
+
+observer.observe(el);
+
+});
+
+}
 
 /* PARTICLES */
 
+function initParticles(){
+
 const canvas=document.getElementById("particles");
+
 const ctx=canvas.getContext("2d");
 
 let particles=[];
 
-function resizeCanvas(){
+function resize(){
 
-  canvas.width=window.innerWidth;
-  canvas.height=window.innerHeight;
+canvas.width=window.innerWidth;
 
-}
-
-window.addEventListener("resize",resizeCanvas);
-resizeCanvas();
-
-for(let i=0;i<45;i++){
-
-  particles.push({
-
-    x:Math.random()*canvas.width,
-    y:Math.random()*canvas.height,
-    size:Math.random()*2+0.5,
-    speed:Math.random()*0.5+0.1,
-    hue:Math.random()*80+250
-
-  });
+canvas.height=window.innerHeight;
 
 }
 
-function animateParticles(){
+resize();
 
-  ctx.clearRect(0,0,canvas.width,canvas.height);
+window.addEventListener("resize",resize);
 
-  particles.forEach(function(p){
+for(let i=0;i<55;i++){
 
-    p.y-=p.speed;
+particles.push({
 
-    if(p.y<0){
-      p.y=canvas.height;
-      p.x=Math.random()*canvas.width;
-    }
+x:Math.random()*canvas.width,
 
-    ctx.beginPath();
+y:Math.random()*canvas.height,
 
-    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+size:Math.random()*2+0.5,
 
-    ctx.fillStyle="hsla("+p.hue+",90%,75%,0.65)";
+speed:Math.random()*.5+.1,
 
-    ctx.shadowBlur=12;
-    ctx.shadowColor="rgba(152,101,255,0.6)";
+alpha:Math.random()*.6+.2
 
-    ctx.fill();
-
-  });
-
-  requestAnimationFrame(animateParticles);
+});
 
 }
 
-animateParticles();
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(function(p){
+
+p.y-=p.speed;
+
+if(p.y<0){
+
+p.y=canvas.height;
+
+p.x=Math.random()*canvas.width;
+
+}
+
+ctx.beginPath();
+
+ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+
+ctx.fillStyle="rgba(255,23,68,"+p.alpha+")";
+
+ctx.shadowBlur=12;
+
+ctx.shadowColor="#ff1744";
+
+ctx.fill();
+
+});
+
+requestAnimationFrame(animate);
+
+}
+
+animate();
+
+}
 
 </script>
 
