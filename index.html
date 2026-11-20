@@ -3,706 +3,427 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
+<meta name="theme-color" content="#080b16">
 
 <title>SHAHZAD OFFICIAL 007</title>
-
-<meta name="description" content="Official digital portfolio of Shahzad. AI, technology, gaming and digital creativity.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 :root{
---bg:#070707;
---card:#111111;
---red:#ff1744;
---white:#ffffff;
---muted:#a5a5a5;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
+    --red:#ff1744;
+    --blue:#168cff;
+    --white:#ffffff;
 }
 
 body{
-background:var(--bg);
-color:white;
-font-family:'Outfit',sans-serif;
-overflow-x:hidden;
+    background:#080b16;
+    color:white;
+    font-family:'Outfit',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
 }
 
-a{
-text-decoration:none;
-color:inherit;
+/* Animated background */
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:#080b16;
+    overflow:hidden;
 }
 
-/* PASSWORD */
-
-#lockScreen{
-position:fixed;
-inset:0;
-z-index:100000;
-display:flex;
-align-items:center;
-justify-content:center;
-background:radial-gradient(circle,#270008,#070707 70%);
-padding:20px;
+.glow{
+    position:absolute;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    filter:blur(110px);
+    opacity:.42;
+    animation:moveGlow 9s ease-in-out infinite alternate;
 }
 
-.lock-box{
-width:100%;
-max-width:400px;
-padding:42px 28px;
-text-align:center;
-background:#101010;
-border:1px solid #ff1744;
-border-radius:20px;
-box-shadow:0 0 50px #ff174422;
+.red-glow{
+    background:#ff003c;
+    top:5%;
+    left:-130px;
 }
 
-.lock-logo{
-font-size:45px;
-font-weight:900;
-margin-bottom:15px;
+.blue-glow{
+    background:#006eff;
+    bottom:0;
+    right:-120px;
+    animation-delay:2s;
 }
 
-.lock-box h2{
-font-family:'Space Grotesk',sans-serif;
-font-size:24px;
-margin-bottom:12px;
+@keyframes moveGlow{
+    0%{
+        transform:translate(0,0) scale(1);
+    }
+    100%{
+        transform:translate(100px,-60px) scale(1.3);
+    }
 }
 
-.lock-box p{
-font-size:13px;
-color:var(--muted);
-margin-bottom:25px;
-}
-
-.lock-box input{
-width:100%;
-padding:15px;
-border-radius:10px;
-border:1px solid #444;
-background:#080808;
-color:white;
-outline:none;
-font-size:15px;
-text-align:center;
-margin-bottom:15px;
-}
-
-.lock-box input:focus{
-border-color:var(--red);
-box-shadow:0 0 15px #ff174444;
-}
-
-.unlock-btn{
-width:100%;
-padding:15px;
-border:none;
-border-radius:10px;
-background:linear-gradient(120deg,#ff1744,#9d001f);
-color:white;
-font-weight:800;
-letter-spacing:1px;
-cursor:pointer;
-font-family:'Outfit',sans-serif;
-}
-
-#error{
-color:#ff4568;
-font-size:13px;
-margin-top:15px;
-}
-
-/* ANIMATED COLORS */
-
-.gradient-text{
-background:linear-gradient(
-270deg,
-#ff1744,
-#ffffff,
-#ff0033,
-#ff687f,
-#99001f,
-#ff1744
-);
-background-size:500% 500%;
--webkit-background-clip:text;
-background-clip:text;
--webkit-text-fill-color:transparent;
-animation:colorMove 6s ease infinite;
-}
-
-@keyframes colorMove{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-
-@keyframes redGlow{
-0%,100%{box-shadow:0 0 8px #ff174422}
-50%{box-shadow:0 0 25px #ff174466}
-}
-
-/* BACKGROUND */
-
-#particles{
-position:fixed;
-inset:0;
-width:100%;
-height:100%;
-pointer-events:none;
-z-index:0;
-}
-
-body::before{
-content:"";
-position:fixed;
-width:450px;
-height:450px;
-background:#ff0033;
-filter:blur(180px);
-opacity:.09;
-top:-180px;
-left:-150px;
-pointer-events:none;
-}
-
-body::after{
-content:"";
-position:fixed;
-width:400px;
-height:400px;
-background:#99001f;
-filter:blur(180px);
-opacity:.08;
-bottom:-150px;
-right:-100px;
-pointer-events:none;
-}
-
-#mainWebsite{
-display:none;
-position:relative;
-z-index:1;
-}
-
-#progress{
-position:fixed;
-top:0;
-left:0;
-height:3px;
-width:0%;
-background:linear-gradient(90deg,#ff1744,#ffffff,#ff0033);
-z-index:99999;
-}
-
-/* HEADER */
+/* Header */
 
 header{
-position:sticky;
-top:0;
-z-index:999;
-background:rgba(7,7,7,.94);
-backdrop-filter:blur(18px);
-border-bottom:1px solid #ff174433;
-}
-
-.navbar{
-max-width:1250px;
-margin:auto;
-padding:19px 6%;
-display:flex;
-align-items:center;
-justify-content:space-between;
+    width:100%;
+    padding:24px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(8,11,22,.65);
+    backdrop-filter:blur(15px);
 }
 
 .logo{
-font-family:'Space Grotesk',sans-serif;
-font-size:21px;
-font-weight:900;
-letter-spacing:1px;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:22px;
+    font-weight:800;
+    font-style:italic;
+    letter-spacing:1px;
+    background:linear-gradient(90deg,#ff1744,#ffffff,#168cff);
+    background-size:200% auto;
+    color:transparent;
+    background-clip:text;
+    -webkit-background-clip:text;
+    animation:colorMove 4s linear infinite;
 }
 
-.nav-links{
-display:flex;
-gap:26px;
-align-items:center;
+@keyframes colorMove{
+    to{
+        background-position:200% center;
+    }
 }
 
-.nav-links a{
-font-size:13px;
-color:#ddd;
-transition:.3s;
-}
-
-.nav-links a:hover{
-color:#ff1744;
-}
-
-.menu-btn{
-display:none;
-background:none;
-border:1px solid #ff1744;
-color:white;
-padding:8px 13px;
-border-radius:8px;
-font-size:20px;
-}
-
-/* SECTIONS */
-
-section{
-max-width:1300px;
-margin:auto;
-padding:100px 7%;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:48px;
-}
-
-.section-title h2{
-font-family:'Space Grotesk',sans-serif;
-font-size:38px;
-font-weight:800;
-letter-spacing:1px;
-}
-
-.section-title p{
-color:var(--muted);
-font-size:14px;
-margin-top:12px;
-}
-
-.red-line{
-width:75px;
-height:3px;
-margin:19px auto;
-border-radius:20px;
-background:linear-gradient(90deg,#ff1744,#ffffff,#ff1744);
-background-size:200% 100%;
-animation:colorMove 4s linear infinite;
-}
-
-/* HERO */
+/* Main welcome */
 
 .hero{
-min-height:88vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
 }
 
 .hero-content{
-max-width:900px;
+    max-width:800px;
 }
 
-.badge{
-display:inline-block;
-padding:11px 21px;
-border:1px solid #ff1744;
-border-radius:30px;
-color:#ff4568;
-font-size:11px;
-letter-spacing:2px;
-margin-bottom:28px;
-background:#ff174411;
-animation:redGlow 3s infinite;
+.welcome-urdu{
+    font-family:'Noto Nastaliq Urdu',serif;
+    font-size:clamp(30px,7vw,55px);
+    line-height:2.1;
+    margin-bottom:15px;
+    color:white;
+    text-shadow:0 0 25px rgba(22,140,255,.35);
 }
 
-.hero h1{
-font-family:'Space Grotesk',sans-serif;
-font-size:clamp(40px,8vw,86px);
-font-weight:900;
-line-height:1.15;
-letter-spacing:-2px;
+.hero-title{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(35px,8vw,75px);
+    font-weight:700;
+    font-style:italic;
+    letter-spacing:-2px;
+    background:linear-gradient(90deg,#ff1744,#ffffff,#168cff,#ff1744);
+    background-size:300% auto;
+    color:transparent;
+    background-clip:text;
+    -webkit-background-clip:text;
+    animation:colorMove 5s linear infinite;
 }
 
-.hero h2{
-font-size:clamp(18px,4vw,28px);
-margin:22px 0;
-color:#eee;
-font-weight:500;
+.hero-subtitle{
+    color:#b8c2d8;
+    font-size:16px;
+    margin-top:18px;
+    line-height:1.8;
 }
 
-.hero p{
-max-width:680px;
-margin:auto;
-color:#aaa;
-font-size:15px;
-line-height:2;
+/* Button */
+
+.info-button{
+    margin-top:38px;
+    padding:16px 30px;
+    border:none;
+    border-radius:12px;
+    color:white;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    font-family:'Space Grotesk',sans-serif;
+    background:linear-gradient(100deg,#ff1744,#168cff);
+    background-size:200% auto;
+    cursor:pointer;
+    box-shadow:0 0 30px rgba(22,140,255,.25);
+    transition:.3s;
+    animation:colorMove 4s linear infinite;
 }
 
-.hero-buttons{
-margin-top:35px;
-display:flex;
-justify-content:center;
-gap:16px;
-flex-wrap:wrap;
+.info-button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 35px rgba(255,23,68,.4);
 }
 
-/* BUTTONS */
+/* Personal information */
 
-.btn{
-display:inline-block;
-padding:15px 28px;
-border-radius:30px;
-font-size:12px;
-font-weight:800;
-letter-spacing:1.2px;
-transition:.3s;
+#personal{
+    display:none;
+    max-width:950px;
+    margin:0 auto;
+    padding:30px 20px 80px;
+    animation:showSection .7s ease;
 }
 
-.btn-primary{
-background:linear-gradient(120deg,#ff1744,#a00025);
-color:white;
+@keyframes showSection{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-.btn-outline{
-border:1px solid #ff1744;
-color:white;
+.section-heading{
+    text-align:center;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(25px,5vw,40px);
+    font-style:italic;
+    margin-bottom:35px;
+    background:linear-gradient(90deg,#ff1744,#168cff);
+    color:transparent;
+    background-clip:text;
+    -webkit-background-clip:text;
 }
 
-.btn:hover{
-transform:translateY(-5px);
-box-shadow:0 0 25px #ff174455;
+.info-card{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:20px;
+    backdrop-filter:blur(12px);
+    transition:.3s;
 }
 
-/* CARDS */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:23px;
+.info-card:hover{
+    border-color:#168cff;
+    transform:translateY(-4px);
 }
 
-.card{
-position:relative;
-padding:32px;
-border-radius:17px;
-background:linear-gradient(145deg,#171717,#0c0c0c);
-border:1px solid #ffffff12;
-transition:.4s;
+.card-number{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:#168cff;
+    margin-bottom:12px;
 }
 
-.card::before{
-content:"";
-position:absolute;
-inset:-1px;
-border-radius:18px;
-padding:1px;
-background:linear-gradient(120deg,#ff1744,#333,#ff1744);
-background-size:300% 300%;
-animation:borderMove 6s linear infinite;
--webkit-mask:linear-gradient(#fff 0 0) content-box,
-linear-gradient(#fff 0 0);
--webkit-mask-composite:xor;
-mask-composite:exclude;
-pointer-events:none;
+.card-title{
+    font-size:23px;
+    font-weight:800;
+    margin-bottom:15px;
+    color:white;
 }
 
-@keyframes borderMove{
-0%{background-position:0% 50%}
-100%{background-position:300% 50%}
+.info-text{
+    color:#b9c4d8;
+    font-size:15px;
+    line-height:2;
 }
 
-.card:hover{
-transform:translateY(-9px);
-box-shadow:0 15px 35px #ff174422;
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    font-size:14px;
 }
 
-.card-icon{
-font-size:27px;
-margin-bottom:20px;
-color:#ff1744;
-font-weight:800;
+.info-row:last-child{
+    border-bottom:none;
 }
 
-.card h3{
-font-family:'Space Grotesk',sans-serif;
-font-size:20px;
-margin-bottom:13px;
+.info-row span:first-child{
+    color:#9daac2;
 }
 
-.card p{
-color:#aaa;
-font-size:13px;
-line-height:1.9;
+.info-row span:last-child{
+    color:white;
+    text-align:right;
+    font-weight:600;
 }
 
-/* ABOUT */
+/* Social links */
 
-.about-box{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:42px;
-align-items:center;
+.social-links{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:13px;
 }
 
-.profile-box{
-min-height:320px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-border-radius:25px;
-background:radial-gradient(circle,#ff174433,transparent 65%),#111;
-border:1px solid #ff174455;
-animation:redGlow 5s infinite;
+.social-link{
+    display:block;
+    text-decoration:none;
+    color:white;
+    padding:16px;
+    text-align:center;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.04);
+    font-weight:700;
+    transition:.3s;
 }
 
-.profile-number{
-font-size:110px;
-font-weight:900;
-font-family:'Space Grotesk',sans-serif;
+.social-link:hover{
+    background:linear-gradient(100deg,#ff1744,#168cff);
+    transform:translateY(-3px);
 }
 
-.about-info h3{
-font-size:30px;
-font-family:'Space Grotesk',sans-serif;
-margin-bottom:20px;
+.coming-soon{
+    color:#8c98ad;
+    padding:16px;
+    text-align:center;
+    border-radius:12px;
+    border:1px dashed rgba(255,255,255,.15);
+    font-weight:600;
 }
 
-.about-info p{
-font-size:14px;
-line-height:2;
-color:#aaa;
-margin-bottom:17px;
+/* Password modal */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:10;
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(12px);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
 }
 
-/* SKILLS */
-
-.skill{
-margin-bottom:25px;
+.modal-box{
+    width:100%;
+    max-width:380px;
+    padding:30px;
+    border-radius:20px;
+    background:#101729;
+    border:1px solid rgba(22,140,255,.5);
+    box-shadow:0 0 40px rgba(22,140,255,.15);
+    text-align:center;
 }
 
-.skill-name{
-display:flex;
-justify-content:space-between;
-font-size:13px;
-margin-bottom:10px;
+.modal-box h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:25px;
+    margin-bottom:12px;
 }
 
-.skill-bar{
-height:8px;
-border-radius:20px;
-background:#292929;
-overflow:hidden;
+.modal-box p{
+    color:#aab6cc;
+    font-size:14px;
+    margin-bottom:22px;
 }
 
-.skill-fill{
-height:100%;
-border-radius:20px;
-background:linear-gradient(90deg,#99001f,#ff1744);
-animation:fill 3s ease;
+.password-input{
+    width:100%;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #34415c;
+    outline:none;
+    background:#080e1c;
+    color:white;
+    font-size:16px;
+    margin-bottom:15px;
 }
 
-@keyframes fill{
-from{width:0}
+.password-input:focus{
+    border-color:#168cff;
 }
 
-/* PROJECTS */
-
-.project-tag{
-color:#ff4568;
-font-size:11px;
-letter-spacing:2px;
-display:inline-block;
-margin-bottom:15px;
+.modal-actions{
+    display:flex;
+    gap:10px;
 }
 
-/* GAMING */
-
-.game-box{
-text-align:center;
-padding:48px 25px;
-background:linear-gradient(145deg,#1a090d,#101010);
-border:1px solid #ff174455;
-border-radius:22px;
+.modal-actions button{
+    flex:1;
+    padding:13px;
+    border:none;
+    border-radius:9px;
+    color:white;
+    font-weight:700;
+    cursor:pointer;
 }
 
-.game-heading{
-font-family:'Space Grotesk',sans-serif;
-font-size:32px;
+.unlock{
+    background:linear-gradient(100deg,#ff1744,#168cff);
 }
 
-.game-id{
-display:inline-block;
-padding:17px 28px;
-margin:22px 0;
-background:#080808;
-border:1px solid #ff1744;
-border-radius:12px;
-font-size:25px;
-font-weight:900;
-letter-spacing:2px;
-color:#ff4568;
-animation:redGlow 3s infinite;
+.cancel{
+    background:#29344a;
 }
 
-/* SOCIAL */
-
-.social-grid{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
+#error{
+    color:#ff536e;
+    font-size:13px;
+    margin-top:13px;
+    min-height:18px;
 }
 
-.social{
-min-width:160px;
-padding:18px 22px;
-text-align:center;
-background:#151515;
-border:1px solid #ffffff20;
-border-radius:12px;
-font-size:13px;
-font-weight:700;
-transition:.3s;
-}
-
-.social:hover{
-transform:translateY(-5px);
-border-color:#ff1744;
-box-shadow:0 0 20px #ff174433;
-}
-
-/* VISION */
-
-.vision-box{
-text-align:center;
-padding:50px 25px;
-background:linear-gradient(145deg,#171717,#0d0d0d);
-border:1px solid #ff174455;
-border-radius:22px;
-}
-
-.vision-box h3{
-font-family:'Space Grotesk',sans-serif;
-font-size:28px;
-}
-
-.vision-box p{
-color:#aaa;
-font-size:14px;
-line-height:2;
-margin:22px 0;
-}
-
-/* FOOTER */
+/* Footer */
 
 footer{
-border-top:1px solid #ffffff15;
-padding:38px 6%;
-text-align:center;
-color:#aaa;
-font-size:12px;
+    text-align:center;
+    padding:25px 15px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#8290a8;
+    font-size:13px;
+    line-height:2;
 }
 
-footer .logo{
-margin-bottom:15px;
-}
+@media(max-width:600px){
+    header{
+        padding:20px;
+    }
 
-/* REVEAL */
+    .logo{
+        font-size:17px;
+    }
 
-.reveal{
-opacity:0;
-transform:translateY(35px);
-transition:.8s;
-}
+    .hero{
+        min-height:75vh;
+    }
 
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
+    .info-card{
+        padding:20px;
+    }
 
-#topBtn{
-position:fixed;
-bottom:22px;
-right:20px;
-width:46px;
-height:46px;
-border:none;
-border-radius:50%;
-background:linear-gradient(135deg,#ff1744,#900020);
-color:white;
-font-size:22px;
-cursor:pointer;
-display:none;
-z-index:999;
-}
+    .social-links{
+        grid-template-columns:1fr;
+    }
 
-/* MOBILE */
-
-@media(max-width:800px){
-
-.menu-btn{
-display:block;
-}
-
-.nav-links{
-display:none;
-position:absolute;
-top:68px;
-left:0;
-width:100%;
-padding:25px;
-background:#101010;
-flex-direction:column;
-gap:23px;
-border-bottom:1px solid #ff1744;
-}
-
-.nav-links.show{
-display:flex;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.about-box{
-grid-template-columns:1fr;
-}
-
-section{
-padding:75px 6%;
-}
-
-.hero{
-min-height:80vh;
-}
-
-.section-title h2{
-font-size:29px;
-}
-
-.social{
-width:100%;
-}
-
-}
-
-@media(prefers-reduced-motion:reduce){
-*,*::before,*::after{
-animation-duration:.01ms!important;
-transition-duration:.01ms!important;
-scroll-behavior:auto!important;
-}
+    .info-row{
+        font-size:13px;
+    }
 }
 
 </style>
@@ -710,545 +431,226 @@ scroll-behavior:auto!important;
 
 <body>
 
-<!-- PASSWORD SCREEN -->
-
-<div id="lockScreen">
-
-<div class="lock-box">
-
-<div class="lock-logo gradient-text">007</div>
-
-<h2>WELCOME TO MY WEBSITE</h2>
-
-<p>Enter your password to access the official website.</p>
-
-<input
-type="password"
-id="password"
-placeholder="Enter Password"
-autocomplete="current-password"
-onkeydown="if(event.key==='Enter') unlock()"
->
-
-<button class="unlock-btn" onclick="unlock()">
-ACCESS WEBSITE
-</button>
-
-<div id="error"></div>
-
+<div class="background">
+    <div class="glow red-glow"></div>
+    <div class="glow blue-glow"></div>
 </div>
-
-</div>
-
-<!-- MAIN WEBSITE -->
-
-<div id="mainWebsite">
-
-<div id="progress"></div>
-
-<canvas id="particles"></canvas>
 
 <header>
-
-<nav class="navbar">
-
-<a href="#home" class="logo gradient-text">
-SHAHZAD 007
-</a>
-
-<button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
-MENU
-</button>
-
-<div class="nav-links" id="navLinks">
-<a href="#home" onclick="closeMenu()">HOME</a>
-<a href="#about" onclick="closeMenu()">ABOUT</a>
-<a href="#skills" onclick="closeMenu()">INTERESTS</a>
-<a href="#projects" onclick="closeMenu()">PROJECTS</a>
-<a href="#gaming" onclick="closeMenu()">GAMING</a>
-<a href="#social" onclick="closeMenu()">SOCIAL</a>
-</div>
-
-</nav>
-
+    <div class="logo">SHAHZAD OFFICIAL 007</div>
 </header>
 
-<!-- HERO -->
+<!-- WELCOME PAGE -->
 
-<section class="hero" id="home">
+<section class="hero">
+    <div class="hero-content">
 
-<div class="hero-content reveal">
+        <h1 class="welcome-urdu" dir="rtl">
+            خوش آمدید
+        </h1>
 
-<div class="badge">WELCOME TO MY DIGITAL WORLD</div>
+        <h2 class="hero-title">
+            𝙎𝙝𝙖𝙝𝙯𝙖𝙙
+        </h2>
 
-<h1 class="gradient-text">SHAHZAD OFFICIAL 007</h1>
+        <p class="hero-subtitle">
+            Welcome to my personal website.<br>
+            Discover my journey, interests and digital world.
+        </p>
 
-<h2>AI EXPLORER | DIGITAL CREATOR | FUTURE DEVELOPER</h2>
+        <button class="info-button" onclick="openPassword()">
+            MY PERSONAL INFORMATION
+        </button>
 
-<p>
-Welcome to my official digital platform.
-I am Shahzad, passionate about artificial intelligence,
-modern technology, web development, gaming and digital creativity.
-Explore my world, interests and creative journey.
-</p>
-
-<div class="hero-buttons">
-<a href="#about" class="btn btn-primary">EXPLORE MY WORLD</a>
-<a href="#social" class="btn btn-outline">CONNECT WITH ME</a>
-</div>
-
-</div>
-
+    </div>
 </section>
 
-<!-- ABOUT -->
+<!-- PERSONAL INFORMATION -->
 
-<section id="about">
+<section id="personal">
 
-<div class="section-title reveal">
-<h2 class="gradient-text">ABOUT SHAHZAD</h2>
-<div class="red-line"></div>
-<p>Discover my story and digital identity.</p>
-</div>
+    <h2 class="section-heading">
+        MY PERSONAL INFORMATION
+    </h2>
 
-<div class="about-box">
+    <div class="info-card">
+        <div class="card-number">01 / INTRODUCTION</div>
+        <h3 class="card-title">About Me</h3>
+        <p class="info-text">
+            Welcome to my personal space.
+            I am Shahzad, a digital creator interested
+            in technology, creativity and learning new things.
+        </p>
+    </div>
 
-<div class="profile-box reveal">
-<div>
-<div class="profile-number gradient-text">007</div>
-<h2>SHAHZAD</h2>
-<p style="color:#aaa;margin-top:10px">FOUNDER & DIGITAL CREATOR</p>
-</div>
-</div>
+    <div class="info-card">
+        <div class="card-number">02 / PERSONAL DETAILS</div>
+        <h3 class="card-title">My Profile</h3>
 
-<div class="about-info reveal">
+        <div class="info-row">
+            <span>Name</span>
+            <span>Shahzad</span>
+        </div>
 
-<h3>MY DIGITAL JOURNEY</h3>
+        <div class="info-row">
+            <span>Website</span>
+            <span>Shahzad Official 007</span>
+        </div>
 
-<p>
-Hello! I am Shahzad, the creator of SHAHZAD OFFICIAL 007.
-I am interested in exploring modern technology and digital creativity.
-</p>
+        <div class="info-row">
+            <span>Role</span>
+            <span>Digital Creator</span>
+        </div>
+    </div>
 
-<p>
-I enjoy discovering artificial intelligence tools,
-creating digital content, learning web development
-and exploring new creative ideas.
-</p>
+    <div class="info-card">
+        <div class="card-number">03 / INTERESTS</div>
+        <h3 class="card-title">My Interests</h3>
 
-<p>
-Gaming, video editing and technology are also
-important parts of my creative interests.
-My goal is to learn, improve and build meaningful projects.
-</p>
+        <p class="info-text">
+            Artificial Intelligence<br>
+            Technology<br>
+            Website Development<br>
+            Video Editing<br>
+            Digital Creation<br>
+            Gaming
+        </p>
+    </div>
 
-<a href="#projects" class="btn btn-primary">VIEW MY PROJECTS</a>
+    <div class="info-card">
+        <div class="card-number">04 / GAMING</div>
+        <h3 class="card-title">Free Fire Profile</h3>
 
-</div>
+        <div class="info-row">
+            <span>Player ID</span>
+            <span>13960506580</span>
+        </div>
+    </div>
 
-</div>
+    <div class="info-card">
+        <div class="card-number">05 / SOCIAL MEDIA</div>
+        <h3 class="card-title">Connect With Me</h3>
 
-</section>
+        <div class="social-links">
 
-<!-- INTERESTS -->
+            <a class="social-link"
+               href="https://www.tiktok.com/@rana.editor33"
+               target="_blank">
+                TikTok
+            </a>
 
-<section id="skills">
+            <a class="social-link"
+               href="https://www.youtube.com/@BabyBubuToons"
+               target="_blank">
+                YouTube
+            </a>
 
-<div class="section-title reveal">
-<h2 class="gradient-text">MY INTERESTS</h2>
-<div class="red-line"></div>
-<p>Technology, creativity and continuous learning.</p>
-</div>
+            <div class="coming-soon">Instagram — Coming Soon</div>
 
-<div class="grid">
+            <div class="coming-soon">Facebook — Coming Soon</div>
 
-<div class="card reveal">
-<div class="card-icon">01</div>
-<h3>ARTIFICIAL INTELLIGENCE</h3>
-<p>Exploring AI tools, creative technology and modern artificial intelligence.</p>
-</div>
-
-<div class="card reveal">
-<div class="card-icon">02</div>
-<h3>WEB DEVELOPMENT</h3>
-<p>Learning HTML, CSS and JavaScript to build modern responsive websites.</p>
-</div>
-
-<div class="card reveal">
-<div class="card-icon">03</div>
-<h3>DIGITAL CREATION</h3>
-<p>Creating digital videos, animations and creative social media content.</p>
-</div>
-
-<div class="card reveal">
-<div class="card-icon">04</div>
-<h3>GAMING</h3>
-<p>Exploring mobile gaming and improving gaming skills.</p>
-</div>
-
-<div class="card reveal">
-<div class="card-icon">05</div>
-<h3>VIDEO EDITING</h3>
-<p>Learning creative editing techniques and visual storytelling.</p>
-</div>
-
-<div class="card reveal">
-<div class="card-icon">06</div>
-<h3>FUTURE TECHNOLOGY</h3>
-<p>Discovering new innovations and exploring future digital possibilities.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<div class="section-title reveal">
-<h2 class="gradient-text">MY PROJECTS</h2>
-<div class="red-line"></div>
-<p>My digital platforms and creative work.</p>
-</div>
-
-<div class="grid">
-
-<div class="card reveal">
-<span class="project-tag">WEBSITE PROJECT</span>
-<h3>SHAHZAD OFFICIAL 007</h3>
-<p>My personal website representing my identity, interests and digital journey.</p>
-<br>
-<a href="https://shahzad-viral.github.io/shahzad-official-007/"
-target="_blank" rel="noopener" class="btn btn-outline">VISIT WEBSITE</a>
-</div>
-
-<div class="card reveal">
-<span class="project-tag">YOUTUBE PROJECT</span>
-<h3>BABY BUBU TOONS</h3>
-<p>A creative YouTube project featuring fictional animated characters and AI-inspired videos.</p>
-<br>
-<a href="https://www.youtube.com/@BabyBubuToons"
-target="_blank" rel="noopener" class="btn btn-outline">OPEN CHANNEL</a>
-</div>
-
-<div class="card reveal">
-<span class="project-tag">FUTURE PROJECT</span>
-<h3>FUTURE INNOVATIONS</h3>
-<p>Exploring creative ideas in AI, gaming, web development and technology.</p>
-<br>
-<a href="#contact" class="btn btn-outline">EXPLORE VISION</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- GAMING -->
-
-<section id="gaming">
-
-<div class="section-title reveal">
-<h2 class="gradient-text">GAMING PROFILE</h2>
-<div class="red-line"></div>
-<p>My mobile gaming identity.</p>
-</div>
-
-<div class="game-box reveal">
-
-<h2 class="game-heading gradient-text">FREE FIRE</h2>
-
-<p style="color:#aaa;margin-top:15px">
-PLAYER IDENTIFICATION NUMBER
-</p>
-
-<div class="game-id">13960506580</div>
-
-<p style="color:#aaa;font-size:12px;letter-spacing:2px">
-GAMING | SKILLS | ENTERTAINMENT
-</p>
-
-</div>
-
-</section>
-
-<!-- SOCIAL -->
-
-<section id="social">
-
-<div class="section-title reveal">
-<h2 class="gradient-text">CONNECT WITH ME</h2>
-<div class="red-line"></div>
-<p>Follow my digital journey on social platforms.</p>
-</div>
-
-<div class="social-grid reveal">
-
-<a class="social" href="https://www.tiktok.com/@rana.editor33"
-target="_blank" rel="noopener">TIKTOK</a>
-
-<a class="social" href="https://www.youtube.com/@BabyBubuToons"
-target="_blank" rel="noopener">YOUTUBE</a>
-
-<div class="social">INSTAGRAM — COMING SOON</div>
-
-<div class="social">FACEBOOK — COMING SOON</div>
-
-<div class="social">WHATSAPP — COMING SOON</div>
-
-</div>
-
-</section>
-
-<!-- VISION -->
-
-<section id="contact">
-
-<div class="section-title reveal">
-<h2 class="gradient-text">MY VISION</h2>
-<div class="red-line"></div>
-<p>My dreams. My ideas. My journey.</p>
-</div>
-
-<div class="vision-box reveal">
-
-<h3 class="gradient-text">THE JOURNEY IS JUST BEGINNING</h3>
-
-<p>
-I believe in continuous learning, creative thinking
-and exploring new opportunities.
-My vision is to develop useful digital projects,
-improve my skills and create something meaningful.
-</p>
-
-<a href="#home" class="btn btn-primary">BACK TO HOME</a>
-
-</div>
+        </div>
+    </div>
 
 </section>
 
 <footer>
-
-<div class="logo gradient-text">SHAHZAD OFFICIAL 007</div>
-
-<p>DESIGNED WITH CREATIVITY AND PASSION</p>
-
-<p style="margin-top:15px">
-COPYRIGHT &copy; <span id="year"></span>
-SHAHZAD OFFICIAL 007. ALL RIGHTS RESERVED.
-</p>
-
+    SHAHZAD OFFICIAL 007<br>
+    Personal Website
 </footer>
 
-<button id="topBtn" onclick="goTop()" aria-label="Back to top">↑</button>
+<!-- PASSWORD POPUP -->
+
+<div class="modal" id="passwordModal">
+
+    <div class="modal-box">
+
+        <h2>Private Information</h2>
+
+        <p>
+            Enter your password to access personal information.
+        </p>
+
+        <input
+            type="password"
+            id="passwordInput"
+            class="password-input"
+            placeholder="Enter Password"
+        >
+
+        <div class="modal-actions">
+
+            <button class="unlock" onclick="checkPassword()">
+                UNLOCK
+            </button>
+
+            <button class="cancel" onclick="closePassword()">
+                CANCEL
+            </button>
+
+        </div>
+
+        <div id="error"></div>
+
+    </div>
 
 </div>
 
 <script>
 
-/* PASSWORD */
-
 const WEBSITE_PASSWORD = "Shahzad445";
 
-function unlock(){
+function openPassword(){
+    document.getElementById("passwordModal").style.display="flex";
+    document.getElementById("passwordInput").value="";
+    document.getElementById("error").textContent="";
 
-const entered = document.getElementById("password").value;
-
-if(entered === WEBSITE_PASSWORD){
-
-sessionStorage.setItem("websiteUnlocked","yes");
-
-document.getElementById("lockScreen").style.display="none";
-
-document.getElementById("mainWebsite").style.display="block";
-
-startWebsite();
-
-}else{
-
-document.getElementById("error").textContent=
-"Incorrect password. Please try again.";
-
+    setTimeout(()=>{
+        document.getElementById("passwordInput").focus();
+    },100);
 }
 
+function closePassword(){
+    document.getElementById("passwordModal").style.display="none";
 }
 
-/* START WEBSITE */
+function checkPassword(){
 
-let websiteStarted=false;
+    const enteredPassword =
+        document.getElementById("passwordInput").value;
 
-function startWebsite(){
+    if(enteredPassword === WEBSITE_PASSWORD){
 
-if(websiteStarted)return;
+        closePassword();
 
-websiteStarted=true;
+        const personal =
+            document.getElementById("personal");
 
-document.getElementById("year").textContent=
-new Date().getFullYear();
+        personal.style.display="block";
 
-initReveal();
+        setTimeout(()=>{
+            personal.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+        },100);
 
-initParticles();
+    }else{
 
+        document.getElementById("error").textContent =
+            "Incorrect password. Please try again.";
+
+    }
 }
 
-if(sessionStorage.getItem("websiteUnlocked")==="yes"){
+document.getElementById("passwordInput")
+.addEventListener("keydown",function(event){
 
-document.getElementById("lockScreen").style.display="none";
-
-document.getElementById("mainWebsite").style.display="block";
-
-startWebsite();
-
-}
-
-/* MOBILE MENU */
-
-function toggleMenu(){
-
-document.getElementById("navLinks").classList.toggle("show");
-
-}
-
-function closeMenu(){
-
-document.getElementById("navLinks").classList.remove("show");
-
-}
-
-/* SCROLL */
-
-window.addEventListener("scroll",function(){
-
-let scrollTop=document.documentElement.scrollTop;
-
-let height=document.documentElement.scrollHeight-
-document.documentElement.clientHeight;
-
-let progress=(scrollTop/height)*100;
-
-document.getElementById("progress").style.width=
-progress+"%";
-
-document.getElementById("topBtn").style.display=
-scrollTop>350?"block":"none";
+    if(event.key === "Enter"){
+        checkPassword();
+    }
 
 });
-
-/* BACK TO TOP */
-
-function goTop(){
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-}
-
-/* REVEAL */
-
-function initReveal(){
-
-const observer=new IntersectionObserver(function(entries){
-
-entries.forEach(function(entry){
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("active");
-
-}
-
-});
-
-},{threshold:.10});
-
-document.querySelectorAll(".reveal").forEach(function(el){
-
-observer.observe(el);
-
-});
-
-}
-
-/* PARTICLES */
-
-function initParticles(){
-
-const canvas=document.getElementById("particles");
-
-const ctx=canvas.getContext("2d");
-
-let particles=[];
-
-function resize(){
-
-canvas.width=window.innerWidth;
-
-canvas.height=window.innerHeight;
-
-}
-
-resize();
-
-window.addEventListener("resize",resize);
-
-for(let i=0;i<50;i++){
-
-particles.push({
-
-x:Math.random()*canvas.width,
-
-y:Math.random()*canvas.height,
-
-size:Math.random()*2+0.5,
-
-speed:Math.random()*.5+.1,
-
-alpha:Math.random()*.6+.2
-
-});
-
-}
-
-function animate(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-particles.forEach(function(p){
-
-p.y-=p.speed;
-
-if(p.y<0){
-
-p.y=canvas.height;
-
-p.x=Math.random()*canvas.width;
-
-}
-
-ctx.beginPath();
-
-ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
-
-ctx.fillStyle="rgba(255,23,68,"+p.alpha+")";
-
-ctx.shadowBlur=12;
-
-ctx.shadowColor="#ff1744";
-
-ctx.fill();
-
-});
-
-requestAnimationFrame(animate);
-
-}
-
-animate();
-
-}
 
 </script>
 
