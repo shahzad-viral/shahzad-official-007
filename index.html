@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SHAHZAD AHMAD | OFFICIAL 007</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+    --gold:#e8c66e;
+    --light:#fff2c5;
+    --dark:#050505;
+    --gold2:#a77b28;
+}
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-:root{
-    --gold:#e8c66e;
-    --light:#fff0bd;
-    --black:#050505;
 }
 
 html{
@@ -39,67 +39,78 @@ body{
 .background{
     position:fixed;
     inset:0;
-    z-index:-5;
+    z-index:-10;
 
     background:
-    radial-gradient(
-        ellipse at 50% 100%,
-        rgba(232,198,110,.19),
-        transparent 55%
-    ),
+    radial-gradient(ellipse at 50% 100%,#8c651b22,transparent 55%),
+    radial-gradient(ellipse at 10% 10%,#e8c66e0c,transparent 45%),
     #050505;
 }
-
-/* GOLDEN LIGHT */
-
-.bottom-light{
-    position:fixed;
-    bottom:-250px;
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:120%;
-    height:500px;
-
-    background:radial-gradient(
-        ellipse,
-        rgba(232,198,110,.35),
-        rgba(232,198,110,.10) 40%,
-        transparent 70%
-    );
-
-    filter:blur(45px);
-
-    animation:lightMove 5s ease-in-out infinite alternate;
-
-    z-index:-3;
-    pointer-events:none;
-}
-
-@keyframes lightMove{
-
-    from{
-        opacity:.35;
-        transform:translateX(-50%) scale(.8);
-    }
-
-    to{
-        opacity:1;
-        transform:translateX(-50%) scale(1.2);
-    }
-
-}
-
-/* PARTICLES */
 
 #particles{
     position:fixed;
     inset:0;
     width:100%;
     height:100%;
-    z-index:-2;
+    z-index:-5;
     pointer-events:none;
+}
+
+.ambient-light{
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:#e8c66e12;
+    filter:blur(100px);
+    pointer-events:none;
+    z-index:-4;
+    animation:ambient 9s ease-in-out infinite alternate;
+}
+
+.ambient-light.one{
+    top:-250px;
+    left:-200px;
+}
+
+.ambient-light.two{
+    bottom:-300px;
+    right:-200px;
+    animation-delay:3s;
+}
+
+@keyframes ambient{
+    from{transform:translate(0,0) scale(.8);opacity:.4;}
+    to{transform:translate(100px,100px) scale(1.3);opacity:1;}
+}
+
+/* GOLDEN LIGHT */
+
+.bottom-light{
+    position:fixed;
+    bottom:-280px;
+    left:50%;
+    transform:translateX(-50%);
+    width:130%;
+    height:500px;
+
+    background:radial-gradient(
+        ellipse,
+        #e8c66e55,
+        #e8c66e15 40%,
+        transparent 70%
+    );
+
+    filter:blur(55px);
+    z-index:-3;
+    pointer-events:none;
+
+    animation:bottomGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes bottomGlow{
+    from{opacity:.35;transform:translateX(-50%) scale(.8);}
+    to{opacity:1;transform:translateX(-50%) scale(1.2);}
 }
 
 /* HEADER */
@@ -109,294 +120,258 @@ header{
     top:0;
     z-index:100;
 
+    padding:20px 12px;
     text-align:center;
-    padding:20px;
 
-    background:rgba(0,0,0,.82);
-    backdrop-filter:blur(15px);
+    background:#050505cc;
+    backdrop-filter:blur(20px);
 
-    border-bottom:1px solid rgba(232,198,110,.3);
+    border-bottom:1px solid #e8c66e55;
 }
 
 .logo{
     font-family:'Cinzel',serif;
     font-size:20px;
-    font-weight:800;
+    font-weight:900;
     letter-spacing:4px;
 
-    color:var(--gold);
+    background:linear-gradient(
+        90deg,
+        #9b7026,
+        #fff1b7,
+        #d6a947,
+        #fff4c7,
+        #9b7026
+    );
 
-    animation:goldGlow 3s infinite alternate;
+    background-size:300%;
+    -webkit-background-clip:text;
+    color:transparent;
+
+    animation:goldText 6s linear infinite;
 }
 
-.logo span{
-    color:white;
+@keyframes goldText{
+    from{background-position:0%;}
+    to{background-position:300%;}
 }
 
-@keyframes goldGlow{
-
-    from{
-        text-shadow:0 0 5px #e8c66e;
-    }
-
-    to{
-        text-shadow:
-        0 0 15px #e8c66e,
-        0 0 30px #e8c66e;
-    }
-
-}
-
-/* LOGIN SCREEN */
+/* PASSWORD */
 
 #lockScreen{
-
     min-height:90vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     padding:25px;
-
 }
 
 .login{
-
+    position:relative;
     width:100%;
     max-width:390px;
 
     text-align:center;
+    padding:40px 25px;
 
-    padding:35px 25px;
+    border:1px solid #e8c66e77;
+    border-radius:25px;
 
-    border:1px solid rgba(232,198,110,.4);
-    border-radius:20px;
+    background:linear-gradient(
+        145deg,
+        #ffffff0c,
+        #e8c66e08,
+        #ffffff03
+    );
 
-    background:rgba(255,255,255,.035);
+    backdrop-filter:blur(15px);
 
     box-shadow:
-    0 0 35px rgba(232,198,110,.08);
+    0 0 40px #e8c66e12,
+    inset 0 0 30px #e8c66e08;
 
-    animation:appear 1.5s ease;
+    animation:entrance 1.4s ease both;
+}
 
+.login::before{
+    content:"";
+    position:absolute;
+    inset:-1px;
+    border-radius:25px;
+    border:1px solid transparent;
+    background:linear-gradient(135deg,#fff1b7,transparent,#c09239);
+    -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    pointer-events:none;
 }
 
 .lock-icon{
-
     font-size:55px;
-
     margin-bottom:20px;
-
-    animation:lockGlow 2s infinite alternate;
-
+    animation:lockFloat 3s ease-in-out infinite;
 }
 
-@keyframes lockGlow{
-
-    from{
-        transform:scale(1);
-        filter:drop-shadow(0 0 5px gold);
-    }
-
-    to{
-        transform:scale(1.08);
-        filter:drop-shadow(0 0 20px gold);
-    }
-
+@keyframes lockFloat{
+    50%{transform:translateY(-10px) rotate(5deg);}
 }
 
 .login h1{
-
     font-family:'Cinzel',serif;
     color:var(--gold);
     font-size:25px;
     letter-spacing:2px;
-
 }
 
 .login p{
-
-    color:#999;
+    color:#aaa;
     font-size:12px;
     line-height:2;
     margin:15px 0 22px;
-
 }
 
 .login input{
-
     width:100%;
-    padding:14px;
-
+    padding:15px;
     background:#111;
-
-    border:1px solid #555;
-    border-radius:9px;
-
+    border:1px solid #6c572d;
+    border-radius:12px;
     color:white;
     text-align:center;
-
     outline:none;
-
+    font-size:14px;
 }
 
 .login input:focus{
-
     border-color:var(--gold);
-    box-shadow:0 0 15px #e8c66e33;
-
+    box-shadow:0 0 20px #e8c66e33;
 }
 
 .login button{
-
     width:100%;
-
-    padding:14px;
+    padding:15px;
     margin-top:18px;
 
-    background:var(--gold);
+    background:linear-gradient(110deg,#a77b28,#fff0bd,#c89b40);
+    background-size:200%;
 
     border:none;
     border-radius:30px;
 
-    font-weight:700;
+    color:#080808;
+    font-weight:800;
     letter-spacing:2px;
-
     cursor:pointer;
 
     transition:.4s;
-
 }
 
 .login button:hover{
-
-    box-shadow:0 0 25px gold;
-    transform:translateY(-3px);
-
+    background-position:100%;
+    transform:translateY(-4px);
+    box-shadow:0 0 30px #e8c66e77;
 }
 
 #error{
-
     color:#ff7777;
     font-size:12px;
     margin-top:15px;
-
 }
 
-/* MAIN WEBSITE */
+/* WEBSITE */
 
 #website{
     display:none;
 }
 
-@keyframes appear{
-
-    from{
-        opacity:0;
-        transform:translateY(35px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
+@keyframes entrance{
+    from{opacity:0;transform:translateY(35px);}
+    to{opacity:1;transform:translateY(0);}
 }
 
 /* HERO */
 
 .hero{
-
     min-height:90vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
-
-    padding:60px 18px;
-
+    padding:70px 18px;
 }
 
 .hero-content{
-
     max-width:850px;
-
-    animation:appear 1.5s ease;
-
+    animation:entrance 1.6s ease both;
 }
 
 .top-label{
-
     color:var(--gold);
     font-size:10px;
-    letter-spacing:5px;
-    margin-bottom:20px;
-
+    letter-spacing:6px;
+    margin-bottom:25px;
 }
 
 .name{
-
     font-family:'Cinzel',serif;
-
-    font-size:clamp(40px,9vw,80px);
-
+    font-size:clamp(42px,10vw,90px);
     line-height:1.3;
-    letter-spacing:3px;
+    letter-spacing:4px;
 
-    color:var(--light);
+    background:linear-gradient(
+        120deg,
+        #a77b28,
+        #fff6ce,
+        #d4a94c,
+        #fff0bd
+    );
 
-    text-shadow:0 0 25px #e8c66e55;
+    background-size:250%;
+    -webkit-background-clip:text;
+    color:transparent;
 
+    animation:goldText 7s linear infinite;
 }
 
 .name span{
     color:white;
+    -webkit-text-fill-color:white;
+    text-shadow:0 0 30px #e8c66e55;
 }
 
 .welcome{
-
-    font-size:22px;
-    letter-spacing:8px;
+    font-size:20px;
+    letter-spacing:10px;
     margin-top:20px;
-
+    color:#eee0b5;
 }
 
 .line{
-
-    width:90px;
+    width:100px;
     height:2px;
-
-    background:var(--gold);
-
+    background:linear-gradient(90deg,transparent,gold,transparent);
     margin:25px auto;
-
     box-shadow:0 0 15px gold;
+    animation:lineMove 3s infinite alternate;
+}
 
+@keyframes lineMove{
+    to{width:180px;}
 }
 
 .poetry{
-
     font-family:'Noto Nastaliq Urdu',serif;
-
     color:var(--light);
-
     font-size:clamp(17px,4vw,23px);
-
     line-height:2.5;
-
     margin:25px auto;
-
+    text-shadow:0 0 15px #e8c66e33;
 }
 
 .description{
-
     color:#aaa;
     font-size:13px;
-    line-height:2.2;
-
+    line-height:2.3;
 }
 
 .description strong{
@@ -404,14 +379,12 @@ header{
 }
 
 .btn{
-
     display:inline-block;
-
-    margin-top:28px;
-    padding:14px 30px;
+    margin-top:30px;
+    padding:15px 35px;
 
     border:1px solid var(--gold);
-    border-radius:30px;
+    border-radius:40px;
 
     color:var(--light);
     text-decoration:none;
@@ -419,159 +392,145 @@ header{
     font-size:11px;
     letter-spacing:2px;
 
-    transition:.4s;
-
+    position:relative;
+    overflow:hidden;
+    transition:.5s;
 }
 
 .btn:hover{
-
     background:var(--gold);
     color:black;
-
-    box-shadow:0 0 30px gold;
-
+    box-shadow:0 0 35px #e8c66e77;
+    transform:translateY(-5px);
 }
 
 /* CLOCK */
 
 .clock-box{
-
     max-width:320px;
-    margin:35px auto;
-
-    padding:20px;
+    margin:40px auto 0;
+    padding:22px;
 
     border:1px solid #e8c66e55;
-    border-radius:15px;
+    border-radius:18px;
 
     background:#ffffff08;
+    backdrop-filter:blur(10px);
 
+    box-shadow:0 0 30px #e8c66e10;
 }
 
 .clock-label{
-
     color:var(--gold);
     font-size:10px;
     letter-spacing:3px;
-
 }
 
 #clock{
-
     color:var(--light);
-    font-size:28px;
+    font-size:29px;
     margin-top:10px;
-
 }
 
 #date{
-
     color:#999;
     font-size:11px;
-
 }
 
 /* SECTIONS */
 
 section{
-
-    padding:75px 18px;
-
+    padding:85px 18px;
     position:relative;
-
 }
 
 .section-title{
-
     text-align:center;
-
     font-family:'Cinzel',serif;
-
-    font-size:28px;
-
+    font-size:clamp(22px,5vw,32px);
     color:var(--light);
-
     letter-spacing:3px;
-
     margin-bottom:15px;
-
-    text-shadow:0 0 20px #e8c66e55;
-
+    text-shadow:0 0 25px #e8c66e55;
 }
 
 .subtitle{
-
     text-align:center;
-
     color:#888;
-
     font-size:10px;
-
     letter-spacing:4px;
-
-    margin-bottom:45px;
-
+    margin-bottom:50px;
 }
 
 .container{
-
     max-width:750px;
     margin:auto;
-
 }
 
-/* CARDS */
+/* GOLDEN GLASS CARDS */
 
 .card{
+    position:relative;
+    overflow:hidden;
 
-    padding:28px;
+    padding:30px;
+    margin:22px 0;
 
-    margin:20px 0;
-
-    border:1px solid rgba(232,198,110,.3);
-
-    border-radius:18px;
+    border:1px solid #e8c66e44;
+    border-radius:20px;
 
     background:linear-gradient(
-        145deg,
-        rgba(255,255,255,.045),
-        rgba(232,198,110,.025)
+        135deg,
+        #ffffff0a,
+        #e8c66e08,
+        #ffffff03
     );
 
-    transition:.5s;
+    backdrop-filter:blur(12px);
 
+    transition:.5s;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-150%;
+    width:70%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #ffffff12,
+        transparent
+    );
+
+    transform:skewX(-25deg);
+    transition:.8s;
+}
+
+.card:hover::before{
+    left:150%;
 }
 
 .card:hover{
-
-    transform:translateY(-6px);
-
+    transform:translateY(-8px);
     border-color:var(--gold);
-
-    box-shadow:0 0 30px #e8c66e22;
-
+    box-shadow:0 10px 40px #e8c66e22;
 }
 
 .card h3{
-
     color:var(--gold);
-
     font-family:'Cinzel',serif;
-
     font-size:21px;
-
     margin-bottom:20px;
-
 }
 
 .card p{
-
     color:#aaa;
-
-    font-size:14px;
-
-    line-height:2.2;
-
+    font-size:13px;
+    line-height:2.4;
 }
 
 .card strong{
@@ -581,256 +540,259 @@ section{
 /* INTERESTS */
 
 .stats{
-
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:20px;
-
+    gap:22px;
+    max-width:850px;
+    margin:auto;
 }
 
 .stat{
-
     width:250px;
-
-    padding:30px 15px;
-
+    padding:35px 15px;
     text-align:center;
 
-    border:1px solid rgba(232,198,110,.3);
+    border:1px solid #e8c66e44;
+    border-radius:22px;
 
-    border-radius:18px;
-
-    background:rgba(255,255,255,.025);
-
-    transition:.5s;
+    background:linear-gradient(145deg,#ffffff09,#e8c66e06);
 
     position:relative;
-
     overflow:hidden;
 
+    transition:.5s;
 }
 
 .stat:hover{
-
-    transform:translateY(-8px) scale(1.02);
-
+    transform:translateY(-10px) scale(1.03);
     border-color:var(--gold);
-
-    box-shadow:0 0 30px #e8c66e33;
-
+    box-shadow:0 0 35px #e8c66e33;
 }
 
-/* NUMBER CIRCLES */
+/* CIRCLES */
 
 .number-circle{
-
-    width:75px;
-    height:75px;
-
-    border:2px solid var(--gold);
-
-    border-radius:50%;
+    position:relative;
+    width:85px;
+    height:85px;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
-    margin:0 auto 22px;
+    margin:0 auto 24px;
+
+    border:1px solid var(--gold);
+    border-radius:50%;
 
     color:var(--light);
-
     font-family:'Cinzel',serif;
-
-    font-size:25px;
-
+    font-size:26px;
     font-weight:800;
 
-    box-shadow:
-    0 0 12px #e8c66e55,
-    inset 0 0 12px #e8c66e22;
+    box-shadow:0 0 20px #e8c66e33;
 
-    animation:circlePulse 3s infinite alternate;
-
+    animation:circleGlow 3s ease-in-out infinite alternate;
 }
 
-@keyframes circlePulse{
+.number-circle::before{
+    content:"";
+    position:absolute;
+    inset:-7px;
+    border:2px dashed #e8c66e66;
+    border-radius:50%;
+    animation:rotateCircle 15s linear infinite;
+}
 
-    from{
+.number-circle::after{
+    content:"";
+    position:absolute;
+    inset:-13px;
+    border:1px solid #e8c66e22;
+    border-radius:50%;
+    animation:rotateCircle 20s linear infinite reverse;
+}
 
-        box-shadow:
-        0 0 8px #e8c66e44,
-        inset 0 0 5px #e8c66e22;
+@keyframes rotateCircle{
+    to{transform:rotate(360deg);}
+}
 
-    }
-
+@keyframes circleGlow{
     to{
-
         box-shadow:
-        0 0 25px #e8c66e99,
-        inset 0 0 15px #e8c66e44;
-
+        0 0 35px #e8c66e88,
+        inset 0 0 20px #e8c66e44;
     }
-
 }
 
 .stat p{
-
-    color:#aaa;
+    color:#bbb;
     font-size:11px;
     letter-spacing:3px;
-
 }
 
 /* LION */
 
 .lion-box{
-
     max-width:650px;
     margin:auto;
+    position:relative;
+    padding:8px;
+    border:1px solid var(--gold);
+    border-radius:27px;
+    box-shadow:0 0 35px #e8c66e33;
+    overflow:hidden;
+}
 
+.lion-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg,transparent,#ffffff33,transparent);
+    animation:lionShine 5s infinite;
+    z-index:2;
+    pointer-events:none;
+}
+
+@keyframes lionShine{
+    50%{left:100%;}
 }
 
 .lion-box img{
-
+    display:block;
     width:100%;
-
-    border:2px solid var(--gold);
-
-    border-radius:25px;
-
-    box-shadow:0 0 30px #e8c66e44;
-
-    transition:.5s;
-
+    border-radius:20px;
+    transition:.6s;
 }
 
 .lion-box img:hover{
-
-    transform:scale(1.02);
-
-    box-shadow:0 0 45px #e8c66e88;
-
+    transform:scale(1.04);
 }
 
 /* PROFILE */
 
 .password-info{
-
     text-align:center;
-
-    padding:25px;
+    padding:30px;
 
     border:1px solid var(--gold);
+    border-radius:20px;
 
-    border-radius:15px;
+    background:linear-gradient(135deg,#e8c66e0c,#ffffff05);
 
+    box-shadow:0 0 30px #e8c66e12;
 }
 
 .password-info h3{
-
     color:var(--gold);
-
     font-family:'Cinzel',serif;
-
     margin-bottom:15px;
-
 }
 
 .id-number{
-
-    font-size:25px;
-
+    font-size:clamp(21px,6vw,30px);
     font-weight:700;
-
     color:var(--light);
-
     letter-spacing:2px;
-
     margin-top:15px;
-
+    text-shadow:0 0 20px #e8c66e66;
 }
 
 /* SOCIAL */
 
 .socials{
-
     display:flex;
-
     justify-content:center;
     flex-wrap:wrap;
-    gap:15px;
-
+    gap:18px;
 }
 
 .socials a{
-
-    min-width:140px;
-
-    padding:14px 20px;
+    min-width:150px;
+    padding:15px 25px;
 
     border:1px solid var(--gold);
-
-    border-radius:30px;
+    border-radius:40px;
 
     text-align:center;
-
     color:var(--light);
-
     text-decoration:none;
 
     transition:.4s;
-
 }
 
 .socials a:hover{
-
-    background:var(--gold);
+    background:linear-gradient(120deg,#a77b28,#fff0bd);
     color:black;
-
-    box-shadow:0 0 20px gold;
-
+    box-shadow:0 0 30px #e8c66e77;
+    transform:translateY(-5px);
 }
 
-/* SCROLL REVEAL */
+/* REVEAL */
 
 .reveal{
-
     opacity:0;
-
-    transform:translateY(35px);
-
-    transition:opacity 1s ease, transform 1s ease;
-
+    transform:translateY(45px);
+    transition:opacity 1s ease,transform 1s ease;
 }
 
 .reveal.active{
-
     opacity:1;
-
     transform:translateY(0);
-
 }
 
 /* FOOTER */
 
 footer{
-
-    padding:35px 15px;
-
+    padding:40px 15px;
     text-align:center;
-
     border-top:1px solid #e8c66e44;
-
     color:#888;
-
     font-size:11px;
-
+    background:#ffffff04;
 }
 
 footer span{
     color:var(--gold);
+}
+
+/* BACK TO TOP */
+
+#topBtn{
+    position:fixed;
+    bottom:25px;
+    right:20px;
+    width:45px;
+    height:45px;
+
+    border:1px solid var(--gold);
+    border-radius:50%;
+
+    background:#090909dd;
+    color:var(--gold);
+    font-size:20px;
+
+    cursor:pointer;
+    z-index:99;
+
+    opacity:0;
+    pointer-events:none;
+    transition:.4s;
+}
+
+#topBtn.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+#topBtn:hover{
+    background:var(--gold);
+    color:black;
+    box-shadow:0 0 20px gold;
 }
 
 /* MOBILE */
@@ -838,19 +800,39 @@ footer span{
 @media(max-width:600px){
 
     .logo{
-        font-size:15px;
+        font-size:14px;
         letter-spacing:2px;
     }
 
-    .section-title{
-        font-size:23px;
+    .welcome{
+        font-size:17px;
+        letter-spacing:6px;
+    }
+
+    section{
+        padding:65px 16px;
     }
 
     .stat{
         width:100%;
-        max-width:300px;
+        max-width:310px;
     }
 
+    .card{
+        padding:24px;
+    }
+
+}
+
+/* REDUCED MOTION */
+
+@media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        scroll-behavior:auto!important;
+        transition-duration:.01ms!important;
+    }
 }
 
 </style>
@@ -859,6 +841,8 @@ footer span{
 <body>
 
 <div class="background"></div>
+<div class="ambient-light one"></div>
+<div class="ambient-light two"></div>
 <div class="bottom-light"></div>
 
 <canvas id="particles"></canvas>
@@ -869,7 +853,7 @@ footer span{
     </div>
 </header>
 
-<!-- PASSWORD LOCK -->
+<!-- PASSWORD -->
 
 <div id="lockScreen">
 
@@ -889,30 +873,31 @@ footer span{
             type="password"
             id="password"
             placeholder="ENTER YOUR PASSWORD"
+            autocomplete="current-password"
         >
 
         <button onclick="unlockWebsite()">
             UNLOCK MY WORLD
         </button>
 
-        <div id="error"></div>
+        <div id="error" aria-live="polite"></div>
 
     </div>
 
 </div>
 
-<!-- COMPLETE WEBSITE LOCKED -->
+<!-- WEBSITE -->
 
 <div id="website">
 
-<!-- HOME -->
+<!-- HERO -->
 
 <div class="hero">
 
 <div class="hero-content">
 
     <div class="top-label">
-        PERSONAL OFFICIAL WEBSITE
+        ✦ PERSONAL OFFICIAL WEBSITE ✦
     </div>
 
     <h1 class="name">
@@ -920,9 +905,7 @@ footer span{
         <span>AHMAD</span>
     </h1>
 
-    <div class="welcome">
-        WELCOME
-    </div>
+    <div class="welcome">WELCOME</div>
 
     <div class="line"></div>
 
@@ -963,7 +946,6 @@ footer span{
 <section id="about" class="reveal">
 
 <h2 class="section-title">ABOUT ME</h2>
-
 <p class="subtitle">GET TO KNOW ME</p>
 
 <div class="container">
@@ -973,7 +955,6 @@ footer span{
 <h3>WHO IS SHAHZAD?</h3>
 
 <p>
-
 My name is <strong>Shahzad Ahmad</strong>.
 
 I am interested in technology, creativity and digital development.
@@ -981,7 +962,6 @@ I am interested in technology, creativity and digital development.
 I believe in respect, kindness and staying true to myself.
 
 My goal is to keep learning and create my own identity.
-
 </p>
 
 </div>
@@ -991,19 +971,16 @@ My goal is to keep learning and create my own identity.
 <h3>MY PERSONALITY</h3>
 
 <p>
-
 Simple living, positive thinking and respect for everyone.
 
 I may not be perfect, but I always try to keep my intentions clean.
 
 Character matters more than words.
-
 </p>
 
 </div>
 
 </div>
-
 </section>
 
 <!-- INTERESTS -->
@@ -1011,45 +988,31 @@ Character matters more than words.
 <section class="reveal">
 
 <h2 class="section-title">MY INTERESTS</h2>
-
 <p class="subtitle">THINGS I LOVE</p>
 
 <div class="stats">
 
 <div class="stat">
-
 <div class="number-circle">01</div>
-
 <p>ARTIFICIAL INTELLIGENCE</p>
-
 </div>
 
 <div class="stat">
-
 <div class="number-circle">02</div>
-
 <p>EDITING</p>
-
 </div>
 
 <div class="stat">
-
 <div class="number-circle">03</div>
-
 <p>STORYTELLING</p>
-
 </div>
 
 <div class="stat">
-
 <div class="number-circle">04</div>
-
 <p>FREE FIRE</p>
-
 </div>
 
 </div>
-
 </section>
 
 <!-- LION -->
@@ -1057,28 +1020,25 @@ Character matters more than words.
 <section class="reveal">
 
 <h2 class="section-title">MY ROYAL WORLD</h2>
-
-<p class="subtitle">
-SILENT POWER • ROYAL ATTITUDE
-</p>
+<p class="subtitle">SILENT POWER • ROYAL ATTITUDE</p>
 
 <div class="lion-box">
 
 <img
 src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1000&q=90"
-alt="Lion"
+alt="Royal lion"
+loading="lazy"
 >
 
 </div>
 
 </section>
 
-<!-- PRIVATE DETAILS -->
+<!-- PROFILE -->
 
 <section class="reveal">
 
 <h2 class="section-title">MY PROFILE</h2>
-
 <p class="subtitle">PERSONAL DETAILS</p>
 
 <div class="container">
@@ -1088,12 +1048,10 @@ alt="Lion"
 <h3>ABOUT MYSELF</h3>
 
 <p>
-
 AI enthusiast with a creative streak.
 Passionate about exploring new tech,
 editing, and storytelling—always learning,
 building, and trying something new.
-
 </p>
 
 </div>
@@ -1113,7 +1071,6 @@ SHAHZAD AHMAD • OFFICIAL 007
 </div>
 
 </div>
-
 </section>
 
 <!-- SOCIAL -->
@@ -1121,28 +1078,24 @@ SHAHZAD AHMAD • OFFICIAL 007
 <section class="reveal">
 
 <h2 class="section-title">CONNECT WITH ME</h2>
-
 <p class="subtitle">MY SOCIAL MEDIA WORLD</p>
 
 <div class="socials">
 
-<a href="https://www.tiktok.com/@rana.editor33" target="_blank">
-TIKTOK
+<a href="https://www.tiktok.com/@rana.editor33" target="_blank" rel="noopener noreferrer">
+TIKTOK ↗
 </a>
 
-<a href="https://www.youtube.com/@BabyBubuToons" target="_blank">
-YOUTUBE
+<a href="https://www.youtube.com/@BabyBubuToons" target="_blank" rel="noopener noreferrer">
+YOUTUBE ↗
 </a>
 
 </div>
-
 </section>
 
 <footer>
 
-<p>
-© 2026 <span>SHAHZAD AHMAD 007</span>
-</p>
+<p>© 2026 <span>SHAHZAD AHMAD 007</span></p>
 
 <p style="margin-top:8px;">
 Dream Big • Stay Humble • Keep Growing
@@ -1152,25 +1105,31 @@ Dream Big • Stay Humble • Keep Growing
 
 </div>
 
+<button id="topBtn" aria-label="Back to top">↑</button>
+
 <script>
 
 /* PASSWORD */
 
 function unlockWebsite(){
 
-    const password="Shahzad445";
+    const correctPassword = "Shahzad445";
 
-    const entered=
+    const entered =
     document.getElementById("password").value;
 
-    if(entered===password){
+    const error =
+    document.getElementById("error");
+
+    if(entered === correctPassword){
 
         document.getElementById("lockScreen").style.display="none";
 
-        document.getElementById("website").style.display="block";
+        const website =
+        document.getElementById("website");
 
-        document.getElementById("website").style.animation=
-        "appear 1.5s ease";
+        website.style.display="block";
+        website.style.animation="entrance 1.5s ease";
 
         window.scrollTo(0,0);
 
@@ -1180,8 +1139,9 @@ function unlockWebsite(){
 
     else{
 
-        document.getElementById("error").innerText=
-        "Incorrect Password! Try Again.";
+        error.innerText="Incorrect Password! Try Again.";
+
+        document.getElementById("password").value="";
 
     }
 
@@ -1200,85 +1160,77 @@ document.getElementById("password")
 
 function updateClock(){
 
-    const now=new Date();
+    const now = new Date();
 
-    document.getElementById("clock").innerText=
-
+    document.getElementById("clock").innerText =
     new Intl.DateTimeFormat("en-PK",{
-
         timeZone:"Asia/Karachi",
         hour:"2-digit",
         minute:"2-digit",
         second:"2-digit",
         hour12:true
-
     }).format(now);
 
-    document.getElementById("date").innerText=
-
+    document.getElementById("date").innerText =
     new Intl.DateTimeFormat("en-PK",{
-
         timeZone:"Asia/Karachi",
         weekday:"long",
         day:"numeric",
         month:"long",
         year:"numeric"
-
     }).format(now);
 
 }
 
 updateClock();
-
 setInterval(updateClock,1000);
 
 /* GOLDEN PARTICLES */
 
-const canvas=document.getElementById("particles");
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
 
-const ctx=canvas.getContext("2d");
-
-let particles=[];
+let particles = [];
 
 function resizeCanvas(){
 
-    canvas.width=window.innerWidth;
+    const ratio = Math.min(window.devicePixelRatio || 1,2);
 
-    canvas.height=window.innerHeight;
+    canvas.width = window.innerWidth * ratio;
+    canvas.height = window.innerHeight * ratio;
+
+    canvas.style.width = window.innerWidth+"px";
+    canvas.style.height = window.innerHeight+"px";
+
+    ctx.setTransform(ratio,0,0,ratio,0,0);
 
 }
 
 window.addEventListener("resize",resizeCanvas);
-
 resizeCanvas();
 
 class Particle{
 
     constructor(){
         this.reset();
-        this.y=Math.random()*canvas.height;
+        this.y=Math.random()*window.innerHeight;
     }
 
     reset(){
 
-        this.x=Math.random()*canvas.width;
+        this.x=Math.random()*window.innerWidth;
+        this.y=window.innerHeight+20;
 
-        this.y=canvas.height+20;
-
-        this.size=Math.random()*2+0.4;
-
-        this.speedY=Math.random()*.65+.2;
-
-        this.speedX=(Math.random()-.5)*.35;
-
-        this.opacity=Math.random()*.5+.15;
+        this.size=Math.random()*1.8+.4;
+        this.speedY=Math.random()*.5+.15;
+        this.speedX=(Math.random()-.5)*.3;
+        this.opacity=Math.random()*.45+.1;
 
     }
 
     update(){
 
         this.y-=this.speedY;
-
         this.x+=this.speedX;
 
         if(this.y<-10){
@@ -1291,11 +1243,9 @@ class Particle{
 
         ctx.beginPath();
 
-        ctx.fillStyle=
-        `rgba(232,198,110,${this.opacity})`;
+        ctx.fillStyle=`rgba(232,198,110,${this.opacity})`;
 
-        ctx.shadowBlur=15;
-
+        ctx.shadowBlur=10;
         ctx.shadowColor="#e8c66e";
 
         ctx.arc(
@@ -1317,73 +1267,102 @@ function createParticles(){
     particles=[];
 
     const total=Math.min(
-        75,
+        65,
         Math.floor(window.innerWidth/7)
     );
 
     for(let i=0;i<total;i++){
-
         particles.push(new Particle());
-
     }
 
 }
+
+createParticles();
+
+let animationFrame;
 
 function animateParticles(){
 
     ctx.clearRect(
         0,
         0,
-        canvas.width,
-        canvas.height
+        window.innerWidth,
+        window.innerHeight
     );
 
     particles.forEach(p=>{
-
         p.update();
-
         p.draw();
-
     });
 
-    requestAnimationFrame(animateParticles);
+    animationFrame=requestAnimationFrame(animateParticles);
 
 }
 
-createParticles();
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    animateParticles();
+}
 
-animateParticles();
-
-/* SCROLL ANIMATION */
+/* SCROLL REVEAL */
 
 function revealElements(){
 
-    const observer=new IntersectionObserver(
+    const elements=document.querySelectorAll(".reveal");
 
-        entries=>{
+    if(!("IntersectionObserver" in window)){
+        elements.forEach(el=>el.classList.add("active"));
+        return;
+    }
 
-            entries.forEach(entry=>{
+    const observer=new IntersectionObserver(entries=>{
 
-                if(entry.isIntersecting){
+        entries.forEach(entry=>{
 
-                    entry.target.classList.add("active");
+            if(entry.isIntersecting){
 
-                }
+                entry.target.classList.add("active");
 
-            });
+                observer.unobserve(entry.target);
 
-        },
+            }
 
-        {
-            threshold:.12
-        }
+        });
 
-    );
+    },{threshold:.10});
+
+    elements.forEach(el=>observer.observe(el));
+
+}
+
+/* BACK TO TOP */
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>400){
+        topBtn.classList.add("show");
+    }else{
+        topBtn.classList.remove("show");
+    }
+
+},{passive:true});
+
+topBtn.addEventListener("click",()=>{
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
+
+/* REDUCED MOTION SUPPORT */
+
+if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
 
     document.querySelectorAll(".reveal").forEach(el=>{
-
-        observer.observe(el);
-
+        el.classList.add("active");
     });
 
 }
