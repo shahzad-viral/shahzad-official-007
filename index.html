@@ -1,61 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
 
-<title>SHAHZAD AHMAD | OFFICIAL 007</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+<title>SHAHZAD OFFICIAL 007</title>
 
 <style>
-
-/* =========================
-   ROYAL COLOR SYSTEM
-========================= */
-
-:root{
---gold:#e8c66e;
---gold2:#a77b28;
---white:#fff5d6;
---black:#050505;
---muted:#999;
-}
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Georgia,serif;
 }
 
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-background:var(--black);
+background:#050505;
 color:white;
-font-family:'Poppins',sans-serif;
 overflow-x:hidden;
-font-size:14px;
-line-height:1.9;
-}
-
-/* =========================
-   BACKGROUND
-========================= */
-
-.background{
-position:fixed;
-inset:0;
-z-index:-10;
-
-background:
-radial-gradient(ellipse at 50% 100%,#8c651b30,transparent 60%),
-radial-gradient(ellipse at 0% 0%,#e8c66e12,transparent 40%),
-#050505;
 }
 
 #particles{
@@ -63,1875 +28,491 @@ position:fixed;
 inset:0;
 width:100%;
 height:100%;
-z-index:-5;
+z-index:-1;
 pointer-events:none;
 }
 
-/* =========================
-   ROTATING ROYAL RINGS
-========================= */
-
-.royal-ring{
-position:fixed;
-width:350px;
-height:350px;
-border:1px solid #e8c66e35;
-border-radius:50%;
-pointer-events:none;
-z-index:-3;
-animation:rotateRing 20s linear infinite;
-}
-
-.royal-ring::before,
-.royal-ring::after{
+body:before{
 content:"";
-position:absolute;
-inset:20px;
-border:1px dashed #e8c66e35;
-border-radius:50%;
-}
-
-.royal-ring::after{
-inset:45px;
-border:1px solid #e8c66e20;
-}
-
-.ring-left{
-top:20%;
-left:-230px;
-box-shadow:0 0 35px #e8c66e15;
-}
-
-.ring-right{
-bottom:10%;
-right:-230px;
-width:450px;
-height:450px;
-animation-direction:reverse;
-}
-
-@keyframes rotateRing{
-to{transform:rotate(360deg);}
-}
-
-/* =========================
-   GOLDEN LIGHT
-========================= */
-
-.glow{
 position:fixed;
-width:350px;
-height:350px;
-border-radius:50%;
-background:#e8c66e20;
-filter:blur(100px);
-z-index:-4;
-pointer-events:none;
-animation:glowMove 12s infinite alternate;
-}
-
-.glow.one{
-top:-150px;
-left:-150px;
-}
-
-.glow.two{
-bottom:-150px;
-right:-150px;
-animation-delay:3s;
-}
-
-@keyframes glowMove{
-to{transform:translate(120px,100px);}
-}
-
-.bottom-light{
-position:fixed;
-bottom:-300px;
-left:50%;
-transform:translateX(-50%);
-width:130%;
-height:500px;
-background:radial-gradient(ellipse,#e8c66e66,transparent 70%);
-filter:blur(55px);
+inset:0;
+background:
+radial-gradient(circle at 50% 15%,#9b741b20,transparent 40%),
+radial-gradient(circle at 10% 80%,#b68a2b12,transparent 35%),
+radial-gradient(circle at 90% 70%,#d7ad5010,transparent 35%);
 z-index:-2;
-animation:bottomGlow 5s infinite alternate;
-pointer-events:none;
 }
-
-@keyframes bottomGlow{
-from{
-opacity:.3;
-transform:translateX(-50%) scale(.8);
-}
-to{
-opacity:1;
-transform:translateX(-50%) scale(1.2);
-}
-}
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-
-.name-logo{
-font-family:'Cinzel',serif;
-font-size:clamp(36px,8vw,76px);
-font-weight:900;
-letter-spacing:clamp(2px,1vw,7px);
-line-height:1.4;
-
-background:linear-gradient(
-90deg,
-#987026,
-#fff5c8,
-#d5a83e,
-#ffffff,
-#a77b28,
-#fff0b0
-);
-
-background-size:400%;
--webkit-background-clip:text;
-background-clip:text;
-color:transparent;
-
-animation:goldFlow 7s linear infinite;
-}
-
-@keyframes goldFlow{
-0%{background-position:0%;}
-100%{background-position:400%;}
-}
-
-.poetry{
-font-family:'Noto Nastaliq Urdu',serif;
-font-size:clamp(19px,4vw,25px);
-line-height:2.9;
-color:var(--white);
-text-shadow:0 0 20px #e8c66e55;
-margin:25px auto;
-}
-
-.section-title{
-font-family:'Cinzel',serif;
-font-size:clamp(25px,5vw,39px);
-font-weight:800;
-letter-spacing:3px;
-text-align:center;
-color:var(--white);
-text-shadow:0 0 20px #e8c66e35;
-}
-
-.subtitle{
-text-align:center;
-font-size:10px;
-letter-spacing:4px;
-color:#888;
-margin-bottom:45px;
-}
-
-/* =========================
-   HEADER
-========================= */
 
 header{
 position:sticky;
 top:0;
-z-index:100;
-padding:18px 10px;
+z-index:20;
+padding:22px 15px;
 text-align:center;
-background:#050505dd;
-backdrop-filter:blur(20px);
-border-bottom:1px solid #e8c66e55;
+background:#080808eF;
+backdrop-filter:blur(15px);
+border-bottom:1px solid #a78338;
 }
 
 .logo{
-font-family:'Cinzel',serif;
-font-size:clamp(13px,3vw,20px);
-font-weight:800;
-letter-spacing:3px;
-color:var(--gold);
+font-size:23px;
+font-weight:bold;
+letter-spacing:4px;
+background:linear-gradient(
+90deg,#8c6820,#fff1a8,#d3a43e,#fff7c9,#8c6820
+);
+background-size:300%;
+-webkit-background-clip:text;
+color:transparent;
+animation:gold 5s linear infinite;
 }
 
-/* =========================
-   LOGIN SCREEN
-========================= */
+@keyframes gold{
+to{background-position:300%}
+}
 
-#lockScreen{
-min-height:90vh;
+nav{
 display:flex;
-align-items:center;
 justify-content:center;
-padding:25px;
-}
-
-.login{
-position:relative;
-width:100%;
-max-width:440px;
-padding:38px 25px;
-text-align:center;
-isolation:isolate;
-
-border:1px solid #e8c66e66;
-border-radius:25px;
-
-background:linear-gradient(
-145deg,
-#ffffff10,
-#e8c66e08,
-#ffffff02
-);
-
-backdrop-filter:blur(20px);
-
-box-shadow:
-0 0 40px #e8c66e20,
-inset 0 0 30px #e8c66e08;
-
-animation:entrance 1.5s ease;
-}
-
-.login::before{
-content:"";
-position:absolute;
-inset:-3px;
-border-radius:27px;
-padding:2px;
-
-background:conic-gradient(
-transparent,
-#e8c66e,
-#fff5d6,
-transparent,
-#a77b28,
-transparent
-);
-
--webkit-mask:
-linear-gradient(#fff 0 0) content-box,
-linear-gradient(#fff 0 0);
-
--webkit-mask-composite:xor;
-mask-composite:exclude;
-
-animation:rotateRing 6s linear infinite;
-z-index:-1;
-}
-
-@keyframes entrance{
-from{
-opacity:0;
-transform:translateY(40px) scale(.95);
-}
-to{
-opacity:1;
-transform:translateY(0) scale(1);
-}
-}
-
-.login .name-logo{
-font-size:clamp(30px,8vw,44px);
-letter-spacing:2px;
-}
-
-.login .poetry{
-font-size:19px;
-}
-
-.line{
-width:100px;
-height:2px;
-background:linear-gradient(90deg,transparent,gold,transparent);
-margin:20px auto;
-box-shadow:0 0 15px gold;
-animation:lineMove 3s infinite alternate;
-}
-
-@keyframes lineMove{
-to{width:190px;}
-}
-
-.login h2{
-font-family:'Cinzel',serif;
-color:var(--gold);
-letter-spacing:3px;
-font-size:22px;
-margin:20px 0;
-}
-
-.login p{
-font-size:11px;
-color:#999;
-line-height:2;
-}
-
-.login input{
-width:100%;
-padding:16px;
-margin-top:25px;
-border:1px solid #9b782f;
-border-radius:12px;
-background:#080808;
-color:white;
-text-align:center;
-outline:none;
-font-size:14px;
-}
-
-.login input:focus{
-border-color:var(--gold);
-box-shadow:0 0 20px #e8c66e55;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.main-btn{
-display:block;
-width:100%;
+gap:24px;
+flex-wrap:wrap;
 margin-top:18px;
-padding:15px;
-border:0;
-border-radius:40px;
-
-background:linear-gradient(
-100deg,
-#a77b28,
-#fff1bc,
-#c99d40
-);
-
-background-size:200%;
-color:black;
-font-weight:800;
-letter-spacing:3px;
-cursor:pointer;
-transition:.4s;
 }
 
-.main-btn:hover{
-background-position:100%;
-transform:translateY(-4px);
-box-shadow:0 0 30px #e8c66e77;
-}
-
-#error{
-color:#ff7777;
-font-size:12px;
-margin-top:15px;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 32px;
-border:1px solid var(--gold);
-border-radius:40px;
-color:var(--white);
+nav a{
+color:#d3b978;
 text-decoration:none;
-font-size:11px;
-font-weight:700;
-letter-spacing:3px;
-transition:.4s;
+font-size:12px;
+letter-spacing:2px;
+transition:.3s;
 }
 
-.btn:hover{
-background:var(--gold);
-color:black;
-box-shadow:0 0 30px #e8c66e77;
-transform:translateY(-5px);
+nav a:hover{
+color:white;
+text-shadow:0 0 15px gold;
 }
-
-/* =========================
-   WEBSITE OPENING
-========================= */
-
-#website{
-display:none;
-}
-
-#website.open{
-display:block;
-animation:royalOpening 1.8s ease both;
-}
-
-@keyframes royalOpening{
-0%{
-opacity:0;
-transform:scale(.94);
-filter:blur(12px);
-}
-100%{
-opacity:1;
-transform:scale(1);
-filter:blur(0);
-}
-}
-
-/* =========================
-   HERO
-========================= */
 
 .hero{
 min-height:90vh;
 display:flex;
 align-items:center;
 justify-content:center;
+flex-direction:column;
 text-align:center;
-padding:70px 20px;
+padding:30px 20px;
 }
 
-.hero-content{
-max-width:850px;
-animation:entrance 1.5s ease;
+.small{
+color:#d4ae59;
+font-size:12px;
+letter-spacing:5px;
 }
 
-.label{
-font-size:10px;
-letter-spacing:6px;
-color:var(--gold);
-margin-bottom:25px;
+.line{
+width:110px;
+height:2px;
+background:linear-gradient(90deg,transparent,#e9c66b,transparent);
+margin:25px;
 }
 
-.welcome{
-font-family:'Cinzel',serif;
-font-size:clamp(17px,4vw,25px);
-letter-spacing:10px;
-color:#eee0b5;
-margin-top:25px;
-font-weight:700;
+.hero h1{
+font-size:clamp(48px,11vw,100px);
+letter-spacing:5px;
+font-weight:bold;
+background:linear-gradient(
+120deg,#805d17,#fff0a0,#c99b35,#fff8d4,#916a1f
+);
+background-size:300%;
+-webkit-background-clip:text;
+color:transparent;
+animation:gold 5s linear infinite;
+filter:drop-shadow(0 0 20px #d4af3760);
 }
 
-.description{
-color:#aaa;
-font-size:13px;
-line-height:2.5;
+.hero p{
+max-width:600px;
+color:#c6bdab;
+line-height:2;
 }
 
-.description strong{
-color:var(--gold);
-}
-
-/* =========================
-   CLOCK
-========================= */
-
-.clock-box{
-max-width:360px;
-margin:40px auto;
-padding:25px;
-border:1px solid #e8c66e66;
-border-radius:20px;
-background:#ffffff08;
-box-shadow:0 0 30px #e8c66e15;
-}
-
-.clock-label{
-color:var(--gold);
-font-size:10px;
-letter-spacing:3px;
-}
-
-#clock{
-font-size:35px;
-color:var(--white);
-margin:12px 0;
-font-weight:500;
-}
-
-#date{
-font-size:11px;
-color:#999;
-}
-
-.clock-switch{
-margin-top:18px;
-padding:10px 22px;
-border:1px solid var(--gold);
-border-radius:30px;
-background:transparent;
-color:var(--gold);
-cursor:pointer;
+.button{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+border:1px solid #c7a34e;
+color:#e9cb79;
+text-decoration:none;
 letter-spacing:2px;
-font-size:10px;
 transition:.4s;
 }
 
-.clock-switch:hover{
-background:var(--gold);
+.button:hover{
+background:#d0a943;
 color:black;
+box-shadow:0 0 30px #d0a94380;
 }
-
-/* =========================
-   SECTIONS
-========================= */
 
 section{
-padding:85px 18px;
+padding:80px 20px;
+text-align:center;
 }
 
-.container{
-max-width:780px;
-margin:auto;
+.heading{
+font-size:34px;
+letter-spacing:3px;
+margin-bottom:40px;
+color:#edcf7e;
 }
 
-/* =========================
-   CARDS
-========================= */
+.heading span{
+color:white;
+}
 
 .card{
-position:relative;
-overflow:hidden;
-padding:30px;
-margin:22px 0;
-border:1px solid #e8c66e44;
-border-radius:20px;
-
-background:linear-gradient(
-135deg,
-#ffffff0b,
-#e8c66e08,
-#ffffff02
-);
-
-backdrop-filter:blur(15px);
-transition:.5s;
-
-box-shadow:0 0 25px #e8c66e0b;
-}
-
-.card::after{
-content:"";
-position:absolute;
-top:0;
-left:-120%;
-width:80%;
-height:100%;
-background:linear-gradient(
-90deg,
-transparent,
-#ffffff18,
-transparent
-);
-transform:skewX(-25deg);
-transition:.9s;
-}
-
-.card:hover::after{
-left:140%;
+max-width:760px;
+margin:20px auto;
+padding:40px 25px;
+background:linear-gradient(145deg,#17140c,#080808);
+border:1px solid #8f6d2d;
+box-shadow:0 0 35px #c49b3510;
+transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-border-color:var(--gold);
-box-shadow:0 10px 40px #e8c66e22;
+transform:translateY(-6px);
+border-color:#ffe18a;
+box-shadow:0 0 35px #d4af3740;
 }
 
 .card h3{
-font-family:'Cinzel',serif;
-color:var(--gold);
-font-size:20px;
-font-weight:800;
+font-size:26px;
 margin-bottom:20px;
+color:#e9c46a;
 }
 
 .card p{
-font-size:13px;
-line-height:2.4;
-color:#aaa;
+color:#c1b8a7;
+line-height:2;
 }
 
-.card strong{
-color:var(--white);
+.skills{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-top:25px;
 }
-
-/* =========================
-   AI SKILLS
-========================= */
 
 .skill{
-margin:25px 0;
-}
-
-.skill-info{
-display:flex;
-justify-content:space-between;
+border:1px solid #a17b31;
+padding:12px 18px;
+color:#e8c46c;
 font-size:12px;
-color:var(--white);
-margin-bottom:10px;
 }
 
-.skill-info span:first-child{
-color:var(--gold);
+.friend{
+display:inline-block;
+min-width:200px;
+padding:30px 20px;
+margin:12px;
+background:linear-gradient(145deg,#201a0c,#090909);
+border:1px solid #b18a3d;
+box-shadow:0 0 20px #d4af3710;
+transition:.4s;
 }
 
-.skill-bar{
-height:7px;
-border-radius:20px;
-background:#ffffff15;
-overflow:hidden;
+.friend:hover{
+transform:scale(1.06);
+box-shadow:0 0 30px #d4af3760;
 }
 
-.skill-progress{
-height:100%;
-width:0;
-border-radius:20px;
-
+.animated-name{
+font-size:25px;
+font-weight:bold;
 background:linear-gradient(
-90deg,
-#a77b28,
-#fff1b5,
-#d4a544
+90deg,#8c6820,#fff2ad,#d4a438,#fff8d5,#8c6820
 );
-
-box-shadow:0 0 15px #e8c66e77;
-transition:width 2s ease;
+background-size:300%;
+-webkit-background-clip:text;
+color:transparent;
+animation:gold 4s linear infinite;
 }
 
-/* =========================
-   CLASS GROUP
-========================= */
-
-.group-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
+.friend p{
+font-size:13px;
+margin-top:12px;
 }
-
-.member{
-padding:30px 15px;
-text-align:center;
-border:1px solid #e8c66e55;
-border-radius:20px;
-background:linear-gradient(145deg,#ffffff0b,#e8c66e08);
-transition:.5s;
-}
-
-.member:hover{
-transform:translateY(-10px) scale(1.03);
-border-color:var(--gold);
-box-shadow:0 0 30px #e8c66e33;
-}
-
-.member-number{
-width:65px;
-height:65px;
-border:1px solid var(--gold);
-border-radius:50%;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-margin:0 auto 20px;
-
-font-family:'Cinzel',serif;
-font-size:22px;
-color:var(--gold);
-position:relative;
-}
-
-.member-number::after{
-content:"";
-position:absolute;
-inset:-6px;
-border:1px dashed #e8c66e66;
-border-radius:50%;
-animation:rotateRing 12s linear infinite;
-}
-
-.member h3{
-font-family:'Cinzel',serif;
-font-size:16px;
-color:var(--white);
-letter-spacing:2px;
-}
-
-.member p{
-color:#888;
-font-size:10px;
-margin-top:10px;
-letter-spacing:2px;
-}
-
-/* =========================
-   COLLEGE PROGRESS
-========================= */
-
-.progress-box{
-padding:30px;
-border:1px solid #e8c66e55;
-border-radius:22px;
-background:#ffffff07;
-}
-
-.progress-title{
-font-family:'Cinzel',serif;
-font-size:21px;
-color:var(--gold);
-text-align:center;
-margin-bottom:25px;
-}
-
-.progress-item{
-margin:25px 0;
-}
-
-.progress-item p{
-font-size:12px;
-color:#ddd;
-margin-bottom:12px;
-}
-
-.progress-line{
-height:6px;
-background:#ffffff17;
-border-radius:20px;
-overflow:hidden;
-}
-
-.progress-fill{
-height:100%;
-width:0;
-
-background:linear-gradient(
-90deg,
-#a77b28,
-#fff1bd,
-#d5a746
-);
-
-border-radius:20px;
-transition:width 2.5s ease;
-}
-
-/* =========================
-   FREE FIRE
-========================= */
-
-.ff-box{
-text-align:center;
-padding:35px 15px;
-border:1px solid var(--gold);
-border-radius:22px;
-background:linear-gradient(145deg,#e8c66e13,#ffffff04);
-box-shadow:0 0 30px #e8c66e12;
-}
-
-.ff-box h3{
-font-family:'Cinzel',serif;
-color:var(--gold);
-font-size:19px;
-}
-
-.ff-id{
-font-family:'Cinzel',serif;
-font-size:clamp(23px,6vw,34px);
-color:var(--white);
-font-weight:900;
-letter-spacing:3px;
-margin:22px 0;
-text-shadow:0 0 20px #e8c66e55;
-}
-
-/* =========================
-   SOCIAL
-========================= */
 
 .socials{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:18px;
-}
-
-.socials a{
-min-width:160px;
-padding:16px 25px;
-text-align:center;
-text-decoration:none;
-color:var(--white);
-border:1px solid var(--gold);
-border-radius:40px;
-font-size:11px;
-font-weight:700;
-letter-spacing:2px;
-transition:.4s;
-}
-
-.socials a:hover{
-background:linear-gradient(100deg,#a77b28,#fff0bd);
-color:black;
-transform:translateY(-6px);
-box-shadow:0 0 30px #e8c66e55;
-}
-
-.coming{
-text-align:center;
+gap:15px;
 margin-top:30px;
-padding:25px;
-border:1px dashed #e8c66e55;
-border-radius:20px;
-color:var(--gold);
-font-family:'Cinzel',serif;
-letter-spacing:4px;
-animation:pulse 3s infinite alternate;
 }
 
-@keyframes pulse{
-to{box-shadow:0 0 30px #e8c66e33;}
+.social{
+padding:15px 25px;
+border:1px solid #a78338;
+color:#e7c46b;
+text-decoration:none;
+transition:.3s;
+letter-spacing:1px;
 }
 
-/* =========================
-   LION
-========================= */
+.social:hover{
+background:#cba54d;
+color:black;
+box-shadow:0 0 20px #cba54d80;
+}
 
-.lion-box{
-max-width:750px;
+.quote{
+max-width:850px;
 margin:auto;
-position:relative;
-border:1px solid var(--gold);
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 0 40px #e8c66e33;
+padding:50px 25px;
+border-top:1px solid #ad8435;
+border-bottom:1px solid #ad8435;
+background:#ffffff05;
 }
 
-.lion-box img{
-display:block;
-width:100%;
-height:400px;
-object-fit:cover;
-filter:brightness(.75);
-transition:1s;
+.quote h2{
+font-size:clamp(24px,5vw,38px);
+line-height:1.7;
+color:#f2d991;
 }
 
-.lion-box:hover img{
-transform:scale(1.06);
-filter:brightness(1);
-}
-
-.lion-caption{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-padding:35px 15px;
-text-align:center;
-background:linear-gradient(transparent,#000000ed);
-font-family:'Cinzel',serif;
-color:var(--gold);
+.quote p{
+margin-top:25px;
+color:#b38b3a;
 letter-spacing:4px;
-font-size:16px;
 }
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-.reveal{
-opacity:0;
-transform:translateY(45px) scale(.97);
-filter:blur(7px);
-
-transition:
-opacity 1s ease,
-transform 1s ease,
-filter 1s ease;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0) scale(1);
-filter:blur(0);
-}
-
-/* =========================
-   FOOTER
-========================= */
 
 footer{
-padding:45px 15px;
+padding:40px 15px;
 text-align:center;
-border-top:1px solid #e8c66e44;
-background:#ffffff04;
+border-top:1px solid #92702f;
+color:#968b70;
+line-height:2.2;
+font-size:13px;
 }
-
-footer h3{
-font-family:'Cinzel',serif;
-color:var(--gold);
-letter-spacing:3px;
-font-size:19px;
-}
-
-footer p{
-font-size:10px;
-color:#777;
-margin-top:15px;
-letter-spacing:2px;
-}
-
-/* =========================
-   BACK TO TOP
-========================= */
-
-#topBtn{
-position:fixed;
-bottom:25px;
-right:20px;
-width:45px;
-height:45px;
-border:1px solid var(--gold);
-border-radius:50%;
-background:#080808;
-color:var(--gold);
-font-size:20px;
-cursor:pointer;
-opacity:0;
-pointer-events:none;
-transition:.4s;
-z-index:99;
-}
-
-#topBtn.show{
-opacity:1;
-pointer-events:auto;
-}
-
-#topBtn:hover{
-background:var(--gold);
-color:black;
-}
-
-/* =========================
-   MOBILE
-========================= */
 
 @media(max-width:600px){
-
-header{
-padding:16px 5px;
+.logo{font-size:17px;letter-spacing:2px}
+nav{gap:14px}
+nav a{font-size:10px}
+.heading{font-size:27px}
+.card{padding:30px 18px}
+.hero h1{letter-spacing:2px}
+.friend{min-width:150px}
 }
-
-.logo{
-font-size:12px;
-letter-spacing:2px;
-}
-
-.group-grid{
-grid-template-columns:1fr 1fr;
-gap:12px;
-}
-
-.member{
-padding:25px 8px;
-}
-
-.member h3{
-font-size:12px;
-}
-
-.welcome{
-font-size:16px;
-letter-spacing:6px;
-}
-
-section{
-padding:65px 15px;
-}
-
-.card{
-padding:23px;
-}
-
-.card p{
-font-size:12px;
-}
-
-.lion-box img{
-height:280px;
-}
-
-.royal-ring{
-width:250px;
-height:250px;
-}
-
-.ring-left{
-left:-190px;
-}
-
-.ring-right{
-right:-190px;
-}
-
-}
-
-/* =========================
-   REDUCED MOTION
-========================= */
-
-@media(prefers-reduced-motion:reduce){
-
-*,*::before,*::after{
-animation:none!important;
-transition:none!important;
-scroll-behavior:auto!important;
-}
-
-.reveal{
-opacity:1;
-transform:none;
-filter:none;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<div class="background"></div>
-
-<div class="glow one"></div>
-<div class="glow two"></div>
-
-<div class="royal-ring ring-left"></div>
-<div class="royal-ring ring-right"></div>
-
-<div class="bottom-light"></div>
-
 <canvas id="particles"></canvas>
 
 <header>
-<div class="logo">
-SHAHZAD AHMAD | OFFICIAL 007
-</div>
+<div class="logo">SHAHZAD OFFICIAL 007</div>
+
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#team">TEAM</a>
+<a href="#social">SOCIAL</a>
+<a href="#vision">VISION</a>
+</nav>
 </header>
 
-<!-- =========================
-     PASSWORD SCREEN
-========================= -->
+<div class="hero" id="home">
 
-<div id="lockScreen">
-
-<div class="login">
-
-<h1 class="name-logo">
-SHAHZAD<br>AHMAD
-</h1>
+<div class="small">THE OFFICIAL DIGITAL WORLD</div>
 
 <div class="line"></div>
 
-<div class="poetry">
-لاکھ کمی ہوں میرے اندر،<br>
-مگر اس دل نے کبھی کسی کا بُرا نہیں سوچا۔
-</div>
+<h1>SHAHZAD</h1>
 
 <div class="line"></div>
-
-<h2>PRIVATE WORLD</h2>
 
 <p>
-WELCOME TO MY PERSONAL DIGITAL KINGDOM<br>
-ENTER PASSWORD TO EXPLORE
+Welcome to my personal digital world.
+A place of ambition, creativity, technology
+and extraordinary ideas.
 </p>
 
-<input
-type="password"
-id="password"
-placeholder="ENTER YOUR PASSWORD"
-autocomplete="current-password"
->
-
-<button class="main-btn" onclick="unlockWebsite()">
-UNLOCK MY WORLD
-</button>
-
-<div id="error"></div>
+<a href="#about" class="button">DISCOVER MY WORLD</a>
 
 </div>
 
-</div>
+<section id="about">
 
-<!-- =========================
-     MAIN WEBSITE
-========================= -->
-
-<div id="website">
-
-<!-- HERO -->
-
-<div class="hero">
-
-<div class="hero-content">
-
-<div class="label">
-PERSONAL OFFICIAL WEBSITE
-</div>
-
-<h1 class="name-logo">
-SHAHZAD AHMAD
-</h1>
-
-<div class="welcome">
-WELCOME
-</div>
-
-<div class="line"></div>
-
-<div class="poetry">
-لاکھ کمی ہوں میرے اندر،<br>
-مگر اس دل نے کبھی کسی کا بُرا نہیں سوچا۔
-</div>
-
-<div class="line"></div>
-
-<p class="description">
-WELCOME TO MY DIGITAL WORLD<br>
-<strong>DREAM BIG • THINK DIFFERENT • STAY LEGENDARY</strong>
-</p>
-
-<a href="#about" class="btn">
-EXPLORE MY WORLD
-</a>
-
-<!-- CLOCK -->
-
-<div class="clock-box">
-
-<div class="clock-label" id="clockLabel">
-PAKISTAN STANDARD TIME
-</div>
-
-<div id="clock">
-00:00:00
-</div>
-
-<div id="date">
-Loading...
-</div>
-
-<button class="clock-switch" onclick="switchTime()">
-SWITCH TO UK TIME
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ABOUT -->
-
-<section id="about" class="reveal">
-
-<h2 class="section-title">
-ABOUT ME
-</h2>
-
-<p class="subtitle">
-MY INTRODUCTION
-</p>
-
-<div class="container">
+<h2 class="heading">ABOUT <span>ME</span></h2>
 
 <div class="card">
 
-<h3>WHO IS SHAHZAD AHMAD?</h3>
+<h3>SHAHZAD — AI ENTHUSIAST</h3>
 
 <p>
+I am Shahzad, a passionate technology lover
+with a deep interest in Artificial Intelligence.
 
-My name is <strong>SHAHZAD AHMAD</strong>.
+I enjoy exploring modern AI tools, discovering
+new technologies, creating digital projects
+and learning new skills.
 
-I am a creative and technology-loving student
-with a passion for Artificial Intelligence,
-web development and digital creativity.
+My vision is to transform creative ideas
+into meaningful digital experiences.
 
-I love learning new things, exploring technology
-and turning creative ideas into reality.
-
-My personality is simple, my dreams are big
-and my goal is to build something extraordinary.
-
-<strong>
-Respect everyone. Stay humble. Keep growing.
-</strong>
-
+I believe that the future belongs to people
+who never stop learning, thinking and creating.
 </p>
 
+<div class="skills">
+<div class="skill">ARTIFICIAL INTELLIGENCE</div>
+<div class="skill">WEB DEVELOPMENT</div>
+<div class="skill">TECHNOLOGY</div>
+<div class="skill">DIGITAL CREATIVITY</div>
 </div>
 
 </div>
-
 </section>
 
-<!-- AI SKILLS -->
+<section id="team">
 
-<section class="reveal">
-
-<h2 class="section-title">
-MY AI SKILLS
-</h2>
-
-<p class="subtitle">
-FUTURE IS ARTIFICIAL INTELLIGENCE
-</p>
-
-<div class="container">
+<h2 class="heading">MY <span>TEAM</span></h2>
 
 <div class="card">
 
-<h3>TECHNOLOGY & CREATIVITY</h3>
-
-<p>
-Artificial Intelligence is one of my biggest interests.
-I love exploring AI tools and discovering how
-technology can make creative ideas possible.
-</p>
-
-<div class="skill">
-
-<div class="skill-info">
-<span>AI EXPLORATION</span>
-<span>LEARNING</span>
+<div class="friend">
+<div class="animated-name">SHAHZAD</div>
+<p>OWNER & FOUNDER</p>
 </div>
 
-<div class="skill-bar">
-<div class="skill-progress" data-width="85%"></div>
+<div class="friend">
+<div class="animated-name">RASHID</div>
+<p>MY FRIEND</p>
 </div>
 
 </div>
-
-<div class="skill">
-
-<div class="skill-info">
-<span>WEB DESIGN</span>
-<span>DEVELOPMENT</span>
-</div>
-
-<div class="skill-bar">
-<div class="skill-progress" data-width="75%"></div>
-</div>
-
-</div>
-
-<div class="skill">
-
-<div class="skill-info">
-<span>CREATIVE EDITING</span>
-<span>CREATIVITY</span>
-</div>
-
-<div class="skill-bar">
-<div class="skill-progress" data-width="80%"></div>
-</div>
-
-</div>
-
-<div class="skill">
-
-<div class="skill-info">
-<span>TECHNOLOGY</span>
-<span>EXPLORATION</span>
-</div>
-
-<div class="skill-bar">
-<div class="skill-progress" data-width="90%"></div>
-</div>
-
-</div>
-
-<p style="margin-top:20px;">
-These are visual interest indicators, not formal test scores.
-</p>
-
-</div>
-
-</div>
-
 </section>
 
-<!-- CLASS GROUP -->
+<section id="social">
 
-<section class="reveal">
+<h2 class="heading">MY <span>TIKTOK</span></h2>
 
-<h2 class="section-title">
-CB_ICS CLASS GROUP
-</h2>
+<div class="card">
 
-<p class="subtitle">
-FOUR BOYS • ONE CLASS • ONE JOURNEY
-</p>
-
-<div class="container">
-
-<div class="group-grid">
-
-<div class="member">
-
-<div class="member-number">01</div>
-
-<h3>SHAHZAD</h3>
-
-<p>THE CREATIVE MIND</p>
-
-</div>
-
-<div class="member">
-
-<div class="member-number">02</div>
-
-<h3>RASHID</h3>
-
-<p>CLASS MEMBER</p>
-
-</div>
-
-<div class="member">
-
-<div class="member-number">03</div>
-
-<h3>AHAD</h3>
-
-<p>CLASS MEMBER</p>
-
-</div>
-
-<div class="member">
-
-<div class="member-number">04</div>
-
-<h3>HAMAD</h3>
-
-<p>CLASS MEMBER</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- COLLEGE -->
-
-<section class="reveal">
-
-<h2 class="section-title">
-COLLEGE JOURNEY
-</h2>
-
-<p class="subtitle">
-CB_ICS • SOFTWARE • FUTURE
-</p>
-
-<div class="container">
-
-<div class="progress-box">
-
-<div class="progress-title">
-MY COLLEGE SOFTWARE PROGRESS
-</div>
-
-<div class="progress-item">
-
-<p>COMPUTER SCIENCE</p>
-
-<div class="progress-line">
-<div class="progress-fill" data-width="80%"></div>
-</div>
-
-</div>
-
-<div class="progress-item">
-
-<p>PROGRAMMING & LOGIC</p>
-
-<div class="progress-line">
-<div class="progress-fill" data-width="65%"></div>
-</div>
-
-</div>
-
-<div class="progress-item">
-
-<p>SOFTWARE DEVELOPMENT</p>
-
-<div class="progress-line">
-<div class="progress-fill" data-width="55%"></div>
-</div>
-
-</div>
-
-<div class="progress-item">
-
-<p>FUTURE TECHNOLOGY</p>
-
-<div class="progress-line">
-<div class="progress-fill" data-width="90%"></div>
-</div>
-
-</div>
-
-<p style="font-size:11px;color:#888;text-align:center;margin-top:25px;">
-LEARNING NEVER ENDS • EVERY DAY IS A NEW CHAPTER
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FREE FIRE -->
-
-<section class="reveal">
-
-<h2 class="section-title">
-FREE FIRE WORLD
-</h2>
-
-<p class="subtitle">
-GAMING IDENTITY
-</p>
-
-<div class="container">
-
-<div class="ff-box">
-
-<h3>SHAHZAD AHMAD</h3>
-
-<div class="ff-id">
-13960506580
-</div>
-
-<p style="color:#999;font-size:11px;letter-spacing:3px;">
-OFFICIAL PLAYER ID
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SOCIAL -->
-
-<section class="reveal">
-
-<h2 class="section-title">
-CONNECT WITH ME
-</h2>
-
-<p class="subtitle">
-MY DIGITAL PRESENCE
-</p>
+<p>FOLLOW MY JOURNEY ON TIKTOK</p>
 
 <div class="socials">
 
-<a href="https://www.tiktok.com/@rana.editor33"
-target="_blank" rel="noopener noreferrer">
-TIKTOK
-</a>
-
-<a href="https://www.youtube.com/@BabyBubuToons"
-target="_blank" rel="noopener noreferrer">
-YOUTUBE
+<a class="social"
+href="https://www.tiktok.com/@rana.editor33"
+target="_blank"
+rel="noopener noreferrer">
+VISIT MY TIKTOK
 </a>
 
 </div>
 
-<div class="coming">
-MORE PLATFORMS<br><br>
-COMING SOON
 </div>
-
 </section>
 
-<!-- LION -->
+<section id="vision">
 
-<section class="reveal">
+<h2 class="heading">MY <span>VISION</span></h2>
 
-<h2 class="section-title">
-THE ROYAL KING
+<div class="quote">
+
+<h2>
+"Greatness is not about being known by everyone.
+It is about creating something that speaks for you."
 </h2>
 
-<p class="subtitle">
-SILENCE • STRENGTH • LEGACY
-</p>
+<p>SHAHZAD OFFICIAL 007</p>
 
-<div class="lion-box">
-
-<img
-src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=90"
-alt="Majestic lion"
-loading="lazy"
->
-
-<div class="lion-caption">
-BORN TO BE DIFFERENT
 </div>
+</section>
+
+<section>
+
+<div class="card">
+
+<h3>THE JOURNEY HAS JUST BEGUN</h3>
+
+<p>
+Never stop learning.
+Never stop improving.
+Never stop creating.
+
+Your dreams deserve your dedication.
+Your future deserves your hard work.
+Make every day a step towards greatness.
+</p>
 
 </div>
 
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 
-<h3>
-SHAHZAD AHMAD 007
-</h3>
+<h3 class="animated-name">SHAHZAD OFFICIAL 007</h3>
 
-<p>
-DREAM BIG • STAY HUMBLE • KEEP GROWING
-</p>
+<p>AI Enthusiast | Technology Lover | Digital Creator</p>
 
-<p>
-© 2026 ALL RIGHTS RESERVED
-</p>
+<p>Designed with Vision and Creativity</p>
+
+<p>Copyright © 2026 Shahzad Official. All Rights Reserved.</p>
 
 </footer>
 
-</div>
-
-<button id="topBtn">
-↑
-</button>
-
 <script>
-
-/* =========================
-   PASSWORD
-========================= */
-
-function unlockWebsite(){
-
-const correctPassword="Shahzad445";
-
-const entered=document.getElementById("password").value;
-
-const error=document.getElementById("error");
-
-if(entered===correctPassword){
-
-document.getElementById("lockScreen").style.display="none";
-
-const website=document.getElementById("website");
-
-website.classList.add("open");
-
-window.scrollTo(0,0);
-
-startReveal();
-
-}else{
-
-error.innerText="INCORRECT PASSWORD! TRY AGAIN.";
-
-document.getElementById("password").value="";
-
-}
-
-}
-
-document.getElementById("password").addEventListener("keydown",function(e){
-
-if(e.key==="Enter"){
-unlockWebsite();
-}
-
-});
-
-/* =========================
-   WORLD CLOCK
-========================= */
-
-let ukTime=false;
-
-function updateClock(){
-
-const zone=ukTime?"Europe/London":"Asia/Karachi";
-
-const label=ukTime?
-"UNITED KINGDOM TIME":
-"PAKISTAN STANDARD TIME";
-
-document.getElementById("clockLabel").innerText=label;
-
-document.getElementById("clock").innerText=
-
-new Intl.DateTimeFormat("en-GB",{
-
-timeZone:zone,
-hour:"2-digit",
-minute:"2-digit",
-second:"2-digit",
-hour12:true
-
-}).format(new Date());
-
-document.getElementById("date").innerText=
-
-new Intl.DateTimeFormat("en-GB",{
-
-timeZone:zone,
-weekday:"long",
-day:"numeric",
-month:"long",
-year:"numeric"
-
-}).format(new Date());
-
-}
-
-function switchTime(){
-
-ukTime=!ukTime;
-
-document.querySelector(".clock-switch").innerText=
-
-ukTime?
-"SWITCH TO PAKISTAN TIME":
-"SWITCH TO UK TIME";
-
-updateClock();
-
-}
-
-updateClock();
-
-setInterval(updateClock,1000);
-
-/* =========================
-   GOLDEN PARTICLES
-========================= */
-
 const canvas=document.getElementById("particles");
-
 const ctx=canvas.getContext("2d");
 
 let particles=[];
 
-let motionReduced=window.matchMedia(
-"(prefers-reduced-motion: reduce)"
-).matches;
-
 function resize(){
-
-const ratio=Math.min(window.devicePixelRatio||1,2);
-
-canvas.width=innerWidth*ratio;
-canvas.height=innerHeight*ratio;
-
-canvas.style.width=innerWidth+"px";
-canvas.style.height=innerHeight+"px";
-
-ctx.setTransform(ratio,0,0,ratio,0,0);
-
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 }
 
 window.addEventListener("resize",resize);
-
 resize();
 
-class Particle{
-
-constructor(){
-
-this.x=Math.random()*innerWidth;
-this.y=Math.random()*innerHeight;
-
-this.size=Math.random()*1.8+.4;
-
-this.speed=Math.random()*.5+.15;
-
-this.opacity=Math.random()*.5;
-
+for(let i=0;i<65;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+size:Math.random()*2+0.5,
+speed:Math.random()*0.5+0.15,
+opacity:Math.random()*0.7+0.2
+});
 }
-
-update(){
-
-this.y-=this.speed;
-
-this.x+=Math.sin(this.y*.01)*.25;
-
-if(this.y<0){
-
-this.y=innerHeight;
-
-this.x=Math.random()*innerWidth;
-
-}
-
-}
-
-draw(){
-
-ctx.beginPath();
-
-ctx.fillStyle=`rgba(232,198,110,${this.opacity})`;
-
-ctx.shadowBlur=12;
-
-ctx.shadowColor="#e8c66e";
-
-ctx.arc(
-this.x,
-this.y,
-this.size,
-0,
-Math.PI*2
-);
-
-ctx.fill();
-
-}
-
-}
-
-function createParticles(){
-
-particles=[];
-
-let total=Math.min(
-75,
-Math.floor(innerWidth/6)
-);
-
-for(let i=0;i<total;i++){
-
-particles.push(new Particle());
-
-}
-
-}
-
-createParticles();
 
 function animate(){
-
-ctx.clearRect(
-0,
-0,
-innerWidth,
-innerHeight
-);
+ctx.clearRect(0,0,canvas.width,canvas.height);
 
 particles.forEach(p=>{
+p.y-=p.speed;
 
-p.update();
-p.draw();
+if(p.y<0){
+p.y=canvas.height;
+p.x=Math.random()*canvas.width;
+}
 
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+ctx.fillStyle="rgba(224,183,83,"+p.opacity+")";
+ctx.shadowBlur=12;
+ctx.shadowColor="#d4af37";
+ctx.fill();
 });
-
-if(!motionReduced){
 
 requestAnimationFrame(animate);
-
 }
-
-}
-
-if(!motionReduced){
 
 animate();
-
-}
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-function startReveal(){
-
-const elements=document.querySelectorAll(".reveal");
-
-if(!("IntersectionObserver" in window)){
-
-elements.forEach(el=>el.classList.add("active"));
-
-return;
-
-}
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("active");
-
-entry.target.querySelectorAll("[data-width]").forEach(bar=>{
-
-bar.style.width=bar.dataset.width;
-
-});
-
-observer.unobserve(entry.target);
-
-}
-
-});
-
-},{threshold:.12});
-
-elements.forEach(el=>observer.observe(el));
-
-}
-
-/* =========================
-   BACK TO TOP
-========================= */
-
-const topBtn=document.getElementById("topBtn");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>400){
-
-topBtn.classList.add("show");
-
-}else{
-
-topBtn.classList.remove("show");
-
-}
-
-},{passive:true});
-
-topBtn.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-behavior:"smooth"
-
-});
-
-});
-
-/* =========================
-   REDUCED MOTION
-========================= */
-
-if(motionReduced){
-
-document.querySelectorAll(".reveal").forEach(el=>{
-
-el.classList.add("active");
-
-});
-
-}
-
 </script>
 
 </body>
