@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SHAHZAD AHMAD | 007</title>
+<title>SHAHZAD AHMAD | OFFICIAL 007</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
 
 <style>
 
+/* =========================
+   ROYAL COLOR SYSTEM
+========================= */
+
 :root{
 --gold:#e8c66e;
---white:#fff5d6;
---dark:#050505;
 --gold2:#a77b28;
+--white:#fff5d6;
+--black:#050505;
+--muted:#999;
 }
 
 *{
@@ -28,18 +35,23 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#050505;
+background:var(--black);
 color:white;
 font-family:'Poppins',sans-serif;
 overflow-x:hidden;
+font-size:14px;
+line-height:1.9;
 }
 
-/* BACKGROUND */
+/* =========================
+   BACKGROUND
+========================= */
 
 .background{
 position:fixed;
 inset:0;
 z-index:-10;
+
 background:
 radial-gradient(ellipse at 50% 100%,#8c651b30,transparent 60%),
 radial-gradient(ellipse at 0% 0%,#e8c66e12,transparent 40%),
@@ -55,6 +67,57 @@ z-index:-5;
 pointer-events:none;
 }
 
+/* =========================
+   ROTATING ROYAL RINGS
+========================= */
+
+.royal-ring{
+position:fixed;
+width:350px;
+height:350px;
+border:1px solid #e8c66e35;
+border-radius:50%;
+pointer-events:none;
+z-index:-3;
+animation:rotateRing 20s linear infinite;
+}
+
+.royal-ring::before,
+.royal-ring::after{
+content:"";
+position:absolute;
+inset:20px;
+border:1px dashed #e8c66e35;
+border-radius:50%;
+}
+
+.royal-ring::after{
+inset:45px;
+border:1px solid #e8c66e20;
+}
+
+.ring-left{
+top:20%;
+left:-230px;
+box-shadow:0 0 35px #e8c66e15;
+}
+
+.ring-right{
+bottom:10%;
+right:-230px;
+width:450px;
+height:450px;
+animation-direction:reverse;
+}
+
+@keyframes rotateRing{
+to{transform:rotate(360deg);}
+}
+
+/* =========================
+   GOLDEN LIGHT
+========================= */
+
 .glow{
 position:fixed;
 width:350px;
@@ -63,7 +126,8 @@ border-radius:50%;
 background:#e8c66e20;
 filter:blur(100px);
 z-index:-4;
-animation:glowMove 10s infinite alternate;
+pointer-events:none;
+animation:glowMove 12s infinite alternate;
 }
 
 .glow.one{
@@ -78,11 +142,8 @@ animation-delay:3s;
 }
 
 @keyframes glowMove{
-from{transform:translate(0,0);}
 to{transform:translate(120px,100px);}
 }
-
-/* BOTTOM LIGHT */
 
 .bottom-light{
 position:fixed;
@@ -99,18 +160,26 @@ pointer-events:none;
 }
 
 @keyframes bottomGlow{
-from{opacity:.3;transform:translateX(-50%) scale(.8);}
-to{opacity:1;transform:translateX(-50%) scale(1.2);}
+from{
+opacity:.3;
+transform:translateX(-50%) scale(.8);
+}
+to{
+opacity:1;
+transform:translateX(-50%) scale(1.2);
+}
 }
 
-/* NAME ANIMATION */
+/* =========================
+   TYPOGRAPHY
+========================= */
 
 .name-logo{
 font-family:'Cinzel',serif;
-font-size:clamp(32px,8vw,75px);
+font-size:clamp(36px,8vw,76px);
 font-weight:900;
-letter-spacing:5px;
-text-align:center;
+letter-spacing:clamp(2px,1vw,7px);
+line-height:1.4;
 
 background:linear-gradient(
 90deg,
@@ -124,6 +193,7 @@ background:linear-gradient(
 
 background-size:400%;
 -webkit-background-clip:text;
+background-clip:text;
 color:transparent;
 
 animation:goldFlow 7s linear infinite;
@@ -134,7 +204,36 @@ animation:goldFlow 7s linear infinite;
 100%{background-position:400%;}
 }
 
-/* HEADER */
+.poetry{
+font-family:'Noto Nastaliq Urdu',serif;
+font-size:clamp(19px,4vw,25px);
+line-height:2.9;
+color:var(--white);
+text-shadow:0 0 20px #e8c66e55;
+margin:25px auto;
+}
+
+.section-title{
+font-family:'Cinzel',serif;
+font-size:clamp(25px,5vw,39px);
+font-weight:800;
+letter-spacing:3px;
+text-align:center;
+color:var(--white);
+text-shadow:0 0 20px #e8c66e35;
+}
+
+.subtitle{
+text-align:center;
+font-size:10px;
+letter-spacing:4px;
+color:#888;
+margin-bottom:45px;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header{
 position:sticky;
@@ -142,19 +241,22 @@ top:0;
 z-index:100;
 padding:18px 10px;
 text-align:center;
-background:#050505d9;
+background:#050505dd;
 backdrop-filter:blur(20px);
 border-bottom:1px solid #e8c66e55;
 }
 
 .logo{
 font-family:'Cinzel',serif;
-font-size:19px;
-letter-spacing:4px;
+font-size:clamp(13px,3vw,20px);
+font-weight:800;
+letter-spacing:3px;
 color:var(--gold);
 }
 
-/* LOGIN SCREEN */
+/* =========================
+   LOGIN SCREEN
+========================= */
 
 #lockScreen{
 min-height:90vh;
@@ -165,10 +267,12 @@ padding:25px;
 }
 
 .login{
+position:relative;
 width:100%;
 max-width:440px;
 padding:38px 25px;
 text-align:center;
+isolation:isolate;
 
 border:1px solid #e8c66e66;
 border-radius:25px;
@@ -189,29 +293,51 @@ inset 0 0 30px #e8c66e08;
 animation:entrance 1.5s ease;
 }
 
+.login::before{
+content:"";
+position:absolute;
+inset:-3px;
+border-radius:27px;
+padding:2px;
+
+background:conic-gradient(
+transparent,
+#e8c66e,
+#fff5d6,
+transparent,
+#a77b28,
+transparent
+);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+
+animation:rotateRing 6s linear infinite;
+z-index:-1;
+}
+
 @keyframes entrance{
 from{
 opacity:0;
-transform:translateY(40px);
+transform:translateY(40px) scale(.95);
 }
 to{
 opacity:1;
-transform:translateY(0);
+transform:translateY(0) scale(1);
 }
 }
 
 .login .name-logo{
-font-size:clamp(29px,8vw,43px);
+font-size:clamp(30px,8vw,44px);
 letter-spacing:2px;
-line-height:1.5;
 }
 
 .login .poetry{
-font-family:'Noto Nastaliq Urdu',serif;
-font-size:18px;
-line-height:2.7;
-color:var(--white);
-margin:22px 0;
+font-size:19px;
 }
 
 .line{
@@ -220,10 +346,10 @@ height:2px;
 background:linear-gradient(90deg,transparent,gold,transparent);
 margin:20px auto;
 box-shadow:0 0 15px gold;
-animation:line 3s infinite alternate;
+animation:lineMove 3s infinite alternate;
 }
 
-@keyframes line{
+@keyframes lineMove{
 to{width:190px;}
 }
 
@@ -231,7 +357,7 @@ to{width:190px;}
 font-family:'Cinzel',serif;
 color:var(--gold);
 letter-spacing:3px;
-font-size:21px;
+font-size:22px;
 margin:20px 0;
 }
 
@@ -259,6 +385,10 @@ border-color:var(--gold);
 box-shadow:0 0 20px #e8c66e55;
 }
 
+/* =========================
+   BUTTONS
+========================= */
+
 .main-btn{
 display:block;
 width:100%;
@@ -266,7 +396,14 @@ margin-top:18px;
 padding:15px;
 border:0;
 border-radius:40px;
-background:linear-gradient(100deg,#a77b28,#fff1bc,#c99d40);
+
+background:linear-gradient(
+100deg,
+#a77b28,
+#fff1bc,
+#c99d40
+);
+
 background-size:200%;
 color:black;
 font-weight:800;
@@ -287,13 +424,56 @@ font-size:12px;
 margin-top:15px;
 }
 
-/* WEBSITE */
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 32px;
+border:1px solid var(--gold);
+border-radius:40px;
+color:var(--white);
+text-decoration:none;
+font-size:11px;
+font-weight:700;
+letter-spacing:3px;
+transition:.4s;
+}
+
+.btn:hover{
+background:var(--gold);
+color:black;
+box-shadow:0 0 30px #e8c66e77;
+transform:translateY(-5px);
+}
+
+/* =========================
+   WEBSITE OPENING
+========================= */
 
 #website{
 display:none;
 }
 
-/* HERO */
+#website.open{
+display:block;
+animation:royalOpening 1.8s ease both;
+}
+
+@keyframes royalOpening{
+0%{
+opacity:0;
+transform:scale(.94);
+filter:blur(12px);
+}
+100%{
+opacity:1;
+transform:scale(1);
+filter:blur(0);
+}
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
 min-height:90vh;
@@ -316,24 +496,13 @@ color:var(--gold);
 margin-bottom:25px;
 }
 
-.hero .name-logo{
-line-height:1.35;
-}
-
 .welcome{
-font-size:19px;
-letter-spacing:12px;
+font-family:'Cinzel',serif;
+font-size:clamp(17px,4vw,25px);
+letter-spacing:10px;
 color:#eee0b5;
 margin-top:25px;
-}
-
-.poetry{
-font-family:'Noto Nastaliq Urdu',serif;
-font-size:clamp(17px,4vw,23px);
-line-height:2.8;
-color:var(--white);
-margin:25px auto;
-text-shadow:0 0 20px #e8c66e55;
+font-weight:700;
 }
 
 .description{
@@ -346,7 +515,9 @@ line-height:2.5;
 color:var(--gold);
 }
 
-/* CLOCK */
+/* =========================
+   CLOCK
+========================= */
 
 .clock-box{
 max-width:360px;
@@ -394,49 +565,12 @@ background:var(--gold);
 color:black;
 }
 
-/* BUTTON */
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 32px;
-border:1px solid var(--gold);
-border-radius:40px;
-color:var(--white);
-text-decoration:none;
-font-size:11px;
-letter-spacing:3px;
-transition:.4s;
-}
-
-.btn:hover{
-background:var(--gold);
-color:black;
-box-shadow:0 0 30px #e8c66e77;
-transform:translateY(-5px);
-}
-
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
 padding:85px 18px;
-}
-
-.section-title{
-font-family:'Cinzel',serif;
-font-size:clamp(24px,5vw,35px);
-color:var(--white);
-text-align:center;
-letter-spacing:3px;
-margin-bottom:12px;
-}
-
-.subtitle{
-text-align:center;
-font-size:10px;
-letter-spacing:4px;
-color:#888;
-margin-bottom:45px;
 }
 
 .container{
@@ -444,7 +578,9 @@ max-width:780px;
 margin:auto;
 }
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 
 .card{
 position:relative;
@@ -463,6 +599,8 @@ background:linear-gradient(
 
 backdrop-filter:blur(15px);
 transition:.5s;
+
+box-shadow:0 0 25px #e8c66e0b;
 }
 
 .card::after{
@@ -472,7 +610,12 @@ top:0;
 left:-120%;
 width:80%;
 height:100%;
-background:linear-gradient(90deg,transparent,#ffffff18,transparent);
+background:linear-gradient(
+90deg,
+transparent,
+#ffffff18,
+transparent
+);
 transform:skewX(-25deg);
 transition:.9s;
 }
@@ -491,12 +634,13 @@ box-shadow:0 10px 40px #e8c66e22;
 font-family:'Cinzel',serif;
 color:var(--gold);
 font-size:20px;
+font-weight:800;
 margin-bottom:20px;
 }
 
 .card p{
 font-size:13px;
-line-height:2.5;
+line-height:2.4;
 color:#aaa;
 }
 
@@ -504,7 +648,9 @@ color:#aaa;
 color:var(--white);
 }
 
-/* AI SKILLS */
+/* =========================
+   AI SKILLS
+========================= */
 
 .skill{
 margin:25px 0;
@@ -533,12 +679,21 @@ overflow:hidden;
 height:100%;
 width:0;
 border-radius:20px;
-background:linear-gradient(90deg,#a77b28,#fff1b5,#d4a544);
+
+background:linear-gradient(
+90deg,
+#a77b28,
+#fff1b5,
+#d4a544
+);
+
 box-shadow:0 0 15px #e8c66e77;
 transition:width 2s ease;
 }
 
-/* CLASS GROUP */
+/* =========================
+   CLASS GROUP
+========================= */
 
 .group-grid{
 display:grid;
@@ -566,10 +721,13 @@ width:65px;
 height:65px;
 border:1px solid var(--gold);
 border-radius:50%;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 margin:0 auto 20px;
+
 font-family:'Cinzel',serif;
 font-size:22px;
 color:var(--gold);
@@ -582,11 +740,7 @@ position:absolute;
 inset:-6px;
 border:1px dashed #e8c66e66;
 border-radius:50%;
-animation:rotate 12s linear infinite;
-}
-
-@keyframes rotate{
-to{transform:rotate(360deg);}
+animation:rotateRing 12s linear infinite;
 }
 
 .member h3{
@@ -603,7 +757,9 @@ margin-top:10px;
 letter-spacing:2px;
 }
 
-/* COLLEGE PROGRESS */
+/* =========================
+   COLLEGE PROGRESS
+========================= */
 
 .progress-box{
 padding:30px;
@@ -640,12 +796,21 @@ overflow:hidden;
 .progress-fill{
 height:100%;
 width:0;
-background:linear-gradient(90deg,#a77b28,#fff1bd,#d5a746);
+
+background:linear-gradient(
+90deg,
+#a77b28,
+#fff1bd,
+#d5a746
+);
+
 border-radius:20px;
 transition:width 2.5s ease;
 }
 
-/* FREE FIRE */
+/* =========================
+   FREE FIRE
+========================= */
 
 .ff-box{
 text-align:center;
@@ -663,15 +828,18 @@ font-size:19px;
 }
 
 .ff-id{
+font-family:'Cinzel',serif;
 font-size:clamp(23px,6vw,34px);
 color:var(--white);
-font-weight:700;
+font-weight:900;
 letter-spacing:3px;
 margin:22px 0;
 text-shadow:0 0 20px #e8c66e55;
 }
 
-/* SOCIAL */
+/* =========================
+   SOCIAL
+========================= */
 
 .socials{
 display:flex;
@@ -689,6 +857,7 @@ color:var(--white);
 border:1px solid var(--gold);
 border-radius:40px;
 font-size:11px;
+font-weight:700;
 letter-spacing:2px;
 transition:.4s;
 }
@@ -716,7 +885,9 @@ animation:pulse 3s infinite alternate;
 to{box-shadow:0 0 30px #e8c66e33;}
 }
 
-/* LION */
+/* =========================
+   LION
+========================= */
 
 .lion-box{
 max-width:750px;
@@ -756,20 +927,30 @@ letter-spacing:4px;
 font-size:16px;
 }
 
-/* REVEAL */
+/* =========================
+   SCROLL REVEAL
+========================= */
 
 .reveal{
 opacity:0;
-transform:translateY(45px);
-transition:1s ease;
+transform:translateY(45px) scale(.97);
+filter:blur(7px);
+
+transition:
+opacity 1s ease,
+transform 1s ease,
+filter 1s ease;
 }
 
 .reveal.active{
 opacity:1;
-transform:translateY(0);
+transform:translateY(0) scale(1);
+filter:blur(0);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 padding:45px 15px;
@@ -782,7 +963,7 @@ footer h3{
 font-family:'Cinzel',serif;
 color:var(--gold);
 letter-spacing:3px;
-font-size:17px;
+font-size:19px;
 }
 
 footer p{
@@ -792,7 +973,9 @@ margin-top:15px;
 letter-spacing:2px;
 }
 
-/* TOP BUTTON */
+/* =========================
+   BACK TO TOP
+========================= */
 
 #topBtn{
 position:fixed;
@@ -822,7 +1005,9 @@ background:var(--gold);
 color:black;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
@@ -831,7 +1016,7 @@ padding:16px 5px;
 }
 
 .logo{
-font-size:13px;
+font-size:12px;
 letter-spacing:2px;
 }
 
@@ -849,8 +1034,8 @@ font-size:12px;
 }
 
 .welcome{
-font-size:15px;
-letter-spacing:7px;
+font-size:16px;
+letter-spacing:6px;
 }
 
 section{
@@ -861,39 +1046,76 @@ padding:65px 15px;
 padding:23px;
 }
 
+.card p{
+font-size:12px;
+}
+
 .lion-box img{
 height:280px;
 }
 
+.royal-ring{
+width:250px;
+height:250px;
 }
 
-/* REDUCED MOTION */
+.ring-left{
+left:-190px;
+}
+
+.ring-right{
+right:-190px;
+}
+
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
 
 @media(prefers-reduced-motion:reduce){
+
 *,*::before,*::after{
 animation:none!important;
 transition:none!important;
 scroll-behavior:auto!important;
 }
+
+.reveal{
+opacity:1;
+transform:none;
+filter:none;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="background"></div>
+
 <div class="glow one"></div>
 <div class="glow two"></div>
+
+<div class="royal-ring ring-left"></div>
+<div class="royal-ring ring-right"></div>
+
 <div class="bottom-light"></div>
 
 <canvas id="particles"></canvas>
 
 <header>
-<div class="logo">SHAHZAD AHMAD | OFFICIAL 007</div>
+<div class="logo">
+SHAHZAD AHMAD | OFFICIAL 007
+</div>
 </header>
 
-<!-- PASSWORD -->
+<!-- =========================
+     PASSWORD SCREEN
+========================= -->
 
 <div id="lockScreen">
 
@@ -923,6 +1145,7 @@ ENTER PASSWORD TO EXPLORE
 type="password"
 id="password"
 placeholder="ENTER YOUR PASSWORD"
+autocomplete="current-password"
 >
 
 <button class="main-btn" onclick="unlockWebsite()">
@@ -932,9 +1155,12 @@ UNLOCK MY WORLD
 <div id="error"></div>
 
 </div>
+
 </div>
 
-<!-- MAIN WEBSITE -->
+<!-- =========================
+     MAIN WEBSITE
+========================= -->
 
 <div id="website">
 
@@ -952,7 +1178,9 @@ PERSONAL OFFICIAL WEBSITE
 SHAHZAD AHMAD
 </h1>
 
-<div class="welcome">WELCOME</div>
+<div class="welcome">
+WELCOME
+</div>
 
 <div class="line"></div>
 
@@ -968,7 +1196,9 @@ WELCOME TO MY DIGITAL WORLD<br>
 <strong>DREAM BIG • THINK DIFFERENT • STAY LEGENDARY</strong>
 </p>
 
-<a href="#about" class="btn">EXPLORE MY WORLD</a>
+<a href="#about" class="btn">
+EXPLORE MY WORLD
+</a>
 
 <!-- CLOCK -->
 
@@ -978,9 +1208,13 @@ WELCOME TO MY DIGITAL WORLD<br>
 PAKISTAN STANDARD TIME
 </div>
 
-<div id="clock">00:00:00</div>
+<div id="clock">
+00:00:00
+</div>
 
-<div id="date">Loading...</div>
+<div id="date">
+Loading...
+</div>
 
 <button class="clock-switch" onclick="switchTime()">
 SWITCH TO UK TIME
@@ -989,14 +1223,20 @@ SWITCH TO UK TIME
 </div>
 
 </div>
+
 </div>
 
 <!-- ABOUT -->
 
 <section id="about" class="reveal">
 
-<h2 class="section-title">ABOUT ME</h2>
-<p class="subtitle">MY INTRODUCTION</p>
+<h2 class="section-title">
+ABOUT ME
+</h2>
+
+<p class="subtitle">
+MY INTRODUCTION
+</p>
 
 <div class="container">
 
@@ -1005,6 +1245,7 @@ SWITCH TO UK TIME
 <h3>WHO IS SHAHZAD AHMAD?</h3>
 
 <p>
+
 My name is <strong>SHAHZAD AHMAD</strong>.
 
 I am a creative and technology-loving student
@@ -1017,20 +1258,29 @@ and turning creative ideas into reality.
 My personality is simple, my dreams are big
 and my goal is to build something extraordinary.
 
-<strong>Respect everyone. Stay humble. Keep growing.</strong>
+<strong>
+Respect everyone. Stay humble. Keep growing.
+</strong>
+
 </p>
 
 </div>
 
 </div>
+
 </section>
 
 <!-- AI SKILLS -->
 
 <section class="reveal">
 
-<h2 class="section-title">MY AI SKILLS</h2>
-<p class="subtitle">FUTURE IS ARTIFICIAL INTELLIGENCE</p>
+<h2 class="section-title">
+MY AI SKILLS
+</h2>
+
+<p class="subtitle">
+FUTURE IS ARTIFICIAL INTELLIGENCE
+</p>
 
 <div class="container">
 
@@ -1101,55 +1351,84 @@ These are visual interest indicators, not formal test scores.
 </p>
 
 </div>
+
 </div>
+
 </section>
 
 <!-- CLASS GROUP -->
 
 <section class="reveal">
 
-<h2 class="section-title">CB_ICS CLASS GROUP</h2>
-<p class="subtitle">FOUR BOYS • ONE CLASS • ONE JOURNEY</p>
+<h2 class="section-title">
+CB_ICS CLASS GROUP
+</h2>
+
+<p class="subtitle">
+FOUR BOYS • ONE CLASS • ONE JOURNEY
+</p>
 
 <div class="container">
 
 <div class="group-grid">
 
 <div class="member">
+
 <div class="member-number">01</div>
+
 <h3>SHAHZAD</h3>
+
 <p>THE CREATIVE MIND</p>
+
 </div>
 
 <div class="member">
+
 <div class="member-number">02</div>
+
 <h3>RASHID</h3>
+
 <p>CLASS MEMBER</p>
+
 </div>
 
 <div class="member">
+
 <div class="member-number">03</div>
+
 <h3>AHAD</h3>
+
 <p>CLASS MEMBER</p>
+
 </div>
 
 <div class="member">
+
 <div class="member-number">04</div>
+
 <h3>HAMAD</h3>
+
 <p>CLASS MEMBER</p>
-</div>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
-<!-- COLLEGE PROGRESS -->
+<!-- COLLEGE -->
 
 <section class="reveal">
 
-<h2 class="section-title">COLLEGE JOURNEY</h2>
-<p class="subtitle">CB_ICS • SOFTWARE • FUTURE</p>
+<h2 class="section-title">
+COLLEGE JOURNEY
+</h2>
+
+<p class="subtitle">
+CB_ICS • SOFTWARE • FUTURE
+</p>
 
 <div class="container">
 
@@ -1204,15 +1483,22 @@ LEARNING NEVER ENDS • EVERY DAY IS A NEW CHAPTER
 </p>
 
 </div>
+
 </div>
+
 </section>
 
 <!-- FREE FIRE -->
 
 <section class="reveal">
 
-<h2 class="section-title">FREE FIRE WORLD</h2>
-<p class="subtitle">GAMING IDENTITY</p>
+<h2 class="section-title">
+FREE FIRE WORLD
+</h2>
+
+<p class="subtitle">
+GAMING IDENTITY
+</p>
 
 <div class="container">
 
@@ -1231,14 +1517,20 @@ OFFICIAL PLAYER ID
 </div>
 
 </div>
+
 </section>
 
 <!-- SOCIAL -->
 
 <section class="reveal">
 
-<h2 class="section-title">CONNECT WITH ME</h2>
-<p class="subtitle">MY DIGITAL PRESENCE</p>
+<h2 class="section-title">
+CONNECT WITH ME
+</h2>
+
+<p class="subtitle">
+MY DIGITAL PRESENCE
+</p>
 
 <div class="socials">
 
@@ -1265,14 +1557,21 @@ COMING SOON
 
 <section class="reveal">
 
-<h2 class="section-title">THE ROYAL KING</h2>
-<p class="subtitle">SILENCE • STRENGTH • LEGACY</p>
+<h2 class="section-title">
+THE ROYAL KING
+</h2>
+
+<p class="subtitle">
+SILENCE • STRENGTH • LEGACY
+</p>
 
 <div class="lion-box">
 
 <img
 src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1200&q=90"
-alt="Majestic lion">
+alt="Majestic lion"
+loading="lazy"
+>
 
 <div class="lion-caption">
 BORN TO BE DIFFERENT
@@ -1286,7 +1585,9 @@ BORN TO BE DIFFERENT
 
 <footer>
 
-<h3>SHAHZAD AHMAD 007</h3>
+<h3>
+SHAHZAD AHMAD 007
+</h3>
 
 <p>
 DREAM BIG • STAY HUMBLE • KEEP GROWING
@@ -1300,11 +1601,15 @@ DREAM BIG • STAY HUMBLE • KEEP GROWING
 
 </div>
 
-<button id="topBtn">↑</button>
+<button id="topBtn">
+↑
+</button>
 
 <script>
 
-/* PASSWORD */
+/* =========================
+   PASSWORD
+========================= */
 
 function unlockWebsite(){
 
@@ -1320,9 +1625,7 @@ document.getElementById("lockScreen").style.display="none";
 
 const website=document.getElementById("website");
 
-website.style.display="block";
-
-website.style.animation="entrance 1.5s ease";
+website.classList.add("open");
 
 window.scrollTo(0,0);
 
@@ -1346,7 +1649,9 @@ unlockWebsite();
 
 });
 
-/* WORLD CLOCK */
+/* =========================
+   WORLD CLOCK
+========================= */
 
 let ukTime=false;
 
@@ -1354,26 +1659,34 @@ function updateClock(){
 
 const zone=ukTime?"Europe/London":"Asia/Karachi";
 
-const label=ukTime?"UNITED KINGDOM TIME":"PAKISTAN STANDARD TIME";
+const label=ukTime?
+"UNITED KINGDOM TIME":
+"PAKISTAN STANDARD TIME";
 
 document.getElementById("clockLabel").innerText=label;
 
 document.getElementById("clock").innerText=
+
 new Intl.DateTimeFormat("en-GB",{
+
 timeZone:zone,
 hour:"2-digit",
 minute:"2-digit",
 second:"2-digit",
 hour12:true
+
 }).format(new Date());
 
 document.getElementById("date").innerText=
+
 new Intl.DateTimeFormat("en-GB",{
+
 timeZone:zone,
 weekday:"long",
 day:"numeric",
 month:"long",
 year:"numeric"
+
 }).format(new Date());
 
 }
@@ -1383,7 +1696,10 @@ function switchTime(){
 ukTime=!ukTime;
 
 document.querySelector(".clock-switch").innerText=
-ukTime?"SWITCH TO PAKISTAN TIME":"SWITCH TO UK TIME";
+
+ukTime?
+"SWITCH TO PAKISTAN TIME":
+"SWITCH TO UK TIME";
 
 updateClock();
 
@@ -1393,13 +1709,19 @@ updateClock();
 
 setInterval(updateClock,1000);
 
-/* PARTICLES */
+/* =========================
+   GOLDEN PARTICLES
+========================= */
 
 const canvas=document.getElementById("particles");
 
 const ctx=canvas.getContext("2d");
 
 let particles=[];
+
+let motionReduced=window.matchMedia(
+"(prefers-reduced-motion: reduce)"
+).matches;
 
 function resize(){
 
@@ -1427,7 +1749,9 @@ this.x=Math.random()*innerWidth;
 this.y=Math.random()*innerHeight;
 
 this.size=Math.random()*1.8+.4;
+
 this.speed=Math.random()*.5+.15;
+
 this.opacity=Math.random()*.5;
 
 }
@@ -1435,11 +1759,13 @@ this.opacity=Math.random()*.5;
 update(){
 
 this.y-=this.speed;
+
 this.x+=Math.sin(this.y*.01)*.25;
 
 if(this.y<0){
 
 this.y=innerHeight;
+
 this.x=Math.random()*innerWidth;
 
 }
@@ -1453,9 +1779,16 @@ ctx.beginPath();
 ctx.fillStyle=`rgba(232,198,110,${this.opacity})`;
 
 ctx.shadowBlur=12;
+
 ctx.shadowColor="#e8c66e";
 
-ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+ctx.arc(
+this.x,
+this.y,
+this.size,
+0,
+Math.PI*2
+);
 
 ctx.fill();
 
@@ -1467,7 +1800,10 @@ function createParticles(){
 
 particles=[];
 
-let total=Math.min(75,Math.floor(innerWidth/6));
+let total=Math.min(
+75,
+Math.floor(innerWidth/6)
+);
 
 for(let i=0;i<total;i++){
 
@@ -1479,11 +1815,14 @@ particles.push(new Particle());
 
 createParticles();
 
-let motionReduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
 function animate(){
 
-ctx.clearRect(0,0,innerWidth,innerHeight);
+ctx.clearRect(
+0,
+0,
+innerWidth,
+innerHeight
+);
 
 particles.forEach(p=>{
 
@@ -1506,7 +1845,9 @@ animate();
 
 }
 
-/* SCROLL REVEAL */
+/* =========================
+   SCROLL REVEAL
+========================= */
 
 function startReveal(){
 
@@ -1546,7 +1887,9 @@ elements.forEach(el=>observer.observe(el));
 
 }
 
-/* BACK TO TOP */
+/* =========================
+   BACK TO TOP
+========================= */
 
 const topBtn=document.getElementById("topBtn");
 
@@ -1575,7 +1918,9 @@ behavior:"smooth"
 
 });
 
-/* REDUCED MOTION */
+/* =========================
+   REDUCED MOTION
+========================= */
 
 if(motionReduced){
 
