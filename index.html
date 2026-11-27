@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -34,6 +35,8 @@ overflow-x:hidden;
 --light:#fff1aa;
 --dark:#8e681d;
 }
+
+/* BACKGROUND */
 
 #particles{
 position:fixed;
@@ -77,7 +80,7 @@ background-size:300%;
 -webkit-background-clip:text;
 background-clip:text;
 color:transparent;
-animation:goldMove 5s linear infinite;
+animation:goldMove 4s linear infinite;
 }
 
 @keyframes goldMove{
@@ -85,7 +88,7 @@ animation:goldMove 5s linear infinite;
 100%{background-position:300%}
 }
 
-/* GENERAL TEXT ANIMATION */
+/* TEXT GLOW */
 
 .animated-text{
 animation:textGlow 4s ease-in-out infinite;
@@ -100,7 +103,7 @@ text-shadow:0 0 14px #d4af3750;
 }
 }
 
-/* PASSWORD */
+/* PASSWORD SCREEN */
 
 #lockScreen{
 position:fixed;
@@ -212,7 +215,7 @@ font-weight:900;
 letter-spacing:3px;
 }
 
-/* TIME BELOW NAME */
+/* CLOCK */
 
 .time-box{
 margin-top:13px;
@@ -283,7 +286,7 @@ padding:60px 20px;
 color:#d5b45f;
 font-size:12px;
 letter-spacing:5px;
-animation:fadeIn 2s ease;
+animation:appear 2s ease;
 }
 
 .line{
@@ -378,11 +381,7 @@ letter-spacing:3px;
 margin-bottom:40px;
 }
 
-.heading span{
-color:white;
-}
-
-/* CARDS */
+/* GENERAL CARDS */
 
 .card{
 max-width:850px;
@@ -412,7 +411,7 @@ color:#c1b8a7;
 line-height:2.2;
 }
 
-/* TEAM */
+/* TEAM SECTION */
 
 .team-title{
 font-family:'Cinzel',serif;
@@ -429,53 +428,114 @@ max-width:650px;
 margin:auto;
 }
 
+/* ALL FOUR MEMBER CARDS */
+
 .friend{
+position:relative;
 padding:38px 12px;
-background:linear-gradient(145deg,#201a0c,#090909);
+background:linear-gradient(
+145deg,
+#201a0c,
+#090909,
+#17120a
+);
 border:1px solid #b18a3d;
+box-shadow:0 0 20px #d4af3710;
 transition:.5s;
-animation:cardFloat 5s ease-in-out infinite;
+overflow:hidden;
+animation:memberFloat 4s ease-in-out infinite;
 }
 
 .friend:nth-child(2){
-animation-delay:.4s;
+animation-delay:.5s;
 }
 
 .friend:nth-child(3){
-animation-delay:.8s;
+animation-delay:1s;
 }
 
 .friend:nth-child(4){
-animation-delay:1.2s;
+animation-delay:1.5s;
 }
 
-@keyframes cardFloat{
+@keyframes memberFloat{
 0%,100%{
 transform:translateY(0);
 }
 50%{
-transform:translateY(-5px);
+transform:translateY(-7px);
 }
+}
+
+/* GOLDEN LIGHT EFFECT */
+
+.friend:before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:60%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+#fff3b525,
+transparent
+);
+transform:skewX(-25deg);
+animation:cardLight 5s infinite;
+}
+
+@keyframes cardLight{
+0%{left:-120%}
+60%,100%{left:150%}
 }
 
 .friend:hover{
+border-color:#fff0a6;
+box-shadow:0 0 35px #d4af3760;
 transform:translateY(-10px) scale(1.03);
-box-shadow:0 0 30px #d4af3760;
 }
 
-.friend h3{
+/* MEMBER NUMBER */
+
+.member-number{
+position:relative;
+font-family:'Cinzel',serif;
+font-size:29px;
+font-weight:900;
+margin-bottom:22px;
+}
+
+/* MEMBER NAME SAME AS SHAHZAD */
+
+.member-name{
+position:relative;
 font-family:'Cinzel',serif;
 font-size:clamp(17px,4vw,26px);
-margin:12px 0;
-}
-
-.friend .number{
-font-size:27px;
+font-weight:900;
+letter-spacing:2px;
+background:linear-gradient(
+110deg,
+#8d681e,
+#f8df8a,
+#fff9d9,
+#c59630,
+#fff0a6,
+#8d681e
+);
+background-size:300%;
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+animation:goldMove 4s linear infinite;
+filter:drop-shadow(0 0 10px #d4af3740);
 }
 
 .friend p{
+position:relative;
 font-size:11px;
-margin-top:15px;
+margin-top:17px;
 letter-spacing:2px;
 color:#c9b994;
 }
@@ -516,31 +576,33 @@ box-shadow:0 0 25px #cba54d80;
 transform:translateY(-5px);
 }
 
-/* RED BMW PHOTO */
+/* FULL RED BMW PHOTO */
 
 .car-box{
-max-width:950px;
+max-width:1100px;
 margin:30px auto;
 border:1px solid #b18a3d;
 overflow:hidden;
+background:#080808;
 box-shadow:0 0 40px #d4af3730;
 }
 
 .car-box img{
 width:100%;
-height:420px;
-object-fit:cover;
+height:auto;
+max-height:650px;
+object-fit:contain;
 display:block;
 transition:1s;
 }
 
 .car-box:hover img{
-transform:scale(1.07);
+transform:scale(1.025);
 }
 
 .car-caption{
 font-family:'Cinzel',serif;
-font-size:15px;
+font-size:clamp(13px,3vw,19px);
 letter-spacing:4px;
 margin-top:25px;
 }
@@ -600,7 +662,7 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:600px){
 
@@ -641,11 +703,25 @@ gap:10px;
 }
 
 .friend{
-padding:25px 7px;
+padding:27px 7px;
+}
+
+.member-name{
+font-size:17px;
+letter-spacing:1px;
+}
+
+.member-number{
+font-size:24px;
+}
+
+.friend p{
+font-size:9px;
+letter-spacing:1px;
 }
 
 .car-box img{
-height:240px;
+height:auto;
 }
 
 section{
@@ -669,13 +745,14 @@ transition:none!important;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <canvas id="particles"></canvas>
 
-<!-- PASSWORD -->
+<!-- PASSWORD SCREEN -->
 
 <div id="lockScreen">
 
@@ -714,7 +791,7 @@ EXCLUSIVE EXPERIENCE 007
 </div>
 
 
-<!-- WEBSITE -->
+<!-- MAIN WEBSITE -->
 
 <div id="website" style="display:none">
 
@@ -724,7 +801,7 @@ EXCLUSIVE EXPERIENCE 007
 SHAHZAD OFFICIAL 007
 </div>
 
-<!-- TIME BELOW NAME -->
+<!-- PAKISTAN / UK TIME -->
 
 <div class="time-box">
 
@@ -839,35 +916,58 @@ FOUR MEMBERS • ONE FRIENDSHIP
 
 <div class="friend">
 
-<h3 class="number gold-text">01</h3>
-<h3 class="gold-text">SHAHZAD</h3>
+<div class="member-number gold-text">
+01
+</div>
+
+<h3 class="member-name">
+SHAHZAD
+</h3>
 
 <p>OWNER & FOUNDER</p>
 
 </div>
 
+
 <div class="friend">
 
-<h3 class="number gold-text">02</h3>
-<h3 class="gold-text">RASHID</h3>
+<div class="member-number gold-text">
+02
+</div>
+
+<h3 class="member-name">
+RASHID
+</h3>
 
 <p>TEAM MEMBER</p>
 
 </div>
 
+
 <div class="friend">
 
-<h3 class="number gold-text">03</h3>
-<h3 class="gold-text">HAMAD</h3>
+<div class="member-number gold-text">
+03
+</div>
+
+<h3 class="member-name">
+HAMAD
+</h3>
 
 <p>TEAM MEMBER</p>
 
 </div>
 
+
 <div class="friend">
 
-<h3 class="number gold-text">04</h3>
-<h3 class="gold-text">AHAD</h3>
+<div class="member-number gold-text">
+04
+</div>
+
+<h3 class="member-name">
+AHAD
+</h3>
 
 <p>TEAM MEMBER</p>
 
@@ -945,19 +1045,15 @@ TIKTOK
 </section>
 
 
-<!-- RED BMW -->
+<!-- BMW FULL CAR PHOTO -->
 
 <section class="reveal">
-
-<h2 class="heading gold-text">
-MY DREAM <span>CAR</span>
-</h2>
 
 <div class="car-box">
 
 <img
-src="https://images.unsplash.com/photo-1525860389552-77ee69a28b7d?auto=format&fit=crop&fm=jpg&q=85&w=1800"
-alt="Red BMW"
+src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&fm=jpg&q=85&w=1800"
+alt="Full red BMW sports car"
 loading="lazy"
 >
 
@@ -1225,7 +1321,7 @@ requestAnimationFrame(animate);
 animate();
 
 
-/* SCROLL REVEAL */
+/* SCROLL ANIMATION */
 
 const observer=new IntersectionObserver((entries)=>{
 
